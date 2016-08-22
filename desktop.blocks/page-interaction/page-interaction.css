@@ -1,0 +1,16 @@
+.page-interaction {
+    height: 30px;
+    margin-top: 9px;
+    line-height: 30px;
+    background-color: #fafafa;
+}
+
+.page-interaction__pull_left {
+    float: left;
+    margin-left: 20px;
+}
+
+.page-interaction__pull_right {
+    float: right;
+    margin-right: 20px;
+}

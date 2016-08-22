@@ -1,0 +1,35 @@
+block('weeks-control')(
+	js()(true),
+	content()(function(){
+
+		return [
+			{
+				elem: 'hidden',
+				tag: 'input',
+				attrs: { type: 'hidden', value: this.ctx.val, name: this.ctx.name}
+			},
+			{
+			    block : 'control-group',
+			    cls: 'mb_30',
+			    content : [
+			        {
+			            block : 'button',
+			            mods : { theme : 'islands', size : 'l' },
+			            text : '-'
+			        },
+			        {
+			            elem: 'text',
+			            content: '1 неделя'
+			        },
+			        {
+			            block : 'button',
+			            mods : { theme : 'islands', size : 'l' },
+			            text : '+'
+			        }
+			    ]
+			}
+		];
+
+	})
+
+);

@@ -1,0 +1,7 @@
+.checkbox-group.checkbox-group_theme_islands.checkbox-group_size_m {
+    line-height: 18px;
+}
+.checkbox-group_font_s .button .button__text,
+.checkbox-group_font_s.checkbox-group_theme_islands .button_theme_islands.button .button__text {
+    font-size: 11px;
+}

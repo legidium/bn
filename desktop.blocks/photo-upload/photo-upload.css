@@ -1,0 +1,101 @@
+.photo-upload {
+	margin: 30px -30px -30px;
+	padding: 30px;
+	background-color: #fafafa;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	-o-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+.photo-upload__title {
+	font-size: 15px;
+	text-align: center;
+	color: #a9a9a9;
+	margin-bottom: 25px;
+}
+
+.photo-upload__buttons {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.photo-upload__buttons .button {
+	margin: 0 10px;
+}
+
+.horizontal-form__field .input + .checkbox-group { margin-left: 20px; }
+
+.photo-upload__layer {
+	position: relative;
+	margin: 0 -10px;
+}
+
+.photo-upload__layer:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.photo-upload__layer__title {
+	position: absolute;
+	left: 10px;
+	top: -4px;
+	font-size: 11px;
+	color: #bbb;
+}
+
+.photo-upload__item {
+	position: relative;
+	padding: 10px;
+	width: 25%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.photo-upload__image-place {
+	height: 120px;
+	background-color: rgb(155, 155, 155);
+	overflow: hidden;
+}
+
+.photo-upload__image-place img {
+	width: 100%;
+}
+
+.photo-upload__controls {
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 20px;
+	height: 14px;
+	line-height: 14px;
+	opacity: 0;
+}
+
+.photo-upload__controls .checkbox {
+	line-height: 14px;
+	height: 14px;
+	float: left;
+}
+
+.photo-upload__controls .checkbox .checkbox__box {
+	top: 0 !important;
+	vertical-align: bottom;
+}
+
+.photo-upload__controls .button {
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	float: right;
+	cursor: pointer;
+}
+
+.photo-upload__item:hover .photo-upload__controls {
+	opacity: 1;
+}

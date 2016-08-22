@@ -1,0 +1,51 @@
+.headgroup{
+	margin-bottom: 15px;
+}
+
+.headgroup_margin_none{
+	margin: 0;
+}
+
+.headgroup_margin_top_30{
+	margin-top: 30px;
+}
+
+
+.headgroup__first{
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+
+.headgroup__second{
+	font-size: 11px;
+}
+
+
+
+.headgroup__h3{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+
+
+.headgroup__h3_menu_title{
+	padding-left: 30px;
+}
+
+
+.headgroup_living_complex{
+	margin-left: 20px;
+}
+
+.headgroup_living_complex .headgroup__first{
+	font-size: 30px;
+	margin-top: 30px;
+}
+
+.headgroup_living_complex .headgroup__second{
+	font-size: 13px;
+}

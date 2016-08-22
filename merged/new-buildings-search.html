@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html class="ua_js_no">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Новостройки - поиск квартир</title>
+    <script>
+      (function(e, c)
+      {
+        e[c] = e[c].replace(/(ua_js_)no/g, "$1yes");
+      })(document.documentElement, "className");
+    </script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/merged.min.css?1446471803005" />
+  </head>
+
+  <body class="page">
+    <div class="layout">
+      <div class="header clearfix">
+        <div class="logo">
+          <a class="logo__link" href="/" title="На главную"></a>
+        </div>
+        <div class="pull_left">
+          <div class="header_menu">
+            <div class="header_menu__item"><a class="header_menu__link header_menu__link_active" href="/">Объявления</a></div>
+            <div class="header_menu__item"><a class="header_menu__link" href="/">Новостройки</a></div>
+            <div class="header_menu__item"><a class="header_menu__link" href="/">Аналитика и статьи</a></div>
+            <div class="header_menu__item"><a class="header_menu__link" href="/">Скидки</a></div>
+          </div>
+        </div>
+        <div class="pull_left" style="margin-left: 20px;">
+          <div class="adv" style="width: 120px;height: 49px;"></div>
+        </div>
+        <div class="pull_right">
+          <div class="header_nav">
+            <div class="header_nav__item header_nav__item_first"><a class="button button_theme_islands button_size_m button_action_warning button__control" role="button" type="button" href="/"><span class="button__text">Подать объявление</span></a></div>
+            <div class="header_nav__item"><a class="button button_theme_islands button_size_m button__control" role="button" type="button" href="/"><i class="icon icon_action_star" aria-hidden="true"></i><span class="button__text">10</span></a></div>
+            <div class="header_nav__item">
+              <div class="dropdown dropdown_switcher_button dropdown_theme_islands dropdown_size_m i-bem" data-bem="{&quot;dropdown&quot;:{}}">
+                <button class="button button_primary button_size_m button_theme_islands button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><i class="icon icon_action_user" aria-hidden="true"></i><span class="button__text">Мой БН</span></button>
+                <div class="popup popup_theme_islands popup_autoclosable popup_target_anchor i-bem" data-bem="{&quot;popup&quot;:{}}">
+                  <div class="menu menu_theme_islands menu_size_m menu_account menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-ads/account-agent-ads.html">Мои объявление</a></div>
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem"
+                    data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-searches/account-agent-searches.html">Мои поиски</a></div>
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem"
+                    data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-subs/account-agent-subs.html">Мои подписки</a></div>
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem"
+                    data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-searches/account-agent-searches.html">Профиль</a></div>
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem"
+                    data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-searches/account-agent-searches.html">Настройки</a></div>
+                    <div class="menu__group menu__group_gray"
+                    role="group">
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/">Выход</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="new-buildings-content">
+        <div class="new-buildings-content__top">
+          <div class="new-buildings-content__title">Полная база новостроек Санкт-Петербурга</div>
+          <div class="new-buildings-content__filter">
+            <form class="new-buildings-search-filter new-buildings-search-controller i-bem" data-bem="{&quot;new-buildings-search-filter&quot;:{&quot;0&quot;:&quot;t&quot;,&quot;1&quot;:&quot;r&quot;,&quot;2&quot;:&quot;u&quot;,&quot;3&quot;:&quot;e&quot;},&quot;new-buildings-search-controller&quot;:{&quot;dataUrl&quot;:&quot;/desktop.blocks/new-buildings-search-filter/data.json&quot;,&quot;returnUrl&quot;:&quot;/desktop.bundles/new-buildings/new-buildings.html&quot;}}">
+              <div id="search_filter_district">
+                <input value="" type="hidden" name="district[]" />
+              </div>
+              <input value="" type="hidden" name="location" id="search_filter_location" />
+              <div id="search_filter_locality">
+                <input value="" type="hidden" name="locality[]" />
+              </div>
+              <div id="search_filter_streetBuilding">
+                <input value="" type="hidden" name="streetBuilding[]" />
+              </div>
+              <div id="search_filter_metro">
+                <input value="" type="hidden" name="metro[]" />
+              </div>
+              <input value="" type="hidden" name="metroDistance" id="search_filter_metroDistance" />
+              <input value="" type="hidden" name="metroDistanceOnFoot" id="search_filter_metroDistanceOnFoot" />
+              <div class="new-buildings-search-filter__line">
+                <div class="new-buildings-search-filter__col"><span class="checkbox-group checkbox-group_theme_islands checkbox-group_size_xl_m checkbox-group_type_button control-group i-bem" data-bem="{&quot;checkbox-group&quot;:{}}"><label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_xl_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><button class="button button_togglable_check button_theme_islands button_size_xl_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Студию</span></button>
+                  <input
+                  class="checkbox__control" type="checkbox" autocomplete="off" name="flatTypes[]" value="0" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_xl_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_xl_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">1</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="flatTypes[]" value="1" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_xl_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_xl_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">2</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="flatTypes[]" value="2" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_xl_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_xl_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">3</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="flatTypes[]" value="3" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_xl_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_xl_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">4 и более</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="flatTypes[]" value="4_more" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_xl_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_xl_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Свободная планировка</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="flatTypes[]" value="-1" />
+                  </label>
+                  </span>
+                </div>
+                <div class="new-buildings-search-filter__col">
+                  <div class="control-group"><span class="input input_theme_islands input_size_xl input_width_s input_nocorners input_inline input_big i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="priceFrom" placeholder="от"/></span></span>
+                    <span
+                    class="input input_theme_islands input_size_xl input_width_s input_nocorners input_inline input_big i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="priceTo" placeholder="до"/></span></span>
+                      <div class="select select_mode_radio select_theme_islands select_size_m select_inline select_big i-bem" data-bem="{&quot;select&quot;:{&quot;name&quot;:&quot;currency&quot;}}">
+                        <input class="select__control" type="hidden" name="currency" value="rub" />
+                        <button class="button button_size_m button_theme_islands button__control select__button i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">тыс. <span class="currency">Р</span></span><i class="icon select__tick" aria-hidden="true"></i></button>
+                        <div class="popup popup_target_anchor popup_theme_islands popup_autoclosable i-bem" data-bem="{&quot;popup&quot;:{&quot;directions&quot;:[&quot;bottom-left&quot;,&quot;bottom-right&quot;,&quot;top-left&quot;,&quot;top-right&quot;]}}">
+                          <div class="menu menu_size_m menu_theme_islands menu_mode_radio menu__control select__menu i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu">
+                            <div class="menu-item menu-item_checked menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;rub&quot;}}" role="menuitem">тыс. <span class="currency">Р</span></div>
+                            <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;usd&quot;}}" role="menuitem">тыс. $</div>
+                            <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;euro&quot;}}" role="menuitem">тыс. €</div>
+                            <div class="menu__group menu__group_gray" role="group">
+                              <div class="menu__padding">
+                                <div class="help">Авторизированные пользователи
+                                  <br>могут менять валюту по умолчанию</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><span class="radio-group radio-group_theme_islands radio-group_size_xl radio-group_type_button radio-group_big control-group i-bem" data-bem="{&quot;radio-group&quot;:{}}"><label class="radio radio_type_button radio_theme_islands radio_size_xl radio_checked i-bem" data-bem="{&quot;radio&quot;:{}}"><button class="button button_togglable_radio button_checked button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">за все</span></button>
+                      <input
+                      class="radio__control" type="radio" autocomplete="off" name="priceMode" value="1" checked="checked" />
+                      </label>
+                      <label class="radio radio_type_button radio_theme_islands radio_size_xl i-bem" data-bem="{&quot;radio&quot;:{}}">
+                        <button class="button button_togglable_radio button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">за м2</span></button>
+                        <input class="radio__control" type="radio" autocomplete="off" name="priceMode" value="2" />
+                      </label>
+                      </span>
+                  </div>
+                </div>
+                <div class="new-buildings-search-filter__col"><span class="checkbox-group checkbox-group_theme_islands checkbox-group_size_m checkbox-group_type_line control-group i-bem" data-bem="{&quot;checkbox-group&quot;:{}}"><label class="checkbox checkbox_type_line checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="buyTypes[]" value="0"/></span>Ипотека</label>
+                  <label
+                  class="checkbox checkbox_type_line checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="buyTypes[]" value="1"/></span>Рассрочка</label>
+                    <label class="checkbox checkbox_type_line checkbox_theme_islands checkbox_size_m i-bem"
+                    data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="buyTypes[]" value="2"/></span>Материнский каритал</label>
+                    </span>
+                </div>
+              </div>
+              <div class="new-buildings-search-filter__line">
+                <div class="new-buildings-search-filter__col"><span class="checkbox-group checkbox-group_theme_islands checkbox-group_size_m checkbox-group_type_button control-group i-bem" data-bem="{&quot;checkbox-group&quot;:{}}"><label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><button class="button button_togglable_check button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Сдан до 2015</span></button>
+                  <input
+                  class="checkbox__control" type="checkbox" autocomplete="off" name="year[]" value="before_2015" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">2015</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="year[]" value="2015" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">2016</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="year[]" value="2016" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">2017</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="year[]" value="2017" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">2018</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="year[]" value="2018" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">2019</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="year[]" value="2019" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">2020</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="year[]" value="2020" />
+                  </label>
+                  <label class="checkbox checkbox_type_button checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}">
+                    <button class="button button_togglable_check button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">2021</span></button>
+                    <input class="checkbox__control" type="checkbox" autocomplete="off" name="year[]" value="2021" />
+                  </label>
+                  </span>
+                </div>
+                <div class="new-buildings-search-filter__col">
+                  <div class="new-buildings-search-filter__label"><span style="margin-right: 3px;">S, общ</span>
+                    <div class="control-group"><span class="input input_theme_islands input_size_l input_width_s input_nocorners input_inline i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="areaFrom" placeholder="от"/></span></span>
+                      <span
+                      class="input input_theme_islands input_size_l input_width_s input_nocorners input_inline i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="areaTo" placeholder="до"/></span></span>
+                    </div><span style="margin-left: 3px;">м</span><sup>2</sup></div>
+                </div>
+                <div class="new-buildings-search-filter__col">
+                  <div class="new-buildings-search-filter__label"><span>S, кухни</span>
+                    <div class="control-group"><span class="input input_theme_islands input_size_l input_width_s input_nocorners input_inline i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="kitchenAreaFrom" placeholder="от"/></span></span>
+                      <span
+                      class="input input_theme_islands input_size_l input_width_s input_nocorners input_inline i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="kitchenAreaTo" placeholder="до"/></span></span>
+                    </div><span>м</span><sup>2</sup></div>
+                </div>
+              </div>
+              <div class="controls_row clearfix">
+                <div class="controls_row__col">
+                  <button class="button button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" id="region_popup_switcher" type="button"><i class="icon icon_action_map" aria-hidden="true"></i><span class="button__text">Санкт-Петербург и пригороды</span></button>
+                </div>
+                <div class="controls_row__col">
+                  <div class="help" id="region_popup_result_text">СПб и населенные пункты в 20-30 минутах езды от КАДа</div>
+                </div>
+                <div class="modal modal_autoclosable modal_theme_islands modal_closable modal_fixtopposition popup popup_autoclosable i-bem" data-bem="{&quot;modal&quot;:{},&quot;popup&quot;:{&quot;zIndexGroupLevel&quot;:20}}" id="search_full_modal">
+                  <div class="modal__table">
+                    <div class="modal__cell">
+                      <div class="modal__content">
+                        <div class="region_popup i-bem" data-bem="{&quot;region_popup&quot;:{}}">
+                          <div class="tabs tabs_theme_islands tabs_type_button tabs_size_xl i-bem" data-bem="{&quot;tabs&quot;:{}}"><span class="radio-group radio-group_type_button radio-group_theme_islands radio-group_size_xl control-group tabs__tabs-group i-bem" data-bem="{&quot;radio-group&quot;:{}}"><label class="radio radio_type_button radio_theme_islands radio_size_xl i-bem" data-bem="{&quot;radio&quot;:{}}"><button class="button button_togglable_radio button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Санкт-Петербург</span></button>
+                            <input
+                            class="radio__control" type="radio" autocomplete="off" name="tabs" value="0" />
+                            </label>
+                            <label class="radio radio_type_button radio_theme_islands radio_size_xl radio_checked i-bem" data-bem="{&quot;radio&quot;:{}}">
+                              <button class="button button_togglable_radio button_checked button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Санкт-Петербург и пригороды</span></button>
+                              <input class="radio__control" type="radio" autocomplete="off" name="tabs" value="1" checked="checked" />
+                            </label>
+                            <label class="radio radio_type_button radio_theme_islands radio_size_xl i-bem" data-bem="{&quot;radio&quot;:{}}">
+                              <button class="button button_togglable_radio button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Санкт-Петербург и Ленобласть</span></button>
+                              <input class="radio__control" type="radio" autocomplete="off" name="tabs" value="2" />
+                            </label>
+                            <label class="radio radio_type_button radio_theme_islands radio_size_xl i-bem" data-bem="{&quot;radio&quot;:{}}">
+                              <button class="button button_togglable_radio button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Только Ленобласть</span></button>
+                              <input class="radio__control" type="radio" autocomplete="off" name="tabs" value="3" />
+                            </label>
+                            </span>
+                            <div class="tabs__container">
+                              <div class="tabs__box" data-bem="{&quot;tabs__box&quot;:{&quot;id&quot;:0}}">
+                                <div class="controls_row clearfix">
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="headgroup">
+                                      <div class="headgroup__h3 headgroup__h3_menu_title">Районы Санкт-Петербурга</div>
+                                    </div>
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_check menu_spb_districts menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:9}}" role="menuitem">Адмиралтейский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:10}}" role="menuitem">Василеостровский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:11}}" role="menuitem">Выборгский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:13}}" role="menuitem">Калининский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:14}}" role="menuitem">Кировский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:15}}" role="menuitem">Колпинский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:16}}" role="menuitem">Красногвардейский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:17}}" role="menuitem">Красносельский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:18}}" role="menuitem">Кронштадтский</div>
+                                      </div>
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:19}}" role="menuitem">Курортный</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:20}}" role="menuitem">Московский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:21}}" role="menuitem">Невский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:22}}" role="menuitem">Петроградский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:23}}" role="menuitem">Петродворцовый</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:12}}" role="menuitem">Приморский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:24}}" role="menuitem">Пушкинский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:25}}" role="menuitem">Фрунзенский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:26}}" role="menuitem">Центральный</div>
+                                      </div>
+                                    </div>
+                                    <div class="headgroup" style="margin-top: 20px;">
+                                      <div class="headgroup__h3 headgroup__h3_menu_title">Адрес</div>
+                                    </div>
+                                    <div class="addresses_control i-bem" data-bem="{&quot;addresses_control&quot;:{}}">
+                                      <div style="margin-left: 30px; margin-bottom: 20px; overflow: hidden;">
+                                        <div class="control-group">
+                                          <div class="address_autocomplete address_autocomplete_type_bn i-bem" data-bem="{&quot;address_autocomplete&quot;:{&quot;url&quot;:&quot;/desktop.blocks/address_autocomplete/test.json&quot;}}" style="width: 180px;"><span class="input input_theme_islands input_size_xl input_nocorners i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" placeholder="Улица"/></span></span>
+                                            <div class="popup popup_theme_islands popup_size_m popup_autoclosable popup_target_anchor i-bem"
+                                            data-bem="{&quot;popup&quot;:{}}">
+                                              <div class="menu menu_theme_islands menu_size_m menu_mode_radio menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0"></div>
+                                            </div>
+                                          </div><span class="input input_theme_islands input_size_xl input_nocorners addresses_control__dom_number i-bem" data-bem="{&quot;input&quot;:{}}" style="width: 115px;"><span class="input__box"><input class="input__control" placeholder="Дома/диапазон"/></span></span>
+                                        </div>
+                                      </div>
+                                      <div class="address_list address_list__control i-bem" data-bem="{&quot;address_list&quot;:{}}" style="margin-left: 30px;"></div>
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col controls_row__col_vertical_top" style="width: 346px;">
+                                    <div class="spb_metro_sheme i-metro_addr-ctrl i-bem" data-bem="{&quot;spb_metro_sheme&quot;:{},&quot;i-metro_addr-ctrl&quot;:{&quot;id&quot;:1}}">
+                                      <embed class="spb_metro_sheme__sheme_svg" src="/desktop.blocks/spb_metro_sheme/spb_metro_sheme.svg" width="570" height="530" type="image/svg+xml" />
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col">
+                                    <div class="plain_text" style="margin-bottom: 10px;">До метро</div>
+                                    <div class="control-group"><span class="input input_theme_islands input_size_xl input_width_s input_nocorners input_right_border i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="metroDistance_input" placeholder="мин"/></span></span>
+                                      <span
+                                      class="radio-group radio-group_theme_islands radio-group_size_xl radio-group_type_button control-group i-bem" data-bem="{&quot;radio-group&quot;:{}}">
+                                        <label class="radio radio_type_button radio_theme_islands radio_size_xl radio_checked i-bem" data-bem="{&quot;radio&quot;:{}}">
+                                          <button class="button button_togglable_radio button_checked button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">пешком</span></button>
+                                          <input class="radio__control" type="radio" autocomplete="off" name="metroDistanceOnFoot_radio" value="true" checked="checked" />
+                                        </label>
+                                        <label class="radio radio_type_button radio_theme_islands radio_size_xl i-bem" data-bem="{&quot;radio&quot;:{}}">
+                                          <button class="button button_togglable_radio button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">на трансп.</span></button>
+                                          <input class="radio__control" type="radio" autocomplete="off" name="metroDistanceOnFoot_radio" value="false" />
+                                        </label>
+                                        </span>
+                                    </div>
+                                    <div class="address_list address_list_inline address_list__control i-metro_addr-ctrl i-bem" data-bem="{&quot;address_list&quot;:{},&quot;i-metro_addr-ctrl&quot;:{&quot;id&quot;:1}}" style="margin-top: 20px; max-width: 239px;"></div>
+                                  </div>
+                                </div>
+                                <div class="controls_row clearfix">
+                                  <div class="controls_row__col" style="margin-left: 30px;">
+                                    <button class="button button_theme_islands button_size_m button_action_save button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Сохранить</span></button>
+                                  </div>
+                                  <div class="controls_row__col"><a class="link link_font_11 link_action_clear link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="#">очистить</a></div>
+                                </div>
+                              </div>
+                              <div class="tabs__box tabs__box_selected" data-bem="{&quot;tabs__box&quot;:{&quot;id&quot;:1}}">
+                                <div class="controls_row clearfix">
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="headgroup">
+                                      <div class="headgroup__h3 headgroup__h3_menu_title">Районы Санкт-Петербурга</div>
+                                    </div>
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_check menu_spb_districts menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:9}}" role="menuitem">Адмиралтейский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:10}}" role="menuitem">Василеостровский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:11}}" role="menuitem">Выборгский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:13}}" role="menuitem">Калининский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:14}}" role="menuitem">Кировский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:15}}" role="menuitem">Колпинский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:16}}" role="menuitem">Красногвардейский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:17}}" role="menuitem">Красносельский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:18}}" role="menuitem">Кронштадтский</div>
+                                      </div>
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:19}}" role="menuitem">Курортный</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:20}}" role="menuitem">Московский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:21}}" role="menuitem">Невский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:22}}" role="menuitem">Петроградский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:23}}" role="menuitem">Петродворцовый</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:12}}" role="menuitem">Приморский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:24}}" role="menuitem">Пушкинский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:25}}" role="menuitem">Фрунзенский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:26}}" role="menuitem">Центральный</div>
+                                      </div>
+                                    </div>
+                                    <div class="headgroup headgroup_margin_top_30">
+                                      <div class="headgroup__h3 headgroup__h3_menu_title">Пригороды Санкт-Петербурга</div>
+                                    </div>
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_check menu_lenobl_districts menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:1}}" role="menuitem">Бугры</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:2}}" role="menuitem">Всеволожск</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:3}}" role="menuitem">Кудрово</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:4}}" role="menuitem">Колтуши</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:5}}" role="menuitem">Мистолово</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:6}}" role="menuitem">Мурино</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:7}}" role="menuitem">Новое Девяткино</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:8}}" role="menuitem">Поселок им. Свердлова</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:9}}" role="menuitem">Романовка</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:11}}" role="menuitem">Сертолово</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:12}}" role="menuitem">Щеглово</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:13}}" role="menuitem">Юкки</div>
+                                      </div>
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:14}}" role="menuitem">Янино</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:15}}" role="menuitem">Гатчина</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:16}}" role="menuitem">Коммунар</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:17}}" role="menuitem">Кировск</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:18}}" role="menuitem">Отрадное</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:19}}" role="menuitem">Шлиссельбург</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:20}}" role="menuitem">Новоселье</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:21}}" role="menuitem">Новогорелово</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:22}}" role="menuitem">Никольское</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:23}}" role="menuitem">Тельмана</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:24}}" role="menuitem">Тосно</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:25}}" role="menuitem">Федоровское</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col controls_row__col_vertical_top" style="width: 346px;">
+                                    <div class="spb_metro_sheme i-metro_addr-ctrl i-bem" data-bem="{&quot;spb_metro_sheme&quot;:{},&quot;i-metro_addr-ctrl&quot;:{&quot;id&quot;:2}}">
+                                      <embed class="spb_metro_sheme__sheme_svg" src="/desktop.blocks/spb_metro_sheme/spb_metro_sheme.svg" width="570" height="530" type="image/svg+xml" />
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col">
+                                    <div class="plain_text" style="margin-bottom: 10px;">До метро</div>
+                                    <div class="control-group"><span class="input input_theme_islands input_size_xl input_width_s input_nocorners input_right_border i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="metroDistance_input" placeholder="мин"/></span></span>
+                                      <span
+                                      class="radio-group radio-group_theme_islands radio-group_size_xl radio-group_type_button control-group i-bem" data-bem="{&quot;radio-group&quot;:{}}">
+                                        <label class="radio radio_type_button radio_theme_islands radio_size_xl radio_checked i-bem" data-bem="{&quot;radio&quot;:{}}">
+                                          <button class="button button_togglable_radio button_checked button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">пешком</span></button>
+                                          <input class="radio__control" type="radio" autocomplete="off" name="metroDistanceOnFoot_radio" value="true" checked="checked" />
+                                        </label>
+                                        <label class="radio radio_type_button radio_theme_islands radio_size_xl i-bem" data-bem="{&quot;radio&quot;:{}}">
+                                          <button class="button button_togglable_radio button_theme_islands button_size_xl button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">на трансп.</span></button>
+                                          <input class="radio__control" type="radio" autocomplete="off" name="metroDistanceOnFoot_radio" value="false" />
+                                        </label>
+                                        </span>
+                                    </div>
+                                    <div class="address_list address_list_inline address_list__control i-metro_addr-ctrl i-bem" data-bem="{&quot;address_list&quot;:{},&quot;i-metro_addr-ctrl&quot;:{&quot;id&quot;:2}}" style="margin-top: 20px; max-width: 239px;"></div>
+                                  </div>
+                                </div>
+                                <div class="controls_row clearfix">
+                                  <div class="controls_row__col" style="margin-left: 30px;">
+                                    <button class="button button_theme_islands button_size_m button_action_save button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Сохранить</span></button>
+                                  </div>
+                                  <div class="controls_row__col"><a class="link link_font_11 link_action_clear link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="#">очистить</a></div>
+                                </div>
+                              </div>
+                              <div class="tabs__box" data-bem="{&quot;tabs__box&quot;:{&quot;id&quot;:2}}">
+                                <div class="controls_row clearfix">
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="headgroup">
+                                      <div class="headgroup__h3 headgroup__h3_menu_title">Районы Санкт-Петербурга</div>
+                                    </div>
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_check menu_spb_districts menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:9}}" role="menuitem">Адмиралтейский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:10}}" role="menuitem">Василеостровский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:11}}" role="menuitem">Выборгский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:13}}" role="menuitem">Калининский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:14}}" role="menuitem">Кировский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:15}}" role="menuitem">Колпинский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:16}}" role="menuitem">Красногвардейский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:17}}" role="menuitem">Красносельский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:18}}" role="menuitem">Кронштадтский</div>
+                                      </div>
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:19}}" role="menuitem">Курортный</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:20}}" role="menuitem">Московский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:21}}" role="menuitem">Невский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:22}}" role="menuitem">Петроградский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:23}}" role="menuitem">Петродворцовый</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:12}}" role="menuitem">Приморский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:24}}" role="menuitem">Пушкинский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:25}}" role="menuitem">Фрунзенский</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:26}}" role="menuitem">Центральный</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="headgroup">
+                                      <div class="headgroup__h3 headgroup__h3_menu_title">Районы Ленобласти</div>
+                                    </div>
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_check menu_lenobl_districts menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:66}}" role="menuitem">Парголово</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:71}}" role="menuitem">Парнас</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:72}}" role="menuitem">Шувалово-Озерки</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:4311}}" role="menuitem">Горелово</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:45}}" role="menuitem">Красное Село</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:3656}}" role="menuitem">Каменка</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:44}}" role="menuitem">Колпино</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:95}}" role="menuitem">Металлострой</div>
+                                      </div>
+                                      <div class="menu__group menu__group_inline" role="group">
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:47}}" role="menuitem">Зеленогорск</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:48}}" role="menuitem">Сестрорецк</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:49}}" role="menuitem">Петергоф</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:134}}" role="menuitem">Стрельна</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:52}}" role="menuitem">Павловск</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:51}}" role="menuitem">Пушкин</div>
+                                        <div class="menu-item menu-item_min_mar menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:136}}" role="menuitem">Шушары</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="controls_row clearfix">
+                                  <div class="controls_row__col" style="margin-left: 30px;">
+                                    <button class="button button_theme_islands button_size_m button_action_save button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Сохранить</span></button>
+                                  </div>
+                                  <div class="controls_row__col"><a class="link link_font_11 link_action_clear link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="#">очистить</a></div>
+                                </div>
+                              </div>
+                              <div class="tabs__box" data-bem="{&quot;tabs__box&quot;:{&quot;id&quot;:3}}">
+                                <div class="headgroup">
+                                  <div class="headgroup__h3 headgroup__h3_menu_title">Районы Ленобласти</div>
+                                </div>
+                                <div class="controls_row clearfix">
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_groupcheck menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group" role="group" aria-label="Бокситогорский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Бокситогорский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:161}}" role="menuitem">Ефимовский</div>
+                                      </div>
+                                      <div class="menu__group" role="group" aria-label="Волосовский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Волосовский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:187}}" role="menuitem">Волосово</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:3329}}" role="menuitem">Кикерино</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:2814}}" role="menuitem">Бегуницы</div>
+                                      </div>
+                                      <div class="menu__group" role="group" aria-label="Волховский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Волховский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:4724}}" role="menuitem">Волхов</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:168}}" role="menuitem">Сясьстрой</div>
+                                      </div>
+                                      <div class="menu__group" role="group" aria-label="Всеволожский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Всеволожский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:1193}}" role="menuitem">Мурино</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:156}}" role="menuitem">Токсово</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_groupcheck menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group" role="group" aria-label="Выборгский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Выборгский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:160}}" role="menuitem">Высоцк</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:3504}}" role="menuitem">Глебычево</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:1114}}" role="menuitem">Зеленая Роща</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:159}}" role="menuitem">Лесогорский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:181}}" role="menuitem">Приморск</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:189}}" role="menuitem">Рощино</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:195}}" role="menuitem">Светогорск</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:174}}" role="menuitem">Советский</div>
+                                      </div>
+                                      <div class="menu__group" role="group" aria-label="Гатчинский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Гатчинский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:182}}" role="menuitem">Вырица</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:3912}}" role="menuitem">Заборье</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:1205}}" role="menuitem">Кобрино</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:178}}" role="menuitem">Коммунар</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:167}}" role="menuitem">Сиверский</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_groupcheck menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group" role="group" aria-label="Кингисеппский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Кингисеппский</div>
+                                      </div>
+                                      <div class="menu__group" role="group" aria-label="Киришский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Киришский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:4921}}" role="menuitem">Кириши</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:164}}" role="menuitem">Будогощь</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_groupcheck menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group" role="group" aria-label="Лужский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Лужский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:4073}}" role="menuitem">Торковичи</div>
+                                      </div>
+                                      <div class="menu__group" role="group" aria-label="Подпорожский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Подпорожский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:179}}" role="menuitem">Вознесенье</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:4221}}" role="menuitem">Винницы</div>
+                                      </div>
+                                      <div class="menu__group" role="group" aria-label="Приозерский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Приозерский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:3878}}" role="menuitem">Мельниково</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:3452}}" role="menuitem">Сосново</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:190}}" role="menuitem">Кузнечное</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="controls_row__col controls_row__col_vertical_top">
+                                    <div class="menu menu_theme_islands menu_size_m menu_mode_groupcheck menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                                      <div class="menu__group" role="group" aria-label="Тосненский">
+                                        <div class="menu-item menu-item_group_title menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem">Тосненский</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:163}}" role="menuitem">Любань</div>
+                                        <div class="menu-item menu-item_theme_islands help i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:158}}" role="menuitem">Никольское</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="controls_row clearfix">
+                                  <div class="controls_row__col" style="margin-left: 30px;">
+                                    <button class="button button_theme_islands button_size_m button_action_save button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Сохранить</span></button>
+                                  </div>
+                                  <div class="controls_row__col"><a class="link link_font_11 link_action_clear link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="#">очистить</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal__close_button"><i class="icon icon_action_remove" aria-hidden="true"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="new-buildings-filter-ext">
+                <div class="new-buildings-filter-ext__first_row">
+                  <div class="new-buildings-filter-ext__col new-buildings-filter-ext__col_gray">
+                    <div class="new-buildings-filter-ext__item" id="new-buildings-filter-ext-etaji">
+                      <div class="plain_text plain_text_bold plain_text_size_11" style="line-height: 1.1; margin: 0 0 19px;">Этажи, лифты</div>
+                      <div class="new-buildings-filter-ext__controls_row">
+                        <div class="control-group clearfix">
+                          <label class="label">
+                            <div class="label__text">Этаж</div>
+                          </label>
+                          <div class="control-group new-buildings-filter-ext__checkbox-group checkbox-group checkbox-group_theme_islands checkbox-group_size_m">
+                            <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="notFirstFloor" value="true"/></span>Не первый</label>
+                            <br/>
+                            <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="notLastFloor" value="true"/></span>Не последний</label>
+                            <br/>
+                            <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="lastFloor" value="true"/></span>Последний</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="new-buildings-filter-ext__controls_row">
+                        <div class="control-group clearfix">
+                          <label class="label">
+                            <div class="label__text">&nbsp;</div>
+                          </label><span class="input input_theme_islands input_size_m input_width_s input_nocorners i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="floorFrom" placeholder="от"/></span></span>
+                          <span
+                          class="input input_theme_islands input_size_m input_width_s input_nocorners i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="floorTo" placeholder="до"/></span></span>
+                        </div>
+                      </div>
+                      <div class="new-buildings-filter-ext__controls_row">
+                        <div class="control-group clearfix">
+                          <label class="label">
+                            <div class="label__text">В доме</div>
+                          </label><span class="input input_theme_islands input_size_m input_width_s input_nocorners i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="floorCountFrom" placeholder="от"/></span></span>
+                          <span
+                          class="input input_theme_islands input_size_m input_width_s input_nocorners input_right_border i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="floorCountTo" placeholder="до"/></span></span><span class="label label_last"><div class="label__text">этажей</div></span></div>
+                      </div>
+                      <div class="new-buildings-filter-ext__controls_row">
+                        <div class="control-group clearfix">
+                          <label class="label">
+                            <div class="label__text">Лифт</div>
+                          </label>
+                          <div class="select select_mode_radio select_theme_islands select_size_m select_width_120 select_corner_all i-bem" data-bem="{&quot;select&quot;:{&quot;name&quot;:&quot;isLift&quot;}}">
+                            <input class="select__control" type="hidden" name="isLift" value="" />
+                            <button class="button button_size_m button_theme_islands button__control select__button i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Не важно</span><i class="icon select__tick" aria-hidden="true"></i></button>
+                            <div class="popup popup_target_anchor popup_theme_islands popup_autoclosable i-bem" data-bem="{&quot;popup&quot;:{&quot;directions&quot;:[&quot;bottom-left&quot;,&quot;bottom-right&quot;,&quot;top-left&quot;,&quot;top-right&quot;]}}">
+                              <div class="menu menu_size_m menu_theme_islands menu_mode_radio menu__control select__menu i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu">
+                                <div class="menu-item menu-item_checked menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;&quot;}}" role="menuitem">Не важно</div>
+                                <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:1}}" role="menuitem">Есть</div>
+                                <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;service_lift&quot;}}" role="menuitem">Есть грузовой лифт</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="new-buildings-filter-ext__col new-buildings-filter-ext__col_gray">
+                    <div class="new-buildings-filter-ext__item" id="new-buildings-filter-ext-infrastructura">
+                      <div class="plain_text plain_text_bold plain_text_size_11" style="line-height: 1.1; margin: 0 0 19px;">Инфраструктура</div>
+                      <div class="new-buildings-filter-ext__controls_row">
+                        <div class="control-group clearfix"><span class="checkbox-group checkbox-group_theme_islands checkbox-group_size_m control-group new-buildings-filter-ext__checkbox-group i-bem" data-bem="{&quot;checkbox-group&quot;:{}}"><label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="infrastructure[]" value="0"/></span>Организованный
+                          паркинг</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="infrastructure[]" value="1"/></span>Закрытая территория</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="infrastructure[]" value="2"/></span>Охрана, консьерж</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="infrastructure[]" value="3"/></span>Детский сад в шаговой доступности</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="infrastructure[]" value="4"/></span>Школа в шаговой доступности</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="infrastructure[]" value="5"/></span>Фитнес-центр в шаговой доступности</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="infrastructure[]" value="6"/></span>Рядом парк</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="infrastructure[]" value="7"/></span>Рядом озеро, река или водоем</label>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="new-buildings-filter-ext__col new-buildings-filter-ext__col_gray">
+                    <div class="new-buildings-filter-ext__item" id="new-buildings-filter-ext-klass-doma">
+                      <div class="plain_text plain_text_bold plain_text_size_11" style="line-height: 1.1; margin: 0 0 19px;">Класс дома</div>
+                      <div class="new-buildings-filter-ext__controls_row">
+                        <div class="control-group clearfix"><span class="checkbox-group checkbox-group_theme_islands checkbox-group_size_m control-group new-buildings-filter-ext__checkbox-group i-bem" data-bem="{&quot;checkbox-group&quot;:{}}"><label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseClass[]" value="0"/></span>Эконом</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseClass[]" value="1"/></span>Комфорт</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseClass[]" value="2"/></span>Бизнес-класс</label>
+                          <br/>
+                          <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseClass[]" value="3"/></span>Элитное жилье</label>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="help help_items">
+                        <div class="help__item" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:0}}">Текст для домов эконом класса.</div>
+                        <div class="help__item" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:1}}">Текст для домов комфорт класса.</div>
+                        <div class="help__item" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:3}}">Текст для домов бизнес-класса.</div>
+                        <div class="help__item help__item_visible" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:4}}">Элитные дома строятся из кирпича или с применением монолитных технологий. Такое жилье обычно располагается в экологически-чистых и престижных районах. Здесь всегда есть организованный паркинг, охрана и закрытая территория. В таких
+                          домах вы не найдете малогабаритных квартир.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="new-buildings-filter-ext__col new-buildings-filter-ext__col_gray">
+                    <div class="new-buildings-filter-ext__item" id="new-buildings-filter-ext-klass-doma">
+                      <div>
+                        <div class="plain_text plain_text_bold plain_text_size_11" style="display: inline-block; line-height: 1.1; margin: 0 0 19px;">Тип дома</div><span class="dropdown dropdown_switcher_button dropdown_theme_islands i-bem" data-bem="{&quot;dropdown&quot;:{}}"><button class="button button_theme_islands button_gray button_view_circle button_pseudo button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button" style="position: relative; top: -2px; left: 10px;"><span class="button__text">?</span></button>
+                        <div
+                        class="popup popup_theme_islands popup_autoclosable popup_target_anchor i-bem" data-bem="{&quot;popup&quot;:{}}">
+                          <div class="popup__popup_content"><span class="plain_text plain_text_bold plain_text_size_11">Монолитный</span>
+                            <div class="plain_text plain_text_size_11">
+                              <p>Этажность: </p>
+                              <p>Текст про монолитные дома
+                                <br>Текст про монолитные дома на новой строке</p>
+                            </div>
+                          </div>
+                      </div>
+                      </span>
+                    </div>
+                    <div class="new-buildings-filter-ext__controls_row">
+                      <div class="control-group clearfix"><span class="checkbox-group checkbox-group_theme_islands checkbox-group_size_m control-group new-buildings-filter-ext__checkbox-group i-bem" data-bem="{&quot;checkbox-group&quot;:{}}"><label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseType[]" value="0"/></span>Панельный</label>
+                        <br/>
+                        <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseType[]" value="1"/></span>Кирпичный</label>
+                        <br/>
+                        <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseType[]" value="2"/></span>Монолитный</label>
+                        <br/>
+                        <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseType[]" value="3"/></span>Монолитно-каркасный</label>
+                        <br/>
+                        <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseType[]" value="4"/></span>Монолитно-кирпичный</label>
+                        <br/>
+                        <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="houseType[]" value="5"/></span>Монолитно-панельный</label>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="help help_items">
+                      <div class="help__item" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:0}}">Текст для панельных домов.</div>
+                      <div class="help__item" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:1}}">Текст для кирпичных домов.</div>
+                      <div class="help__item" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:2}}">Текст для монолитных домов.</div>
+                      <div class="help__item" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:3}}">Текст для монолитно-каркасных домов.</div>
+                      <div class="help__item" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:4}}">Текст для монолитно-кирпичных домов.</div>
+                      <div class="help__item help__item_visible" data-bem="{&quot;help__item&quot;:{&quot;val&quot;:5}}">Монолитно-панельные дома представляют собой уникальную современную технологию, призванную быть экологичной и быстрой. Такие дома обычно стоят дешевле остальных.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="new-buildings-filter-ext__first_row new-buildings-filter-ext__first_row_padding">
+                <div class="new-buildings-filter-ext__col">
+                  <div class="new-buildings-filter-ext__controls_row">
+                    <div class="control-group clearfix">
+                      <label class="label" style="width: 100px; margin: 0 13px 6px 0;">
+                        <div class="label__text">Условия сделки</div>
+                      </label>
+                      <div class="select select_mode_radio select_theme_islands select_size_m select_width_150 select_corner_all i-bem" data-bem="{&quot;select&quot;:{&quot;name&quot;:&quot;conditionTrade&quot;}}">
+                        <input class="select__control" type="hidden" name="conditionTrade" value="" />
+                        <button class="button button_size_m button_theme_islands button__control select__button i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Не важно</span><i class="icon select__tick" aria-hidden="true"></i></button>
+                        <div class="popup popup_target_anchor popup_theme_islands popup_autoclosable i-bem" data-bem="{&quot;popup&quot;:{&quot;directions&quot;:[&quot;bottom-left&quot;,&quot;bottom-right&quot;,&quot;top-left&quot;,&quot;top-right&quot;]}}">
+                          <div class="menu menu_size_m menu_theme_islands menu_mode_radio menu__control select__menu i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu">
+                            <div class="menu-item menu-item_checked menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;&quot;}}" role="menuitem">Не важно</div>
+                            <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:1}}" role="menuitem">Прямая продажа</div>
+                            <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:2}}" role="menuitem">Переуступка</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><span class="dropdown dropdown_switcher_button dropdown_theme_islands i-bem" data-bem="{&quot;dropdown&quot;:{}}" style="position: absolute; top: 3px; right: 10px;"><button class="button button_theme_islands button_view_circle button_pseudo button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">?</span></button>
+                    <div
+                    class="popup popup_theme_islands popup_autoclosable popup_target_anchor i-bem" data-bem="{&quot;popup&quot;:{}}">
+                      <div class="popup__popup_content"><span class="plain_text plain_text_bold plain_text_size_11">Условия сделки</span>
+                        <div class="plain_text plain_text_size_11">
+                          <p>Текст об условиях сделки
+                            <br>Текст об условиях сделки на новой строке</p>
+                        </div>
+                      </div>
+                  </div>
+                  </span>
+                </div>
+              </div>
+              <div class="new-buildings-filter-ext__col">
+                <div class="new-buildings-filter-ext__controls_row">
+                  <label class="label" style="width: 75px; margin: 0 12px 6px 0;">
+                    <div class="label__text">Схема работы</div>
+                  </label><span class="radio-group radio-group_theme_islands radio-group_size_m radio-group_type_button control-group i-bem" data-bem="{&quot;radio-group&quot;:{}}"><label class="radio radio_type_button radio_theme_islands radio_size_m i-bem" data-bem="{&quot;radio&quot;:{}}"><button class="button button_togglable_radio button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">ДДУ (214 Ф3)</span></button>
+                  <input
+                  class="radio__control" type="radio" autocomplete="off" name="workSheme" value="0" />
+                  </label>
+                  <label class="radio radio_type_button radio_theme_islands radio_size_m i-bem" data-bem="{&quot;radio&quot;:{}}">
+                    <button class="button button_togglable_radio button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">ЖСК</span></button>
+                    <input class="radio__control" type="radio" autocomplete="off" name="workSheme" value="1" />
+                  </label>
+                  <label class="radio radio_type_button radio_theme_islands radio_size_m i-bem" data-bem="{&quot;radio&quot;:{}}">
+                    <button class="button button_togglable_radio button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Иное</span></button>
+                    <input class="radio__control" type="radio" autocomplete="off" name="workSheme" value="2" />
+                  </label>
+                  </span>
+                </div>
+              </div>
+              <div class="new-buildings-filter-ext__col">
+                <div class="new-buildings-filter-ext__controls_row">
+                  <div class="control-group clearfix">
+                    <label class="label" style="width: 100px; margin: 0 12px 6px 0;">
+                      <div class="label__text">Автор объявления</div>
+                    </label><span class="input input_theme_islands input_size_l input_width_175 input_nocorners i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" name="autor" placeholder="Название или телефон"/></span></span>
+                  </div>
+                </div>
+                <div class="new-buildings-filter-ext__controls_row">
+                  <div class="control-group clearfix">
+                    <label class="label" style="width: 100px; margin: 0 12px 6px 0;">
+                      <div class="label__text">&nbsp;</div>
+                    </label>
+                    <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="isPrivate" value="true"/></span>Частное</label>
+                  </div>
+                </div>
+              </div>
+              <div class="new-buildings-filter-ext__col">
+                <div class="new-buildings-filter-ext__controls_row" id="new-buildings-filter-ext-data-publikacii">
+                  <div class="control-group clearfix">
+                    <label class="label" style="width: 100px; margin: 0 12px 6px 0;">
+                      <div class="label__text">Дата публикации</div>
+                    </label>
+                    <div class="select select_mode_radio select_theme_islands select_size_m select_width_175 select_corner_left i-bem" data-bem="{&quot;select&quot;:{&quot;name&quot;:&quot;publishDate&quot;}}">
+                      <input class="select__control" type="hidden" name="publishDate" value="" />
+                      <button class="button button_size_m button_theme_islands button__control select__button i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Не важно</span><i class="icon select__tick" aria-hidden="true"></i></button>
+                      <div class="popup popup_target_anchor popup_theme_islands popup_autoclosable i-bem" data-bem="{&quot;popup&quot;:{&quot;directions&quot;:[&quot;bottom-left&quot;,&quot;bottom-right&quot;,&quot;top-left&quot;,&quot;top-right&quot;]}}">
+                        <div class="menu menu_size_m menu_theme_islands menu_mode_radio menu__control select__menu i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu">
+                          <div class="menu-item menu-item_checked menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;&quot;}}" role="menuitem">Не важно</div>
+                          <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;day&quot;}}" role="menuitem">За сутки</div>
+                          <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;week&quot;}}" role="menuitem">За неделю</div>
+                          <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;month&quot;}}" role="menuitem">За месяц</div>
+                          <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;3_month&quot;}}" role="menuitem">За 3 месяца</div>
+                          <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;all_time&quot;}}" role="menuitem">За все время</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="new-buildings-filter-ext__controls_row">
+                  <div class="control-group clearfix">
+                    <label class="label" style="width: 100px; margin: 0 12px 6px 0;">
+                      <div class="label__text">&nbsp;</div>
+                    </label>
+                    <label class="checkbox checkbox_theme_islands checkbox_size_m i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="hasPhoto" value="true"/></span>Только с фото</label>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="new-buildings-search-filter__line">
+          <div class="new-buildings-search-filter__col">
+            <button class="button button_theme_islands button_size_xl button_action_primary button_type_submit button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" id="search_filter_submit_button" type="submit"><span class="button__text">Найти</span></button>
+          </div>
+          <div class="new-buildings-search-filter__col"><a class="link link_font_13 link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="#" id="toggle-filter-ext-link" data-text="Подробный поиск" data-toggle-text="Краткий поиск">Подробный поиск</a></div>
+          <div class="new-buildings-search-filter__col"><span class="spin spin_theme_islands spin_size_m"></span></div>
+          <div class="new-buildings-search-filter__col new-buildings-search-filter__col_right">
+            <button class="button button_theme_islands button_size_xl button_type_submit button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" id="search_filter_return_button" type="submit"><span class="button__text">Вернуться к ЖК</span></button>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div class="new-buildings-content__body">
+      <div class="new-buildings-content__list">
+        <div class="content_layout clearfix">
+          <div class="content_layout__left">
+            <div class="search_sorts clearfix">
+              <div class="search_sorts__pull_left">
+                <div class="search_sorts__label">Сортировать&nbsp;</div>
+                <div class="select select_mode_radio select_theme_islands select_size_m select_liketext i-bem" data-bem="{&quot;select&quot;:{}}" id="search_filter_sorts">
+                  <input class="select__control" type="hidden" value="price_desc" />
+                  <button class="button button_size_m button_theme_islands button__control select__button i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">по цене от наибольшей</span><i class="icon select__tick" aria-hidden="true"></i></button>
+                  <div class="popup popup_target_anchor popup_theme_islands popup_autoclosable i-bem" data-bem="{&quot;popup&quot;:{&quot;directions&quot;:[&quot;bottom-left&quot;,&quot;bottom-right&quot;,&quot;top-left&quot;,&quot;top-right&quot;]}}">
+                    <div class="menu menu_size_m menu_theme_islands menu_mode_radio menu__control select__menu i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu">
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;price_asc&quot;}}" role="menuitem">по цене от наименьшей</div>
+                      <div class="menu-item menu-item_checked menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;price_desc&quot;}}" role="menuitem">по цене от наибольшей</div>
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;address_asc&quot;}}" role="menuitem">по адресу</div>
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;area_asc&quot;}}" role="menuitem">по площади от наименьшей</div>
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;area_desc&quot;}}" role="menuitem">по площади от наибольшей</div>
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:&quot;publish_desc&quot;}}" role="menuitem">по дате добавления</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search_sorts__pull_right">
+                <div class="dropdown dropdown_switcher_link dropdown_theme_islands dropdown_size_m i-bem" data-bem="{&quot;dropdown&quot;:{}}"><a class="link link_theme_islands link_size_m link_font_11 link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0"><span>Отправить</span><div class="link__tick icon"></div></a>
+                  <div class="popup popup_theme_islands popup_autoclosable popup_target_anchor i-bem"
+                  data-bem="{&quot;popup&quot;:{}}">
+                    <div class="send_search_results">
+                      <div class="send_search_results__row"><span class="radio-group radio-group_theme_islands radio-group_size_m radio-group_type_button control-group i-bem" data-bem="{&quot;radio-group&quot;:{}}"><label class="radio radio_type_button radio_theme_islands radio_size_m i-bem" data-bem="{&quot;radio&quot;:{}}"><button class="button button_togglable_radio button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Эту страницу</span></button>
+                        <input
+                        class="radio__control" type="radio" autocomplete="off" name="radio-islands" value="1" />
+                        </label>
+                        <label class="radio radio_type_button radio_theme_islands radio_size_m i-bem" data-bem="{&quot;radio&quot;:{}}">
+                          <button class="button button_togglable_radio button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Все результаты</span></button>
+                          <input class="radio__control" type="radio" autocomplete="off" name="radio-islands" value="2" />
+                        </label>
+                        </span>
+                      </div>
+                      <div class="send_search_results__row">
+                        <label class="checkbox checkbox_theme_islands checkbox_size_m checkbox_checked i-bem" data-bem="{&quot;checkbox&quot;:{}}"><span class="checkbox__box"><input class="checkbox__control" type="checkbox" autocomplete="off" name="name1" value="val_1" checked="checked"/></span>Без контактов продавца</label>
+                      </div>
+                      <div class="send_search_results__row clearfix"><span class="input input_theme_islands input_size_m input_width_available i-bem" data-bem="{&quot;input&quot;:{}}" style="float: none; width: 100%;"><span class="input__box"><input class="input__control" name="name12" placeholder="Email получателя"/></span></span>
+                      </div>
+                      <div class="send_search_results__row">
+                        <textarea class="textarea textarea_theme_islands textarea_size_m textarea_width_available textarea__control i-bem" data-bem="{&quot;textarea&quot;:{}}" placeholder="Комментарий для получателя" rows="5"></textarea>
+                      </div>
+                      <div class="send_search_results__row">
+                        <button class="button button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Отправить</span></button><a class="link link_font_11 link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="#" style="margin-left: 10px;">отмена</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown dropdown_switcher_button dropdown_theme_islands dropdown_size_m i-bem" data-bem="{&quot;dropdown&quot;:{}}" style="margin-left: 20px;"><a class="link link_theme_islands link_size_m link_font_11 link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0"><span>Распечатать</span><div class="link__tick icon"></div></a>
+                  <div class="popup popup_theme_islands popup_autoclosable popup_target_anchor i-bem"
+                  data-bem="{&quot;popup&quot;:{}}">
+                    <div class="menu menu_theme_islands menu_size_m menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:1}}" role="menuitem"><span>объекты этой страницы&nbsp</span><span class="help">27</span></div>
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:2}}" role="menuitem"><span>результаты всего поиска&nbsp</span><span class="help">1427</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search_results i-bem" data-bem="{&quot;search_results&quot;:{&quot;favorite_url&quot;:&quot;/desktop.blocks/user_lists_in_search/test.json&quot;,&quot;new_list_url&quot;:&quot;/desktop.blocks/user_lists_in_search/add_test.json&quot;,&quot;add_to_list_url&quot;:&quot;/desktop.blocks/user_lists_in_search/test.json&quot;,&quot;comment_url&quot;:&quot;/desktop.blocks/user_lists_in_search/test.json&quot;}}"></div>
+            <div class="search_footer">
+              <div class="controls_row clearfix">
+                <div class="controls_row__col">
+                  <div class="pagination pagination_hidden i-bem" data-bem="{&quot;pagination&quot;:{}}">
+                    <div class="pagination__line clearfix">
+                      <div class="pagination__col">
+                        <div class="text text_font_m text_height_l">Страницы</div>
+                      </div>
+                      <div class="pagination__col">
+                        <div class="control-group pagination__pages"><a class="button button_theme_islands button_size_l button_type_link button__control i-bem" data-bem="{&quot;button&quot;:{&quot;page&quot;:1}}" role="button" href="/"><span class="button__text">Первая</span></a><a class="button button_theme_islands button_size_l button_type_link button__control i-bem"
+                          data-bem="{&quot;button&quot;:{&quot;page&quot;:2}}" role="button" href="/"><span class="button__text">2</span></a><a class="button button_theme_islands button_size_l button_type_link button__control i-bem" data-bem="{&quot;button&quot;:{&quot;page&quot;:3}}"
+                          role="button" href="/"><span class="button__text">3</span></a><a class="button button_theme_islands button_size_l button_type_link button_checked button__control i-bem" data-bem="{&quot;button&quot;:{&quot;page&quot;:4}}" role="button"
+                          href="/"><span class="button__text">4</span></a><a class="button button_theme_islands button_size_l button_type_link button__control i-bem" data-bem="{&quot;button&quot;:{&quot;page&quot;:5}}" role="button" href="/"><span class="button__text">5</span></a>
+                          <a
+                          class="button button_theme_islands button_size_l button_type_link button__control i-bem" data-bem="{&quot;button&quot;:{&quot;page&quot;:6}}" role="button" href="/"><span class="button__text">6</span></a><a class="button button_theme_islands button_size_l button_type_link button__control i-bem" data-bem="{&quot;button&quot;:{&quot;page&quot;:7}}" role="button" href="/"><span class="button__text">Следующая</span></a></div>
+                        <div
+                        class="text text_font_s text_height_l pagination__status">Показано 50 из 1231</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_layout__right">
+          <div class="new-buildings-sidebar">
+            <div class="sidebar-image">
+              <a class="sidebar-image__link" href="#"><img class="sidebar-image__image" src="../../img/bn/250x130/bn_1.png" alt="" /></a>
+            </div>
+            <div class="sidebar-text-list">
+              <div class="sidebar-text-list__items">
+                <div class="sidebar-text-list__item">
+                  <div class="sidebar-text-list__left"><a class="sidebar-text-list__link" href="#"><i class="icon icon_sidebar_bricks" aria-hidden="true"></i></a></div>
+                  <div class="sidebar-text-list__right"><a class="sidebar-text-list__link" href="#"><span class="sidebar-text-list__text">Плюсы и минусы домов СФК. На что обращать внимание при покупке.</span></a></div>
+                </div>
+                <div class="sidebar-text-list__item">
+                  <div class="sidebar-text-list__left"><a class="sidebar-text-list__link" href="#"><i class="icon icon_sidebar_ecology" aria-hidden="true"></i></a></div>
+                  <div class="sidebar-text-list__right"><a class="sidebar-text-list__link" href="#"><span class="sidebar-text-list__text">Экологическая ситуация на Васильевском острове.</span></a></div>
+                </div>
+                <div class="sidebar-text-list__item">
+                  <div class="sidebar-text-list__left"><a class="sidebar-text-list__link" href="#"><i class="icon icon_sidebar_user-plus" aria-hidden="true"></i></a></div>
+                  <div class="sidebar-text-list__right"><a class="sidebar-text-list__link" href="#"><span class="sidebar-text-list__text">Что такое встречка.<br> Успешные истории.</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-thumbs-list">
+              <div class="sidebar-thumbs-list__items">
+                <div class="sidebar-thumbs-list__item">
+                  <a class="sidebar-thumbs-list__link" href="#">
+                    <div class="sidebar-thumbs-list__image-wrapper sidebar-thumbs-list__image-wrapper_video"><img class="sidebar-thumbs-list__image" src="../../img/thumbs/120x90/video_1.png" alt="" /></div><span class="sidebar-thumbs-list__text">Объезд новых ЖК Приморского района (май 2015)</span></a>
+                </div>
+                <div class="sidebar-thumbs-list__item">
+                  <a class="sidebar-thumbs-list__link" href="#">
+                    <div class="sidebar-thumbs-list__image-wrapper sidebar-thumbs-list__image-wrapper_video"><img class="sidebar-thumbs-list__image" src="../../img/thumbs/120x90/video_2.png" alt="" /></div><span class="sidebar-thumbs-list__text">Интервью руководства ЛСР о ситуации с новостройками в СПб</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-smart-list">
+              <div class="sidebar-smart-list__items">
+                <div class="sidebar-smart-list__item">
+                  <a class="sidebar-smart-list__link" href="#"><img class="sidebar-smart-list__image" src="../../img/thumbs/240x80/img_1.png" alt="" /><span class="sidebar-smart-list__text">Жилой комплекс Duderhof Club, элитные квартиры на Петергофском шоссе</span><span class="sidebar-smart-list__help">1 982 предложения</span></a>
+                </div>
+                <div class="sidebar-smart-list__item">
+                  <a class="sidebar-smart-list__link" href="#"><img class="sidebar-smart-list__image" src="../../img/thumbs/240x80/img_2.png" alt="" /><span class="sidebar-smart-list__text">ЖК «Три ветра» — квартиры бизнес-класса в 10 минутах от Лахта-Центра</span><span class="sidebar-smart-list__help">672 предложения</span></a>
+                </div>
+                <div class="sidebar-smart-list__item">
+                  <a class="sidebar-smart-list__link" href="#"><img class="sidebar-smart-list__image" src="../../img/thumbs/240x80/img_3.png" alt="" /><span class="sidebar-smart-list__text">Хотите квартиру бизнес-класса за 4млн? ЖК «Александровский» в Пушкине</span><span class="sidebar-smart-list__help">917 предложений</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-image">
+              <a class="sidebar-image__link" href="#"><img class="sidebar-image__image" src="../../img/bn/250x250/bn_1.png" alt="" /></a>
+            </div>
+            <div class="sidebar-smart-list">
+              <div class="sidebar-smart-list__items">
+                <div class="sidebar-smart-list__item">
+                  <a class="sidebar-smart-list__link" href="#"><img class="sidebar-smart-list__image" src="../../img/thumbs/240x80/img_1.png" alt="" /><span class="sidebar-smart-list__text">Квартиры с балконом до 3 млн. рублей в ЖК Адмиралтейского района</span><span class="sidebar-smart-list__help">2 291 объявление</span></a>
+                </div>
+                <div class="sidebar-smart-list__item">
+                  <a class="sidebar-smart-list__link" href="#"><img class="sidebar-smart-list__image" src="../../img/thumbs/240x80/img_2.png" alt="" /><span class="sidebar-smart-list__text">1 и 2-ух комнатные квартиры в ЖК для молодой семьи рядом с парком</span><span class="sidebar-smart-list__help">1 147 объявлений</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-thumbs-list">
+              <div class="sidebar-thumbs-list__items">
+                <div class="sidebar-thumbs-list__item">
+                  <a class="sidebar-thumbs-list__link" href="#">
+                    <div class="sidebar-thumbs-list__image-wrapper"><img class="sidebar-thumbs-list__image" src="../../img/thumbs/120x100/img_1.png" alt="" /></div><span class="sidebar-thumbs-list__text">Квартира с видом на Неву! 7-я линия, 51 м2, высокие потолки, с мебелью, 7 500 000</span></a>
+                </div>
+                <div class="sidebar-thumbs-list__item">
+                  <a class="sidebar-thumbs-list__link" href="#">
+                    <div class="sidebar-thumbs-list__image-wrapper"><img class="sidebar-thumbs-list__image" src="../../img/thumbs/120x100/img_2.png" alt="" /></div><span class="sidebar-thumbs-list__text">Видовая квартира на Среднем проспекте! Окна в пол, новый ремонт, 12 млн.</span></a>
+                </div>
+                <div class="sidebar-thumbs-list__item">
+                  <a class="sidebar-thumbs-list__link" href="#">
+                    <div class="sidebar-thumbs-list__image-wrapper"><img class="sidebar-thumbs-list__image" src="../../img/thumbs/120x100/img_3.png" alt="" /></div><span class="sidebar-thumbs-list__text">2-ух комнатая квартира на 11-й линии. Высокие потолки, 6 250 000</span></a>
+                </div>
+                <div class="sidebar-thumbs-list__item">
+                  <a class="sidebar-thumbs-list__link" href="#">
+                    <div class="sidebar-thumbs-list__image-wrapper"><img class="sidebar-thumbs-list__image" src="../../img/thumbs/120x100/img_4.png" alt="" /></div><span class="sidebar-thumbs-list__text">Прекрасная однушка у м. Василеостровская. Новый ремонт 8,5 млн., не жили</span></a>
+                </div>
+                <div class="sidebar-thumbs-list__item">
+                  <a class="sidebar-thumbs-list__link" href="#">
+                    <div class="sidebar-thumbs-list__image-wrapper"><img class="sidebar-thumbs-list__image" src="../../img/thumbs/120x100/img_5.png" alt="" /></div><span class="sidebar-thumbs-list__text">Элитная 3-х комнатная квартира на набережной Невы со скидкой, 18 900 000</span></a>
+                </div>
+                <div class="sidebar-thumbs-list__item">
+                  <a class="sidebar-thumbs-list__link" href="#">
+                    <div class="sidebar-thumbs-list__image-wrapper"><img class="sidebar-thumbs-list__image" src="../../img/thumbs/120x100/img_6.png" alt="" /></div><span class="sidebar-thumbs-list__text">2-х комнатная квартира с отличным ремонтом в ЖК «Ласточкино гнездо»</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-text-list">
+              <div class="sidebar-text-list__items">
+                <div class="sidebar-text-list__item"><a class="sidebar-text-list__link" href="#"><span class="sidebar-text-list__title">ГЛАВНОЕ</span></a><a class="sidebar-text-list__link" href="#"><span class="sidebar-text-list__text">Рынок жилья Петербурга. Цены 5 – 11 июня</span></a></div>
+                <div
+                class="sidebar-text-list__item"><a class="sidebar-text-list__link" href="#"><span class="sidebar-text-list__title">НОВОСТИ</span></a><a class="sidebar-text-list__link" href="#"><span class="sidebar-text-list__text">Обновленный Генплан: каким инвестпроектам повезло</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="new-buildings-content__empty"></div>
+    </div>
+    </div>
+    <div class="footer">
+      <div class="footer__row clearfix">
+        <div class="footer__col">
+          <ul class="links_list">
+            <li class="links_list__item"><a class="links_list__link" href="/">Жилая недвижимость</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Загородная недвижимость</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Коммерческая недвижимость</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Недвижимость за рубежом</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Недвижимость в Латвии</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="links_list">
+            <li class="links_list__item"><a class="links_list__link" href="/">Оценка недвижимости</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Юридическая консультация</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Аналитика и аудит</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="links_list">
+            <li class="links_list__item"><a class="links_list__link" href="/">Новости рынка и индустрии</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Статьи и публикации</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Пресс-релизы компаний</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Видео</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="links_list">
+            <li class="links_list__item"><a class="links_list__link" href="/">О группе компаний</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Правила перепечатки</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col"><a class="button button_theme_islands button_size_m button_action_warning button__control" role="button" type="button" href="/"><span class="button__text">Подать объявление</span></a>
+          <ul class="links_list" style="margin-top: 10px;">
+            <li class="links_list__item"><a class="links_list__link" href="/">Подписка на издания БН</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Реклама на сайте</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <div class="help help_font_13">Генеральный партнер</div>
+          <a class="adv" style="width: 120px;height: 36px;margin:10px 0 0 0;" href="http://alfabank.ru"><img class="image" role="img" src="/img/alfa.png" /></a>
+        </div>
+      </div>
+      <div class="footer__powered"><a class="link link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="http://aidem.ru" title=""><span class="link__powered_by">Design by</span><span class="link__powered_logo"></span></a></div>
+    </div>
+    </div>
+    <script src="js/merged.min.js?1446471803005"></script>
+  </body>
+
+</html>

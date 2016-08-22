@@ -1,0 +1,16 @@
+block('calendar')(
+    content()(function() {
+        var ctx = this.ctx,
+            name = ctx.name ? ctx.name : 'calendar',
+            id = ctx.id ? ctx.id : 'calendar',
+            text = ctx.text ? ctx.text : '';
+
+        return [
+            {
+                elem: 'input',
+                tag: 'input',
+                attrs: { name: name, id: id, value: text },
+            }
+        ]
+    })
+);

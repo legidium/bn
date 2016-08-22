@@ -1,0 +1,178 @@
+block('retail-data')(
+	js()(true),
+	content()(function() {
+		var objects = this.ctx.objects;
+		var plans = this.ctx.plans;
+		var parameters = this.ctx.parameters;
+		var description = this.ctx.description;
+		var address = this.ctx.address;
+		var items = this.ctx.items;
+
+		return [
+			{
+				elem: 'left',
+				content: [
+					{
+						elem: 'parameters',
+						parameters: parameters
+					},
+					{
+						elem: 'description',
+						content: description
+					}
+				]
+			},
+
+			{
+				elem: 'right',
+				content: [
+					{
+						elem: 'map-wrapper',
+						items: items
+					},
+					{
+						elem: 'address',
+						content: address
+					},
+					{
+						elem: 'image-wrapper',
+						content: [
+							{
+								elem: 'image',
+								tag: 'img'
+							}
+						]
+					},
+					{
+						elem: 'galleries',
+						content: [
+							{
+								elem: 'gallery',
+								collection: objects
+							},
+							{
+								elem:  'gallery',
+								mods: { 'plan-gallery': true },
+								collection: plans
+							}
+						]
+					}
+				]
+			}
+		]
+	}),
+
+	elem('parameters')(
+		tag()('ul'),
+		content()(function () {
+			var parameters = this.ctx.parameters;
+
+			return parameters.map(function (parameter) {
+
+				if (parameter.separator) {
+                    return { elem: 'separator' };
+                }
+
+				return {
+					tag: 'li',
+					elem: 'parameter',
+					content: [
+						{
+							elem: 'parameter-title',
+							content: parameter.title
+						},
+						{
+							elem: 'parameter-value',
+							content: parameter.value
+						}
+					]
+				};
+			});
+		})
+	),
+
+	elem('gallery')(
+		content()(function () {
+			var collection = this.ctx.collection;
+
+			return collection.map(function (item) {
+				return {
+					elem: 'gallery-item',
+					attrs: {
+						'data-large-image-url': item.largeImageUrl ? item.largeImageUrl : '',
+						'data-youtube-id': item.youtubeID ? item.youtubeID : ''
+					},
+					content: [
+						{
+							elem: 'preview-image',
+							tag: 'img',
+							attrs: {
+								src: item.imageUrl ? item.imageUrl : ''
+							}
+						},
+						{
+							elem: 'border-top'
+						},
+						{
+							elem: 'border-bottom'
+						},
+						{
+							elem: 'border-right'
+						},
+						{
+							elem: 'border-left'
+						}
+					]
+				};
+			});
+		})
+	),
+
+	elem('map-wrapper')(
+		content()(function(){
+			var content = [];
+			var items = this.ctx.items;
+
+			content.push({
+				block : 'map',
+				mods : { provider : 'yandex' },
+				center : [59.938596, 30.312232],
+				zoom : 17,
+				disableScroll: true,
+				clustering: true,
+				changeSize: true,
+				controls : [
+					'fullscreenControl'
+				],
+				geoObjects : [
+					{
+						type : 'placemark',
+						coordinates : [59.938596, 30.312232],
+						hintContent : 'Шпалерная 51',
+						objectData : items[0]
+					},
+					{
+						type : 'placemark',
+						coordinates : [59.938096, 30.312239],
+						hintContent : 'Плотников 51',
+						objectData : items[1]
+					},
+					{
+						type : 'placemark',
+						coordinates : [59.938096, 30.312231],
+						hintContent : 'Кузнечная 51',
+						objectData : items[2]
+					}
+				]
+			});
+
+			content.push({
+				block: 'search_map_popup',
+				directions : ['top-center'],
+				items: this.ctx.items || []
+			});
+
+			return content;
+		})
+	)
+);

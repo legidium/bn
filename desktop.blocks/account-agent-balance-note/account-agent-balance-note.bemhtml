@@ -1,0 +1,57 @@
+block('account-agent-balance-note')(
+    content()(function() {
+        return [
+            {
+                elem: 'title',
+                content: 'Если закончилось место под объявления, вы можете докупить необходимое количество.',
+            },
+            {
+                elem: 'text',
+                content: 'Оплата за них будет включена в ежемесячный счет клиента. Данная операция требует подтвержения вашего модератора.'
+            },
+            {
+                elem: 'control-line',
+                elemMods: { margin: 's' },
+                content: [
+                    {
+                        elem: 'control-col',
+                        elemMods: { width: 'select', size: 'l' },
+                        content: [
+                            {
+                                block: 'select',
+                                mods: { mode: 'radio', theme: 'islands', size: 'm', width : 'available' },
+                                name: 'select',
+                                val: 1,
+                                options: [
+                                    { val: 1, text: '16 Общих позиций &ndash; 2 670 <span class="currency">Р</span>' },
+                                    { val: 2, text: '18 Общих позиций &ndash; 2 670 <span class="currency">Р</span>' },
+                                    { val: 3, text: '20 Общих позиций &ndash; 2 670 <span class="currency">Р</span>' },
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'control-col',
+                        elemMods: { size: 'l' },
+                        content: [
+                            {
+                                elem: 'note',
+                                content: 'Дата конца действия вашего тарифа - 18 октября 2015 г.'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'buttons',
+                content: [
+                    {
+                        block: 'button',
+                        mods: { theme: 'islands', size: 'xl', gray: true },
+                        text: 'Заказать'
+                    }
+                ]
+            }
+        ];
+    })
+)

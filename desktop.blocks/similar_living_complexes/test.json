@@ -1,0 +1,50 @@
+{
+	"items": [
+		{
+			"js": {
+				"id": 1
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Ласточкино гнездо",
+			"address_text": "Октябрьская наб., 118",
+			"address_help": "м. Ломоносовская, 40 мин. на транспорте",
+			"developer_name": "ЛенСпецСМУ",
+			"developer_logo": "../../img/new-buildings-developer-logo.png",
+			"link": "http://bn.ru",
+			"image": "../../img/new-buildings-list-item-sample.jpg",
+			"class_text": "Эконом, Бизнес-класс",
+			"class_params_text": "Монолит, охрана, консьерж, фитнес в шаговой доступности.",
+			"buildings_text": "5 корпусов: 2 сдано, остальные — в2017, 2018 и 2019",
+			"appartments_text": "4270 квартир: 1 — 4к.кв., студии, свободные план.; от 20 до 180 м²",
+			"total_items_text": "2115 предложений",
+			"price_min": "1 450 500",
+			"price_max": "4 500 000",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 2
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Ласточкино гнездо",
+			"address_text": "Октябрьская наб., 118",
+			"address_help": "м. Ломоносовская, 40 мин. на транспорте",
+			"developer_name": "ЛенСпецСМУ",
+			"developer_logo": "../../img/new-buildings-developer-logo-blank.png",
+			"link": "http://bn.ru/2",
+			"image": "../../img/new-buildings-list-item-blank.png",
+			"class_text": "Эконом, Бизнес-класс",
+			"class_params_text": "Монолит, охрана, консьерж, фитнес в шаговой доступности.",
+			"buildings_text": "5 корпусов: 2 сдано, остальные — в2017, 2018 и 2019",
+			"appartments_text": "4270 квартир: 1 — 4к.кв., студии, свободные план.; от 20 до 180 м²",
+			"total_items_text": "2115 предложений",
+			"price_min": "1 450 500",
+			"price_max": "4 500 000",
+			"currency": "Р"
+		}
+	]
+}

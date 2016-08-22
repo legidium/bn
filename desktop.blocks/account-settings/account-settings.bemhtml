@@ -1,0 +1,190 @@
+block('account-settings')(
+    js()(true),
+    tag()('form'),
+    content()(function() {
+        var content = [];
+        var data = this.ctx.data || {};
+        var dashboard = 'account-dashboard';
+        var view = this.ctx.mods.view || 'person';
+        var emailTitleHelp;
+
+        if (view == 'agent' || view == 'agency') {
+            emailTitleHelp = 'Вы можете отправить списки объявлений своим клиентам с подставновкой своих контактных данных вместо данных, опубликованных на сайте.';
+        }
+
+        content.push([
+            {
+                block: 'table',
+                mods: { height: true },
+                content: [
+                    {
+                        elem: 'row',
+                        elemMods: { type: 'header', border: 'b' },
+                        content: [
+                            {
+                                elem: 'cell',
+                                mix: { block: dashboard, elem: 'item', elemMods: { 'padding-vh' : 'm-l' } },
+                                content: [
+                                    {
+                                        elem: 'text',
+                                        mix: { block: dashboard, elem: 'title', elemMods: { nomargin: true } },
+                                        content: 'Настройки'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'row',
+                        elemMods: { type: 'body' },
+                        content: [
+                            {
+                                block: 'table',
+                                mods: { height: true },
+                                content: [
+                                    {
+                                        elem: 'row',
+                                        content: [
+                                            {
+                                                elem: 'cell',
+                                                content: [
+                                                    {
+                                                        block: 'form-group',
+                                                        content: [
+                                                            {
+                                                                elem: 'item',
+                                                                mix: { block: dashboard, elem: 'item', elemMods: { 'padding-vh' : 'm-l' } },
+                                                                content: [
+                                                                    {
+                                                                        elem: 'title',
+                                                                        content: 'Настройка публикации'
+                                                                    },
+                                                                    {
+                                                                        elem: 'content',
+                                                                        content: [
+                                                                            {
+                                                                                block: 'checkbox-group',
+                                                                                mods: { theme: 'islands', size: 'l' },
+                                                                                name: 'checkbox-line',
+                                                                                val: [1, 2],
+                                                                                options: [
+                                                                                    { val: 1, text: 'Получить SMS сообщения со страницы объявления' },
+                                                                                    { val: 2, text: 'Получать электронные письма со страницы объявления' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        elem: 'help',
+                                                                        content: 'Пользователи, которые увидят ваше объявление, смогут отправить вам SMS<br> или письмо на электронную почту, если вы этого хотите.'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                elem: 'item',
+                                                                mix: { block: dashboard, elem: 'item', elemMods: { 'padding-vh' : 'm-l', nopadding: 'b' } },
+                                                                content: [
+                                                                    {
+                                                                        elem: 'title',
+                                                                        content: 'Настройка отправки',
+                                                                    },
+                                                                    emailTitleHelp ? { elem: 'title-help', content: emailTitleHelp } : '',
+                                                                    {
+                                                                        elem: 'content',
+                                                                        mix: { block: dashboard, elem: 'item', elemMods: { padding : 'xs' } },
+                                                                        content: [
+                                                                            {
+                                                                                block: 'checkbox-group',
+                                                                                mods: { theme: 'islands', size: 'l' },
+                                                                                name: 'checkboxes',
+                                                                                val: [1],
+                                                                                options: [
+                                                                                    { val: 1, text: 'Отправлять со своей почты ' + (data.email || '') }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        elem: 'help',
+                                                                        content: 'Каждый раз, когда вы отправляете письмо со страницы сайта bn.ru — страницу объявления или делитесь своим списком, например — вы можете подставить свой электронный адрес вместо hello@bn.ru'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                elem: 'item',
+                                                                mix: { block: dashboard, elem: 'item', elemMods: { padding : 'l' } },
+                                                                content: [
+                                                                    {
+                                                                        elem: 'content',
+                                                                        content: [
+                                                                            {
+                                                                                elem: 'label',
+                                                                                content: 'Подпись к письму'
+                                                                            },
+                                                                            {
+                                                                                block: 'textarea',
+                                                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                                                attrs: { style: 'height: 117px; margin-bottom: 20px;'},
+                                                                                content: data.mail_signature || ''
+                                                                            },
+                                                                            {
+                                                                                block: 'button',
+                                                                                mods: { theme: 'islands', size: 'xl', font: 'm' },
+                                                                                text: 'Сохранить подпись'
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elem: 'cell',
+                                                mix: { block: dashboard , elem: 'sidebar', elemMods: { width: 'm' } },
+                                                content: [
+                                                    {
+                                                        block: 'form-group',
+                                                        mix: { block: dashboard, elem: 'item', elemMods: { 'padding-vh' : 'm-l' } },
+                                                        content: [
+                                                            {
+                                                                elem: 'title',
+                                                                content: 'Сортировка в поиске по-умолчанию'
+                                                            },
+                                                            {
+                                                                elem: 'content',
+                                                                content: [
+                                                                    {
+                                                                        block : 'menu',
+                                                                        mods : { theme : 'islands', size : 'm', mode : 'radio' },
+                                                                        val: 1,
+                                                                        content : [
+                                                                            { block : 'menu-item', val : 1, content : 'по цене от наименьшей' },
+                                                                            { block : 'menu-item', val : 2, content : 'по цене от наибольшей' },
+                                                                            { block : 'menu-item', val : 3, content : 'по адресу А — я' },
+                                                                            { block : 'menu-item', val : 4, content : 'по адресу Я — а' },
+                                                                            { block : 'menu-item', val : 5, content : 'по площади от наименьшей' },
+                                                                            { block : 'menu-item', val : 6, content : 'по площади от наибольшей' },
+                                                                            { block : 'menu-item', val : 7, content : 'по дате добавления' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]);
+
+        return content;
+    })
+)

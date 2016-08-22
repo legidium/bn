@@ -1,0 +1,34 @@
+@require "../../design/stylus/index"
+    
+.account-dashboard-balance-control
+    margin-bottom 10px
+    
+    &_hidden
+        display none
+    
+    &_inline
+        display inline-block
+        margin-right 20px
+        vertical-align top
+        
+        &:last-child
+            margin-right 0
+        
+    &__value
+        display inline-block
+        border 1px solid #e5e5e5
+        border-right none
+        
+        font-size 13px
+        font-weight bold
+        line-height 35px
+        
+        width 110px
+        height 35px
+        padding 0 5px
+        text-align center
+        vertical-align top
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
+        border-box()

@@ -1,0 +1,41 @@
+block('account-my-subs-list-item')(
+    content()(function() {
+        return [
+            {
+                attrs: applyNext().attrs,
+                elem: 'row',
+                content: {
+                    elem: 'row-inner',
+                    content: [
+                        {
+                            elem: 'cell',
+                            mods: { title: true },
+                            content: [
+                                { elem: 'title', content: applyNext().title || '&nbsp;' },
+                                { elem: 'description', content: applyNext().description || '&nbsp;' },
+                            ]
+                        },
+                        {
+                            elem: 'cell',
+                            mods: { date: true },
+                            content: [
+                                { elem: 'date', content: applyNext().date_text || '&nbsp;' },
+                                {
+                                    block: 'link',
+                                    mix: { block: 'account-my-subs-list-item', elem: 'button-remove' },
+                                    content: [
+                                        {
+                                            block: 'icon',
+                                            attrs: { style: 'width: 15px; height: 15px;' },
+                                            mods: { action: 'remove' }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ];
+    })
+);

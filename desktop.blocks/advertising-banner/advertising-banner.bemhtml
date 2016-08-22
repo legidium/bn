@@ -1,0 +1,9 @@
+block('advertising-banner')(
+	content()(function() {
+		return {
+            block: 'banner',
+            href: '#',
+            url: '../../img/ad-content__ban.jpg'
+        };
+	})
+)

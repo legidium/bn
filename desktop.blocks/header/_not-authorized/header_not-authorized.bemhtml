@@ -1,0 +1,82 @@
+block('header')(
+	mix()([{block: 'clearfix'}]),
+    content()(function() {
+    	return [
+					{
+						block: 'logo'
+					},
+					{
+						block: 'pull_left',
+						content: {
+							block: 'header_menu',
+							items: [
+								{text: 'Объявления', attrs: {href: '/'}, mods: {active: true}},
+								{text: 'Новостройки', attrs: {href: '/'}},
+								{text: 'Аналитика и статьи', attrs: {href: '/'}},
+								{text: 'Услуги', attrs: {href: '/'}},
+							]
+						}
+					},
+					{
+						block: 'pull_left',
+						attrs: { style: 'margin-left: 20px;' },
+						content: {
+							block: 'adv',
+							width: 120,
+							height: 49
+						}
+					},
+					{
+						block: 'pull_right',
+						content: {
+							block: 'header_nav',
+							content: [
+								{
+									elem: 'item',
+									mods: {first: true},
+									content: {
+							            block: 'button',
+							            js: false,
+							            tag: 'a',
+							            attrs: { href: '/' },
+							            mods : { theme : 'islands', size : 'm', action: 'warning' },
+							            text: 'Подать объявление'
+							        }
+								},
+								{
+									elem: 'item',
+									content: {
+							            block: 'button',
+							            js: false,
+							            tag: 'a',
+							            attrs: { href: '/' },
+							            mods : {theme : 'islands', size : 'm'},
+							            text: '10',
+							            icon: {
+									        block : 'icon',
+									        mods : { action : 'star' }
+									    }
+							        }
+								},
+								{
+									elem: 'item',
+									content: {
+										block: 'button',
+							            js: false,
+							            tag: 'a',
+							            attrs: { href: '#' },
+							            cls: 'pull_right',
+							            mods : { theme : 'islands', size : 'm' },
+							            text: 'Войти на БН',
+							            icon: {
+									        block : 'icon',
+									        mods : { action : 'key' }
+									    }
+									}
+								}
+							]
+						}
+					}
+				];
+    })
+);

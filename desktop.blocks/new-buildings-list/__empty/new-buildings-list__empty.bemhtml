@@ -1,0 +1,37 @@
+block('new-buildings-list').elem('empty')(
+    content()(function() {
+        return [
+            {
+                elem: 'error-message',
+                content: [
+                    {
+                        block: 'text',
+                        mods: { error: true },
+                        content: 'К сожалению, жилые комплексы не найдены.'
+                    },
+                    {
+                        block: 'text',
+                        content: [
+                            'Попробуйте изменить параметры поиска или посмотреть жилые комплексы на ',
+                            { tag: 'a', attrs: { href: '#' }, content: 'карте'},
+                            '.'
+                        ]
+                    }
+                ]
+            },
+            {
+                block: 'new-buildings-list-other',
+                content: []
+            },
+            {
+                block: 'link',
+                content: [
+                    {
+                        tag: 'img',
+                        attrs: { src: '../../img/new-buildings-list-bannner.png', alt: ''}
+                    }
+                ]
+            }
+        ];
+    })
+)

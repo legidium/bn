@@ -1,0 +1,1075 @@
+block('search_full')(
+
+	js()(true),
+
+	content()(function(){
+
+		var dop = this.mods.dop || false;
+
+
+
+		 var fNames = {
+            action: 'action', 
+            target: 'target',
+            priceFrom: 'priceFrom',
+            priceTo: 'priceTo',
+            currency: 'currency',
+            priceMode: 'priceMode',
+
+
+            flatTypes: 'flatTypes',
+            flatTypes1: 'flatTypes1',
+            flatTypes2: 'flatTypes2',
+            
+
+            isNew: 'isNew',
+            isResale: 'isResale',
+
+            objectTypes: 'objectTypes', // массив вторичка/новостройка
+
+
+            isBuild: 'isBuild',
+            isBuilt: 'isBuilt',
+
+            buildingProcesses: 'buildingProcesses', // массив cсдан/строится
+
+            roomCount: 'roomCount',
+
+            roomCount1: 'roomCount1',
+            roomCount2: 'roomCount2',
+
+            roomCountFrom: 'roomCountFrom',
+            roomCountTo: 'roomCountTo',
+            roomOfferedCount: 'roomOfferedCount',
+
+
+            isDailyRent: 'isDailyRent',
+            isLongRent: 'isLongRent',
+
+            rentType: 'rentType', // массив
+
+
+            areaFrom: 'areaFrom',
+            areaTo: 'areaTo',
+
+            livingAreaFrom: 'livingAreaFrom',
+            livingAreaTo: 'livingAreaTo',
+
+            kitchenAreaFrom: 'kitchenAreaFrom',
+            kitchenAreaTo: 'kitchenAreaTo',
+
+            floorFrom: 'floorFrom',
+            floorTo: 'floorTo',
+            floorCountFrom: 'floorCountFrom',
+            floorCountTo: 'floorCountTo',
+
+
+            notLastFloor: 'notLastFloor',
+            notFirstFloor: 'notFirstFloor',
+            lastFloor: 'lastFloor',
+            floorVariants: 'floorVariants', // массив варианты этажа не последний/не первый/последний
+
+            outFloor: 'outFloor', // Крайние этажи')   :   Не первый = '1'; Не последний = '2'; Последний = '3'
+
+
+
+            isLift: 'isLift',
+            canBeSettledAtOnce: 'canBeSettledAtOnce',
+            finishing: 'finishing',
+            balcony: 'balcony',
+            
+            bathroom: 'bathroom',
+            bathroom1: 'bathroom1',
+            bathroom2: 'bathroom2',
+
+
+            coveredParking: 'coveredParking',
+            coveredSpace: 'coveredSpace',
+            
+            typeBuilding: 'typeBuilding',
+            conditionTrade: 'conditionTrade',
+
+            isMortgage: 'isMortgage',
+            author: 'author',
+            isPrivate: 'isPrivate',
+            publishDate: 'publishDate',
+            hasPhoto: 'hasPhoto',
+            readyQuarter: 'readyQuarter',
+            readyYear: 'readyYear',
+
+            district: 'district',
+            locality: 'locality',
+            street: 'street',
+            building: 'building',
+            metro: 'metro',
+            metroDistance: 'metroDistance',
+            metroDistanceOnFoot: 'metroDistanceOnFoot',
+
+            hasRentPledge: 'hasRentPledge',
+            ////////////////////////////////////////////////////////////////////////////////
+
+            withChildren: 'withChildren',
+            withPets: 'withPets',
+            isPhone: 'isPhone',
+            isFridge: 'isFridge',
+            isWasher: 'isWasher',
+            isStove: 'isStove',
+            isKitchenFurniture: 'isKitchenFurniture',
+            isFurniture: 'isFurniture',
+
+            advansedTypes: 'advansedTypes', // sdfsdfsdfs
+            advansedTypes1: 'advansedTypes1', // sdfsdfsdfs
+            advansedTypes2: 'advansedTypes2', // sdfsdfsdfs
+
+            
+
+            villageTypes: 'villageTypes',
+            sectorAreaFrom: 'sectorAreaFrom',
+            sectorAreaTo: 'sectorAreaTo',
+
+            businessTypes: 'businessTypes',
+
+            
+            
+
+
+            typeBuilding: 'typeBuilding', // тип дома
+            commissy: 'commissy', // Коммиссия
+
+
+        };
+
+
+        var fName = function(name, arr){
+            arr = arr || false;
+            // return 'filter[' + name + ']' + (arr ? '[]' : '');
+            return name + (arr ? '[]' : '');
+        };
+
+
+
+
+		return [
+			{
+				elem: 'first_row',
+				content: [
+					{
+						elem: 'col',
+						attrs: {id: 'search_full_ploschad'},
+						mods: {gray: true, hide: (dop)},
+						content: [
+							{
+								block: 'plain_text',
+								mods:{bold: true, size: '11'},
+								content: 'Площадь'
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'Общая'
+										}, 
+										{
+											block: 'input',
+											name: fName(fNames.areaFrom),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+	        								placeholder : 'от'
+										},
+										{
+											block: 'input',
+											name: fName(fNames.areaTo),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true, right_border: true },
+	        								placeholder : 'до'
+										},
+										{
+											block: 'label',
+											tag: 'span',
+											mods: {last: true},
+											text: 'м2'
+										}
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'Жилая'
+										}, 
+										{
+											block: 'input',
+											name: fName(fNames.livingAreaFrom),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+	        								placeholder : 'от'
+										},
+										{
+											block: 'input',
+											name: fName(fNames.livingAreaTo),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true, right_border: true },
+	        								placeholder : 'до'
+										},
+										{
+											block: 'label',
+											tag: 'span',
+											mods: {last: true},
+											text: 'м2'
+										}
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'Кухни'
+										}, 
+										{
+											block: 'input',
+											name: fName(fNames.kitchenAreaFrom),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+	        								placeholder : 'от'
+										},
+										{
+											block: 'input',
+											name: fName(fNames.kitchenAreaTo),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true, right_border: true },
+	        								placeholder : 'до'
+										},
+										{
+											block: 'label',
+											tag: 'span',
+											mods: {last: true},
+											text: 'м2'
+										}
+									]
+								}
+							}
+						]
+					},
+					{
+						elem: 'col',
+						attrs: {id: 'search_full_etaji'},
+						mods: {gray: true, is_first: (dop)},
+						content: [
+							{
+								block: 'plain_text',
+								mods:{bold: true, size: '11'},
+								content: 'Этажи, лифты'
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'Этаж'
+										},
+				                        {
+					                        block : 'control-group',
+				                            mix: {block: 'checkbox-group', mods : { theme : 'islands', size : 'm' }},
+				                            content: [
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'm' },
+						                            name : fName(fNames.notFirstFloor),
+						                            text : 'Не первый',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'm' },
+						                            name : fName(fNames.notLastFloor),
+						                            text : 'Не последний',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'm' },
+						                            name : fName(fNames.lastFloor),
+						                            text : 'Последний',
+						                            val: true
+				                            	},
+				                            ]
+				                        }
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: '&nbsp;'
+										}, 
+										{
+											block: 'input',
+											name : fName(fNames.floorFrom),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+	        								placeholder : 'от'
+										},
+										{
+											block: 'input',
+											name : fName(fNames.floorTo),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+	        								placeholder : 'до'
+										},
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'В доме'
+										}, 
+										{
+											block: 'input',
+											name : fName(fNames.floorCountFrom),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+	        								placeholder : 'от'
+										},
+										{
+											block: 'input',
+											name : fName(fNames.floorCountTo),
+											mods : { theme : 'islands', size : 'm', width: 's', nocorners: true, right_border: true },
+	        								placeholder : 'до'
+										},
+										{
+											block: 'label',
+											tag: 'span',
+											mods: {last: true},
+											text: 'этажей'
+										}
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'Лифт'
+										}, 
+										{
+											block : 'select',
+										    mods : { mode : 'radio', theme : 'islands', size : 'm', width: '120', corner: 'all' },
+										    name : fName(fNames.isLift),
+										    val : '',
+										    options : [
+										        { val : '', text : 'Не важно' },
+										        { val : 1, text : 'Есть' },
+										        { val : 'service_lift', text : 'Есть грузовой лифт' },
+										    ]
+										}
+									]
+								}
+							}
+						]
+					},
+					{
+						elem: 'col',
+						attrs: {
+							id: 'search_full_dop_big',
+							style: 'display: none;'
+						},
+						mods: {gray: true, twocolspan: true},
+						content: [
+							{
+								block: 'plain_text',
+								mods:{bold: true, size: '11'},
+								content: 'Дополнительно'
+							},
+							{
+								elem: 'controls_row',
+								content: [
+									{
+										elem: 'controls_row_col',
+										attrs: {style: 'margin-top: 4px;'},
+										content: {
+				                            block : 'control-group',
+				                            mix: {block: 'checkbox-group', mods : { theme : 'islands', size : 'l' }},
+				                            content:[
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'l' },
+						                            name : fName(fNames.withChildren),
+						                            text : 'Можно с детьми',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'l' },
+						                            name : fName(fNames.withPets),
+						                            text : 'Можно с животными',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'l' },
+						                            name : fName(fNames.isPhone),
+						                            text : 'Телефон',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'l' },
+						                            name : fName(fNames.isFridge),
+						                            text : 'Холодильник',
+						                            val: true
+				                            	}
+				                            ]
+				                        }
+									},
+									{
+										elem: 'controls_row_col',
+										attrs: {style: 'margin-top: 4px;'},
+										content: {
+				                            block : 'control-group',
+				                            mix: {block: 'checkbox-group', mods : { theme : 'islands', size : 'l' }},
+				                            content: [
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'l' },
+						                            name : fName(fNames.isWasher),
+						                            text : 'Стиральная машина',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'l' },
+						                            name : fName(fNames.isStove),
+						                            text : 'Плита',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'l' },
+						                            name : fName(fNames.isKitchenFurniture),
+						                            text : 'Кухонная мебель',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'l' },
+						                            name : fName(fNames.isFurniture),
+						                            text : 'Мебель в квартире',
+						                            val: true
+				                            	},
+				                            ]
+				                        }
+									},
+									{
+										elem: 'controls_row_col',
+										content: [
+											{
+												block: 'control-group',
+												attrs: {style: 'margin-top: 4px;'},
+												mix: {block: 'clearfix'},
+												content: [
+													{
+														block: 'label',
+														text: 'Санузел'
+													}, 
+													{
+														block : 'select',
+													    mods : { mode : 'radio', theme : 'islands', size : 'm',  width: '120', corner: 'all' },
+													    name : fName(fNames.bathroom),
+													    val : '',
+													    options : [
+													        { val : '', text : 'Не важно' },
+													        { val : 1, text : 'Совмещенный' },
+													        { val : 2, text : 'Раздельный' },
+													        { val : 3, text : 'Несколько' },
+													    ]
+													}
+												]
+											},
+											{
+												block: 'control-group',
+												attrs: {id: 'search_full_parking_and_close_territory_big', style: 'margin-top: 38px;'},
+												mix: {block: 'clearfix'},
+												content: [
+													{
+								                        block : 'control-group',
+							                            mix: {block: 'checkbox-group', mods : { theme : 'islands', size : 'l' }},
+							                            content: [
+							                            	{
+							                            		block: 'checkbox',
+							                            		mods : { theme : 'islands', size : 'l' },
+									                            name : fName(fNames.coveredParking),
+									                            text : 'Крытый паркинг',
+									                            val: true
+							                            	},
+							                            	{
+							                            		tag: 'br'
+							                            	},
+							                            	{
+							                            		block: 'checkbox',
+							                            		mods : { theme : 'islands', size : 'l' },
+									                            name : fName(fNames.coveredSpace),
+									                            text : 'Закрытая территория',
+									                            val: true
+							                            	}
+							                            ]
+							                        }
+												]
+											}
+										]
+									}
+								]
+							},
+							
+						]
+					},
+					{
+						elem: 'col',
+						attrs: {id: 'search_full_dop_small'},
+						mods: {gray: true},
+						content: [
+							{
+								block: 'plain_text',
+								mods:{bold: true, size: '11'},
+								content: 'Дополнительно'
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: '&nbsp;'
+										},
+										{
+				                            block : 'checkbox',
+				                            mods : { theme : 'islands', size : 'm' },
+				                            attrs: {style: 'margin-top: 4px; margin-right: 0;'},
+				                            name : fName(fNames.canBeSettledAtOnce),
+				                            val : true, 
+				                            text : 'Можно заезжать сразу и жить'
+				                        }
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'Отделка'
+										}, 
+										{
+											block : 'select',
+										    mods : { mode : 'radio', theme : 'islands', size : 'm',  width: '120', corner: 'all' },
+										    name : fName(fNames.finishing),
+										    val : '',
+										    options : [
+										        { val : '', text : 'Не важно' },
+										        { val : 1, text : 'Чистовая отделка' },
+										        { val : 2, text : 'Черновая отделка' },
+										        { val : 3, text : 'Косметический ремонт' },
+										        { val : 4, text : 'Нет' },
+										    ]
+										}
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'Балкон'
+										}, 
+										{
+											block : 'select',
+										    mods : { mode : 'radio', theme : 'islands', size : 'm',  width: '120', corner: 'all' },
+										    name : fName(fNames.balcony),
+										    val : '',
+										    options : [
+										        { val : '', text : 'Не важно' },
+										        { val : 1, text : 'Есть' },
+										        { val : 2, text : 'Несколько' },
+										    ]
+										}
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: 'Санузел'
+										}, 
+										{
+											block : 'select',
+										    mods : { mode : 'radio', theme : 'islands', size : 'm',  width: '120', corner: 'all' },
+										    name : fName(fNames.bathroom1),
+										    val : '',
+										    options : [
+										        { val : '', text : 'Не важно' },
+										        { val : 1, text : 'Совмещенный' },
+										        { val : 2, text : 'Раздельный' },
+										        { val : 3, text : 'Несколько' },
+										    ]
+										}
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								attrs: {id: 'search_full_parking_and_close_territory'},
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											text: '&nbsp;'
+										},
+				                        {
+					                        block : 'control-group',
+				                            mix: {block: 'checkbox-group', mods : { theme : 'islands', size : 'm' }},
+				                            content: [
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'm' },
+						                            name : fName(fNames.coveredParking),
+						                            text : 'Крытый паркинг',
+						                            val: true
+				                            	},
+				                            	{
+				                            		tag: 'br'
+				                            	},
+				                            	{
+				                            		block: 'checkbox',
+				                            		mods : { theme : 'islands', size : 'm' },
+						                            name : fName(fNames.coveredSpace),
+						                            text : 'Закрытая территория',
+						                            val: true
+				                            	}
+				                            ]
+				                        }
+									]
+								}
+							},
+						]
+					},
+					{
+						elem: 'col',
+						mods: {gray: true},
+						content: [
+							{
+								tag: 'div',
+								content: [
+									{
+										block: 'plain_text',
+										tag: 'span',
+										mods:{bold: true, size: '11'},
+										content: 'Тип дома'
+									},
+						            {
+									    block : 'dropdown',
+									    tag: 'span',
+									    mods : { switcher : 'button', theme : 'islands'},
+									    switcher : {
+							                block: 'button',
+							                attrs: {style: 'position: relative; top: -4px; left: 10px;'},
+							                mods : { theme : 'islands', gray: true, view: 'circle', pseudo : true},
+							                text: '?'
+							            },
+									    popup : {
+									    	elem: 'popup_content',
+									    	content: [
+												{
+													block: 'plain_text',
+													tag: 'span',
+													mods:{bold: true, size: '11'},
+													content: 'Сталинские дома'
+												},
+									    		{
+											    	block: 'plain_text',
+											    	mods:{size: '11'},
+											    	content: [
+											    		{
+											    			tag: 'p',
+											    			content: 'Этажность: 3-7'
+											    		},
+											    		{
+											    			tag: 'p',
+											    			content: 'Текст про сталинские дома<br>Текст про сталинские дома на новой строке'
+											    		},
+											    	]
+											    }
+									    	]
+									    }
+									}
+								]
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+				                            block : 'checkbox-group',
+				                            mods : { theme : 'islands', size : 'm' },
+				                            attrs: {style: 'margin-top: 4px;'},
+				                            name : fName(fNames.typeBuilding, true),
+				                            options : [
+				                                { val : 0, text : 'Новый дом'},
+				                                { val : 1, text : 'Хрущевка' },
+				                                { val : 2, text : 'Сталинка' },
+				                                { val : 3, text : 'Монолит' },
+				                                { val : 4, text : 'Кирпич' },
+				                                { val : 5, text : 'Панельный' },
+				                            ]
+				                        }
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+				                            block : 'help',
+				                            content: 'Г-2И, Г-3И, Г-2И-БЕТА, Г-3И-БЕТА, Г-4, Г-5'
+				                        }
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				elem: 'first_row',
+				mods: {padding: true},
+				content: [
+
+					{
+						elem: 'col',
+						attrs: {id: 'search_full_uslovia_sdelki'},
+						content: [
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: 'Условия сделки'
+										},
+										{
+				                            block : 'select',
+				                            name: fName(fNames.conditionTrade),
+				                            mods : {  mode : 'radio', theme : 'islands', size : 'm',  width: '120', corner: 'all' },
+				                            options : [
+				                                { val : '', text : 'Не важно'},
+				                                { val : 'haggle', text : 'Торг'},
+				                                { val : 'installment_plan', text : 'Рассрочка'},
+				                                { val : 'military_mortgage', text : 'Военная ипотека'},
+				                                { val : 'state_program', text : 'Государственная программа'},
+				                                { val : 'parent_capital', text : 'Материнский капитал'},
+				                                { val : 'rent_pledge', text : 'Залог'},
+				                                { val : '50_percent', text : 'Комиссия (залог) до 50%'},
+				                                { val : '100_percent', text : 'Комиссия (залог) до 100%'},
+				                            ]
+				                        }
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: '&nbsp;'
+										},
+										{
+				                            block : 'checkbox',
+				                            mods : { theme : 'islands', size : 'm' },
+				                            name: fName(fNames.isMortgage),
+				                           	val : true, 
+				                           	text : 'Ипотека'
+				                        }
+									]
+								}
+							},
+						]
+					},
+					{
+						elem: 'col',
+						attrs: {
+							id: 'search_full_kommissia_zalog', 
+							style: 'display: none;'
+						},
+						content: [
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: 'Комиссия, залог'
+										},
+										{
+				                            block : 'select',
+				                            name: fName(fNames.commissy),
+				                            mods : {  mode : 'radio', theme : 'islands', size : 'm',  width: '120', corner: 'all' },
+				                            options : [
+				                                { val : 0, text : 'Без комиссии'},
+				                                { val : 1, text : 'до 50%'},
+				                                { val : 2, text : 'до 100%'},
+				                            ]
+				                        }
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: '&nbsp;'
+										},
+										{
+				                            block : 'checkbox',
+				                            mods : { theme : 'islands', size : 'm' },
+				                            name : fName(fNames.hasRentPledge),
+				                            val : 'true', 
+				                            text : 'Залог'
+				                        }
+									]
+								}
+							},
+						]
+					},
+					{
+						elem: 'col',
+						content: [
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: 'Автор объявления'
+										},
+										{
+				                            block : 'input',
+				                            name : fName(fNames.author),
+				                            mods : { theme : 'islands', size : 'l',  width: '120', corner: 'all' },
+				                            placeholder: 'Название или телефон'
+				                        }
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: '&nbsp;'
+										},
+										{
+				                            block : 'checkbox',
+				                            mods : { theme : 'islands', size : 'm' },
+				                            name : fName(fNames.isPrivate),
+				                            val : 'true', 
+				                            text : 'Частное'
+				                        }
+									]
+								}
+							},
+						]
+					},
+					{
+						elem: 'col',
+						content: [
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: 'Дата публикации'
+										},
+										{
+				                            block : 'select',
+				                            name : fName(fNames.publishDate),
+				                            mods : {  mode : 'radio', theme : 'islands', size : 'm',  width: '120', corner: 'all' },
+				                            options : [
+				                                { val : '', text : 'Не важно'},
+				                                { val : 'day', text : 'За сутки'},
+				                                { val : 'week', text : 'За неделю'},
+				                                { val : 'month', text : 'За месяц'},
+				                                { val : '3_month', text : 'За 3 месяца'},
+				                                { val : 'all_time', text : 'За все время'},
+				                            ]
+				                        }
+									]
+								}
+							},
+							{
+								elem: 'controls_row',
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: '&nbsp;'
+										},
+										{
+				                            block : 'checkbox',
+				                            mods : { theme : 'islands', size : 'm' },
+				                            name : fName(fNames.hasPhoto),
+				                            val : 'true', 
+				                            text : 'Только с фото'
+				                        }
+									]
+								}
+							},
+						]
+					},
+					{
+						elem: 'col',
+						content: [
+							{
+								elem: 'controls_row',
+								attrs: {
+									id: 'search_full_deadline'
+								},
+								content: {
+									block: 'control-group',
+									mix: {block: 'clearfix'},
+									content: [
+										{
+											block: 'label',
+											attrs: {style: 'width: 100px;'},
+											text: 'Срок сдачи'
+										},
+										{
+				                            block : 'select',
+				                            name : fName(fNames.readyYear),
+				                            mods : {  mode : 'radio', theme : 'islands', size : 'm', corner: 'left' },
+				                            options : [
+				                                { val : '', text : 'Год'},
+				                                { val : 1957, text : '1957'},
+				                                { val : 1958, text : '1958'},
+				                                { val : 1959, text : '1959'},
+				                                { val : 1960, text : '1960'},
+				                            ]
+				                        },
+				                        {
+				                            block : 'select',
+				                            name : fName(fNames.readyQuarter),
+				                            mods : {  mode : 'radio', theme : 'islands', size : 'm' },
+				                            options : [
+				                                { val : '', text : 'Квартал'},
+				                                { val : 1, text : 'I кв'},
+				                                { val : 2, text : 'II кв'},
+				                                { val : 3, text : 'III кв'},
+				                                { val : 4, text : 'IV кв'},
+				                            ]
+				                        }
+									]
+								}
+							}
+						]
+					},
+					
+				]
+			}
+		]
+	})
+
+);

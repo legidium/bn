@@ -1,0 +1,25 @@
+block('nod-table')(
+    tag()('table'),
+    content()(function() {
+        return (this.ctx.options || []).map(function(option) {
+            return [
+                {
+                    elem: 'row',
+                    tag: 'tr',
+                    content: [
+                        {
+                            elem: 'name',
+                            tag: 'td',
+                            content: option.name
+                        },
+                        {
+                            elem: 'text',
+                            tag: 'td',
+                            content: option.text
+                        }
+                    ]
+                }
+            ];
+        });
+    })
+);

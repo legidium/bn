@@ -1,0 +1,14 @@
+block('label')(
+
+	tag()(function() {
+        return this.ctx.tag || 'label';
+    }),
+
+	content()(function(){
+		return {
+			elem: 'text',
+			content: this.ctx.text
+		};
+	})
+
+);

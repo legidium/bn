@@ -1,0 +1,76 @@
+@require "../../design/stylus/index"
+
+.account-favorites
+    &__title
+        font-weight normal
+        font-size $font_size_h1
+        line-height $title_line_height_m
+        margin 0
+        padding $margin_m $margin_l
+        clearfix()
+        
+    &__title-note
+        color $text_color_light
+        font-size $font_size_s
+        line-height 1
+        margin 5px
+        vertical-align super
+        
+        &_hidden
+            display none
+    
+    &__spin
+        float right
+            
+    &__toolbar
+        background #f9f9f9
+        padding 0 $margin_m 0 $margin_l
+        margin-bottom $margin_s
+        clearfix()
+        
+    &__toolbar-group
+        margin-left -10px
+        margin-right -10px
+        clearfix()
+        
+        &_pull_left
+            float left
+            
+        &_pull_right
+            float right
+        
+    &__toolbar-item
+        float left
+        padding-left 10px
+        padding-right 10px
+        border-box()
+        
+        .button,
+        .button_theme_islands.button
+            .button__text
+                margin-left 0
+                margin-right 0
+    
+    &__pager
+        padding $padding_l
+        
+        &_loading
+            visibility hidden
+    
+    &__pager-prev,
+    &__pager-next,
+    .button&__pager-prev,
+    .button&__pager-next
+        margin-right $margin_m
+        
+        &_hidden
+            display none
+    
+    &__pager-info
+        color $text_color_light
+        font-size $font_size_s
+        line-height $title_line_height_l
+
+        
+    
+    

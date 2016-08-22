@@ -1,0 +1,267 @@
+block('account-dashboard-favorites')(
+    content()(function() {
+        var content = [];
+        var items = this.ctx.items || [];
+
+        content.push({ elem: 'toolbar' });
+        content.push({ elem: 'items', mods: { loadable: true }, content: items });
+        content.push({ elem: 'pager', mods: { loadable: true } });
+
+        return content;
+    }),
+
+    elem('toolbar')(
+        content()(function() {
+            return [
+                {
+                    elem: 'toolbar-line',
+                    content: [
+                        {
+                            elem: 'toolbar-right',
+                            content: [
+                                {
+                                    block: 'button',
+                                    mix: { block: 'account-dashboard-favorites', elem: 'control' },
+                                    mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                    text: 'Сохранить как PDF'
+                                },
+                                {
+                                    block: 'dropdown',
+                                    mix: { block: 'account-dashboard-favorites', elem: 'control' },
+                                    mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                    switcher: {
+                                        block: 'link',
+                                        mods: { theme: 'islands', size: 'm', font: '11'},
+                                        content: [
+                                            {
+                                                tag: 'span',
+                                                content: 'Отправить'
+                                            },
+                                            {
+                                                elem: 'tick',
+                                                mix: { block: 'icon' }
+                                            }
+                                        ]
+                                    },
+                                    popup: [
+                                        {
+                                            block: 'send_search_results'
+                                        }
+                                    ]
+                                },
+                                {
+                                    block: 'dropdown',
+                                    mix: { block: 'account-dashboard-favorites', elem: 'control' },
+                                    mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                    switcher: {
+                                        block: 'link',
+                                        mods: { theme: 'islands', size: 'm', font: '11'},
+                                        content: [
+                                            {
+                                                tag: 'span',
+                                                content: 'Поделиться'
+                                            },
+                                            {
+                                                elem: 'tick',
+                                                mix: { block: 'icon' }
+                                            }
+                                        ]
+                                    },
+                                    popup: [
+                                        {
+                                            block: 'share_search_results'
+                                        }
+                                    ]
+                                },
+                                {
+                                    block: 'button',
+                                    mix: { block: 'account-dashboard-favorites', elem: 'control' },
+                                    mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                    text: 'Распечатать'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ];
+        })
+    ),
+
+    elem('pager')(
+        content()(function() {
+            return [
+                {
+                    block: 'button',
+                    mix: { block: 'account-dashboard-favorites', elem: 'pager-more'},
+                    mods: { theme: 'islands', size: 'l' },
+                    text: 'Показать еще'
+                },
+                {
+                    tag: 'span',
+                    block: 'help',
+                    mix: { block: 'account-dashboard-favorites', elem: 'pager-text'},
+                    content: ' Показано 10 из 20'
+                }
+            ];
+        })
+    ),
+
+    elem('items')(
+        content()(function() {
+            var content = [];
+
+            (applyNext() || []).map(function(item) {
+                content.push({
+                    elem: 'item',
+                    js: item.link ? { link: item.link } : {},
+                    mods: item.mods,
+                    content: item
+                });
+            });
+
+            return content;
+        })
+    ),
+    
+    elem('item')(
+        content()(function() {
+            var js = applyNext().js || {};
+            var id = js.id || 0;
+
+            var unpublished = applyNext().mods.unpublished
+                ? { tag: 'span', elem: 'error-text', content: ' объявление снято с публикации' }
+                : '';
+
+            return [
+                {
+                    attrs: applyNext().attrs,
+                    elem: 'row',
+                    content: {
+                        elem: 'row-inner',
+                        content: [
+                            {
+                                elem: 'cell',
+                                mods: { image: true },
+                                content: [
+                                    { elem: 'image-holder', content: applyNext() }
+                                ]
+                            },
+                            {
+                                elem: 'cell',
+                                mods: { address: true },
+                                content: [
+                                    {
+                                        elem: 'status-text',
+                                        content: [ applyNext().status_text || '&nbsp;', unpublished ]
+                                    },
+                                    { elem: 'title-text', content: applyNext().address_title || '&nbsp;' },
+                                    { elem: 'text', content: applyNext().address_text || '&nbsp;' },
+                                    { block: 'help', content: applyNext().address_help || '&nbsp;' }
+                                ]
+                            },
+                            {
+                                elem: 'cell',
+                                mods: { price: true },
+                                content: [
+                                    { elem: 'status-text', content:  '&nbsp;' },
+                                    { elem: 'title-text', content: applyNext().price_text },
+                                    { block: 'help', content: applyNext().price_help || '&nbsp;' }
+                                ]
+                            },
+                            {
+                                elem: 'cell',
+                                mods: { seller: true },
+                                content: [
+                                    { elem: 'status-text', content: '&nbsp;' },
+                                    { elem: 'title-text', content: applyNext().seller_text },
+                                    (applyNext().phones || []).map(function(phone) { return { elem: 'text', content: phone }; })
+                                ]
+                            },
+                            {
+                                elem: 'cell',
+                                mods: { comment: true },
+                                content: [
+                                    { elem: 'status-text', content:  '&nbsp;' },
+                                    { elem: 'text', content: applyNext().comment }
+                                ]
+                            },
+                            {
+                                elem: 'cell',
+                                mods: { tools: true },
+                                content: [{ elem: 'tools', content: applyNext() }]
+                            }
+                        ]
+                    }
+                }
+            ];
+        })
+    ),
+
+    elem('image-holder')(
+        content()(function() {
+            return applyNext().image ? { tag: 'img', attrs: { src: applyNext().image, alt: '' } } : '';
+        })
+    ),
+
+    elem('tools')(
+        content()(function() {
+            var content = [];
+            var type = applyNext().type ? applyNext().type : '';
+
+            content.push({
+                elem: 'tools-item',
+                mods: { first: true, accept: applyNext().tools_star_accept },
+                content: {
+                    block: 'icon',
+                    mods: { action: applyNext().tools_star_accept ? 'star' : 'star-o' }
+                }
+            });
+
+            if (type != 'ЖК') {
+                content.push({
+                    elem: 'tools-item',
+                    mods: { second: true, accept: applyNext().tools_plus_accept },
+                    content: [
+                        {
+                            block: 'dropdown',
+                            mods: { switcher: 'link', theme: 'islands' },
+                            switcher: {
+                                block: 'link',
+                                content: {
+                                    block: 'icon',
+                                    mods: { action: applyNext().tools_plus_accept ? 'plus-blue' : 'plus' }
+                                }
+                            },
+                            popup: {
+                                block: 'user_lists_in_search'
+                            }
+                        }
+                    ]
+                });
+
+                content.push({
+                    elem: 'tools-item',
+                    mods: { third: true, accept: applyNext().tools_comments_accept },
+                    content: [
+                        {
+                            block: 'dropdown',
+                            mods: { switcher: 'link', theme: 'islands' },
+                            switcher: {
+                                block: 'link',
+                                content: {
+                                    block: 'icon',
+                                    mods: { action: applyNext().tools_comments_accept ? 'comments-blue' : 'comments' }
+                                }
+                            },
+                            popup: {
+                                block: 'user_comments_in_search'
+                            }
+                        }
+                    ]
+                });
+            }
+
+            return content;
+        })
+    )
+)

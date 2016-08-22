@@ -1,0 +1,296 @@
+block('search_results_item')(
+
+	tag()('a'),
+
+	content()(function() {
+
+		var that = applyNext();
+
+		var addr_text_len = 27;
+		var addr_help_len = 27;
+		var seller_text_len = 9;
+
+		var item_in_list = !!(applyNext().hasOwnProperty('in_lists') && applyNext().in_lists.length);
+
+		return [
+			{
+				attrs: applyNext().attrs, 
+				mods: applyNext().mods, 
+				elem: 'table_row',
+				tag: 'span',
+				content: {
+					elem: 'table_row_inner',
+					tag: 'span',
+					content: [
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { image : true },
+							content: applyNext().image ?  { elem: 'image_holder', tag: 'span', content: {tag: 'img', attrs: {src: applyNext().image, alt: ''}}} : { elem: 'image_holder', tag: 'span', }
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { address : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									attrs: { title: applyNext().address_text && applyNext().address_text.length > addr_text_len ? applyNext().address_text : '' },
+									content: applyNext().address_text && applyNext().address_text.length > addr_text_len ? applyNext().address_text.substr(0, addr_text_len) + '...' : applyNext().address_text
+								},
+								{
+									block: 'help',
+									tag: 'span',
+									attrs: { title: applyNext().address_help && applyNext().address_help.length > addr_help_len ? applyNext().address_help : '' },
+									content: applyNext().address_help && applyNext().address_help.length > addr_help_len ? applyNext().address_help.substr(0, addr_help_len) + '...' : applyNext().address_help || '&nbsp;'
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { object : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									content: applyNext().object_text
+								},
+								{
+									block: 'help',
+									tag: 'span',
+									content: applyNext().object_help || '&nbsp;'
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { s : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									content: applyNext().s_text
+								},
+								{
+									block: 'help',
+									tag: 'span',
+									content: applyNext().s_help || '&nbsp;'
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { floor : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									content: applyNext().floor_text
+								},
+								{
+									block: 'help',
+									tag: 'span',
+									content: applyNext().floor_help || '&nbsp;'
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { san : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									content: applyNext().san_text
+								},
+								{
+									block: 'help',
+									tag: 'span',
+									content: applyNext().san_help || '&nbsp;'
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { home : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									content: ([applyNext().home_text, applyNext().home_voprosique]).map(function(text) { 
+										if(text == '?'){
+											return {
+												block: 'voprosique',
+												text: that.hasOwnProperty('home_voprosique_text') ?  that.home_voprosique_text : ''
+											};
+										}
+
+										return { 
+											tag: 'span',
+											content: text
+										};
+									})
+								},
+								{
+									block: 'help',
+									tag: 'span',
+									content: applyNext().home_help || '&nbsp;'
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { price : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									content: applyNext().price_text
+								},
+								{
+									block: 'help',
+									tag: 'span',
+									content: applyNext().price_help || '&nbsp;'
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { seller : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									attrs: { title: applyNext().seller_text && applyNext().seller_text.length > seller_text_len ? applyNext().seller_text : '' },
+									content: applyNext().seller_text && applyNext().seller_text.length > seller_text_len ? applyNext().seller_text.substr(0, seller_text_len) + '...' : applyNext().seller_text
+								},
+								{
+									block: 'help',
+									tag: 'span',
+									content: applyNext().seller_help || '&nbsp;'
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { phone : true },
+							content: (applyNext().phones || []).map(function(phone) { return { elem: 'text', tag: 'span', content: phone }; })
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { comment : true },
+							content: [
+								{
+									elem: 'text',
+									tag: 'span',
+									content: applyNext().comment
+								}
+							]
+						},
+						{
+							elem: 'table_cell',
+							tag: 'span',
+							mods : { tools : true },
+							content: [
+								{
+									elem: 'tools_item',
+									tag: 'span',
+									mods: {first: true, accept: !!applyNext().is_favorite },
+									content: {
+									    block : 'icon',
+									    mods : { action : !!applyNext().is_favorite ? 'star' : 'star-o' }
+									},
+								},
+								{
+									elem: 'tools_item',
+									tag: 'span',
+									mods: {second: true, accept: item_in_list},
+									content: [
+										{
+										    block : 'dropdown',
+										    tag: 'span',
+										    mods : { switcher : 'button', theme : 'islands', switcher_only_icon: true },
+										    switcher : {
+										    	block: 'button',
+										    	content: {
+										    		block : 'icon',
+											    	mods : { action : item_in_list ? 'plus-blue' : 'plus' }
+												}
+										    },
+										    popup : {
+										    	mods: {closable: true},
+												block: 'popup',
+												content: {
+													block: 'user_lists_in_search',
+													item_id: applyNext().id,
+													in_lists : (applyNext().hasOwnProperty('in_lists') ? applyNext().in_lists : []),
+													lists: (applyNext().hasOwnProperty('lists') ? applyNext().lists : []),
+													user_auth: applyNext().user_auth
+												}
+											}
+										}
+									]
+								},
+								{
+									elem: 'tools_item',
+									tag: 'span',
+									mods: {third: true, accept: !!applyNext().user_comment},
+									content: [
+										{
+										    block : 'dropdown',
+										    tag: 'span',
+										    mods : { switcher : 'button', theme : 'islands', switcher_only_icon: true },
+										    switcher : {
+										    	block: 'button',
+										    	content: {
+										    		block : 'icon',
+											    	mods : { action : !!applyNext().user_comment ? 'comments-blue' : 'comments' }
+												}
+										    },
+										    popup : {
+										    	mods: {closable: !applyNext().user_auth},
+												block: 'popup',
+												content: {
+													block: 'user_comments_in_search',
+													item_id: applyNext().id,
+													user_auth: applyNext().user_auth,
+													user_comment: applyNext().user_comment
+												}
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			}
+		];
+	}),
+
+	mod('embed', true)(
+		tag()('div'),
+		js()(false),
+		content()(function() {
+			var data = this.ctx.content;
+			
+			return {
+				block:   'embed',
+				mods:    data.mods || {},
+				js:      data.js   || {},
+				content: data
+			};
+		})
+	)
+
+);

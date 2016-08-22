@@ -1,0 +1,25 @@
+.account-balance-info__title {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+.account-balance-info__items {
+    display: table;
+    margin: 20px 0;
+}
+.account-balance-info__item-col {
+    display: table-cell;
+    padding: 4px 0;
+}
+.account-balance-info__item-col_right {
+    text-align: right;
+}
+.account-balance-info__item {
+    display: table-row;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.account-balance-info__item-separator {
+    margin: 10px 0;
+    border-top: 1px solid #f1f1f1;
+}

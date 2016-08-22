@@ -1,0 +1,39 @@
+block('account-dashboard-list-comment-edit')(
+    js()(true),
+    content()(function() {
+        var text = applyNext() || '';
+
+        return [
+            {
+                block: 'link',
+                mix: { block: this.block, elem: 'button', elemMods: { action: 'toggle' } },
+                mods: { theme: 'islands', size: 'l', font: '11' },
+                content: {
+                    block: 'icon',
+                    mods: { action: text ? 'comments-blue': 'comments' }
+                }
+            },
+            {
+                elem: 'container',
+                content: [
+                    {
+                        elem: 'input-wrapper',
+                        content: {
+                            block: 'textarea',
+                            mix: { block: this.block, elem: 'input' },
+                            mods: { theme: 'islands', size: 's', width: 'available' },
+                            placeholder: 'Ваш комментарий',
+                            val: text || undefined
+                        }
+                    },
+                    {
+                        block: 'button',
+                        mix: { block: this.block, elem: 'button', elemMods: { action: 'save' } },
+                        mods: { theme: 'islands', size: 'm', submit: true },
+                        text: 'Сохранить'
+                    }
+                ]
+            }
+        ];
+    })
+);

@@ -1,0 +1,98 @@
+block('living_complex_sidebar_info')(
+
+	content()(function(){
+		return [
+			{
+				elem: 'price',
+				content: [
+					{
+						tag: 'span',
+						elem: 'price_help',
+						content: 'от'
+					},
+					{
+						tag: 'span',
+						elem: 'price_value',
+						content: '1 450 500'
+					},
+					{
+						block: 'currency',
+						mods: { size: 30, bold: true },
+						tag: 'span',
+						content: 'Р'
+					}
+				]
+			},
+			{
+				elem: 'price',
+				content: [
+					{
+						tag: 'span',
+						elem: 'price_help',
+						content: 'до'
+					},
+					{
+						tag: 'span',
+						elem: 'price_value',
+						content: '4 500 500'
+					},
+					{
+						block: 'currency',
+						mods: { size: 30, bold: true },
+						tag: 'span',
+						content: 'Р'
+					}
+				]
+			},
+			{
+				block: 'help',
+				attrs: {style: 'margin-bottom: 5px;'},
+				content: 'от 49 890 до 74 970 ₽ за м2'
+			},
+			{
+				block: 'plain_text',
+				mods: {size: 11},
+				attrs: {style: 'margin-bottom: 15px;'},
+				content: 'Возможны ипотека, рассрочка, материнский капитал, военная ипотека'
+			},
+			// {
+			// 	tag: 'div',
+			// 	attrs: {style: 'width: 250px; height: 80px; margin-bottom: 25px; line-height: 80px; text-align: center; font-size: 13px; color: rgb(155, 155, 155); background: rgb(240, 240, 240);'},
+			// 	content: 'Реклама кокотечного калькулятора'
+			// },
+			{
+                block: 'adv',
+                width: 250,
+                height: 80,
+                margin: '0 auto 25px'
+            },
+			{
+				elem: 'info',
+				content: [
+					{
+						elem: 'info_bold',
+						content: 'Selt City'
+					},
+					{
+						block: 'help',
+						content: 'Девелопер'
+					}
+				]
+			},
+			{
+				elem: 'info',
+				content: [
+					{
+						elem: 'info_bold',
+						content: 'Итака'
+					},
+					{
+						block: 'help',
+						content: 'Экслюзивный блокер (продавец)'
+					}
+				]
+			}
+		];
+	})
+
+);

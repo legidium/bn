@@ -1,0 +1,73 @@
+block('objects-list-item-tools')(
+    js()(true),
+    //tag()('span'),
+    content()(function() {
+        var content = [];
+        var data = this.ctx.data || {};
+
+        var inLists    = data.in_lists  || [];
+        var userNote   = data.user_note || '';
+
+        var isFavorite = !!data.is_favorite;
+        var isInList   = !!inLists.length || data.is_in_lists;
+        var isUserNote = !!userNote.length || !!data.is_user_note;
+
+        var flags        = this.ctx.flags || {};
+        var showFavorite = typeof flags.favorite != 'undefined' ? flags.favorite : true;
+        var showLists    = typeof flags.lists != 'undefined' ? flags.lists : true;
+        var showNote     = typeof flags.note != 'undefined' ? flags.note : true;
+
+        if (showFavorite) {
+            content.push({
+                elem: 'item',
+                tag: 'span',
+                elemMods: { favorite: true, accept: isFavorite },
+                content: {
+                    block: 'link',
+                    mods: { pseudo: true, theme: 'islands' },
+                    content: {
+                        block: 'icon',
+                        mix: { block: this.block, elem: 'icon' },
+                        mods: { action: isFavorite ? 'star' : 'star-o' }
+                    }
+                }
+            });
+        }
+
+        if (showLists) {
+            content.push({
+                elem: 'item',
+                tag: 'span',
+                elemMods: { lists: true, accept: isInList },
+                content: {
+                    block: 'link',
+                    mods: { pseudo: true, theme: 'islands' },
+                    content: {
+                        block: 'icon',
+                        mix: { block: this.block, elem: 'icon' },
+                        mods: { action: isInList ? 'list' : 'plus' }
+                    }
+                }
+            });
+        }
+
+        if (showNote) {
+            content.push({
+                elem: 'item',
+                tag: 'span',
+                elemMods: { note: true, accept: isUserNote },
+                content: {
+                    block: 'link',
+                    mods: { pseudo: true, theme: 'islands' },
+                    content: {
+                        block: 'icon',
+                        mix: { block: this.block, elem: 'icon' },
+                        mods: { action : isUserNote ? 'comments-blue' : 'comments' }
+                    }
+                }
+            });
+        }
+
+        return content;
+    })
+)

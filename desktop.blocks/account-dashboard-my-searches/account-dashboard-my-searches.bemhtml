@@ -1,0 +1,66 @@
+block('account-dashboard-my-searches')(
+    content()(function() {
+        var content = [];
+        var items = this.ctx.items || [];
+
+        content.push({ elem: 'title', content: 'Ваши сохраненные поиcки' });
+        content.push(items.length ? { elem: 'items', content: items } : {});
+        content.push(items.length ? { elem: 'more' } : {});
+
+        return content;
+    }),
+    
+    elem('items')(
+        content()(function() {
+            var content = [];
+
+            (applyNext() || []).map(function(item) {
+                content.push({ elem: 'item', mods: item.mods, content: item });
+            });
+
+            return content;
+        })
+    ),    
+
+    elem('item')(
+        content()(function() {
+            return [
+                {
+                    attrs: applyNext().attrs,
+                    elem: 'row',
+                    content: [
+                        {
+                            elem: 'cell',
+                            mods: { title: true },
+                            content: [
+                                { elem: 'item-title', content: applyNext().title || '&nbsp;' },
+                                { elem: 'item-description', content: applyNext().description || '&nbsp;' }
+                            ]
+                        },
+                        {
+                            elem: 'cell',
+                            mods: { date: true },
+                            content: [
+                                { elem: 'item-date', content: applyNext().date_text || '&nbsp;' }
+                            ]
+                        }
+                    ]
+                }
+            ];
+        })
+    ),
+
+    elem('more')(
+        content()(function() {
+            return [
+                {
+                    block: 'button',
+                    mods: { theme: 'islands', size: 'l', type: 'link' },
+                    url: '#',
+                    text: 'Мои сохраненные списки'
+                }
+            ];
+        })
+    )
+
+);

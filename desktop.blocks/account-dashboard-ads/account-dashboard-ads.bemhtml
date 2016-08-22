@@ -1,0 +1,52 @@
+block('account-dashboard-ads')(
+    content()(function() {
+        var items = [];
+        var hasBanner = this.ctx.banner ? true : false;
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({ elem: 'item', mods: item.mods, content: item });
+        });
+
+        return [
+            { elem: 'title', content: 'Мои объявления' },
+            {
+                elem: 'items',
+                content: [
+                    { elem: 'col', mods: { list: true }, content: items },
+                    hasBanner ? { elem: 'col', mods: { bblock: true }, content: { elem: 'bblock', content: this.ctx.banner } } : ''
+                ]
+            }
+        ];
+    }),
+
+    elem('item')(
+        content()(function() {
+            return {
+                block: 'link',
+                mods : { theme : 'islands', size : 's' },
+                mix: { block: this.block, elem: 'link'},
+                url: applyNext().link,
+                content: [
+                    applyNext().title,
+                    '&nbsp;',
+                    {
+                        elem: 'value',
+                        tag: 'span',
+                        mix: { block: this.block, elem: 'value'},
+                        content: applyNext().val
+                    }
+                ]
+            };
+        })
+    ),
+
+    elem('bblock')(
+        content()(function() {
+            return {
+                block: 'link',
+                url: applyNext().url || '#',
+                content: { tag: 'img', attrs: { src: applyNext().image || '', alt: '' } }
+            };
+        })
+    )
+);

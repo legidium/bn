@@ -1,0 +1,25 @@
+block('address_list_item')(
+	
+	js()(true),
+
+    attrs()({ role : 'menuitem' }),
+
+    content()(function(){
+    	return [
+    		{
+    			elem: 'text',
+    			tag: 'span',
+    			content: this.ctx.text
+    		},
+    		{
+    			elem: 'del',
+    			tag: 'span',
+    			content: {
+    				block: 'icon',
+    				mods: {action: 'remove'}
+    			}
+    		}
+    	];
+    })
+
+);

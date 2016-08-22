@@ -1,0 +1,50 @@
+.new-buildings-list {
+    position: relative;
+}
+.new-buildings-list__body {
+    position: relative;
+    padding: 10px;
+    font-size: 0;
+    line-height: 0;
+}
+.new-buildings-list__footer {
+    padding: 0 20px 40px;
+}
+.new-buildings-list__overlay {
+    display: none;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.new-buildings-list__overlay_visible {
+    display: block;
+}
+.new-buildings-list__overlay-spin {
+    position: relative;
+    top: 12px;
+    left: 50%;
+    margin-left: 14px;
+}
+
+.new-buildings-list_loading .new-buildings-list__body:before {
+    background: rgba(255, 255, 255, 0.7);
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.new-buildings-list_empty .new-buildings-list__body,
+.new-buildings-list_empty .new-buildings-list__footer,
+.new-buildings-list_empty .new-buildings-list__overlay,
+.new-buildings-list_empty .new-buildings-list__overlay_visible {
+    display: none;
+}
+.new-buildings-list_empty .new-buildings-list__empty {
+    display: block;
+}

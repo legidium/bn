@@ -1,0 +1,87 @@
+.menu.menu_theme_islands.menu_size_s {
+	font-size:  11px;
+	line-height: 25px;
+}
+
+.menu.menu_theme_islands.menu_size_m {
+	font-size:  11px;
+	line-height: 25px;
+}
+
+.menu_theme_islands .menu__group.menu__group_gray {
+	background: #f0f0f0;
+	margin-bottom: -4px;
+	padding-bottom: 10px;
+	border-top: 0;
+}
+.menu_theme_islands .menu__group.menu__group_gray:last-child {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 0;
+}
+.menu__padding {
+	padding: 10px 20px;
+}
+.menu_theme_islands .menu__group.menu__group_inline {
+	display: inline-block;
+	vertical-align: top;
+	border-top: 0;
+	border-bottom: 0;
+	padding-top: 0;
+}
+.menu_theme_islands .menu__group.menu__group_inline:first-child {
+	min-width: 200px;
+}
+.menu_theme_islands .menu__group.menu__group_inline:last-child {
+	padding-top: 0;
+}
+
+.menu_mode_groupcheck.menu_theme_islands.menu_size_m .menu__group {
+	border: 0;
+	margin-bottom: 20px;
+}
+.menu_mode_groupcheck.menu_theme_islands.menu_size_m .menu__group-title {
+	padding-left: 30px;
+	font-size: 13px;
+	color: black;
+	cursor: pointer;
+}
+.menu_mode_groupcheck.menu_theme_islands.menu_size_m .menu__group-title_checked {
+    /*.menu_mode_groupcheck .menu-item_theme_islands.menu-item_checked*/
+	background: 0 50% no-repeat url(data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAAXNSR0IArs4c6QAAAEpJREFUGBljYCAMXIBKmJgJqAsDym8CYkl86kCK/gPxZpIViQJ13AdiRqhOnCbpAhWArLgAxAlQNk7rYIoJugloEANI8UEQAxsAAMZ0EFLCN69wAAAAAElFTkSuQmCC);
+}
+.menu_mode_groupcheck.menu_theme_islands.menu_size_m .menu__group-title:hover {
+	background-color: #f2f2f2;
+}
+
+/* Remove the white bar at the bottom of the select menu */
+/* .menu.menu_theme_islands.select__menu:after {
+    height: 0;
+} */
+
+.menu.menu_theme_islands.select__menu .menu__group.menu__group_gray:last-child {
+    margin-bottom: -4px;
+}
+.menu.menu_theme_islands.menu_size_xl.select__menu .menu__group.menu__group_gray:last-child {
+    margin-bottom: -6px;
+}
+
+.menu_align_right {
+	text-align: right;
+}
+
+.menu.menu_theme_islands.menu_account,
+.menu.menu_theme_islands.menu_dropdown {
+	font-size: 11px;
+	line-height: 25px;
+}
+.menu.menu_theme_islands.menu_account:after {
+	height: 0;
+}
+.menu_account.menu_theme_islands .menu-item_type_link {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.menu_account.menu_theme_islands .menu__group_gray .menu-item_hovered {
+	background: transparent;
+}

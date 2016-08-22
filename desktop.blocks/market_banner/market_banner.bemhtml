@@ -1,0 +1,46 @@
+block('market_banner')(
+	content()(function () {
+		var bigImageObject = {
+			elem: 'big-image'
+		};
+
+		if (this.ctx.bannerUrl.length > 0) {
+			bigImageObject.tag = 'img';
+			bigImageObject.attrs = { src: this.ctx.bannerUrl };
+		}
+
+		return [{
+			elem: 'banner-wrapper',
+			content: [
+				bigImageObject, {
+					elem: 'banner-upper-text',
+					content: 'Реклама'
+				}, {
+					elem: 'banner-lower-text',
+					content: '250x250'
+				}
+			]
+		}, {
+			elem: 'items',
+			tag: 'ul',
+			content: this.ctx.items.map(function (item) {
+				return {
+					elem: 'item',
+					tag: 'li',
+					content: [{
+						elem: 'image-wrapper',
+						content: {
+							block: 'icon',
+							mix: { block: 'market_banner', elem: 'image' },
+							mods: { action: item.url }
+						}
+					},{
+						elem: 'text',
+						tag: 'p',
+						content: item.text
+					}]
+				};
+			})
+		}];
+	})
+);

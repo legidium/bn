@@ -1,0 +1,21 @@
+block('titles')(
+        content()(function() {
+                return  [
+                   {
+                       elem: 'page-title',
+                       tag: 'h1',
+                       content: '' + this.ctx.type + ': ' + this.ctx.address + ' (' + this.ctx.area + ' м<sup>2</sup>)'
+                   },
+                   {
+                        elem: 'page-subtitle',
+                        tag: 'p',
+                        content: this.ctx.note
+                   },
+                   {
+                        elem: 'trade-type',
+                        tag: 'span',
+                        content: this.ctx.tradeType
+                   }
+                ]
+            })
+        )

@@ -1,0 +1,47 @@
+block('new-buildings-list')(
+    js()(true),
+    content()(function() {
+        var content = [];
+        var items = [];
+
+        (this.ctx.items).map(function(item) {
+            items.push({
+                block: 'new-buildings-list-item',
+                mods: item.mods,
+                content: item
+            });
+        });
+
+        content.push({
+            elem: 'header',
+            content: [
+                {
+                    block: 'new-buildings-list-toolbar',
+                    js: { url: '/desktop.blocks/new-buildings-list-toolbar/test.json' }
+                }
+            ]
+        });
+
+        content.push({ elem: 'body', content: items });
+
+        content.push({ 
+            elem: 'footer', 
+            content: [
+                {
+                    block: 'controls_row',
+                    content: [
+                        {
+                            elem: 'col',
+                            content: { block: 'pagination' }
+                        }
+                    ]
+                }
+            ]
+        });
+
+        content.push({ elem: 'overlay', elemMods: { visible: false } });
+        content.push({ elem: 'empty' });
+
+        return content;
+    })
+)

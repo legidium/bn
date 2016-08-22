@@ -1,0 +1,25 @@
+block('account-menu')(
+    content()(function() {
+        return (this.ctx.items).map(function(item) {
+            return typeof item.separator === 'undefined'
+                ? { elem: 'item', content: item }
+                : { elem: 'separator', attrs: item.attrs, mods: item.mods };
+        });
+    }),
+    elem('item')(
+        content()(function() {
+            var content = [applyNext().text];
+            if (typeof applyNext().val !== 'undefined') {
+                content.push({ elem: 'value', tag: 'span', content: ' ' + applyNext().val });
+            }
+
+            return {
+                elem: 'link',
+                tag: 'a',
+                attrs: applyNext().attrs,
+                mods: applyNext().mods,
+                content: content
+            };
+        })
+    )
+);

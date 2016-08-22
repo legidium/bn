@@ -1,0 +1,45 @@
+block('multi-phones')(
+	js()(true),
+	content()(function(){
+		return [
+			{
+				elem: 'add',
+                tag: 'button',
+                content: '+ еще телефон'
+			},
+			{
+				elem: 'item',
+				content: [
+					{
+                        block : 'input',
+                        js: true,
+            			cls: 'input_w130',
+            			name: 'multiphone[][phone]',
+						mix: { block: 'maskedinput', js: true, mods: { pattern: 'phone' } },
+                        mods : { theme : 'islands', size : 'l',  nocorners: true },
+                        placeholder: 'обязательное поле'
+                    },
+					{
+						block : 'control-group',
+                        content: [
+                        	{	
+                        		block: 'checkbox',
+                        		mods : { theme : 'islands', size : 'm' },
+		                        name : 'multiphone[][viber]',
+		                        val : true, 
+		                        text : 'Есть Viber'
+                        	},
+                        	{	
+                        		block: 'checkbox',
+                        		mods : { theme : 'islands', size : 'm' },
+		                        name : 'multiphone[][whatsapp]',
+		                        val : true, 
+		                        text : 'Есть WhatsApp'
+                        	},
+                        ]
+					}
+				]
+			}
+		]
+	})
+);

@@ -1,0 +1,18 @@
+block('ad-head')(
+	content()(function(){
+		return [
+			{
+				block: 'button',
+	            mods : { theme : 'islands', size : 'm', gray: 'light' },
+	            text: 'Результаты поиска'
+			},
+			{
+				block: 'button',
+	            mods : { theme : 'islands', size : 'm', gray: 'light' },
+	            text: 'Новый поиск'
+			}
+		];
+
+	})
+
+);

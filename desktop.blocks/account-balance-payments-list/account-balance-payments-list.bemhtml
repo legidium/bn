@@ -1,0 +1,63 @@
+block('account-balance-payments-list')(
+    content()(function() {
+        var content = [];
+        var items = this.ctx.items || [];
+
+        content.push({ elem: 'header', content: { elem: 'title', content: 'История платежей' } });
+        content.push({ elem: 'main', content: items ? { elem: 'items', content: items } : {} });
+
+        return content;
+    }),
+
+    elem('items')(
+        content()(function() {
+            var content = [];
+            var t = this;
+            
+            content.push([
+                {
+                    elem: 'items-header',
+                    content: [
+                        { elem: 'cell', content: 'Дата' },
+                        { elem: 'cell', content: 'Сумма' },
+                        { elem: 'cell', content: 'Способ оплаты' },
+                        { elem: 'cell', content: 'Статус платежа' },
+                        { elem: 'cell', content: 'Документы' },
+                        { elem: 'cell', content: '&nbsp;' }
+                    ]
+                }
+            ]);
+
+            (applyNext() || []).map(function(item) {
+                content.push({
+                    elem: 'item',
+                    mods: item.mods || {},
+                    content: item
+                });
+            });
+
+            return content;
+        })
+    ),
+
+     elem('item')(
+        content()(function() {
+            var button = {
+                block: 'button',
+                mods: { theme: 'islands', size: 's', view: 'plain' },
+                icon: { block: 'icon', mods: { action: 'refresh' } }
+            };
+
+            var attachment = { tag: 'a', attrs: { href: '#'}, content: applyNext().attachments  || '&nbps;'};
+
+            return [
+                { elem: 'cell', elemMods: {         date: true }, content: applyNext().date || '&nbps;' },
+                { elem: 'cell', elemMods: {          sum: true }, content: applyNext().sum || '&nbps;' },
+                { elem: 'cell', elemMods: {       method: true }, content: applyNext().method || '&nbps;' },
+                { elem: 'cell', elemMods: {       status: true }, content: applyNext().status || '&nbps;' },
+                { elem: 'cell', elemMods: {  attachments: true, link: true }, content: attachment },
+                { elem: 'cell', elemMods: {      refresh: true }, content: button }
+            ];
+        })
+    )
+);

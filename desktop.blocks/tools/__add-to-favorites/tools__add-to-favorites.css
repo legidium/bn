@@ -1,0 +1,13 @@
+.tools__add-to-favorites
+{
+    display: inline-block;
+    margin-right: 5px;
+    width: 21px;
+    height: 20px;
+    background-image: url(/desktop.bundles/retail.card/images/star.png);
+    cursor: pointer;
+}
+
+.tools__add-to-favorites:hover {
+    background-image: url(/desktop.bundles/retail.card/images/star-fill.png);
+}

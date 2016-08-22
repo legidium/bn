@@ -1,0 +1,57 @@
+block('account-settings-mail')(
+    content()(function() {
+        var data = this.ctx.data || {};
+        var email = data.email || 'ivanpetrovich@gmail.com';
+
+        return [
+            {
+                elem: 'line',
+                mix: { block: 'account-settings-content', elem: 'line' },
+                content: [
+                    {
+                        elem: 'title',
+                        attrs: { style: 'margin-bottom: 10px; font-size: 20px; line-height: 1.3;' },
+                        content: 'Настройка отправки'
+                    },
+                    {
+                        block: 'checkbox-group',
+                        mods: { theme: 'islands', size: 'l' },
+                        attrs: { style: 'margin-bottom: 5px;'},
+                        name: 'checkbox-line',
+                        val: [1],
+                        options: [
+                            { val: 1, text: 'Отправлять со своей почты ' + email }
+                        ]
+                    },
+                    {
+                        block: 'help',
+                        content: 'Каждый раз, когда вы отправляете письмо со страницы сайта bn.ru — страницу объявления или делитесь своим списком, например — вы можете подставить свой электронный адрес вместо hello@bn.ru'
+                    },
+                ]
+            },
+            {
+                elem: 'line',
+                mix: { block: 'account-settings-content', elem: 'line' },
+                content: [
+                    {
+                        block: 'label',
+                        attrs: { style: 'font-size: 13px; margin-bottom: 10px;' },
+                        content: 'Подпись к письму'
+                    },
+                    {
+                        block: 'textarea',
+                        mods: { theme: 'islands', size: 'm', width: 'available' },
+                        attrs: { style: 'height: 117px; margin-bottom: 20px;'},
+                        content: data.mail_signature || ''
+                    },
+                    {
+                        block: 'button',
+                        mods: { theme : 'islands', size : 'xl', font: 'm' },
+                        attrs: { style: 'margin-bottom: 20px;'},
+                        text: 'Сохранить подпись'
+                    }
+                ]
+            }
+        ];
+    })
+);

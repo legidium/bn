@@ -1,0 +1,26 @@
+block('address_autocomplete')(
+
+	js()(true),
+	content()(function(){
+		return [
+			{
+				block: 'input',
+				mods: {theme: 'islands', size: 'xl', nocorners: true},
+				placeholder: 'Улица'
+			},
+			{
+				block: 'popup',
+				mods: {theme: 'islands', size: 'm', autoclosable: true, target: 'anchor'},
+				content: [
+					{
+						block: 'menu',
+						mods: {theme: 'islands', size: 'm', mode: 'radio'},
+						content: [
+						]
+					}
+				]
+			}
+		];
+	})
+
+);

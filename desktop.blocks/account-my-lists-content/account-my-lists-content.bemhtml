@@ -1,0 +1,62 @@
+block('account-my-lists-content')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                elem: 'header',
+                content: [
+                    {
+                        elem: 'line',
+                        mix: { block: 'clearfix'},
+                        content: [
+                            {
+                                elem: 'left',
+                                content: [
+                                    {
+                                        elem: 'title',
+                                        content: [
+                                            'Мои списки',
+                                            { block: 'spin', mods: { theme: 'islands', size : 'm' }, mix: { block: this.block, elem: 'spin' } }
+                                        ]
+                                    },
+                                ]
+                            },
+                            {
+                                elem: 'right',
+                                content: [
+                                    {
+                                        block: 'button',
+                                        mix: { block: 'account-my-lists-content', elem: 'button-new-list' },
+                                        mods: { theme: 'islands', size: 'm' },
+                                        text: 'Новый список'
+                                    },
+                                    {
+                                        block: 'popup',
+                                        mix: { block: 'account-my-lists-content', elem: 'popup-new-list' },
+                                        mods: { autoclosable: true, theme: 'islands', target: 'anchor' },
+                                        directions: ['bottom-center', 'bottom-right'],
+                                        content: {
+                                            block: 'account-my-lists-content-new-list'
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        block: 'account-my-lists-filter'
+                    }
+                ]
+            },
+            {
+                elem: 'main',
+                content: [
+                    {
+                        block: 'account-my-lists-list',
+                        items: this.ctx.items || []
+                    }
+                ]
+            }
+        ];
+    })
+)

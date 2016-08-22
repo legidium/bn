@@ -1,0 +1,58 @@
+block('email_subscribe')(
+
+	content()(function(){
+
+		return [
+			{
+				elem: 'row',
+				content: [
+					{
+						block: 'plain_text',
+						attrs: {style: 'display: inline-block; margin-right: 10px;'},
+						mods: {size: '11'},
+						content: 'Присылать'
+					},
+					{
+						block: 'radio-group',
+						mods : { theme : 'islands', size : 'm', type : 'button', checked: true },
+					    name : 'radio-234',
+					    val : 1,
+					    options : [
+					        { val : 1, text : 'сразу' },
+					        { val : 2, text : 'раз в день' }
+					    ]
+					},
+				]
+			},
+			{
+				elem: 'row',
+				mix: {block: 'clearfix'},
+				content: {
+					block : 'input',
+					attrs: {style: 'float: none; width: 100%;'},
+				    mods : { theme : 'islands', size : 'm', width : 'available' },
+				    name: 'name12',
+				    placeholder : 'Email'
+				}
+			},
+			{
+				elem: 'row',
+				content: [
+					{
+						block: 'button',
+						mods : { theme : 'islands', size : 'm'},
+						text: 'Подписаться'
+					},
+					{
+						block: 'link',
+						attrs: {href: '#', style: 'margin-left: 10px;'},
+						mods: {font: '11'},
+                        content: 'отмена'
+					}
+				]
+			}
+		];
+
+	})
+
+);

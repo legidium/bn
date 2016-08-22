@@ -1,0 +1,48 @@
+.payment-method {
+	margin: 0 -5px 15px;
+}
+
+.payment-method:after {
+	content: '';
+	display: block;
+}
+
+.payment-method__radio {
+	display: none;
+}
+
+.payment-method__radio:checked + .payment-method__item .payment-method__inner {
+	border-color: #000;
+}
+
+.payment-method__item {
+	padding: 5px;
+	float: left;
+	width: 33.33%;
+	box-sizing: border-box;
+}
+
+.payment-method__inner {
+	border-radius: 3px;
+	padding: 15px 10px 15px 15px;
+	border: 1px solid rgb(229, 229, 229);
+	cursor: pointer;
+	height: 44px;
+}
+
+.payment-method__name {
+	font-size: 13px;
+	margin-bottom: 4px;
+}
+
+.payment-method__desc {
+	font-size: 11px;
+	color: #bbb;
+	white-space: nowrap;
+}
+
+.payment-method__icon {
+	width: 30px;
+	height: 44px;
+	float: left;
+}

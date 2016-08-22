@@ -1,0 +1,31 @@
+.header_menu{
+	margin-left: 33px;
+}
+
+.header_menu__item {
+	float: left;
+}
+
+
+.header_menu__link {
+	text-decoration: none;
+	display: block;
+	color: black;
+	font-size: 16px;
+	margin: 0 20px;
+	line-height: 46px;
+	height: 49px;
+	border-bottom: 2px solid transparent;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.header_menu__link_active {
+	border-bottom: 2px solid #f29b39;
+}
+
+.header_menu__link:hover,
+.header_menu__link:focus {
+    color: #b8002d;
+}

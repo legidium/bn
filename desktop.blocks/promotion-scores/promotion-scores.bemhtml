@@ -1,0 +1,45 @@
+block('promotion-scores')(
+    content()(function() {
+        var items = this.ctx.items || [];
+        var help = this.ctx.help || '';
+        var content = [];
+
+        var arrayChunk = function(array, size) {
+            var sets = [];
+            var chunks = array.length / size;
+            for (var i = 0, j = 0; i < chunks; i++, j += size) {
+                sets[i] = array.slice(j, j + size);
+            }
+            return sets;
+        }
+
+        var row;
+        var chunkes = arrayChunk(items, 3);
+        (chunkes || []).map(function(chunk) {
+            row = [];
+            (chunk).map(function(item) {
+                row.push({ elem: 'item', content: item });
+            })
+            content.push( row.length ? { elem: 'items', content: row } : '');
+        });
+
+        return [
+            content.length ? { elem: 'content', content: content } : '' ,
+            help ? { elem: 'help', content: help } : ''
+        ];
+    }),
+
+    elem('item')(
+        content()(function() {
+            var content = [];
+            var title = applyNext().title || '';
+            var help = applyNext().help || '';
+            var text = applyNext().text || '';
+
+            content.push(title ? { elem: 'title', content: title + (help ? '<small>' + ' ' + help + '</small>' : '') } : '');
+            content.push(text ? { elem: 'text', content: text } : '');
+
+            return content;
+        })
+    )
+)

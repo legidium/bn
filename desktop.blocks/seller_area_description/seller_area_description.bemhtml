@@ -1,0 +1,77 @@
+block('seller_area_description')(
+	content()(function () {
+		var pictureObject = {
+			elem: 'image'
+		};
+
+		if (this.ctx.image.length > 0) {
+			pictureObject.tag = 'img';
+			pictureObject.attrs = { src: this.ctx.image };
+		}
+
+		return [{
+			elem: 'name',
+			content: this.ctx.name,
+			tag: 'h3'
+		}, {
+			elem: 'location',
+			content: this.ctx.location,
+			tag: 'p'
+		}, pictureObject, {
+			elem: 'items',
+			tag: 'ul',
+			content: [{
+				elem: 'item',
+				tag: 'li',
+				content: [{
+					elem: 'text',
+					tag: 'span',
+					content: 'Класс'
+				}, {
+					elem: 'description',
+					tag: 'span',
+					content: this.ctx.category
+				}]
+			}, {
+				elem: 'item',
+				tag: 'li',
+				content: [{
+					elem: 'text',
+					tag: 'span',
+					content: 'Корпусов'
+				}, {
+					elem: 'description',
+					tag: 'span',
+					content: this.ctx.buildings
+				}]
+			}, {
+				elem: 'item',
+				tag: 'li',
+				content: [{
+					elem: 'text',
+					tag: 'span',
+					content: 'Квартиры'
+				}, {
+					elem: 'description',
+					tag: 'span',
+					cls: 'top',
+					content: this.ctx.apartmentTypes.reduce(function (result, apartment) {
+						return result + ', ' + apartment.split('м2').join('м<sup>2</sup>');
+					})
+				}]
+			}, {
+				elem: 'item',
+				tag: 'li',
+				content: [{
+					elem: 'text',
+					tag: 'span',
+					content: 'В продаже'
+				}, {
+					elem: 'description',
+					tag: 'span',
+					content: this.ctx.sale + ' предложения'
+				}]
+			}]
+		}];
+	})
+);

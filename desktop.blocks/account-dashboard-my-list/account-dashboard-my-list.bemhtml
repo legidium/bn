@@ -1,0 +1,344 @@
+block('account-dashboard-my-list')(
+    content()(function() {
+        var content = [];
+        var items = this.ctx.items || [];
+
+        content.push({ elem: 'toolbar' });
+        content.push({ elem: 'items', mods: { loadable: true }, content: items });
+        content.push({ elem: 'pager', mods: { loadable: true } });
+
+        return content;
+    }),
+
+    elem('toolbar')(
+        content()(function() {
+            return [
+                {
+                    elem: 'toolbar-line',
+                    content: [
+                        {
+                            elem: 'toolbar-left',
+                            content: [
+                                {
+                                    block: 'dropdown',
+                                    mix: { block: 'account-dashboard-my-list', elem: 'control' },
+                                    mods : { switcher : 'button', theme : 'islands', size : 'm' },
+                                    switcher : {
+                                        block : 'link',
+                                        mods : { theme : 'islands', size : 'm', font: '11'},
+                                        content: [
+                                            {
+                                                tag: 'span',
+                                                content: 'Действия с выбранными'
+                                            },
+                                            {
+                                                elem: 'tick',
+                                                mix: { block: 'icon' }
+                                            }
+                                        ]
+                                    },
+                                    popup : [
+                                        {
+                                            block: 'menu',
+                                            mix: { block: 'account-dashboard-my-list', elem: 'control' },
+                                            mods : { theme : 'islands', size : 'm' },
+                                            content : [
+                                                { block: 'menu-item', val: 1, content: 'Снять с публикации' },
+                                                { block: 'menu-item', val: 2, content: 'Архивировать' },
+                                                { block: 'menu-item', val: 3, content: 'Управлять размещением' }                                             ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    block: 'checkbox',
+                                    mix: { block: 'account-dashboard-my-list', elem: 'control' },
+                                    mods: { theme: 'islands', size: 'm' },
+                                    attrs: { style: 'line-height: 30px;'},
+                                    text: 'Только мои объявления'
+                                }
+                            ]
+                        },
+                        {
+                            elem: 'toolbar-right',
+                            content: [
+                                {
+                                    block: 'button',
+                                    mix: { block: 'account-dashboard-my-list', elem: 'control' },
+                                    mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                    text: 'Сохранить как PDF'
+                                },
+                                {
+                                    block: 'dropdown',
+                                    mix: { block: 'account-dashboard-my-list', elem: 'control' },
+                                    mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                    switcher: {
+                                        block: 'link',
+                                        mods: { theme: 'islands', size: 'm', font: '11'},
+                                        content: [
+                                            {
+                                                tag: 'span',
+                                                content: 'Отправить'
+                                            },
+                                            {
+                                                elem: 'tick',
+                                                mix: { block: 'icon' }
+                                            }
+                                        ]
+                                    },
+                                    popup: [
+                                        {
+                                            block: 'send_search_results'
+                                        }
+                                    ]
+                                },
+                                {
+                                    block: 'dropdown',
+                                    mix: { block: 'account-dashboard-my-list', elem: 'control' },
+                                    mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                    switcher: {
+                                        block: 'link',
+                                        mods: { theme: 'islands', size: 'm', font: '11'},
+                                        content: [
+                                            {
+                                                tag: 'span',
+                                                content: 'Поделиться'
+                                            },
+                                            {
+                                                elem: 'tick',
+                                                mix: { block: 'icon' }
+                                            }
+                                        ]
+                                    },
+                                    popup: [
+                                        {
+                                            block: 'share_search_results'
+                                        }
+                                    ]
+                                },
+                                {
+                                    block: 'button',
+                                    mix: { block: 'account-dashboard-my-list', elem: 'control' },
+                                    mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                    text: 'Распечатать'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ];
+        })
+    ),
+
+    elem('pager')(
+        content()(function() {
+            return [
+                {
+                    block: 'button',
+                    mix: { block: 'account-dashboard-my-list', elem: 'pager-more'},
+                    mods: { theme: 'islands', size: 'l' },
+                    text: 'Показать еще'
+                },
+                {
+                    tag: 'span',
+                    block: 'help',
+                    mix: { block: 'account-dashboard-my-list', elem: 'pager-text'},
+                    content: ' Показано 25 из 50'
+                }
+            ];
+        })
+    ),
+
+    elem('items')(
+        content()(function() {
+            var content = [];
+
+            (applyNext() || []).map(function(item) {
+                content.push({
+                    elem: 'item',
+                    js: item.link ? { link: item.link } : {},
+                    mods: item.mods,
+                    content: item
+                });
+            });
+
+            return content;
+        })
+    ),
+
+    elem('item')(
+        content()(function() {
+            var id, unpublished;
+            var checkbox, image, address, object, s, floor, san, home, price, seller, phones, comment, tools;
+            var isHeading = applyNext().mods && applyNext().mods.heading;
+
+            if (!isHeading) {
+                id = applyNext().js && applyNext().js.id ? applyNext().js.id : 0;
+                unpublished = applyNext().mods.unpublished;
+
+                checkbox = { block: 'checkbox', mods: { theme: 'islands', size: 'm' }, name: 'ids[]', val: id };
+                image = { elem: 'image-holder', content: applyNext() };
+                address = [
+                    { elem: 'status-text', content:
+                            unpublished
+                                ? { tag: 'span', block: 'text', mods: { error: true }, content: ' объявление снято с публикации' }
+                                :  applyNext().status_text || '&nbsp;'
+                    },
+                    { elem: 'text', content: applyNext().address_text || '&nbsp;' },
+                    { block: 'help', content: applyNext().address_help || '&nbsp;' }
+                ];
+                object = [
+                    { elem: 'status-text', content: '&nbsp;' },
+                    { elem: 'text', content: applyNext().object_text },
+                    { block: 'help', content: applyNext().object_help || '&nbsp;' }
+                ];
+                s = [
+                    { elem: 'status-text', content: '&nbsp;'},
+                    { elem: 'text', content: applyNext().s_text },
+                    { block: 'help', content: applyNext().s_help || '&nbsp;' }
+                ];
+                floor = [
+                    { elem: 'status-text', content: '&nbsp;' },
+                    { elem: 'text', content: applyNext().floor_text },
+                    { block: 'help', content: applyNext().floor_help || '&nbsp;' }
+                ];
+                san = [
+                    { elem: 'status-text', content: '&nbsp;' },
+                    { elem: 'text', content: applyNext().san_text },
+                    { block: 'help', content: applyNext().san_help || '&nbsp;' }
+                ];
+                home = [
+                    { elem: 'status-text', content: '&nbsp;' },
+                    { elem: 'text', content: ([ applyNext().home_text, applyNext().home_voprosique ]).map(function(text) {
+                            return text == '?'
+                                ? { block: 'voprosique' }
+                                : { tag: 'span', content: text };
+                        })
+                    },
+                    { block: 'help', content: applyNext().home_help || '&nbsp;' }
+                ];
+                price = [
+                    { elem: 'status-text', content:  '&nbsp;' },
+                    { elem: 'text', content: applyNext().price_text },
+                    { block: 'help', content: applyNext().price_help || '&nbsp;' }
+                ];
+                seller = [
+                    { elem: 'status-text', content: '&nbsp;' },
+                    { elem: 'text', content: applyNext().seller_text },
+                    { block: 'help', content: applyNext().seller_help || '&nbsp;' }
+                ];
+                phones = [
+                    { elem: 'status-text', content: '&nbsp;' },
+                    (applyNext().phones || []).map(function(phone) {
+                        return { elem: 'text', content: phone };
+                    })
+                ];
+                comment = { elem: 'text', content: applyNext().comment };
+                tools = { elem: 'tools', content: applyNext() };
+
+            } else {
+                checkbox = { block: 'checkbox', mods: { theme: 'islands', size: 'm' }, name: 'check_all' };
+                address = applyNext().address_help || 'nbsp;';
+                object  = applyNext().object_help || '&nbsp;';
+                s       = applyNext().s_help || '&nbsp;';
+                floor   = applyNext().floor_help || '&nbsp;';
+                san     = applyNext().san_help || '&nbsp;';
+                home    = applyNext().home_help || '&nbsp;';
+                price   = applyNext().price_help || '&nbsp;';
+                seller  = applyNext().seller_help || '&nbsp;';
+                phones  = '&nbsp;';
+                comment = '&nbsp;';
+                tools   = '&nbsp;';
+            }
+
+            return [
+                {
+                    attrs: applyNext().attrs,
+                    elem: 'row',
+                    elemMods: { heading: isHeading },
+                    content: {
+                        elem: 'row-inner',
+                        content: [
+                            { elem: 'cell', mods: { checkbox: true }, content: checkbox },
+                            { elem: 'cell', mods: { image: true }, content: image},
+                            { elem: 'cell', mods: { address: true }, content: address },
+                            { elem: 'cell', mods : { object: true }, content: object },
+                            { elem: 'cell', mods: { s: true }, content: s },
+                            { elem: 'cell', mods: { floor: true }, content: floor },
+                            { elem: 'cell', mods: { san: true }, content: san },
+                            { elem: 'cell', mods: { home: true }, content: home },
+                            { elem: 'cell', mods: { price: true }, content: price },
+                            { elem: 'cell', mods: { seller: true }, content: seller },
+                            { elem: 'cell', mods: { phone: true }, content: phones },
+                            { elem: 'cell', mods: { comment: true }, content: comment },
+                            { elem: 'cell', mods: { tools: true }, content: tools }
+                        ]
+                    }
+                }
+            ];
+        })
+    ),
+
+    elem('image-holder')(
+        content()(function() {
+            return applyNext().image ? { tag: 'img', attrs: { src: applyNext().image, alt: '' } } : '';
+        })
+    ),
+
+    elem('tools')(
+        content()(function() {
+            return [
+                {
+                    elem: 'tools-item',
+                    mods: { first: true, accept: applyNext().tools_star_accept },
+                    content: {
+                        block: 'icon',
+                        mix: { block: 'account-dashboard-my-list', elem: 'icon' },
+                        mods: { action: applyNext().tools_star_accept ? 'star' : 'star-o' }
+                    }
+                },
+                {
+                    elem: 'tools-item',
+                    mods: { second: true, accept: applyNext().tools_list_accept },
+                    content: [
+                        {
+                            block: 'dropdown',
+                            mods: { switcher: 'link', theme: 'islands' },
+                            switcher: {
+                                block: 'link',
+                                content: {
+                                    block: 'icon',
+                                    mix: { block: 'account-dashboard-my-list', elem: 'icon' },
+                                    mods: { action: applyNext().tools_list_accept ? 'list-blue' : 'list' }
+                                }
+                            },
+                            popup: {
+                                block: 'user_lists_in_search'
+                            }
+                        }
+                    ]
+                },
+                {
+                    elem: 'tools-item',
+                    mods: { third: true, accept: applyNext().tools_comments_accept },
+                    content: [
+                        {
+                            block: 'dropdown',
+                            mods: { switcher: 'link', theme: 'islands' },
+                            switcher: {
+                                block: 'link',
+                                content: {
+                                    block: 'icon',
+                                    mix: { block: 'account-dashboard-my-list', elem: 'icon' },
+                                    mods: { action: applyNext().tools_comments_accept ? 'comments-blue' : 'comments' }
+                                }
+                            },
+                            popup: {
+                                block: 'user_comments_in_search'
+                            }
+                        }
+                    ]
+                }
+            ];
+        })
+    )
+)

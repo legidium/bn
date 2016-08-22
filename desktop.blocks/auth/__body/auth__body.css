@@ -1,0 +1,142 @@
+.auth__body {
+	min-height: 230px;
+	border-bottom: 1px solid rgb(229, 229, 229);
+	padding: 1px 0 40px;
+}
+
+.auth__ban + .auth__body .auth__block { margin-top: -130px; }
+
+.auth__top {
+	position: relative;
+	margin: 50px auto 10px;
+	width: 600px;
+	text-align: center;
+}
+
+.auth__top .auth__title {
+	margin-bottom: 10px;
+	font-size: 26px;
+	font-weight: 600;
+    padding-top: 4px;
+}
+
+.auth__top .auth__title-desc {
+	color: #bbb;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+
+.auth__block > p.auth__title {
+	margin: 0 0 30px;
+	text-align: center;
+	font-size: 26px;
+}
+
+.auth__label.auth__label_password-recovery { width: 150px; }
+
+.auth__bottom .pull_left,
+.auth__bottom .pull_right,
+.auth__top .pull_left,
+.auth__top .pull_right {
+	position: absolute;
+	top: 2px;
+}
+
+.auth__bottom .pull_left, .auth__top .pull_left { left: 0; }
+.auth__bottom .pull_right, .auth__top .pull_right { right: 0; }
+
+.auth__form {
+	display: table;
+	margin-bottom: -20px;
+	width: 100%;
+}
+
+.auth__form-line {
+	display: table-row;
+}
+
+.auth__label,
+.auth__field {
+	position: relative;
+	display: table-cell;
+	padding-bottom: 30px;
+	vertical-align: middle;
+	font-size: 13px;
+}
+
+.auth__label {
+	width: 110px;
+	vertical-align: middle;
+}
+
+.auth__label.vertical-top { padding-top: 8px; }
+
+.auth__field { vertical-align: top; }
+
+.vertical-top { vertical-align: top; }
+
+.auth__field .input_theme_islands.input.input_size_l { width: 350px; }
+.auth__field .input_theme_islands.input.input_size_l.input_full-size { width: 100%; }
+.auth__field .input_theme_islands.input.input_size_l.input_w130 { width: 130px; }
+
+.auth__field .select_theme_islands.select { float: none; }
+
+.auth__field .select .button { border-radius: 0; }
+
+.auth__field .select.select_full-size { width: 100%; }
+
+.auth__field .checkbox-group_theme_islands.checkbox-group_size_m {
+	line-height: 30px;
+	margin-left: 15px;
+}
+
+.auth__field-desc {
+	font-size: 11px;
+	padding-top: 6px;
+	color: #bbb;
+}
+
+.auth__field .input_theme_islands.input.input_size_l .input__control {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	width: 100%;
+}
+
+.auth__phone-line {
+	margin-bottom: 20px;
+}
+
+.auth__add-phone {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	color: #bbb;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.input__control {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.long-input .input__control { width: 100%; }
+.short-input .input__control {
+	width: 130px;
+	margin-right: 13px;
+}
+
+.auth__preson-switcher {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.auth__preson-switcher .button_theme_islands.button_size_xl,
+.auth__preson-switcher .button_theme_islands.button.button_size_xl,
+.auth__preson-switcher .button_theme_islands.button.button_size_xl .button__text {
+	height: 28px;
+	line-height: 28px;
+}

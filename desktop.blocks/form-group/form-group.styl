@@ -1,0 +1,127 @@
+@require "../../design/stylus/index"
+
+$help_line_height  ?=      1.1
+
+form_widths()
+    &_width_xs
+        width 270px
+    &_width_s
+        width 430px
+    &_width_m
+        width 490px
+    &_width_l
+        width 550px
+    &_width_xl
+        width 710px
+
+.form-group
+    form_widths()
+    
+    &__item
+        margins()
+        
+    &__title
+        font-size $title_size_s
+        line-height $title_line_height
+        margin-bottom $margin_s
+        title_sizes()
+        margins()
+        
+    &__title-help
+        font-size $text_size_m
+        line-height $text_line_height
+        margin-bottom $margin_m
+        text_sizes()
+        margins()
+    
+    &__content
+        margin-bottom $margin_s
+        margins()
+
+    &__line
+        display table
+        line-height $control_height_l
+        margin-bottom $margin_m
+        width 100%
+        margins()
+        control_heights()
+    
+    &__col
+        display table-cell
+        padding-right $padding_s
+        border-box()
+        paddings()
+        
+        &:last-child
+            padding-right 0
+            
+        &_type_label
+            font-size $text_size_m
+            width $form_group_col_size_m
+            vertical-align top
+            form_group_col_sizes()
+    
+    &__help
+        color $text_color_light
+        font-size $text_size_s
+        line-height $text_line_height_s
+        margins()
+        
+    &__label
+        font-size $text_size_m
+        line-height $text_line_height
+        margin-bottom $margin_s
+        text_font_sizes()
+        margins()
+        
+    &__label-text
+        font-size $text_size_m
+        line-height $text_line_height
+        padding-top 6px
+        
+    &__input-control
+        position relative
+    
+    &__icon-button
+        position absolute !important
+        width $icon_size_l
+        height $icon_size_l
+        right 1px
+        top 0
+        z-index 1
+        
+        &.button_theme_islands.button.button_size_m,
+        &.button_theme_islands.button.button_size_m .icon
+            font-size $text_size_l
+     
+    &__icon-input.input.input_size_m .input__control,
+    &__icon-input.input_theme_islands.input.input_size_l .input__control
+        padding-right ($icon_size_m + 1)
+           
+    &__icon-input.input.input_size_l .input__control,
+    &__icon-input.input_theme_islands.input.input_size_l .input__control
+        padding-right ($icon_size_l + 1)
+
+
+
+/* Button styles */
+/* TODO: Move to the button block */
+.button_font_xs.button .button__text,
+.button_font_xs.button_theme_islands.button .button__text
+    font-size $text_size_xs
+    
+.button_font_s.button .button__text,
+.button_font_s.button_theme_islands.button .button__text
+    font-size $text_size_s
+
+.button_font_m.button .button__text,
+.button_font_m.button_theme_islands.button .button__text
+    font-size $text_size_m
+    
+.button_font_l.button .button__text,
+.button_font_l.button_theme_islands.button .button__text
+    font-size $text_size_l
+
+.button_font_xl.button .button__text,
+.button_font_xl.button_theme_islands.button .button__text
+    font-size $text_size_xl

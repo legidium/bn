@@ -1,0 +1,95 @@
+block('b-agency-contacts')(
+    content()(function () {
+        var contactsIcon = {
+            Skype: 'images/skype.png',
+            WhatsApp: 'images/whatsapp.png',
+            Viber: 'images/viber.png'
+        };
+
+        return [{
+            elem: 'name',
+            content: this.ctx.agencyName
+        }, {
+            elem: 'type',
+            tag: 'p',
+            content: this.ctx.contragentType
+        }, {
+            elem: 'phones',
+            content: this.ctx.phones.map(function (phone) {
+                return {
+                    elem: 'phone',
+                    content: [{
+                        elem: 'number',
+                        tag: 'span',
+                        content: phone.number
+                    }, {
+                        elem: 'icons',
+                        tag: 'span',
+                        content: phone.alternatives.map(function (iconUrl) {
+                            return {
+                                elem: 'icon',
+                                tag: 'img',
+                                attrs: {
+                                    src: contactsIcon[iconUrl]
+                                }
+                            };
+                        })
+                    }]
+                };
+            })
+        }, {
+            elem: 'help-tooltip',
+            content: [{
+                elem: 'help-text',
+                tag: 'span',
+                content: 'Можно связаться с помощью'
+            }, {
+                elem: 'icons',
+                content: this.ctx.callTypes.map(function (callType) {
+                    return {
+                        tag: 'img',
+                        attrs: {'src': contactsIcon[callType]}
+                    };
+                })
+            }]
+        }, {
+            elem: 'button',
+            content: {
+                block: 'button',
+                text: 'Написать продавцу',
+                mods: {
+                    theme: 'islands',
+                    size: 'm'
+                }
+            }
+        }, {
+            elem: 'items',
+            tag: 'ul',
+            content: [{
+                elem: 'item',
+                tag: 'li',
+                content: [{
+                    elem: 'published-text',
+                    content: 'Опубликовано',
+                    tag: 'span'
+                }, {
+                    elem: 'published-data',
+                    content: this.ctx.publishDate,
+                    tag: 'span'
+                }]
+            }, {
+                elem: 'item',
+                tag: 'li',
+                content: [{
+                    elem: 'viewed-text',
+                    content: 'Просмотрено',
+                    tag: 'span'
+                }, {
+                    elem: 'viewed-data',
+                    content: this.ctx.viewed + ' раз',
+                    tag: 'span'
+                }]
+            }]
+        }];
+    })
+)

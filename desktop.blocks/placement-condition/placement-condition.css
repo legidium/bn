@@ -1,0 +1,10 @@
+.placement-condition {
+	font-size: 13px;
+	color: #bbb;
+	margin-bottom: 10px;
+}
+
+.placement-condition__name {
+	display: inline-block;
+	width: 140px;
+}

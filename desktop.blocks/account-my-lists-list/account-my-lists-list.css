@@ -1,0 +1,25 @@
+.account-my-lists-list_loading .account-my-lists-list__toolbar_loadable,
+.account-my-lists-list_loading .account-my-lists-list__items_loadable,
+.account-my-lists-list_loading .account-my-lists-list__pager_loadable {
+    position: relative;
+}
+.account-my-lists-list_loading .account-my-lists-list__toolbar_loadable:before,
+.account-my-lists-list_loading .account-my-lists-list__items_loadable:before,
+.account-my-lists-list_loading .account-my-lists-list__pager_loadable:before {
+    background: rgba(255, 255, 255, 0.7);
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+}
+.account-my-lists-list__items {
+    font-size: 0;
+    line-height: 0;
+    padding: 5px 15px;
+}
+.account-my-lists-list__footer {
+    padding: 10px 30px 30px;
+}

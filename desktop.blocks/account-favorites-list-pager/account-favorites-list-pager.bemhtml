@@ -1,0 +1,21 @@
+block('account-favorites-list-pager')(
+    content()(function() {
+        return [
+            {
+                block: 'button',
+                mix: { block: 'account-favorites-list-pager', elem: 'more' },
+                mods: { theme: 'islands', size: 'l' },
+				attrs: {'id' : 'load-more-favs-button'},
+                text: 'Показать еще'
+            },
+            {
+                tag: 'span',
+                block: 'help',
+                mix: { block: 'account-favorites-list-pager', elem: 'text' },
+                content: 'Показано 10 из 20'
+            }
+        ]
+    }),
+	
+	js()({"url": "/desktop.blocks/account-favorites-list/fav-list.json"})
+)

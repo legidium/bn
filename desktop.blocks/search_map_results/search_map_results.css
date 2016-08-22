@@ -1,0 +1,24 @@
+.search_map_results__item_title {
+    margin-bottom: 8px;
+    font-size: 11px;
+    line-height: 1.2;
+}
+.search_map_results__item_details,
+.search_map_results__item_comment {
+    color: rgb(151, 151, 151);
+    font-size: 11px;
+    line-height: 1.2;
+}
+.search_map_results__text.search_map_results__text_object,
+.search_map_results__text.search_map_results__text_price,
+.search_map_results__text.search_map_results__text_seller {
+    display: inline;
+}
+.search_map_results__text.search_map_results__text_price {
+    font-weight: bold;
+    margin-right: 5px;
+}
+.search_map_results__text.search_map_results__text_seller {
+    color: rgb(151, 151, 151);
+}
+

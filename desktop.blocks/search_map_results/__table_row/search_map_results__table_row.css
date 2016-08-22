@@ -1,0 +1,14 @@
+.search_map_results__table_row {
+    display: none;
+    border: 1px solid transparent;
+    margin: 0 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+.search_map_results__table_row:hover {
+    border: 1px solid #fedb6b;
+    cursor: pointer;
+}
+.search_map_results__table_row.search_map_results__table_row_visible {
+    display: block;
+}

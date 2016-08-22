@@ -1,0 +1,19 @@
+block('search_footer')(
+	mix()({ block: 'text-center' }),
+	content()(function(){
+
+		return [
+			{
+				block: 'feed-ad',
+				mods: { last: true },
+				content: {
+					block: 'button',
+		            mods : { theme : 'islands', size : 'xl', gray: 'light' },
+		            text: 'Еще похожие объекты'
+				}
+			}
+		];
+
+	})
+
+);

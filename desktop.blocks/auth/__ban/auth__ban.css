@@ -1,0 +1,16 @@
+.auth__ban {
+	min-height: 300px;
+	background-color: rgb(229, 229, 229);
+}
+
+.auth__ban img {
+	width: 100%;
+}
+
+.auth__text {
+	color: #b3b3b3;
+	font-size: 18px;
+	padding-top: 72px;
+	margin: 0;
+	text-align: center;
+}

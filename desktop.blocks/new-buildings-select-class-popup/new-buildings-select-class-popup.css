@@ -1,0 +1,12 @@
+.new-buildings-select-class-popup__top {}
+.new-buildings-select-class-popup__bottom {
+    margin: 6px 0 15px;
+    padding: 0 20px 0 30px;
+}
+.new-buildings-select-class-popup .menu_theme_islands.menu_size_m {
+    font-size: 11px;
+}
+.new-buildings-select-class-popup .menu_size_m[class*='menu_mode'] .menu-item_theme_islands,
+.new-buildings-select-class-popup .menu_size_m .menu__group-title ~ .menu-item_theme_islands {
+    padding: 0 15px 0 30px;
+}

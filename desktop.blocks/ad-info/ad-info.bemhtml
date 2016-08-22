@@ -1,0 +1,50 @@
+block('ad-info')(
+	content()(function(){
+		return [
+			{
+				elem: 'controls',
+				content: [
+					{
+						block: 'button',
+						mods: { link: true },
+						text: 'Редактировать',
+						icon: {
+					        block : 'icon',
+					        mods : { action : 'redact' }
+					    }
+					},
+					{
+						block: 'button',
+						mods: { link: true },
+						text: 'Снять с публикации',
+						icon: {
+					        block : 'icon',
+					        mods : { action : 'redact' }
+					    }
+					},
+					{
+						block: 'button',
+						mods: { link: true },
+						text: 'Архивировать',
+						icon: {
+					        block : 'icon',
+					        mods : { action : 'redact' }
+					    }
+					}
+				]
+			},
+			{
+				elem: 'title',
+				tag: 'p',
+				content: this.ctx.title
+			},
+			this.ctx.content,
+			{
+				elem: 'buttons',
+				content: this.ctx.buttons
+			}
+		];
+
+	})
+
+);

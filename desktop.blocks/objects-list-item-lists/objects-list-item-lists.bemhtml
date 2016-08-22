@@ -1,0 +1,113 @@
+block('objects-list-item-lists')(
+    js()(true),
+    content()(function() {
+        var auth = this.ctx.auth || false;
+
+        if (!auth) {
+            var loginUrl = this.ctx.loginUrl || '';
+            var registerUrl = this.ctx.registerUrl || '';
+
+            return [
+                {
+                    block: 'help',
+                    attrs: {style: 'padding: 10px;'},
+                    content: 'Чтобы добавлять объекты в списки,<br>войдите на БН'
+                },
+                {
+                    tag: 'div',
+                    attrs: {style: 'padding: 10px;'},
+                    content: [
+                        {
+                            block : 'button',
+                            attrs: { style: 'margin-right: 10px;' }, 
+                            mods : { theme : 'islands', size : 'm', action: 'primary', type: 'link' },
+                            url: loginUrl,
+                            content: [
+                                {
+                                    elem: 'text',
+                                    tag: 'span',
+                                    content: 'Войти'
+                                }
+                            ]
+                        },
+                        {
+                            block : 'button',
+                            mods : { theme : 'islands', size : 'm', type: 'link' },
+                            url: registerUrl,
+                            content: [
+                                {
+                                    elem: 'text',
+                                    tag: 'span',
+                                    content: 'Зарегистрироваться'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    tag: 'div',
+                    attrs: {style: 'padding: 10px; background: #f2f2f2;'},
+                    content: [
+                        {
+                            block: 'help',
+                            content: 'Вы сможете создавать собственные списки объектов. Распечатывать, скачивать и отправлять их по почте.'
+                        }
+                    ]
+                }
+            ];
+        }
+
+        var that = this;
+        var val = this.ctx.inLists || [];
+
+        return [
+            {
+                block: 'help',
+                attrs: { style: 'padding: 10px;'},
+                content: 'Добавить в список'
+            },
+            {
+                elem: 'list',
+                content: {
+                    block: 'menu',
+                    mods: { theme: 'islands', size: 'm', mode: 'check' },
+                    val: val,
+                    content: (this.ctx.lists || []).map(function(item) {
+                        return {
+                            block: 'menu-item',
+                            js: { val: item.id, count: item.count },
+                            val : item.id,
+                            content: [
+                                { tag: 'span', block: 'plain_text', mods: { size: '11'}, content: item.name + '&nbsp;' },
+                                { tag: 'span', block: 'help', content: item.count }
+                            ]
+                        };
+                    })
+                }
+            },
+            {
+                elem: 'add-form',
+                tag: 'form',
+                attrs: { action: '', method: 'post' },
+                content: [
+                    {
+                        block: 'control-group',
+                        content: [
+                            {
+                                block : 'input',
+                                attrs: { style: 'width: 130px;'},
+                                mods : { theme : 'islands', size : 'l' },
+                                placeholder : 'Новый список'
+                            },
+                            {
+                                block : 'button',
+                                mods : { theme : 'islands', size : 'm', type: 'submit' },
+                                text : 'Добавить'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    })
+);

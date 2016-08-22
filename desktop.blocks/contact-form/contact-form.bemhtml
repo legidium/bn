@@ -1,0 +1,120 @@
+block('contact-form')(
+    js()(true),
+    tag()('form'),
+    content()(function() {
+        var data = this.ctx.data || {};
+
+        return [
+            {
+                block: 'form-group',
+                content: [
+                    {
+                        elem: 'line',
+                        mix: [
+                            { block: this.block, elem: 'email' },
+                            { block: 'mr', mods: { b: 'l' } },
+                        ],
+                        content: [
+                            {
+                                elem: 'col',
+                                elemMods: { type: 'label' },
+                                mix: { block: this.block, elem: 'label' },
+                                content: { elem: 'label-text', content: 'E-mail' }
+                            },
+                            {
+                                elem: 'col', elemMods: { type: 'input' },
+                                content: [
+                                    {
+                                        block: 'input',
+                                        mods: { theme: 'islands', size: 'l', font: 's', nocorners: true, width: 'available' },
+                                        name: 'email',
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'line',
+                        mix: [
+                            { block: this.block, elem: 'subject' },
+                            { block: 'mr', mods: { b: 'l' } }
+                        ],
+                        content: [
+                            {
+                                elem: 'col',
+                                elemMods: { type: 'label' },
+                                mix: { block: this.block, elem: 'label' },
+                                content: { elem: 'label-text', content: 'Тема сообщения' }
+                            },
+                            {
+                                elem: 'col', elemMods: { type: 'input' },
+                                content: [
+                                    {
+                                        block: 'select',
+                                        mods: { mode: 'radio-check', theme: 'islands', size: 'm', width: 'available' },
+                                        text: 'Выберите тему',
+                                        name: 'subject',
+                                        options: data.subjects || []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'line',
+                        mix: [
+                            { block: this.block, elem: 'message' },
+                            { block: 'mr', mods: { b: 'l' } }
+                        ],
+                        content: [
+                            {
+                                elem: 'col',
+                                elemMods: { type: 'label' },
+                                mix: { block: this.block, elem: 'label' },
+                                content: { elem: 'label-text', content: 'Сообщение' }
+                            },
+                            {
+                                elem: 'col', elemMods: { type: 'input' },
+                                content: [
+                                    {
+                                        block: 'textarea',
+                                        mods: { theme: 'islands', size: 'm', width: 'available' },
+                                        name: 'message',
+                                        content: ''
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'line',
+                        mix: [
+                            { block: this.block, elem: 'submit' },
+                            { block: 'mr', mods: { b: 'l' } }
+                        ],
+                        content: [
+                            {
+                                elem: 'col',
+                                elemMods: { type: 'label' },
+                                mix: { block: this.block, elem: 'label' },
+                                content: '&nbsp;'
+                            },
+                            {
+                                elem: 'col', elemMods: { type: 'input' },
+                                content: [
+                                    {
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'm', font: 'm', type: 'submit' },
+                                        text: 'Отправить'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    })
+)
+
+                                                                                

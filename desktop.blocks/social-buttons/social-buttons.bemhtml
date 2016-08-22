@@ -1,0 +1,36 @@
+block('social-buttons')(
+	content()(function () {
+		return [
+			{
+				block: 'button',
+	            mods : { theme : 'islands', size : 'm' },
+	            text: 'Вконтакте'
+			},
+			{
+				block: 'button',
+	            mods : { theme : 'islands', size : 'm' },
+	            text: 'Одноклассники'
+			},
+			{
+				block: 'button',
+	            mods : { theme : 'islands', size : 'm' },
+	            text: 'Мой мир'
+			},
+			{
+				block: 'button',
+	            mods : { theme : 'islands', size : 'm' },
+	            text: 'Yandex'
+			},
+			{
+				block: 'button',
+	            mods : { theme : 'islands', size : 'm' },
+	            text: 'Google'
+			},
+			{
+				block: 'button',
+	            mods : { theme : 'islands', size : 'm' },
+	            text: 'Facebook'
+			}
+		];
+	})
+);

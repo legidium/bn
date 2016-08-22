@@ -1,0 +1,78 @@
+.account-my-searches-list-item__row {
+    border: 1px solid transparent;
+    margin-top: -1px;
+    padding: 0 30px;
+    position: relative;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.account-my-searches-list-item__row:hover {
+    border-color: #fedb6b;
+    cursor: pointer;
+}
+.account-my-searches-list-item__row-inner {
+    position: relative;
+}
+.account-my-searches-list-item__row-inner:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #ececec;
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    clear: both;
+}
+.account-my-searches-list-item:last-child .account-my-searches-list-item__row-inner:after {
+    content: none;
+}
+
+
+/* Cell Styles */
+.account-my-searches-list-item__cell {
+    display: table-cell;
+    vertical-align: top;
+    padding: 20px 10px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.account-my-searches-list-item__cell_title {
+    padding-left: 0;
+    padding-right: 20px;
+    width: 774px;
+}
+.account-my-searches-list-item__cell_date {
+    padding-left: 10px;
+    padding-right: 0;
+    text-align: right;
+    width: 150px;
+}
+
+.account-my-searches-list-item__title {
+    font-size: 15px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+.account-my-searches-list-item__description {
+    color: #afafaf;
+    font-size: 13px;
+    line-height: 1.3;
+}
+.account-my-searches-list-item__date {
+    font-size: 13px;
+    line-height: 1.3;
+}
+.account-my-searches-list-item__button-remove {
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    visibility: hidden;
+}
+.account-my-searches-list-item__row:hover .account-my-searches-list-item__button-remove {
+
+}

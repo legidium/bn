@@ -1,0 +1,108 @@
+.layout{
+	width: 1280px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.layout_has_full_adv{
+	margin-top: 105px;
+}
+
+
+
+
+
+.layout__content {
+    border: 1px solid rgb(229, 229, 229);
+    border-top: 1px solid transparent;
+    border-collapse: collapse;
+    position: relative;
+    top: -1px;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
+.layout__left,
+.layout__right,
+.layout__middle {
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.layout__left {
+    border-right: 1px solid rgb(229, 229, 229);
+}
+.layout__right {
+    border-left: 1px solid rgb(229, 229, 229);
+}
+.middle-block {
+	width: 540px;
+	margin: 0 auto 30px;
+	padding: 30px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 8px 10px rgba(126, 126, 126, 0.5);
+	-moz-box-shadow: 0 8px 10px rgba(126, 126, 126, 0.5);
+	-o-box-shadow: 0 8px 10px rgba(126, 126, 126, 0.5);
+	box-shadow: 0 8px 10px rgba(126, 126, 126, 0.5);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.vertical-top {
+	vertical-align: top;
+}
+
+.text-center { text-align: center; }
+.cl_grey { color: #bbb; }
+
+.text-italic { font-style: italic; }
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.col-4 {
+	box-sizing: border-box;
+	float: left;
+	width: 33.33%;
+}
+
+.layout_ad-page { background-color: #fff; }
+
+.layout_ad-page .header,
+.layout_ad-page .content_layout,
+.layout_ad-page .footer {
+	background-color: #fff;
+}
+
+.layout_ad-page .footer {
+	margin-top: 14px;
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.layout_account .content_layout__left,
+.layout_account .content_layout__right,
+.layout_account .content_layout__middle {
+    padding: 0;
+    display: table-cell;
+}
+.layout_account .content_layout__left {
+    padding: 30px 20px;
+    width: 270px;
+}
+.layout_account .content_layout__right {
+    padding: 20px;
+    width: 310px;
+}
+.layout_account .content_layout__middle {
+    width: 700px;
+}
+
+.content_layout__col {
+    float: left;
+}

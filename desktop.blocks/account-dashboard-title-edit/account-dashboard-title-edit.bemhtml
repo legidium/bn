@@ -1,0 +1,19 @@
+block('account-dashboard-title-edit')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                block:'input',
+                mods : { theme : 'islands', size: 'l', width: 'available' },
+                mix: { block: 'account-dashboard-title-edit', elem: 'input' },
+                placehlder: 'Введите название'
+            },
+            {
+                block: 'button',
+                mods : { theme : 'islands', size : 'm', gray: true },
+                mix: { block: 'account-dashboard-title-edit', elem: 'button', elemMods: { action: 'save' } },
+                text: 'Сохранить'
+            }
+        ]
+    })
+)

@@ -1,0 +1,107 @@
+.auth {
+	padding-top: 1px;
+	background-color: #fafafa;
+	border-width: 0 1px;
+	border-style: solid;
+	border-color: #e2e2e2;
+}
+
+.auth ~ .footer {
+	background-color: #fafafa;
+	border-top: 1px solid #e2e2e2;
+}
+
+.auth__footer {
+	margin: 10px -30px -30px;
+	padding: 30px;
+	background-color: #fafafa;
+}
+
+.auth .input_theme_islands .input__control {
+	font-size: 13px;
+}
+
+.auth .tabs__reg-text {
+	font-size: 13px;
+	line-height: 1.6;
+	margin: 0 0 30px;
+}
+
+.auth__error-message {
+	width: 300px;
+	font-size: 13px;
+	color: #d0021b;
+	padding-left: 110px;
+	margin: 0 0 20px;
+	line-height: 1.8;
+}
+
+.checkbox_terms-of-use {
+	width: 170px;
+    padding-left: 20px;
+    padding-top: 4px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.checkbox_terms-of-use.checkbox_theme_islands .checkbox__box {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.checkbox_terms-of-use .link {
+	color: #5587DE;
+	font-size: 11px;
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.auth__block > p {
+	font-size: 13px;
+	line-height: 1.4;
+	margin: 0;
+}
+
+.password-recovery_error-message {
+	padding-left: 150px;
+	width: auto;
+	margin: 0;
+}
+
+.password-recovery_description,
+.password-recovery_description .link {
+	color: #aeaeae;
+	font-size: 13px;
+	line-height: 1.7;
+}
+
+.password-recovery_description { padding-left: 150px; }
+
+.password-recovery_description .link {
+	text-decoration: underline;
+}
+
+.auth-socail__small-title {
+	font-weight: 600;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+.auth__block.auth__block_registration-stat_step2 > .auth__title {
+	text-align: left;
+}
+
+.auth__block.auth__block_registration-stat_step2 > p {
+	margin-bottom: 30px;
+}
+
+.auth__block.auth__block_registration-stat_step2 > p:last-child { margin: 0; }
+
+.auth__ban + .auth__body .auth__block.auth__block.auth__block_registration-stat_step3 {
+	margin-top: -54px;
+}
+
+.auth__block.auth__block_registration-stat_step3 > p {
+	margin: 0;
+}

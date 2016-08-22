@@ -1,0 +1,85 @@
+block('account-summary')(
+    content()(function() {
+        return [
+            {
+                block: 'alert',
+                mods: { info: true },
+                mix: { block: 'account-summary', elem: 'messages' },
+                content: [
+                    {
+                        elem: 'text',
+                        content: 'Область системных уведомлений'
+                    }
+                ]
+            },
+            {
+                elem: 'line',
+                mix: { block: 'clearfix' },
+                content: [
+                    {
+                        elem: 'col',
+                        mix: { block: 'account-summary', elem: 'ad' },
+                        content: [
+                            {
+                                block: 'account-summary-ad',
+                                title: 'Мои объявления',
+                                items: [
+                                    { text: 'Истекает срок', val: '16', mods: { selected: true }},
+                                    { text: 'Активные', val: '1045' },
+                                    { text: 'Не опубликованные', val: ' 2163'},
+                                    { text: 'На модерации', val: '21' },
+                                    { text: 'Архивные', val: '10 000 + ' },
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        mix: { block: 'account-summary', elem: 'banner'},
+                        content: [
+                            {
+                                tag: 'a',
+                                attrs: { href: '#' },
+                                content: {
+                                    tag: 'img',
+                                    attrs: { src: '../../img/account-ad-banner.png', alt: ''}
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'line',
+                content: [
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'account-summary-updated-lists',
+                                content: [
+                                    {
+                                        elem: 'title',
+                                        attrs: { style: 'font-size: 26px; margin-bottom: 20px;'},
+                                        content: 'Недавно обновленные списки'
+                                    },
+                                    {
+                                        block: 'button',
+                                        mix: { block: 'account-summary-updated-lists', elem: 'button' },
+                                        js: false,
+                                        mods: { theme: 'islands', size : 'l', view: 'plain' },
+                                        text: 'Добавляйте объекты в произвольные списки, редактируйте и отправляйте их по почте',
+                                        icon: {
+                                            block : 'icon',
+                                            mods : { action : 'list' }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+);

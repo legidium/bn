@@ -1,0 +1,113 @@
+block('objects-list-item-note')(
+    js()(true),
+    content()(function() {
+        var auth = this.ctx.auth || false;
+
+        if (!auth) {
+            var loginUrl = this.ctx.loginUrl || '';
+            var registerUrl = this.ctx.registerUrl || '';
+
+            return [
+                {
+                    block: 'help',
+                    attrs: {style: 'padding: 10px;'},
+                    content: 'Чтобы добавлять объекты в списки,<br>войдите на БН'
+                },
+                {
+                    tag: 'div',
+                    attrs: {style: 'padding: 10px;'},
+                    content: [
+                        {
+                            block : 'button',
+                            attrs: { style: 'margin-right: 10px;' }, 
+                            mods : { theme : 'islands', size : 'm', action: 'primary', type: 'link' },
+                            url: loginUrl,
+                            content: [
+                                {
+                                    elem: 'text',
+                                    tag: 'span',
+                                    content: 'Войти'
+                                }
+                            ]
+                        },
+                        {
+                            block : 'button',
+                            mods : { theme : 'islands', size : 'm', type: 'link' },
+                            url: registerUrl,
+                            content: [
+                                {
+                                    elem: 'text',
+                                    tag: 'span',
+                                    content: 'Зарегистрироваться'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    tag: 'div',
+                    attrs: {style: 'padding: 10px; background: #f2f2f2;'},
+                    content: [
+                        {
+                            block: 'help',
+                            content: 'Вы сможете создавать собственные списки объектов. Распечатывать, скачивать и отправлять их по почте.'
+                        }
+                    ]
+                }
+            ];
+        }
+
+        var data = this.ctx.data || {};
+        var userNote = data.user_note || '';
+
+        return [
+            {
+                elem: 'form',
+                tag: 'form',
+                attrs: { action: '', method: 'post' },
+                content: [
+                    {
+                        elem: 'row',
+                        attrs: { style: 'margin-bottom: 5px;' },
+                        content: {
+                            block: 'textarea',
+                            mix: { block: this.block, elem: 'text' },
+                            attrs: { rows: 5 },
+                            mods : { theme: 'islands', size: 'm', width: 'available' },
+                            placeholder: 'Добавьте заметку',
+                            val: userNote
+                        }
+                    },
+                    {
+                        elem: 'row',
+                        content: [
+                            {
+                                block: 'button',
+                                mix: { block: this.block, elem: 'submit' },
+                                mods : { theme: 'islands', size: 'm', type: 'submit'},
+                                text: 'Отправить'
+                            },
+                            {
+                                block: 'button',
+                                mix: { block: this.block, elem: 'cancel' },
+                                attrs: { style: 'margin-left: 10px;', type: 'button' },
+                                mods: { theme: 'islands', link: true },
+                                text: 'Отмена'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag: 'div',
+                attrs: {style: 'padding: 10px; background: #f2f2f2;'},
+                content: [
+                    {
+                        block: 'help',
+                        content: 'Заметки видны только вам'
+                    }
+                ]
+            }
+        ];
+    })
+);

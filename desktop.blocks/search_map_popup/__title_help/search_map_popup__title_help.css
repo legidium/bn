@@ -1,0 +1,6 @@
+.search_map_popup__title_help {
+    color: rgb(151, 151, 151);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

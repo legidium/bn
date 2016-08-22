@@ -1,0 +1,36 @@
+block('sidebar-thumbs-list')(
+    content()(function() {
+        var items = [];
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({ elem: 'item', content: item });
+        });
+
+        return { elem: 'items', content: items };
+    }),
+
+    elem('item')(
+        content()(function() {
+            var content = [];
+            var url    = applyNext().url    || '';
+            var image  = applyNext().image  || '';
+            var text   = applyNext().text   || '';
+
+            if (image) {
+                content.push({
+                    elem: 'image-wrapper',
+                    mods: { video: applyNext().video || undefined },
+                    content: { elem: 'image', tag: 'img', attrs: { src: image, alt: '' } }
+                });
+            }
+
+            if (text) {
+                content.push({ elem: 'text', tag: 'span', content: text });
+            }
+
+            return url
+                ? { elem: 'link', tag: 'a', attrs: { href: url }, content: content }
+                : { elem: 'link', tag: 'span', attrs: { href: url }, content: content };
+        })
+    )
+)

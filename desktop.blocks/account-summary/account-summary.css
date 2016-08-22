@@ -1,0 +1,17 @@
+.account-summary__line {
+    display: table;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.account-summary__col {
+    padding: 20px 30px;
+    vertical-align: top;
+    display: table-cell;
+}
+.account-summary__col.account-summary__ad {
+    width: 40%;
+}
+.account-summary__col.account-summary__banner {
+    width: 60%;
+    padding-top: 78px;
+}

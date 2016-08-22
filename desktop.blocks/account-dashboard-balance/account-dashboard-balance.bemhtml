@@ -1,0 +1,48 @@
+block('account-dashboard-balance')(
+    content()(function() {
+        var type = this.ctx.mods && this.ctx.mods.type ? this.ctx.mods.type : 'person'; 
+        var items = this.ctx.items || {};
+
+        return [
+            {
+                elem: 'title',
+                content: 'Баланс и тариф'
+            },
+            {
+                elem: 'items',
+                content: [
+                    {
+                        elem: 'item',
+                        content: [
+                            {
+                                block: 'control-group',
+                                content: [
+                                    {
+                                        block: 'control',
+                                        mix: { block: 'account-dashboard-balance', elem: 'value' },
+                                        content: items.balance || ''
+                                    },
+                                    {
+                                        block: 'button',
+                                        mix: { block: 'account-dashboard-balance', elem: 'add' },
+                                        mods: { theme: 'islands', size: 'xl', submit: true },
+                                        text: 'Пополнить'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'item',
+                        content: [
+                            {
+                                elem: 'tariff-help',
+                                content: items.tariff_help || ''
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+);

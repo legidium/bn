@@ -1,0 +1,9 @@
+block('account-my-lists-list-pager')(
+    content()(function() {
+        return [
+            {
+                block: 'pagination'
+            }
+        ]
+    })
+)

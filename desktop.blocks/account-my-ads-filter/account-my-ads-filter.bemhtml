@@ -1,0 +1,133 @@
+block('account-my-ads-filter')(
+    js()(true),
+    tag()('form'),
+    content()(function() {
+        var counts = {
+            expires:     '16',
+            active:      '1045',
+            unpublished: '2163',
+            pending:     '21',
+            archived:    '10 000 +'
+        };
+
+        var fNames = {
+            status: 'status',
+            action: 'action',
+            target: 'target',
+            flatTypes: 'flatTypes',
+            address: 'address'
+        };
+
+        var fName = function(name, arr){
+            return name + ((arr || false) ? '[]' : '');
+        };
+
+        return [
+            {
+                elem: 'line',
+                mix: { block: 'clearfix' },
+                content: [
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'checkbox-group',
+                                mix: { block: this.block, elem: 'status' },
+                                mods: { theme: 'islands', size: 'l', font_s: true, type: 'button' },
+                                name: fName(fNames.status, true),
+                                val: [],
+                                options: [
+                                    { val: 'expires',     text: ['Истекает срок',     { block: 'help', tag: 'em', content: counts.expires     || '' }] },
+                                    { val: 'active',      text: ['Активные',          { block: 'help', tag: 'em', content: counts.active      || '' }] },
+                                    { val: 'unpublished', text: ['Не опубликованные', { block: 'help', tag: 'em', content: counts.unpublished || '' }] },
+                                    { val: 'pending',     text: ['На модерации',      { block: 'help', tag: 'em', content: counts.pending     || '' }] },
+                                    { val: 'archived',    text: ['Архивные',          { block: 'help', tag: 'em', content: counts.archived    || '' }] }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'line',
+                mix: { block: 'clearfix'},
+                content: [
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block : 'radio-group',
+                                mix: { block: this.block, elem: 'action' },
+                                mods : { theme : 'islands', size : 'l', font_s: true, type : 'button' },
+                                name : fName(fNames.action),
+                                val: 'sell',
+                                options : [
+                                    { val : 'sell', text : 'Продать' },
+                                    { val : 'buy', text : 'Сдать' }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block : 'radio-group',
+                                mix: { block: this.block, elem: 'target' },
+                                mods : { theme : 'islands', size : 'l', font_s: true, type : 'button' },
+                                name : fName(fNames.target),
+                                val: 'flat',
+                                options : [
+                                    { val : 'flat', text : 'Квартиру' },
+                                    { val : 'room', text : 'Комнату' }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block : 'checkbox-group',
+                                mix: { block: this.block, elem: 'flat-types' },
+                                mods : { theme : 'islands', size : 'l', font_s: true, type : 'button' },
+                                name : fName(fNames.flatTypes, true),
+                                options : [
+                                    { val : 0, text : 'Студия' },
+                                    { val : 1, text : '1' },
+                                    { val : 2, text : '2' },
+                                    { val : 3, text : '3' },
+                                    { val : '4_more', text : '4 и более' },
+                                    { val : '-1', text : 'Свободная планировка' }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                elem: 'search-wrapper',
+                                content: [
+                                    {
+                                        block: 'input',
+                                        mix: { block: this.block, elem: 'search-input' },
+                                        mods: { theme: 'islands', size: 'l', type: 'search', nocorners: true },
+                                        name: fName(fNames.address),
+                                        placeholder: 'Поиск по спискам'
+                                    },
+                                    {
+                                        block: 'button',
+                                        mix: { block: this.block, elem: 'search-submit' },
+                                        mods: { theme: 'islands', size: 'm', type : 'submit' },
+                                        icon: { block: 'icon', mods: { action: 'search' } }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+)

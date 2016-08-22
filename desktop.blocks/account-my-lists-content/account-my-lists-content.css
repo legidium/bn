@@ -1,0 +1,27 @@
+.account-my-lists-content__header {
+    padding: 20px 20px 0 30px;
+}
+.account-my-lists-content__line {
+    margin-bottom: 20px;
+}
+.account-my-lists-content__line:last-line {
+    margin-bottom: 0;
+}
+.account-my-lists-content__left {
+    float: left;
+}
+.account-my-lists-content__right {
+    float: right;
+}
+.account-my-lists-content__title {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.account-my-lists-content__spin {
+    margin: 0 10px;
+}
+.account-my-lists-content__title:last-child {
+    margin-bottom: 0;
+}
+

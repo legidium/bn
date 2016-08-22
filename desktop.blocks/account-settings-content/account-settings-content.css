@@ -1,0 +1,29 @@
+.account-settings-content__header {
+    padding: 20px 30px 15px 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.account-settings-content__left,
+.account-settings-content__right {
+    display: table-cell;
+}
+.account-settings-content__left {
+    border-right:  1px solid #e5e5e5;
+    width: 610px;
+    padding: 20px 30px;
+}
+.account-settings-content__right {
+    border-left:  1px solid #e5e5e5;
+    padding: 20px 30px;
+    width: 375px;
+}
+.account-settings-content__line {
+    margin-bottom: 30px;
+}
+.account-settings-content__line:last-child {
+    margin-bottom: 0;
+}
+.account-settings-content__title {
+    font-size: 26px;
+    line-height: 1.3;
+}
+

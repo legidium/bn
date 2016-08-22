@@ -1,0 +1,123 @@
+block('tools')(
+		js()(true),
+        content()(function() {
+                var noteObject = {};
+                var noteButton = {};
+                var note = this.ctx.note;
+
+                var js = this.ctx.js ? this.ctx.js : {
+                	favorite_url: '',
+					new_list_url: '',
+					add_to_list_url: '',
+					comment_url: '',
+					item_id: 0, 
+					lists: [],
+					in_lists: []
+                };
+
+                var item_in_list = !!(js.hasOwnProperty('in_lists') && js.in_lists.length);
+
+                var comm = [
+	                {
+		                block : 'dropdown',
+		                mods : { switcher : 'link', theme : 'islands', size : 'm' },
+		                switcher : {
+			                block: 'link',
+			                content: {
+				                block : 'icon',
+				                mods : { action : this.ctx.addedNote ? 'comments-blue' : 'comments' }
+			                }
+		                },
+		                popup : {
+			                block: 'user_comments_in_search'
+		                }
+	                }
+                ];
+
+                if (this.ctx.isAuthorized) {
+                    noteObject = {
+                        block: 'textarea',
+                        mods: { width: 'available' },
+                        mix: { block: 'tools', elem: 'input-for-note' },
+                        attrs: { placeholder: 'Добавьте заметку (видна только вам)' }
+                    };
+
+                    noteButton = {
+                        block: 'button',
+                        mods: { theme: 'islands', size: 'm', submit: true },
+                        mix: { block: 'tools', elem: 'note-button' },
+                        text: 'Сохранить'
+                    };
+
+                    comm = {
+		                block : 'icon',
+		                mods : { action : this.ctx.addedNote ? 'comments-blue' : 'comments' }
+	                };
+                }
+
+                return  [
+                    {
+                        elem: 'line',
+                        content: [
+                            {
+                                elem: 'col',
+                                elemMods: { tools: true },
+                                content: {
+                                    elem: 'tools_items',
+                                    mods: { horizontal: true },
+                                    content: [
+                                        {
+                                            elem: 'tools_item',
+                                            mods: { first: true, horizontal: true, accept: this.ctx.addedToFavorites },
+                                            content: {
+                                                block : 'icon',
+                                                mods : { action : this.ctx.addedToFavorites ? 'star' : 'star-o' }
+                                            }
+                                        },
+                                        {
+                                            elem: 'tools_item',
+                                            mods: { horizontal: true, second: true, accept: item_in_list},
+                                            content: [
+                                                {
+                                                    block : 'dropdown',
+                                                    mods : { switcher : 'link', theme : 'islands', size : 'm' },
+                                                    switcher : {
+                                                        block: 'link',
+                                                        content: {
+                                                            block : 'icon',
+                                                            mods : { action : item_in_list ? 'plus-blue' : 'plus' }
+                                                        }
+                                                    },
+                                                    popup : {
+                                                        block: 'user_lists_in_search',
+                                                        item_id:   js.item_id,
+                                                        in_lists : js.in_lists,
+                                                        lists:     js.lists,
+                                                        user_auth: this.ctx.isAuthorized,
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            elem: 'tools_item',
+                                            mods: {horizontal: true, third: true, accept: this.ctx.addedNote},
+                                            content: comm
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                elem: 'col',
+                                elemMods: { note: true },
+                                content: noteObject,
+                            },
+                            {
+                                elem: 'col',
+                                elemMods: { button: true },
+                                content: noteButton
+                            }
+                        ]
+                    }
+                ]
+            })
+        )

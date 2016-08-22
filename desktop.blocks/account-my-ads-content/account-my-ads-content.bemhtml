@@ -1,0 +1,37 @@
+block('account-my-ads-content')(
+    js()(true),
+    content()(function() {
+        var content = [];
+
+        content.push({
+            elem: 'header',
+            content: [
+                {
+                    elem: 'title',
+                    content: [
+                        'Мои объявления',
+                        { block: 'spin', mods: { theme: 'islands', size : 'm' }, mix: { block: this.block, elem: 'spin' } }
+                    ]
+                },
+                { block: 'account-my-ads-filter' }
+            ]
+        });
+
+        content.push({
+            elem: 'main',
+            content: [
+                {
+                    block: 'objects-list',
+                    mix: { block: 'account-my-ads-list' },
+                    mods: { selectable: true },
+                    toolbar: { block: 'account-my-ads-list-toolbar' },
+                    mixItem: { block: 'account-my-ads-list-item'},
+                    pager:   { block: 'pagination' },
+                    items: this.ctx.items || []
+                }
+            ]
+        });
+
+        return content;
+    })
+);

@@ -1,0 +1,49 @@
+block('not-authorized-popup')(
+	content()(function() {
+		return [
+			{
+				elem: 'header',
+				content: 'Чтобы отправлять информацию об объекте, войдите на БН'
+			},
+			{
+				elem: 'controls',
+				content: [
+					{
+						block: 'controls_row',
+						mods: { padding: 'left'  },
+						content: [
+							{
+								elem: 'col',
+								content: {
+									block: 'button',
+									mods : { theme : 'islands', size : 'm'},
+									text: 'Войти'
+								}
+							},
+							{
+								elem: 'col',
+								content: {
+									block: 'button',
+									mods : { theme : 'islands', size : 'm'},
+									text: 'Зарегистрироваться'
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				elem: 'footer',
+				content: 'Вы сможете отправлять информацию об объекте. Скрывать некоторую данные объекта и сопровождать письмо комментарием.'
+			},
+			{
+				elem: 'close',
+				tag: 'span',
+				content: {
+					block: 'icon',
+					mods: {action: 'remove'}
+				}
+			}
+		]
+	})
+);

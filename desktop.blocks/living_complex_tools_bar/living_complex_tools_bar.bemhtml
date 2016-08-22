@@ -1,0 +1,13 @@
+block('living_complex_tools_bar')(
+    js()(true),
+    content()(function(){
+        return {
+            elem: 'item',
+            mods: { first: true, horizontal: true, accept: this.ctx.addedToFavorites },
+            content: {
+                block : 'icon',
+                mods : { action : this.ctx.addedToFavorites ? 'star' : 'star-o' }
+            }
+        };
+    })
+)

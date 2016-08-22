@@ -1,0 +1,35 @@
+block('social-info')(
+	content()(function(){
+		var icon = this.ctx.social_icon;
+
+		return [
+			{
+				elem: 'text',
+				content: 'В следующий раз вы сможете входить на БН без пароля, при помощи профиля:'
+			},
+			{
+				elem: 'content',
+				mix: { block: 'clearfix' },
+				content: [
+					{
+						block: 'image',
+						url: '../../img/social-icons/' + this.ctx.social_icon + '.png'
+					},
+					{
+						elem: 'content-right',
+						content: [
+							{
+								elem: 'text',
+								content: this.ctx.name
+							},
+							{
+								elem: 'email',
+								content: this.ctx.email
+							}
+						]
+					}
+				]
+			}
+		];
+	})
+);

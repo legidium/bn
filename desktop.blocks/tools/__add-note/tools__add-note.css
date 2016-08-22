@@ -1,0 +1,9 @@
+.tools__add-note
+{
+    display: inline-block;
+    margin-right: 5px;
+    width: 21px;
+    height: 19px;
+    background-image: url(/desktop.bundles/retail.card/images/note.png);
+    cursor: pointer;
+}

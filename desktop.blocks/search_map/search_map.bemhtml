@@ -1,0 +1,52 @@
+block('search_map')(
+
+	content()(function(){
+	    var content = [];
+
+	    content.push({
+            block : 'map',
+            mods : { provider : 'yandex' },
+            center : [59.938596, 30.332232],
+            zoom : 12,
+            controls : [],
+            geoObjects : []
+        });
+
+       /* content.push({
+            block: 'search_map_controls',
+            content: [
+                {
+                    block: 'controls_row',
+                    content: [
+                        {
+                            elem: 'col',
+                            elemMods: { vertical: 'top', gutter: 's' },
+                            content: {
+                                block : 'input',
+                                mods : { theme : 'islands', size : 'l', type : 'search', nocorners: true, map: true },
+                                placeholder : 'Быстрый поиск улицы'
+                            }
+                        },
+                        {
+                            elem: 'col',
+                            elemMods: { vertical: 'top', gutter: 's' },
+                            content: {
+                                block : 'button',
+                                mods : { theme : 'islands', size : 'l', type: 'submit' },
+                                text : 'Показать'
+                            }
+                        }
+                    ]
+                }
+            ]
+        });*/
+
+        content.push({
+             block: 'search_map_popup',
+             directions : ['top-center'],
+             items: this.ctx.items || []
+        });
+
+        return content;
+	})
+);

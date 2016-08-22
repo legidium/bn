@@ -1,0 +1,57 @@
+block('similar_realties')(
+	js()(true),
+	
+	content()(function () {
+		return [
+			{
+				elem: 'header',
+				tag: 'h2',
+				content: [
+					{
+						elem: 'header-text',
+						tag: 'span',
+						content: 'Похожие объекты по'
+					}, 
+					{
+						block: 'radio-group',
+						mods: { theme: 'islands', size: 'm', type: 'button' },
+						name: 'similar_by',
+						val: 3,
+						options: [
+							{ val: 1, text: 'распололжению' },
+							{ val: 2, text: 'параметрам' },
+							{ val: 3, text: 'цене' }
+						]
+					},
+					{
+                        tag: 'span',
+                        attrs: { style: 'display: inline-block; margin-left: 20px; position: relative; top: 0; vertical-align: top;' },
+                        content: {
+                            block : 'spin',
+                            mods : { theme : 'islands', size : 'm' }
+                        }
+                    }
+				]
+			}, 
+			{
+				block: 'search_results',
+				mods: { without: 'map' },
+				js: { 
+					favorite_url: '/desktop.blocks/user_lists_in_search/test.json',
+					new_list_url: '/desktop.blocks/user_lists_in_search/add_test.json',
+					add_to_list_url: '/desktop.blocks/user_lists_in_search/test.json',
+					comment_url: '/desktop.blocks/user_lists_in_search/test.json',
+				},
+				items: []
+			}, 
+			{
+				elem: 'more',
+				content: {
+					block: 'button',
+					mods: {theme: 'islands', size: 'l', type: 'button'},
+					text: 'Ещё похожие объекты'
+				}
+			}
+		];
+	})
+);

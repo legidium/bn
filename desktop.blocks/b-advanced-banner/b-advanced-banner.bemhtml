@@ -1,0 +1,70 @@
+block('b-advanced-banner')(
+	content()(function () {
+		return [{
+			elem: 'big-banner-wrapper',
+			content: [{
+				elem: 'banner-upper-text',
+				tag: 'p',
+				content: 'Реклама'
+			}, {
+				elem: 'banner-lower-text',
+				content: '250×250',
+				tag: 'p'
+			}]
+		}, {
+			elem: 'banners',
+			content: this.ctx.bannersText.map(function (bannerText) {
+				return {
+					elem: 'banner',
+					content: [{
+						elem: 'small-banner-wrapper',
+						content: [{
+							elem: 'banner-upper-text',
+							tag: 'p',
+							content: 'Рекламное'
+						}, {
+							elem: 'banner-lower-text',
+							content: 'объявление',
+							tag: 'p'
+						}]
+					}, {
+						elem: 'banner-text',
+						tag: 'p',
+						content: bannerText
+					}]
+				}
+			})
+		}, {
+			elem: 'items',
+			tag: 'ul',
+			content: this.ctx.apartments.map(function (apartment) {
+				return {
+					elem: 'item',
+					tag: 'li',
+					content: [{
+						elem: 'image'
+					}, {
+						elem: 'name',
+						tag: 'p',
+						content: apartment.text
+					}, {
+						elem: 'count',
+						tag: 'p',
+						content: apartment.count + ' объявлений'
+					}]
+				};
+			})
+		}, {
+			elem: 'big-banner-wrapper',
+			content: [{
+				elem: 'banner-upper-text',
+				tag: 'p',
+				content: 'Реклама'
+			}, {
+				elem: 'banner-lower-text',
+				content: '250×250',
+				tag: 'p'
+			}]
+		}];
+	})
+);

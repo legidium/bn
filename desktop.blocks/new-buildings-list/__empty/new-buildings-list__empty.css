@@ -1,0 +1,18 @@
+.new-buildings-list__empty {
+    display: none;
+    padding: 25px 20px;
+}
+.new-buildings-list__error-message {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+.new-buildings-list__empty .text {
+    margin-bottom: 15px;
+}
+.new-buildings-list__empty .text_error {
+    font-weight: bold;
+}
+.new-buildings-list__empty .text a {
+    color: #000;
+}

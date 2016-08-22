@@ -1,0 +1,66 @@
+@require "../../design/stylus/index"
+
+$border_color ?= #e5e5e5
+
+visibility()
+    &_hidden
+        display none
+    &_invisible
+        visibility hidden
+        
+borders()
+    &_border
+        border 1px solid $border_color
+    &_border_t
+        border-top 1px solid $border_color
+    &_border_b
+        border-bottom 1px solid $border_color
+    &_border_l
+        border-left 1px solid $border_color
+    &_border_r
+        border-right 1px solid $border_color
+    &_border_tb,
+    &_border_h
+        border-top 1px solid $border_color
+        border-bottom 1px solid $border_color
+    &_border_lr,
+    &_border_v
+        border-left 1px solid $border_color
+        border-right 1px solid $border_color
+    
+.table
+    border-collapse collapse
+    display table
+    width 100%
+    
+    borders()
+    visibility()
+    
+    &_height
+        height 100%
+
+    &__row
+        display table-row
+        
+        borders()
+        visibility()
+        
+        &_type_header
+            display table-header-group
+            
+        &_type_body
+            display table-row-group
+                
+        &_type_footer
+            display table-footer-group
+    
+    &__cell
+        display table-cell
+        vertical-align top
+        border-box()
+        borders()
+        paddings()
+        vh_paddings()
+        nopaddings()
+        visibility()
+        

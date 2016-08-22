@@ -1,0 +1,281 @@
+{
+	"total_items": 1000,
+	"total_pages": 20,
+	"current_page": 1,
+	"items_per_page": 10,
+
+	"items": [
+		{
+			"js": {
+				"id": 1
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Воронцово гнездо",
+			"address_text": "Октябрьская наб., 118",
+			"address_help": "м. Ломоносовская, 40 мин. на транспорте",
+
+			"developer_name": "ЛенСпецСМУ",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_1.png",
+
+			"link": "http://bn.ru/1",
+			"image": "../../img/new-buildings/img_novostr_1.png",
+
+			"class_text": "Эконом",
+			"class_params_text": "Монолит, организованный паркинг, закрытая территория",
+			"buildings_text": "5 корпусов: 2 сдано, остальные — в 2017, 2018 и 2019",
+			"appartments_text": "4270 квартир: 1 — 4к.кв., студии, свободные план.; от 20 до 180 м²",
+			"total_items_text": "2115 предложений",
+
+			"price_min": "1 450 500",
+			"price_max": "4 500 000",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 2
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Двудевятое царство",
+			"address_text": "Всеволожский район, пос. Мурино, земли САОЗТ «Ручьи»",
+			"address_help": "м. Девяткино, 25 мин. пешком",
+
+			"developer_name": "УНИСТО Петросталь",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_2.png",
+
+			"link": "http://bn.ru/2",
+			"image": "../../img/new-buildings/img_novostr_2.png",
+
+			"class_text": "Эконом",
+			"class_params_text": "Монолит, детский сад в шаговой доступности",
+
+			"buildings_text": "3 корпуса: 2 сдано, последний — в 2016",
+			"appartments_text": "3970 квартир: 1 — 5к.кв., студии; от 18 до 140 м²",
+			"total_items_text": "3817 предложений",
+			
+			"price_min": "1 680 450",
+			"price_max": "7 240 000",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 3
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Silver City",
+			"address_text": "пр. Александровской Фермы, 8, литера А",
+			"address_help": "м. Пролетарская, 12 мин. на транспорте",
+
+			"developer_name": "Северный город",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_3.png",
+			
+			"link": "http://bn.ru/3",
+			"image": "../../img/new-buildings/img_novostr_3.png",
+			
+			"class_text": "Эконом",
+			"class_params_text": "Монолит, охрана, консьерж, рядом парк",
+			"buildings_text": "3 корпуса: 1 сдан, остальные — в 2017, 2018",
+			"appartments_text": "4270 квартир: 1 — 4к.кв., студии, свободные план.; от 20 до 180 м²",
+			"total_items_text": "2115 предложений",
+			
+			"price_min": "2 290 000",
+			"price_max": "9 420 000",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 4
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Дом у дубовой рощи",
+			"address_text": "Всеволожский р-н, д. Кудрово, Областная ул., 1",
+			"address_help": "м. Улица Дыбенко, 17 мин. на транспорте",
+
+			"developer_name": "Отделстрой",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_4.png",
+			
+			"link": "http://bn.ru/4",
+			"image": "../../img/new-buildings/img_novostr_4.png",
+			
+			"class_text": "Эконом",
+			"class_params_text": "Монолит, детский сад в шаговой доступности",
+			"buildings_text": "1 корпус: сдан 1990",
+			"appartments_text": "квартир: 1 — 4к.кв., студии, свободные план.; от 21 до 130 м²",
+			"total_items_text": "1090 предложений",
+			
+			"price_min": "2 150 000",
+			"price_max": "6 950 500",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 5
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Восточый",
+			"address_text": "Всеволожский район, д. Кудрово, участок 2, квартал 6 м.",
+			"address_help": "Улица Дыбенко, 26 мин. на транспорте",
+
+			"developer_name": "Инвестторг",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_5.png",
+			
+			"link": "http://bn.ru/5",
+			"image": "../../img/new-buildings/img_novostr_5.png",
+			
+			"class_text": "Эконом",
+			"class_params_text": "Монолит, охрана, консьерж, детский сад в шаговой доступности, фитнес в шаговой доступности.",
+
+			"buildings_text": "5 корпусов: 3 сдано, остальные — в 2015, 2016",
+			"appartments_text": "5592 квартиры: 1 — 4к.кв., студии; от 22 до 96 м²",
+			"total_items_text": "2716 предложений",
+			
+			"price_min": "2 710 000 ",
+			"price_max": "6 899 000",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 6
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Маргарита",
+			"address_text": "Южное шоссе, участок 7",
+			"address_help": "м. Международная, 17 мин. на транспорте",
+
+			"developer_name": "ЛСР.Недвижимость",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_6.png",
+			
+			"link": "http://bn.ru/6",
+			"image": "../../img/new-buildings/img_novostr_6.png",
+			
+			"class_text": "Эконом",
+			"class_params_text": "Монолит, охрана, консьерж, фитнес в шаговой доступности.",
+			"buildings_text": "20 корпусов: 9 сдано, остальные — в 2015, 2016, 2017, 2018, 2019",
+			"appartments_text": "17 980 квартир: 1 — 5к.кв., студии, свободные план.; от 18 до 135 м²",
+			"total_items_text": "4982 предложения",
+			
+			"price_min": "1 999 000",
+			"price_max": "8 210 000",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 7
+			},
+			"mods": {
+				"selected": true
+			},
+			"name": "Дом «Space»",
+			"address_text": "ул. Заозерная, 3а, литера Г",
+			"address_help": "м. Фрунзенская, 4 мин. пешком",
+
+			"developer_name": "Северный город",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_3.png",
+			
+			"link": "http://bn.ru/7",
+			"image": "../../img/new-buildings/img_novostr_7.png",
+			
+			"class_text": "Эконом",
+			"class_params_text": "Монолит, охрана, консьерж, фитнес в шаговой доступности",
+			"buildings_text": "1 корпус: сдан",
+			"appartments_text": "974 квартиры: 1 — 3к.кв., студии; от 23 до 79 м²",
+			"total_items_text": "316 предложений",
+
+			"price_min": "2 970 000",
+			"price_max": "8 230 500",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 8
+			},
+			"mods": {
+				"selected": false
+			},
+			"name": "Дом на Витебском",
+			"address_text": "наб. Обводного канала, 108, литера Ж",
+			"address_help": "м. Фрунзенская, 3 мин. пешком",
+
+			"developer_name": "ГК AAG",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_7.png",
+
+			"link": "http://bn.ru/8",
+			"image": "../../img/new-buildings/img_novostr_8.png",
+
+			"class_text": "Элитное жильё",
+			"class_params_text": "Монолит, организованный паркинг, закрытая территория, охрана",
+			"buildings_text": "1 корпус: сдан",
+			"appartments_text": "107 квартир: 1 — 5к.кв., свободные планировки; от 34 до 155 м²",
+
+			"total_items_text": "96 предложений",
+			"price_min": "6 770 000",
+			"price_max": "25 902 000",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 9
+			},
+			"mods": {
+				"selected": false
+			},
+			"name": "STYLE-Приморский",
+			"address_text": "Приморский пр., 52, литера Д",
+			"address_help": "м. Старая Деревня, 14 мин. на транспорте",
+			
+			"developer_name": "Pioneer",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_8.png",
+			
+			"link": "http://bn.ru/9",
+			"image": "../../img/new-buildings/img_novostr_9.png",
+			
+			"class_text": "Бизнес-класс",
+			"class_params_text": "Монолит, организованный паркинг, закрытая территория, охрана.",
+			"buildings_text": "3 корпуса: все сданы",
+			"appartments_text": "847 квартиры: 1 — 5к.кв., студии; от 36 до 191 м²",
+			"total_items_text": "712 предложений",
+			
+			"price_min": "4 097 000",
+			"price_max": "23 608 040",
+			"currency": "Р"
+		},
+		{
+			"js": {
+				"id": 10
+			},
+			"mods": {
+				"selected": false
+			},
+			"name": "Brambo City",
+			"address_text": "Комендантский пр., 119",
+			"address_help": "м. Комендантский Проспект, 26 мин. на транспорте",
+
+			"developer_name": "Северный город",
+			"developer_logo": "../../img/new-buildings/developer-logos/logo_novostr_3.png",
+			
+			"link": "http://bn.ru/10",
+			"image": "../../img/new-buildings/img_novostr_10.png",
+			
+			"class_text": "Эконом, Бизнес-класс",
+			"class_params_text": "Монолит, детский сад в шаговой доступности, школа в шаговой доступности.",
+			"buildings_text": "3 корпуса: 1 сдан, остальные — в 2015, 2016",
+			"appartments_text": "2659 квартир: 1 — 4к.кв., студии; от 24 до 98 м²",
+			"total_items_text": "2706 предложений",
+			
+			"price_min": "4 050 000",
+			"price_max": "10 790 080",
+			"currency": "Р"
+		}
+	]
+}

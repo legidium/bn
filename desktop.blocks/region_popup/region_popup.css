@@ -1,0 +1,19 @@
+.region_popup{
+	width: 1055px;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+}
+
+
+.region_popup__content_item{
+	display: none;
+}
+
+
+.region_popup__content_item_visible{
+	display: block;
+}
+
+

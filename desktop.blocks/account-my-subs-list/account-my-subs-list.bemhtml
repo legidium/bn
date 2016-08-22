@@ -1,0 +1,31 @@
+block('account-my-subs-list')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                elem: 'main',
+                content: this.ctx.items ? { elem: 'items', content: this.ctx.items } : {}
+            },
+            {
+                elem: 'footer',
+                content: { block: 'pager' }
+            }
+        ]
+    }),
+
+    elem('items')(
+        content()(function() {
+            var content = [];
+
+            (applyNext() || []).map(function(item) {
+                content.push({
+                    block: 'account-my-subs-list-item',
+                    mods: item.mods,
+                    content: item
+                });
+            });
+
+            return content;
+        })
+    )
+);

@@ -1,0 +1,45 @@
+block('search_map_popup')(
+    js()(true),
+    mix()([{
+        block: 'popup',
+        mods: {theme: 'islands', target : 'position', autoclosable : true}
+    }]),
+	content()(function(){
+	    return [
+	        {
+                elem: 'header',
+                content: [
+                    {
+                        elem: 'close'
+                    },
+                    {
+                        elem: 'title',
+                        content: 'Шпаленрная 51'
+                    },
+                    {
+                        elem: 'title_help',
+                        content: 'Бизнесцентр Таврический'
+                    },
+                ]
+            },
+            {
+                elem: 'divider'
+            },
+            {
+                elem: 'body',
+                items: this.ctx.items || []
+            }
+        ];
+	}),
+
+	elem('body')(
+	    content()(function() {
+	        return [
+	            {
+                	block: 'search_map_results',
+                    items: this.ctx.items || []
+                }
+	        ];
+	    })
+	)
+);

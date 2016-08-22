@@ -1,0 +1,24 @@
+block('account-my-searches-list')(
+    content()(function() {
+        return {
+            elem: 'main',
+            content: this.ctx.items ? { elem: 'items', content: this.ctx.items } : {}
+        }
+    }),
+
+    elem('items')(
+        content()(function() {
+            var content = [];
+
+            (applyNext() || []).map(function(item) {
+                content.push({
+                    block: 'account-my-searches-list-item',
+                    mods: item.mods,
+                    content: item
+                });
+            });
+
+            return content;
+        })
+    )
+);

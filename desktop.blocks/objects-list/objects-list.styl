@@ -1,0 +1,22 @@
+@require "../../design/stylus/index"
+
+$overlay
+    background #fff
+    content " "
+    opacity 0.7
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 1
+    
+.objects-list
+    position relative
+    
+    &_loading
+        .objects-list__items:before
+            @extends $overlay
+    
+    &__items
+        position relative

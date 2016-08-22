@@ -1,0 +1,27 @@
+block('sidebar-menu')(
+    content()(function() {
+        var items = [];
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({
+                elem: 'item',
+                tag: 'li',
+                elemMods: { active: item.active || undefined },
+                content: item
+            });
+        });
+
+        return { elem: 'items', tag: 'ul', content: items };
+    }),
+
+    elem('item')(
+        content()(function() {
+            return {
+                elem: 'link',
+                tag: 'a',
+                attrs: { href: applyNext().link || '#' },
+                content: applyNext().title || ''
+            };
+        })
+    )
+)

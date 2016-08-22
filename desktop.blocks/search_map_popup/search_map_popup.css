@@ -1,0 +1,20 @@
+.search_map_popup {
+    width: 640px;
+    height: auto;
+    max-height: 400px;
+    padding-bottom: 1px;
+}
+.search_map_popup:after {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-top-color: #fff;
+
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+}

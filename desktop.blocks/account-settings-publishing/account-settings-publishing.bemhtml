@@ -1,0 +1,28 @@
+block('account-settings-publishing')(
+    content()(function() {
+        var data = this.ctx.data || {};
+
+        return [
+            {
+                elem: 'title',
+                attrs: { style: 'margin-bottom: 10px; font-size: 20px; line-height: 1.3;' },
+                content: 'Настройка публикации'
+            },
+            {
+                block : 'checkbox-group',
+                mods : { theme : 'islands', size : 'l' },
+                attrs: { style: 'margin-bottom: 10px;'},
+                name : 'checkbox-line',
+                val: [1, 2],
+                options : [
+                    { val : 1, text : 'Получить SMS сообщения со страницы объявления' },
+                    { val : 2, text : 'Получать электронные письма со страницы объявления' }
+                ]
+            },
+            {
+                block: 'help',
+                content: 'Пользователи, которые увидят ваше объявление, смогут отправить вам SMS<br> или письмо на электронную почту, если вы этого хотите.'
+            }
+        ];
+    })
+);

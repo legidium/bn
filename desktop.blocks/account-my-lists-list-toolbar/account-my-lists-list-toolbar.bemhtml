@@ -1,0 +1,30 @@
+block('account-my-lists-list-toolbar')(
+    mix()({ block: 'clearfix' }),
+    content()(function() {
+        return [
+            {
+                elem: 'line',
+                content: [
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'select',
+                                mix: { block: this.block, elem: 'sort' },
+                                mods: { mode: 'radio', theme: 'islands', size: 'm', liketext: true },
+                                name: 'sort',
+                                val: 1,
+                                options: [
+                                    { val: 1, text: 'Сначала недавно измененные' },
+                                    { val: 2, text: 'Сначала давно измененные' },
+                                    { val: 3, text: 'Сначала недавно созданные' },
+                                    { val: 4, text: 'Сначала давно созданные' }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+)

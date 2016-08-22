@@ -1,0 +1,308 @@
+block('account-profile')(
+    js()(true),
+    tag()('form'),
+    mix()([{ block: 'table' }]),
+
+    content()(function() {
+        var dashboard = 'account-dashboard';
+        var data = this.ctx.data || {};
+        var view = this.ctx.mods.view || 'person';
+        var agency = data.agency || {};
+        var phones = data.phones || [];
+        phones = phones.length ? phones : [{ phone: '', messengers: [] }];
+
+        var content = [],
+            title   = [],
+            groups  = [],
+            lines   = [],
+            sidebar = [],
+            values  = [];
+
+        var titleHelp;
+
+        switch (view) {
+            case 'person': titleHelp = 'Вы зарегистрированы bn.ru как частное лицо'; break;
+            case 'agent': titleHelp = 'Вы зарегистрированы bn.ru как агент'; break;
+            case 'agency': titleHelp = 'Вы зарегистрированы bn.ru как агентство'; break;
+        }
+
+        // Title
+        title.push({
+            block: 'item',
+            mix: { block: dashboard, elem: 'item', elemMods: { 'padding-vh': 'm-l' } },
+            content: [
+                {
+                    elem: 'text',
+                    mix: { block: dashboard, elem: 'title', elemMods: { nomargin: true } },
+                    content: [
+                        'Личные данные',
+                        {
+                            block: 'text',
+                            mods: { font: 'm', light: true },
+                            content: titleHelp
+                        }
+                    ]
+                }
+            ]
+        });
+
+        // Name
+        lines.push({
+            elem: 'line',
+            elemMods: { type: 'name' },
+            content: [
+                { elem: 'col', elemMods: { type: 'label' }, content: { elem: 'label-text', content: 'Имя Фамилия' } },
+                { elem: 'col', elemMods: { type: 'input' }, content: [
+                    {
+                        block: 'input',
+                        mods: { theme: 'islands', size: 'l', font: 's', nocorners: true, width: 'available' },
+                        name: 'name',
+                        val: data.name || ''
+                    }
+                ]}
+            ]
+        });
+
+        // Email
+        lines.push({
+            elem: 'line',
+            elemMods: { type: 'email' },
+            content: [
+                { elem: 'col', elemMods: { type: 'label' }, content: { elem: 'label-text', content: 'E-mail' } },
+                { elem: 'col', elemMods: { type: 'input' }, content: [
+                    {
+                        block: 'input',
+                        mods: { theme: 'islands', size: 'l', font: 's', nocorners: true, width: 'available' },
+                        name: 'email',
+                        val: data.email || ''
+                    }
+                ]}
+            ]
+        });
+
+        // Init multiple phones
+        (phones).map(function(item) {
+            values.push({
+                elem: 'item',
+                content: [
+                    {
+                        elem: 'col',
+                        elemMods: { size: 's' },
+                        content: [
+                            {
+                                block: 'input',
+                                mix: { block: 'maskedinput', js: true, mods: { pattern: 'phone' } },
+                                mods: { theme: 'islands', size: 'l', font: 's', nocorners: true, width: 'available' },
+                                name: 'phones[]',
+                                val: item.phone || ''           
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'checkbox-group',
+                                mods: { theme: 'islands', size: 'm', font: 's', type: 'line' },
+                                name: 'messengers[]',
+                                val: item.messengers || [],
+                                options: [
+                                    { val: 1, text: 'Есть Viber' },
+                                    { val: 2, text: 'Есть Watsup' }
+                                ]
+                            }   
+                        ]
+                    }
+                ]
+            });
+        });
+        
+        // Phones
+        lines.push({
+            elem: 'line',
+            elemMods: { type: 'phone' },
+            content: [
+                { elem: 'col', elemMods: { type: 'label' }, content: { elem: 'label-text', content: 'Телефон' } },
+                {
+                    elem: 'col',
+                    elemMods: { type: 'input' },
+                    content: [
+                        {
+                            block: 'multi-value',
+                            content: [
+                                {
+                                    elem: 'items',
+                                    content: values
+                                },
+                                {
+                                    block: 'button',
+                                    mix: { block: 'multi-value', elem: 'button-add' },
+                                    mods: { theme: 'islands', size: 's', font: 's', view: 'plain' },
+                                    text: '+ еще телефон'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        });
+        
+        // Skype
+        lines.push({
+            elem: 'line',
+            elemMods: { type: 'skype' },
+            content: [
+                { elem: 'col', elemMods: { type: 'label' }, content: { elem: 'label-text', content: 'Skype' } },
+                { elem: 'col', elemMods: { type: 'input' }, content: [
+                    {
+                        block: 'input',
+                        mods: { theme: 'islands', size: 'l', nocorners: true, width: 'available' },
+                        name: 'skype',
+                        val: data.skype || ''
+                    }
+                ]}
+            ]
+        });
+
+        // Save button
+        lines.push({
+            elem: 'line',
+            elemMods: { type: 'submit' },
+            content: [
+                { elem: 'col', elemMods: { type: 'label' }, content: '' },
+                { elem: 'col', elemMods: { type: 'input' }, content: [
+                    {
+                        block: 'button',
+                        mods: { theme : 'islands', size : 'xl', font: 'm', submit: true  },
+                        mix: { block: 'account-agent-profile', elem: 'button-save' },
+                        text: 'Сохранить информацию'
+                    }
+                ]}
+            ]
+        });
+
+        // Main form group
+        groups.push({
+            block: 'form-group',
+            mods: { width: 'm' },
+            mix: { block: dashboard, elem: 'item', elemMods: { 'padding-vh': 's-l' } },
+            content: lines
+        });
+
+
+        lines = [];
+
+        // Old password
+        lines.push({
+            elem: 'line',
+            elemMods: { type: 'old-password' },
+            content: [
+                { elem: 'col', elemMods: { type: 'label' }, content: { elem: 'label-text', content: 'Текущий' } },
+                { elem: 'col', elemMods: { type: 'input' }, content: [
+                    {
+                        elem: 'input-control',
+                        content: [
+                            {
+                                block: 'input',
+                                mix: { block: 'form-group', elem: 'icon-input' },
+                                mods: { theme: 'islands', type: 'password', size: 'l', font: 'm', nocorners: true, width: 'available' },
+                                name: 'password_old'
+                            },
+                            {
+                                block: 'button',
+                                mix: { block: 'form-group', elem: 'icon-button' },
+                                mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                icon: {
+                                    block: 'icon',
+                                    mods: { action: 'eye' }
+                                }
+                            }
+                        ]
+                    }
+                ]}
+            ]
+        });
+
+        // New password
+        lines.push({
+            elem: 'line',
+            elemMods: { type: 'new-password' },
+            content: [
+                { elem: 'col', elemMods: { type: 'label' }, content: { elem: 'label-text', content: 'Новый пароль' } },
+                { elem: 'col', elemMods: { type: 'input' }, content: [
+                    {
+                        elem: 'input-control',
+                        content: [
+                            {
+                                block: 'input',
+                                mix: { block: 'form-group', elem: 'icon-input' },
+                                mods: { theme: 'islands', type: 'password', size: 'l', font: 'm', nocorners: true, width: 'available' },
+                                name: 'password_new'
+                            },
+                            {
+                                block: 'button',
+                                mix: { block: 'form-group', elem: 'icon-button' },
+                                mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                icon: {
+                                    block: 'icon',
+                                    mods: { action: 'eye' }
+                                }
+                            }
+                        ]
+                    }
+                ]}
+            ]
+        });
+
+        // Save password
+        lines.push({
+            elem: 'line',
+            elemMods: { type: 'submit' },
+            content: [
+                { elem: 'col', elemMods: { type: 'label' }, content: '' },
+                { elem: 'col', elemMods: { type: 'input' }, content: [
+                    {
+                        block: 'button',
+                        mix: { block: 'account-agent-profile', elem: 'button-save-password' },
+                        mods: { theme : 'islands', size : 'xl', font: 'm', submit: true  },
+                        text: 'Сохранить пароль'
+                    }
+                ]}
+            ]
+        });
+        
+        // Password form group
+        groups.push({
+            block: 'form-group',
+            mix: { block: dashboard, elem: 'item', elemMods: { padding: 'l' } },
+            mods: { width: 'm' },
+            content: [
+                {
+                    elem: 'title',
+                    elemMods: { margin: 'm' },
+                    content: 'Изменить пароль'
+                },
+                lines
+            ]
+        });
+
+        // Sidebar
+        if (view == 'agent' || view == 'agency') {
+            sidebar.push({
+                block: 'account-dashboard-agency',
+                mix: { block: dashboard, elem: 'item', elemMods: { padding: 'm' } },
+                mods: { view: 'agent' },
+                data: data.agency || {}
+            });
+        }
+
+        var cells = [];
+        cells.push({ elem: 'main', mix: { block: 'table' , elem: 'cell' }, content: [ title, groups ] });
+        cells.push(sidebar.length ? { elem: 'sidebar', mix: { block: 'table' , elem: 'cell' }, content: sidebar } : '');
+
+        content.push({ elem: 'content', mix: { block: 'table' , elem: 'row' }, content: cells });
+
+        return content;
+    })
+
+)

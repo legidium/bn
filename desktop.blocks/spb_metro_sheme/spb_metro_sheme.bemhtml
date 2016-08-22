@@ -1,0 +1,23 @@
+block('spb_metro_sheme')(
+
+	js()(true),
+
+	content()(function(){
+
+
+
+		return {
+			elem: 'sheme_svg',
+			tag: 'embed',
+			attrs: {
+				src: '/desktop.blocks/spb_metro_sheme/spb_metro_sheme.svg', 
+				width: '570',
+				height: '530',
+				type: 'image/svg+xml',
+			}
+		};
+
+	})
+
+
+);

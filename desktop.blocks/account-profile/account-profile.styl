@@ -1,0 +1,84 @@
+@require "../../design/stylus/index"
+    
+.account-profile
+    height 100%
+        
+    &__sidebar
+        border-left 1px solid $border_color
+        width 370px
+        
+    &__line
+        display table
+        line-height 30px
+        margin-bottom 20px
+        width 100%
+        
+        &_nomargin
+            margin-bottom 0
+        &_margin_s
+            margin-bottom 10px
+        &_margin_m
+            margin-bottom 20px
+        &_margin_l
+            margin-bottom 30px
+        &_margin_xl
+            margin-bottom 40px
+            
+        &_heiht_s
+            line-height 24px
+        &_heiht_m
+            line-height 28px
+        &_heiht_l
+            line-height 30px
+        &_heiht_xl
+            line-height 35px
+        
+    
+    &__col
+        display table-cell
+        padding-right 10px
+        border-box()
+        
+        &:last-child
+            padding-right 0
+            
+        &_type_label
+            font-size 14px
+            width 110px
+            padding-top 6px
+            vertical-align top
+            
+            &_width_s
+                width 60px
+            &_width_m
+                width 110px
+            &_width_l
+                width 150px
+            &_width_xl
+                width 180px
+        
+        .link, .link.link_theme_islands
+            color #afafaf
+            font-size 11px
+            
+        
+        &_type_input
+            vertical-align top
+
+    
+    .input_font_s .input__control,
+    .input_theme_islands.input.input_font_s .input__control,
+    .checkbox-group_font_s .checkbox,
+    .checkbox-group_theme_islands.checkbox-group_font_s .checkbox
+        font-size 11px
+    
+    .checkbox-group_font_s .checkbox,
+    .checkbox-group_theme_islands.checkbox-group_font_s .checkbox
+        margin-right 10px
+        
+    .checkbox-group_font_s .checkbox:last-child,
+    .checkbox-group_theme_islands.checkbox-group_font_s .checkbox:last-child
+        margin-right 0
+
+        
+    

@@ -1,0 +1,25 @@
+.calendar {
+	display: inline-block;
+	position: relative;
+	margin: 0 20px;
+	font-size: 0;
+}
+
+.calendar:after {
+	content: '';
+	position: absolute;
+	right: 10px;
+	top: 6px;
+	background: url('calendar.png') no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.calendar__input {
+	height: 28px;
+	line-height: 28px;
+	width: 96px;
+	font-size: 13px;
+	padding: 0 32px 0 10px;
+	border: 1px solid rgb(229, 229, 229);
+}

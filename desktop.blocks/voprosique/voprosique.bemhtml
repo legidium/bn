@@ -1,0 +1,59 @@
+block('voprosique')(
+	tag()('span'),
+	content()(function(){
+
+		var cont;
+
+		if(!this.ctx.text){
+			cont = [
+				{
+					block: 'plain_text',
+					tag: 'span',
+					mods:{bold: true, size: '11'},
+					content: 'Сталинские дома'
+				},
+	    		{
+			    	block: 'plain_text',
+			    	mods:{size: '11'},
+			    	content: [
+			    		{
+			    			tag: 'p',
+			    			content: 'Этажность: 3-7'
+			    		},
+			    		{
+			    			tag: 'p',
+			    			content: 'Текст про сталинские дома<br>Текст про сталинские дома на новой строке'
+			    		},
+			    	]
+			    }
+	    	];
+		} else {
+			cont = {
+		    	block: 'plain_text',
+		    	mods:{size: '11'},
+		    	content: this.ctx.text
+		    };
+		}
+
+
+		return {
+		    block : 'dropdown',
+		    tag: 'span',
+		    mods : { switcher : 'pseudo-icon', theme : 'islands' },
+		    switcher : {
+                block: 'link',
+                mods : { theme: 'islands', pseudo: true, voprosique: true },
+                content: '?'
+            },
+		    popup : {
+		    	block: 'popup',
+                mods: {closable: true},
+		    	content: {
+	    			elem: 'content',
+			    	content: cont
+	    		}
+		    	
+		    }
+		}
+	})
+);

@@ -1,0 +1,60 @@
+@require "../../design/stylus/index"
+
+$link_hover_color ?= rgb(176, 42, 48)
+
+.sidebar-thumbs-list
+    &__items
+        line-height 0
+        margin-left -5px
+        margin-right -5px
+        line-height 0
+        font-size 0
+    
+    &__item
+        display inline-block
+        vertical-align top
+        margin-bottom $margin_m
+        padding-left 5px
+        padding-right 5px
+        width 130px
+        border-box()
+            
+    &__link,
+    &__image,
+    &__text
+        display block
+    
+    &__image
+        margin-bottom $margin_s
+    
+    &__link,
+    &__text
+        color $text_color
+        font-size $font_size_xs
+        line-height $text_line_height_xs
+        
+     &__link
+        text-decoration none
+        
+        &:hover, &:focus
+            color $link_hover_color
+            
+            .sidebar-thumbs-list__text         
+                color $link_hover_color
+                
+    &__image-wrapper
+        position relative
+        
+        &_video:after
+            content " "
+            position absolute
+            top 50%
+            left 50%
+            margin-left -12px
+            margin-top -12px
+            width 25px
+            height 25px
+            z-index 1
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAoxJREFUSA21Vs1LVFEU/53XNKKGFIbWJIGIRK0cbMxFyUzLCKb+gyhIN9GioJYubdGqVS76G3LjKprpY1EZuGgVEoblTE5IZEzm+PR0znvz5PU+rm/ELgzv3vPxOx/33HOGYFgLs7fa+rs6LhJQJNBZEc2A0A3GquwrDH7PwMzi2u/ng5cebcRBiX54lUr51Fhq9DoRJgX0eFgiQGFUmTH50n7zpFAo2wGuQATW+ut7J9sITwHKBlgJjjy/wbjSfv7Bkl/Y8h8a5Ts5MTC3NwOKRFnVVxw/7k4kzQjUQI9fYG97rklEOS8iJxK9g2aK9sGAukU9iqe4enKMjB08d8Ocop2AVSfhoqwWjwqTlulAV+eisYr6CuJOGlguA1uxlRo2LlX3aa3eb+k7MBpQVSsF6ssD2btA74gQEkYm5a/4logXFSfJovQh0MBVYOg2cHgwiYq6UxQjzktOpOAJUUcv6Iyk+/Q1oN1cK4qvt5/xlFv90pFTYI1o5R3w5RmwWY+CyFgST3cUJymNSCCOjbr3dXQorCb4VrPZhZktUNj+A3wtAasfwlrSTDVdFfnt3gTD6mDedlO1JKmyI1OlWpWUtmu5nOEIDCOJf3wEPs8C6zWznOCLEcxImY0bJX1Mrn9zwX8u+KjxW8VP6cCRF1/d7UFy45dbQSvSQ+UiEy158YrvPN2tV/dvSpE8jlXsPCFp+Q5sN2JFohhyZeMHLkxNOw1SJ5p4Nx8l6NDqyy0bUDwX19eE/vs8UW91wNib9mXxwFwuseF6DK4pjjewlOqky2On8w/ndKIZU+cJR36dGZ9THD/7HyPKUA9eNN6OMPOEFFHVLxy7d/6t8ITq+SPw5J3q8g7B73797/oLgK3xm7kFaGoAAAAASUVORK5CYII=');
+        
+        

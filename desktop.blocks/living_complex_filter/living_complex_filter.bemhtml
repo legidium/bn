@@ -1,0 +1,323 @@
+block('living_complex_filter')(
+
+	tag()('form'),
+
+	content()(function(){
+
+		return [
+			{
+				elem: 'header',
+				content: [
+					{
+						tag: 'span',
+						elem: 'name',
+						content: 'Квартиры в ЖК «Ласточкино гнездо»'
+					},
+					{
+						tag: 'span',
+						elem: 'count',
+						content: ''
+					},
+				]
+			},
+			{
+				block: 'controls_row',
+				content: [
+					{
+						elem: 'col',
+						content: [
+							{
+								block: 'checkbox',
+								mods: { theme: 'islands', size: 'm', type: 'button'},
+								text: 'Сданные дома',
+								name: 'isBuilt',
+								val: true
+							}
+						]
+					},
+					{
+						elem: 'col',
+						content: [
+							{
+								block: 'checkbox-group',
+								name: 'year[]',
+								mods: { theme: 'islands', size: 'm', type: 'button'},
+								options: [
+									{ val: 2015, text: 2015 },
+									{ val: 2016, text: 2016 },
+									{ val: 2017, text: 2017 },
+									{ val: 2018, text: 2018 },
+									{ val: 2019, text: 2019 },
+									{ val: 2020, text: 2020 },
+								]
+							}
+						]
+					},
+					{
+                        elem: 'col',
+                        content: {
+                            block : 'control-group',
+                            content : [
+                                {
+                                    block : 'input',
+                                    name: 'priceFrom',
+                                    mods : { theme : 'islands', size : 'l', width: 's',  nocorners: true },
+                                    placeholder : 'от'
+                                },
+                                {
+                                    block : 'input',
+                                    name: 'priceTo',
+                                    mods : { theme : 'islands', size : 'l', width: 's',  nocorners: true },
+                                    placeholder : 'до'
+                                },
+                                {
+                                    block : 'select',
+                                    mods : { mode : 'radio', theme : 'islands', size : 'm' },
+                                    val: 'usd',
+                                    name: 'currency',
+                                    options : [
+                                        { val : 'rub', text : 'тыс. <span class="currency">Р</span>' },
+                                        { val : 'usd', text : 'тыс. $' },
+                                        { val : 'eur', text : 'тыс. €' },
+                                        {
+                                            mods: {gray: true},
+                                            group: [
+                                                {
+                                                    block: 'help',
+                                                    text: 'Авторизированные пользователи <br>могут менять валюту <br>по умолчанию'
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    block : 'radio-group',
+                                    name: 'priceMode',
+                                    mods : { theme : 'islands', size : 'm', type : 'button' },
+                                    val: 1,
+                                    options : [
+                                        { val : 1, text : 'за все', checked : true },
+                                        { val : 2, text : 'за м2' },
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                    	elem: 'col',
+                    	mods: { right: true },
+                    	attrs: { style: 'margin-left: 0;' },
+                    	content: [
+                    		{
+				                block: 'dropdown',
+				                mix: { block: 'new-buildings-select-class', elem: 'dropdown' },
+				                mods : { switcher : 'button', theme : 'islands', size : 'm' },
+				                switcher : {
+				                    block : 'button',
+				                    mods : { theme : 'islands', size : 'm'},
+				                    content: [
+				                        {
+				                            tag: 'span',
+				                            elem: 'text',
+				                            attrs: { style: 'margin-right: 0;' },
+				                            content: 'Способ покупки'
+				                        },
+				                        {
+				                            elem: 'tick',
+				                            mix: { block: 'icon' }
+				                        }
+				                    ]
+				                },
+				                popup : [
+				                    {
+				                    	tag: 'div',
+				                    	content: [
+				                    		{
+								                tag: 'div',
+								                content: [
+								                    {
+								                        block: 'menu',
+								                        mods : { theme : 'islands', size : 'm', mode : 'check', dropdown: true },
+								                        val : [0],
+								                        content : [
+								                            {
+								                                elem: 'group',
+								                                content : [
+								                                    { block: 'menu-item', val: 1, content: 'Ипотека' },
+								                                    { block: 'menu-item', val: 2, content: 'Рассрочка' },
+								                                    { block: 'menu-item', val: 3, content: 'Материнский капитал' },
+								                                ]
+								                            }
+								                        ]
+								                    }
+								                ]
+								            },
+								            {
+								                tag: 'div',
+								                attrs: { style: 'padding: 10px 20px 20px 30px;' },
+								                content: [
+								                    {
+								                        block: 'button',
+								                        mods: { theme: 'islands', size: 'm' },
+								                        text: 'Показать'
+								                    }
+								                ]
+								            }
+				                    	]
+				                    }
+				                ]
+				            }
+                    	]
+                    }
+				]
+			},
+			{
+				block: 'controls_row',
+				content: [
+					{
+						elem: 'col',
+						content: [
+		                    {
+		                        block: 'control-group',
+		                        content: [
+		                            {
+		                                block: 'checkbox',
+		                                name: 'flatTypes[]',
+		                                mods : { theme : 'islands', size : 'm', type : 'button' },
+		                                val : 0, 
+		                                text : 'Студию', 
+		                                checked : true
+		                            },
+		                            {
+		                                block: 'checkbox',
+		                                name: 'flatTypes[]',
+		                                mods : { theme : 'islands', size : 'm', type : 'button' },
+		                                val : 1, 
+		                                text : '1', 
+		                            },
+		                            {
+		                                block: 'checkbox',
+		                                name: 'flatTypes[]',
+		                                mods : { theme : 'islands', size : 'm', type : 'button' },
+		                                val : 2, 
+		                                text : '2', 
+		                            },
+		                            {
+		                                block: 'checkbox',
+		                                name: 'flatTypes[]',
+		                                mods : { theme : 'islands', size : 'm', type : 'button' },
+		                                val : 3, 
+		                                text : '3', 
+		                            },
+		                            {
+		                                block: 'checkbox',
+		                                name: 'flatTypes[]',
+		                                mods : { theme : 'islands', size : 'm', type : 'button' },
+		                                val : '4_more', 
+		                                text : '4 и более', 
+		                            },
+		                            {
+		                                block: 'checkbox',
+		                                name: 'flatTypes[]',
+		                                attrs: {id: 'search_filter_flat_types_free_plan'},
+		                                mods : { theme : 'islands', size : 'm', type : 'button' },
+		                                val : '-1', 
+		                                text : 'Свободная планировка', 
+		                            }
+		                        ]
+		                    }
+		                ]
+					},
+					{
+						elem: 'col',
+						content: [
+							{
+	                            block : 'control-group',
+	                            mix: { block: 'clearfix' },
+	                            content : [
+	                            	{
+	                            		tag: 'span',
+	                            		block: 'plain_text',
+	                            		mods: { size: '11' },
+	                            		content: 'S, общ&nbsp;&nbsp;'
+	                            	},
+	                                {
+	                                    block : 'input',
+	                                    name: 'areaFrom',
+	                                    attrs: { style: 'float: none;' },
+	                                    mods : { theme : 'islands', size : 'l', width: 's',  nocorners: true },
+	                                    placeholder : 'от'
+	                                },
+	                                {
+	                                    block : 'input',
+	                                    name: 'areaTo',
+	                                    attrs: { style: 'float: none;' },
+	                                    mods : { theme : 'islands', size : 'l', width: 's',  nocorners: true, right_border: true },
+	                                    placeholder : 'до'
+	                                },
+	                                {
+	                            		tag: 'span',
+	                            		block: 'plain_text',
+	                            		mods: { size: '11' },
+	                            		content: '&nbsp;&nbsp;м<sup>2</sup>'
+	                            	},
+	                            ]
+	                        }
+						]
+					},
+					{
+						elem: 'col',
+						content: [
+							{
+	                            block : 'control-group',
+	                            mix: { block: 'clearfix' },
+	                            content : [
+	                            	{
+	                            		tag: 'span',
+	                            		block: 'plain_text',
+	                            		mods: { size: '11' },
+	                            		content: 'S, кухни&nbsp;&nbsp;'
+	                            	},
+	                                {
+	                                    block : 'input',
+	                                    name: 'kitchenAreaFrom',
+	                                    attrs: { style: 'float: none;' },
+	                                    mods : { theme : 'islands', size : 'l', width: 's',  nocorners: true },
+	                                    placeholder : 'от'
+	                                },
+	                                {
+	                                    block : 'input',
+	                                    name: 'kitchenAreaTo',
+	                                    attrs: { style: 'float: none;' },
+	                                    mods : { theme : 'islands', size : 'l', width: 's',  nocorners: true, right_border: true },
+	                                    placeholder : 'до'
+	                                },
+	                                {
+	                            		tag: 'span',
+	                            		block: 'plain_text',
+	                            		mods: { size: '11' },
+	                            		content: '&nbsp;&nbsp;м<sup>2</sup>'
+	                            	},
+	                            ]
+	                        }
+						]
+					},
+					{
+                        elem: 'col',
+                        content: {
+                            block : 'spin',
+                            mods : { theme : 'islands', size : 'm' }
+                        }
+                    }
+				]
+			}
+
+		];
+
+
+
+	})
+
+
+
+);

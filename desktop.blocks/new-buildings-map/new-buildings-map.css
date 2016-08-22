@@ -1,0 +1,41 @@
+.new-buildings-map {
+    border: 1px solid rgb(229, 229, 229);
+    border-top: 1px solid transparent;
+}
+.new-buildings-map__pull-left {
+    float: left;
+}
+.new-buildings-map__pull-right {
+    float: right;
+}
+
+.new-buildings-map__search {
+    width: 335px;
+    margin-right: 20px;
+}
+.new-buildings-map__filter-class {
+    margin-right: 20px;
+}
+
+.button_theme_islands.button.button_ticked,
+.button_theme_islands.button.button_ticked:before {
+    background: transparent;
+}
+.button_theme_islands.button.button_ticked .button__text {
+    margin-left: 0;
+    padding-right: 10px;
+}
+.button.button_ticked .dropdown__tick {
+    background-size: 8px 5px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 29px;
+    background-image: url("../../libs/bem-components/design/common.blocks/theme/_islands/arrow.svg");
+    transition: -webkit-transform 0.1s ease-out;
+    transition: transform 0.1s ease-out;
+}
+.dropdown_theme_islands.dropdown_opened .dropdown__tick {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}

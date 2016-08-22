@@ -1,0 +1,252 @@
+@require "../../design/stylus/index"
+
+$border-box
+    border-box()
+    
+.objects-list-item:focus
+    outline none
+    
+.objects-list-item
+    color $text_color
+    display block
+    text-decoration none
+
+    &__row
+        display block
+        border 1px solid transparent
+        margin -1px -1px 0 -1px
+        position relative
+        @extends $border-box
+        
+        &:hover, &:focus
+            border-color #fedb6b
+    
+    &_heading,
+    &__row-inner
+        display block
+        position relative
+            
+        &:after
+            border-top 1px solid $border_color
+            content ''
+            clear both
+            display block
+            height 0
+            width 100%
+            position absolute
+            top 100%
+            z-index -1
+    
+    &_heading
+        margin-bottom 1px
+           
+    &_heading &__cell
+        background transparent
+        color $text_color_light
+        font-size $font_size_s
+        line-height $text_line_height_xs
+        padding 5px
+        vertical-align top
+        
+    &_heading &__cell_checkbox
+        padding-left 10px
+        padding-right 0
+
+    &__cell
+        display table-cell
+        padding 10px 5px
+        position relative
+        vertical-align top
+        @extends $border-box
+        
+    &__image
+        display block
+        width 100%
+        height 100%
+        @extends $border-box
+        
+    &__image-holder
+        background #9b9b9b
+        width 50px
+        height 50px
+        position relative
+        @extends $border-box
+    
+        &:after, &:before
+            content " "
+            display none
+            position absolute
+            top 0
+            left 0
+            
+        &:before
+            width 48px
+            height 48px
+            background #c3c3c3
+            z-index -1
+            top -3px
+            left 50%
+            margin-left -24px
+            
+        &:after 
+            width 46px
+            height 46px
+            background #e5e3e3
+            z-index -2
+            top -6px
+            left 50%
+            margin-left -23px
+    
+    &__top-text
+        font-size $font_size_xs
+        line-height 1.1
+        margin-bottom 8px
+        
+    &__status-text,
+    &__error-text
+        color $text_color_light
+        display inline
+        font-size $font_size_xs
+        line-height $text_line_height_xs
+        
+    &__error-text
+        margin-left 10px
+        
+    &__title
+        font-size $font_size_l
+        line-height $text_line_height_s
+        margin-bottom 9px
+        
+    &__text
+        font-size $font_size_s
+        line-height $text_line_height_s
+    
+    &__text-help
+        font-size $font_size_s
+        line-height 1.1
+        color $text_color_light
+        
+    &__comment
+        font-size $font_size_s
+        line-height 1.1
+    
+    &__top-text,
+    &__title,
+    &__text,
+    &__text-help,
+    &__status-text,
+    &__address,
+    &__phone
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+    
+    /* Columns widths */
+    &__cell_checkbox
+        width 30px
+        min-width 30px
+        padding-left 10px
+        padding-right 0
+        text-align center
+        vertical-align middle
+        
+        .checkbox_theme_islands.checkbox.checkbox_size_m .checkbox__box
+            margin 0
+            top 0
+        
+    &__cell_image
+        width 60px
+        min-width 60px
+        max-width 60px
+        
+    &__cell_address
+        width 210px
+        min-width 210px
+        max-width 210px
+    
+    &__cell_san
+        width 45px
+        min-width 45px
+        max-width 45px
+        
+    &__cell_s,
+    &__cell_floor,
+    &__cell_object,
+    &__cell_home,
+    &__cell_price
+        width 50px
+        min-width 50px
+        max-width 50px
+    
+    &__cell_price
+        background #fafafa
+        width 55px
+        min-width 55px
+        max-width 55px
+    
+    &__cell_seller
+        width 100px
+        min-width 100px
+        max-width 100px
+    
+    &__cell_comment
+        width 180px
+        min-width 180px
+        max-width 180px
+        vertical-align middle
+    
+    &__cell_tools
+        text-align left
+        padding-top 4px
+        padding-bottom 4px
+        
+    &__cell_tools &__top-text
+        margin-bottom 5px
+        
+    &__cell_tools .objects-list-item-tools__item
+        visibility hidden
+
+    &__cell_tools .objects-list-item-tools__item_accept
+        visibility visible
+            
+    &__row:hover &__cell_tools .objects-list-item-tools__item
+        visibility visible
+    
+        
+    /* Block mods */ 
+    &_many_images &__image-holder:before,
+    &_many_images &__image-holder:after
+        display: block;
+    
+    &_selected &__image-holder
+        border 2px solid #fedb6b
+
+    &_expires &__error-text,
+    &_expires &__status-text_error
+        color #f5a623
+        
+    &_unpublished &__error-text,
+    &_unpublished &__status-text_error
+        color #d0021b
+    
+    &_expires &__title,
+    &_expires &__text,
+    &_expires &__text-help,
+    &_expires &__comment,
+    &_unpublished &__title,
+    &_unpublished &__text,
+    &_unpublished &__text-help,
+    &_unpublished &__comment
+        opacity 0.31
+    
+    &_expires &__cell_image:after,
+    &_unpublished &__cell_image:after
+        background #fff
+        content " "
+        opacity 0.31
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        z-index 1

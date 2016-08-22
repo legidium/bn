@@ -1,0 +1,18 @@
+block('account-favorites').elem('title')(
+    tag()('h1'),
+    content()(function() {
+        return [
+            applyNext(),
+            {
+                elem: 'title-note',
+                tag: 'span',
+                content: this.ctx.note || ''
+            },
+            {
+                block: 'spin',
+                mods: { theme: 'islands', size : 'm' },
+                mix: { block: this.block, elem: 'spin' }
+            }
+        ];
+    })
+)

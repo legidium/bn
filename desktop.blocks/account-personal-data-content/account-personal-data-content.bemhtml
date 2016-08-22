@@ -1,0 +1,38 @@
+block('account-personal-data-content')(
+    content()(function() {
+        var data = this.ctx.data || {};
+
+        return [
+            {
+                elem: 'header',
+                content: [
+                    {
+                        elem: 'title',
+                        content: 'Личные данные'
+                    },
+                    {
+                        elem: 'title-help',
+                        content: data.register_status_text || ''
+                    }
+                ]
+            },
+            {
+                elem: 'main',
+                content: [
+                    {
+                        elem: 'form',
+                        content: [
+                            { block: 'account-personal-data-form', content: data },
+                        ]
+                    },
+                    {
+                        elem: 'form',
+                        content: [
+                            { block: 'account-personal-data-form-password' }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+);

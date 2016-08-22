@@ -1,0 +1,43 @@
+block('account-dashboard-my-list-comment')(
+    content()(function() {
+        var comment = applyNext() || '';
+        var hasComment = comment ? true : false;
+
+        return [
+            {
+                elem: 'input',
+                content: [
+                    {
+                        block: 'link',
+                        mix: { block: 'account-dashboard-my-list-comment', elem: 'input-icon' },
+                        mods: { theme: 'islands', size: 'l', font: '11' },
+                        content: [
+                            {
+                                block: 'icon',
+                                mods: { action: hasComment ? 'comments-blue': 'comments' }
+                            }
+                        ]
+                    },
+                    {
+                        block: 'textarea',
+                        mix: { block: 'account-dashboard-my-list-comment', elem: 'input-text' },
+                        mods: { theme: 'islands', size: 's', width: 'available' },
+                        placeholder: 'Ваш комментарий',
+                        val: hasComment ? comment: ''
+                    }
+                ]
+            },
+            {
+                elem: 'input-button',
+                content: [
+                    {
+                        block: 'button',
+                        mix: { block: 'account-dashboard-my-list-comment', elem: 'input-button' },
+                        mods: { theme: 'islands', size: 'm', gray: true },
+                        text: 'Сохранить'
+                    }
+                ]
+            }
+        ];
+    })
+);

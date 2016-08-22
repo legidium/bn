@@ -1,0 +1,18 @@
+block('account-dashboard-list-tools')(
+    js()(true),
+    content()(function() {
+        var content = [];
+
+        (['edit', 'copy', 'remove']).map(function(action) {
+            content.push({
+                elem: 'button',
+                elemMods: { 'action': action },
+                content: {
+                    block: 'link', mods: { pseudo: true }, content: { block: 'icon',  mods: { 'action': action } }
+                }
+            });
+        });
+
+        return content;
+    })
+);

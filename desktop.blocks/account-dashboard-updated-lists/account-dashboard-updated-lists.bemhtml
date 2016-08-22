@@ -1,0 +1,38 @@
+block('account-dashboard-updated-lists')(
+    content()(function() {
+        var content = [];
+        var items = [];
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({ elem: 'item', mods: item.mods, content: item });
+        });
+
+        content.push({ elem: 'title', content: 'Недавно обновленные списки' });
+        content.push(
+            items && items.length
+                ? { elem: 'items', content: items }
+                : { elem: 'note' }
+        );
+
+        return content;
+    }),
+
+    elem('item')(
+        content()(function() {
+            return '';
+        })
+    ),
+
+    elem('note')(
+        content()(function() {
+            return [
+                {
+                    block: 'icon',
+                    mods: { action: 'list' },
+                    mix: { block: 'account-dashboard-updated-lists', elem: 'note-icon' }
+                },
+                'Добавляйте объекты в произвольные списки, редактируйте и отправляйте их по почте'
+            ];
+        })
+    )
+);

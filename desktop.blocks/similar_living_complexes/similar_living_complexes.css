@@ -1,0 +1,26 @@
+.similar_living_complexes{
+	border-top: 1px solid rgb(229, 229, 229);
+	margin-bottom: 30px;
+}
+
+.similar_living_complexes__header{
+	padding: 20px;
+	vertical-align: top;
+}
+
+.similar_living_complexes__header-text{
+	font-size: 18px;
+	display: inline-block;
+	margin-right: 10px;
+	line-height: 30px;
+}
+
+
+.similar_living_complexes__body{
+	padding: 10px;
+	font-size: 0;
+}
+
+.similar_living_complexes__more{
+	text-align: center;
+}

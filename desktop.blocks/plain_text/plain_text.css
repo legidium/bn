@@ -1,0 +1,12 @@
+.plain_text{
+	font-size: 13px;
+	color: black;
+}
+
+.plain_text_bold{
+	font-weight: bold;
+}
+
+.plain_text_size_11{
+	font-size: 11px;
+}

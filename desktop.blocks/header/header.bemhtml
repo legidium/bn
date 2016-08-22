@@ -1,0 +1,157 @@
+block('header')(
+	mix()([{block: 'clearfix'}]),
+    content()(function() {
+    	return [
+					{
+						block: 'logo'
+					},
+					{
+						block: 'pull_left',
+						content: {
+							block: 'header_menu',
+							items: [
+								{text: 'Объявления', attrs: {href: '/'}, mods: {active: true}},
+								{text: 'Новостройки', attrs: {href: '/'}},
+								{text: 'Аналитика и статьи', attrs: {href: '/'}},
+								{text: 'Скидки', attrs: {href: '/'}},
+							]
+						}
+					},
+					{
+						block: 'pull_left',
+						attrs: { style: 'margin-left: 20px;' },
+						content: {
+							block: 'adv',
+							width: 120,
+							height: 49
+						}
+					},
+					{
+						block: 'pull_right',
+						content: {
+							block: 'header_nav',
+							content: [
+								{
+									elem: 'item',
+									mods: {first: true},
+									content: {
+							            block: 'button',
+							            js: false,
+							            tag: 'a',
+							            attrs: { href: '/' },
+							            mods : { theme : 'islands', size : 'm', action: 'warning' },
+							            text: 'Подать объявление'
+							        }
+								},
+								{
+									elem: 'item',
+									content: {
+							            block: 'button',
+							            js: false,
+							            tag: 'a',
+							            attrs: { href: '/' },
+							            mods : {theme : 'islands', size : 'm'},
+							            text: '10',
+							            icon: {
+									        block : 'icon',
+									        mods : { action : 'star' }
+									    }
+							        }
+								},
+								{
+									elem: 'item',
+									content: {
+							            block: 'dropdown',
+							            mods : { switcher : 'button', theme : 'islands',  size : 'm' },
+							            switcher : {
+							            	block: 'button',
+							            	mods: { primary: true },
+							            	text: 'Мой БН',
+							            	icon: {
+										        block : 'icon',
+										        mods : { action : 'user' }
+								            },
+							            },
+									    popup: {
+									    	block: 'menu',
+									    	mods : { theme : 'islands', size : 'm', account: true },
+									    	content : [
+										        {
+										            block : 'menu-item',
+										            mods: { type: 'link' },
+										            content : {
+										            	tag: 'a',
+										            	block: 'link',
+										            	mix: { block: 'menu-item', elem: 'link' },
+										            	attrs: { href: '/desktop.bundles/account-agent-ads/account-agent-ads.html' },
+										            	content: 'Мои объявление'
+										            }
+										        },
+										        {
+										            block : 'menu-item',
+										            mods: { type: 'link' },
+										            content : {
+										            	tag: 'a',
+										            	block: 'link',
+										            	mix: { block: 'menu-item', elem: 'link' },
+										            	attrs: { href: '/desktop.bundles/account-agent-searches/account-agent-searches.html' },
+										            	content: 'Мои поиски'
+										            }
+										        },
+										        {
+										            block : 'menu-item',
+										            mods: { type: 'link' },
+										            content : {
+										            	tag: 'a',
+										            	block: 'link',
+										            	mix: { block: 'menu-item', elem: 'link' },
+										            	attrs: {href: '/desktop.bundles/account-agent-subs/account-agent-subs.html' },
+										            	content: 'Мои подписки'
+										            }
+										        },
+										        {
+										            block : 'menu-item',
+										            mods: { type: 'link' },
+										            content : {
+										            	tag: 'a',
+										            	block: 'link',
+										            	mix: { block: 'menu-item', elem: 'link' },
+										            	attrs: { href: '/desktop.bundles/account-agent-searches/account-agent-searches.html' },
+										            	content: 'Профиль'
+										            }
+										        },
+										        {
+										            block : 'menu-item',
+										            mods: { type: 'link' },
+										            content : {
+										            	tag: 'a',
+										            	block: 'link',
+										            	mix: { block: 'menu-item', elem: 'link' },
+										            	attrs: {href: '/desktop.bundles/account-agent-searches/account-agent-searches.html' },
+										            	content: 'Настройки'
+										            }
+										        },
+										        {
+										        	 elem : 'group',
+										        	 mods: { gray: true },
+										        	 content:  {
+										            	block : 'menu-item',
+											            content : {
+											            	tag: 'a',
+											            	block: 'link',
+											            	mix: { block: 'menu-item', elem: 'link' },
+											            	attrs: { href: '/' },
+											            	content: 'Выход'
+											            }
+										            }
+										        }
+										    ]
+									    }
+							        }
+								}
+							]
+						}
+					}
+				];
+    })
+);

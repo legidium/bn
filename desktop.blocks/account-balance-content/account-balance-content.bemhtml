@@ -1,0 +1,57 @@
+block('account-balance-content')(
+    content()(function() {
+        var data = this.ctx.data || {};
+        var content = [];
+        var header = [];
+        var main = [];
+
+        header.push([
+            {
+                elem: 'line',
+                content: [
+                    { elem: 'col', content: { elem: 'title', content: 'Баланс' } },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'control-group',
+                                content: [
+                                    {
+                                        block: 'input',
+                                        mods: { theme: 'islands', size: 'xl', type: 'search', disabled: true, nocorners: true, align_center: true },
+                                        attrs: { style: 'width: 100px;' },
+                                        val: data.balance || 0
+                                    },
+                                    {
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'xl' },
+                                        text: 'Пополнить'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]);
+
+        if (data.tariff_text) {
+            header.push({
+                elem: 'line',
+                content: {
+                    elem: 'col',
+                    content: { block: 'text', mods: { font: 'l', height: 'normal' }, content: data.tariff_text }
+                }
+            });
+        }
+
+        if (data.payments) {
+            main.push({ block: 'account-balance-payments-list', items: data.payments || [] });
+        }
+
+        if (header) { content.push([{ elem: 'header', content: header }]); }
+        if (main) { content.push([{ elem: 'main', content: main }]); }
+
+        return content;
+    })
+);

@@ -1,0 +1,49 @@
+block('sidebar-text-list')(
+    content()(function() {
+        var items = [];
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({ elem: 'item', content: item });
+        });
+
+        return { elem: 'items', content: items };
+    }),
+
+    elem('item')(
+        content()(function() {
+            var content = [];
+            var left = [];
+            var right = [];
+
+            var url   = applyNext().url   || '';
+            var icon  = applyNext().icon  || '';
+            var title = applyNext().title || '';
+            var text  = applyNext().text  || '';
+            var help  = applyNext().help  || '';
+
+            if (icon) {
+                icon = { block: 'icon', cls: icon };
+                left.push(url ? { elem: 'link', tag: 'a', attrs: { href: url }, content: icon } : icon);
+            }
+
+            if (title) {
+                title = { elem: 'title', tag: 'span', content: title };
+                right.push(url ? { elem: 'link', tag: 'a', attrs: { href: url }, content: title } : title);
+            }
+
+            if (text) {
+                text = { elem: 'text', tag: 'span', content: text };
+                right.push(url ? { elem: 'link', tag: 'a', attrs: { href: url }, content: text } : text);
+            }
+
+            if (help) {
+                right.push({ elem: 'help', tag: 'span', content: help });
+            }
+
+            content.push(left.length ? { elem: 'left', content: left } : '');
+            content.push(left.length && right.length ? { elem: 'right', content: right } : right );
+
+            return content;
+        })
+    )
+)

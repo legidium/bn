@@ -1,0 +1,161 @@
+block('account-balance-info')(
+    content()(function() {
+        return [
+            {
+                elem: 'title',
+                content: 'Баланс и тариф'
+            },
+            {
+                block: 'account-balance-info-tariff',
+                content: [
+                    {
+                        elem: 'title',
+                        content: 'Ваш тариф «БН Стандарт»'
+                    },
+                    {
+                        block : 'dropdown',
+                        tag: 'span',
+                        mix: { block: 'account-balance-info-tariff', elem: 'helper'},
+                        mods : { switcher : 'button', theme : 'islands'},
+                        switcher : {
+                            block: 'button',
+                            mix: { block: 'account-balance-info-tariff', elem: 'helper-button'},
+                            mods : { theme : 'islands', view: 'circle', pseudo : true },
+                            text: '?'
+                        },
+                        popup : {
+                            elem: 'popup_content',
+                            content: [
+                                {
+                                    block: 'plain_text',
+                                    tag: 'span',
+                                    mods: { bold: true, size: '11' },
+                                    content: 'Тариф «БН Стандарт»'
+                                },
+                                {
+                                    block: 'plain_text',
+                                    mods:{size: '11'},
+                                    content: [
+                                        {
+                                            tag: 'p',
+                                            content: 'Текст о тарифе «БН Стандарт»<br>Текст о тарифе на новой строке'
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        elem: 'items',
+                        content: [
+                            {
+                                elem: 'item',
+                                content: [
+                                    {
+                                        elem: 'col',
+                                        content: [
+                                            'Дней до конца периода до',
+                                            { elem: 'help', content: ' 28.09.2015' }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'col',
+                                        mods: { right: true },
+                                        content: '16'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                block: 'account-balance-info-details',
+                content: [
+                    {
+                        elem: 'items',
+                        content: [
+                            {
+                                elem: 'item',
+                                mods: { selected: true },
+                                content: [
+                                    {
+                                        elem: 'col',
+                                        content: 'Свободных позиций'
+                                    },
+                                    {
+                                        elem: 'col',
+                                        mods: { right: true },
+                                        content: '0'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'item',
+                                mods: { italic: true },
+                                content: [
+                                    {
+                                        elem: 'col',
+                                        content: 'Занято вами'
+                                    },
+                                    {
+                                        elem: 'col',
+                                        mods: { right: true },
+                                        content: '50'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'item',
+                                content: [
+                                    {
+                                        elem: 'col',
+                                        content: 'Доступно выделенных'
+                                    },
+                                    {
+                                        elem: 'col',
+                                        mods: { right: true },
+                                        content: '5'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'item',
+                                content: [
+                                    {
+                                        elem: 'col',
+                                        content: 'Куплено обычных'
+                                    },
+                                    {
+                                        elem: 'col',
+                                        mods: { right: true },
+                                        content: '200'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'item',
+                                content: [
+                                    {
+                                        elem: 'col',
+                                        content: 'Куплено выделенных'
+                                    },
+                                    {
+                                        elem: 'col',
+                                        mods: { right: true },
+                                        content: '200'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        block: 'button',
+                        mods : { theme : 'islands', size : 'l'},
+                        text: 'Докупить место'
+                    }
+                ]
+            }
+        ];
+    })
+);

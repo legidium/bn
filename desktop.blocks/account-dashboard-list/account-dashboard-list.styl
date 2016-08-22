@@ -1,0 +1,243 @@
+@require "../../design/stylus/index"
+
+$row_hover_border_color ?= #fedb6b
+
+text-nowrap()
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    
+.account-dashboard-list
+    &__header
+        padding 20px 50px 0 30px
+        
+    &__footer
+        padding 30px
+        
+    &__title
+        margin-bottom 4px
+        
+        &_hidden
+            display none
+        
+    &__title-text
+        display inline
+        font-weight normal
+        font-size $font_size_h1
+        line-height $title_line_height_m
+        
+    &__title-note
+        color $text_color_light
+        font-size $font_size_s
+        line-height 1
+        margin 5px
+        vertical-align super
+
+
+
+
+
+
+    &__control
+        margin-right 20px !important
+        
+        &:last-child
+            margin-right 0 !important
+
+        
+    &__item
+        display table
+        width 100%
+        
+        &_many_images
+            .account-dashboard-list__image-holder:before,
+            .account-dashboard-list__image-holder:after
+                display block
+        
+        &_selected
+            .account-dashboard-list__image-holder
+                border 2px solid #fedb6b
+    
+    &__row
+        position relative
+        border 1px solid transparent
+        margin -1px -1px 0 -1px
+        border-box()
+        
+        &:hover
+            border-color $row_hover_border_color
+            
+            .account-dashboard-list__tools-item
+                visibility visible
+            
+        &_heading
+            &:hover
+                border-color transparent
+                cursor default
+                
+            .account-dashboard-list__cell
+                color #afafaf
+                font-size 11px
+                line-height 12px
+                font-weight normal
+                padding 5px
+                vertical-align bottom
+                
+                &_checkbox
+                    padding-left 10px
+                    padding-right 5px
+                
+                &_price
+                    background transparent
+                    
+                &_seller
+                    padding-left 10px
+        
+    &__row-inner
+        position relative
+        
+        &:after
+            content ''
+            display block
+            height 0
+            width 100%
+            border-top 1px solid #ececec
+            position absolute
+            z-index -1
+            top 100%
+            clear both
+            
+    &__cell
+        font-size 11px
+        line-height 12px
+        display table-cell
+        vertical-align middle
+        padding: 0 5px
+        border-box()
+        
+        &_checkbox
+            width 29px
+            max-width 29px
+            padding-left 10px
+            padding-right 5px
+        &_image
+            width 55px
+            max-width 55px
+            padding-left 0
+            padding-right 0
+        &_address
+            width 220px
+            max-width 220px
+        &_s,
+        &_san,
+        &_floor,
+        &_home,
+        &_price,
+        &_object
+            width 50px
+            max-width 50px
+        &_seller
+            width 90px
+            max-width 90px
+            padding-left 10px
+        &_phone
+            width 100px
+            max-width 100px
+        &_comment
+            width auto
+            .account-dashboard-list__text
+                white-space normal
+        &_tools
+            width 40px
+            max-width 40px
+            text-align center
+            
+        &_price
+            background #fafafa
+            
+        .checkbox_theme_islands.checkbox .checkbox__box
+            margin 0
+    
+    &__status-text
+        color #afafaf
+        font-size 10px
+        line-height 11px
+        margin-bottom 7px
+        text-nowrap()
+        
+    &__text,
+    &__text-help,
+    &__item-link
+        font-size 11px
+        line-height 12px
+        text-nowrap()
+    
+    &__text span
+        vertical-align top
+              
+    &__text-help
+        color #afafaf;
+        
+    &__image-holder
+        background #9b9b9b
+        width 50px
+        height 50px
+        margin 12px 0 8px
+        position relative
+        border-box()
+        
+        &:after,
+        &:before
+            display none
+            content " "
+            position absolute
+            top 0
+            left 0
+    
+        &:before
+            width 48px
+            height 48px
+            background rgb(195, 195, 195)
+            z-index -1
+            top -3px
+            left 50%
+            margin-left -24px
+        
+        &:after 
+            width 46px
+            height 46px
+            background rgb(229, 227, 227)
+            z-index -2
+            top -6px
+            left 50%
+            margin-left -23px
+            
+        img
+            display block
+            width 100%
+            height 100%
+            box-sizing border-box
+    
+    &__tools-item
+        padding 4px 0
+        visibility hidden
+        
+        &_persist,
+        &_accept
+            visibility visible    
+
+$unpublished
+    opacity 0.315
+    
+.account-dashboard-list__item_unpublished 
+    .account-dashboard-list__cell_image
+    .account-dashboard-list__text,
+    .account-dashboard-list__text-help
+        @extend $unpublished
+
+.account-dashboard-list__item_expires .account-dashboard-list__status-text
+    color: #f5a623;
+
+.account-dashboard-list__item_unpublished .account-dashboard-list__status-text
+    color: #e12335;
+        

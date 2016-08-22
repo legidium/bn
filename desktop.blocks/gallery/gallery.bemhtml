@@ -1,0 +1,63 @@
+block('gallery')(
+
+	js()(true),
+
+	content()(function(){
+
+		var current_width  = 600;
+		var current_height = 450;
+
+		var item_width  = 99;
+		var item_height = 74;
+
+		var i = 0;
+
+
+		var collection = this.ctx.objects;
+
+
+		var items = collection.map(function(item){
+			var res = {
+					elem: 'item',
+					mods: { active: i == 0 },
+					attrs: {
+						'data-large-image-url': item.largeImageUrl ? item.largeImageUrl : '',
+						'data-youtube-id': item.youtubeID ? item.youtubeID : ''
+					},
+					content: {
+						block: 'image',
+						width: item_width, 
+						height: item_height, 
+						url: item.imageUrl ? item.imageUrl : ''
+					}
+				};
+
+			i++;
+
+			return res;
+		});
+
+
+
+		return [
+
+			{
+				elem: 'current',
+				content: {
+					block: 'image',
+					width: current_width, 
+					height: current_height, 
+					url: collection.length ? collection[0].largeImageUrl : ''
+				}
+			},
+
+			{
+				elem: 'list',
+				content: items
+			}
+
+		];
+	})
+
+
+);

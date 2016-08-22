@@ -1,0 +1,36 @@
+.global-hint {
+	position: absolute;
+	left: 100%;
+	width: 200px;
+	margin-left: 85px;
+	color: #bbb;
+}
+
+.global-hint:before {
+	content: '';
+	position: absolute;
+	right: 100%;
+	top: 10px;
+	margin-right: 10px;
+	width: 68px;
+	height: 36px;
+	border: 1px solid #bbb;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	-webkit-border-radius: 99%/99% 0 0 0;
+	-moz-border-radius: 99%/99% 0 0 0;
+	-o-border-radius: 99%/99% 0 0 0;
+	border-radius: 99%/99% 0 0 0;
+}
+
+.global-hint__title {
+	font-size: 15px;
+	margin: 0 0 10px;
+	font-style: italic;
+}
+
+.global-hint__text {
+	font-size: 11px;
+	margin: 0 0 10px;
+	font-style: italic;
+}

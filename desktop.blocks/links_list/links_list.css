@@ -1,0 +1,36 @@
+.links_list{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.links_list__item{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	display: block;
+}
+
+.links_list__link{
+	display: inline;
+	font-size: 11px;
+	text-decoration: none;
+	color: black;
+}
+
+.links_list__label{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.links_list_forn_13 .links_list__link{
+	font-size: 13px;
+}
+
+.links_list_forn_13 .links_list__item{
+	margin-bottom: 3px;
+}
+
+.links_list_marbot .links_list__item{
+	margin-bottom: 10px;
+}

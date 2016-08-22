@@ -1,0 +1,166 @@
+@require "../../design/stylus/index"
+
+$dashboard    ?=            1280px
+$left ?=                    270px
+$middle ?=                  auto
+$right ?=                   auto
+$sidebar ?=                 287px
+
+$sidebar_width_xs ?=        270px
+$sidebar_width_s  ?=        287px
+$sidebar_width_m  ?=        390px
+$sidebar_width_l  ?=        408px
+$sidebar_width_xl ?=        460px
+
+
+$panel
+    border-left 1px solid $border_color
+    border-right 1px solid $border_color
+    display table-cell
+    vertical-align top
+    height 1px
+    min-height 100%
+    border-box()
+    borders()
+    
+panel()
+    border-left 1px solid $border_color
+    border-right 1px solid $border_color
+    display table-cell
+    vertical-align top
+    height 1px
+    min-height 100%
+    border-box()
+    borders()
+    paddings()
+
+header_paddings()
+    &_nopadding
+        padding 0
+    &_padding_s
+        padding 10px
+    &_padding_m
+        padding 20px
+    &_padding_l
+        padding 30px
+    &_padding_xl
+        padding 40px
+        
+    &_padding_lm
+        padding 20px 30px
+		
+.account-dashboard
+    width $dashboard
+    margin-left auto
+    margin-right auto
+    border-box()
+    clearfix()
+    
+    &__main
+        // border 1px solid $border_color
+        // border-top-color transparent
+        // position relative
+        // top -1px
+        // borders()
+        
+    &__panels
+        border 1px solid $border_color
+        border-collapse collapse
+        display table
+        position relative
+        top -1px
+        width 100%
+        border-box()
+    
+    &__left
+        @extend $panel
+        width $left
+        min-width $left
+        
+    &__middle
+        @extend $panel
+        width $middle
+    
+    &__right
+        @extend $panel
+        width $right
+        min-width $right
+        
+     &__sidebar
+        border-left 1px solid $border_color
+        width $sidebar_width_s
+        borders()
+        
+        &_width_xs
+            width $sidebar_width_xs
+        &_width_s
+            width $sidebar_width_s
+        &_width_m
+            width $sidebar_width_m 
+        &_width_l
+            width $sidebar_width_l
+        &_width_xl
+            width $sidebar_width_xl
+            
+    &__header
+        paddings()
+        
+    &__items
+        borders()
+            
+    &__item
+        position relative
+        border-box()
+        borders()
+        paddings()
+        vh_paddings()
+        nopaddings()
+        
+        &_dark
+            background #fafafa
+        &_toolbar_vertical
+            padding-right 50px
+        
+    &__line
+        border-collapse collapse
+        display table
+        width 100%
+    
+    &__col
+        display table-cell
+        border-right 1px solid #e5e5e5
+        vertical-align top
+            
+    &__title
+        font-size $title_size_m
+        line-height $title_line_height
+        margins()
+            
+        &:last-child
+            margin-right 0
+            
+        &_inline
+            display inline-block
+            margin-right $margin_m
+            
+        &_hidden
+            display none
+            
+        
+    &__title-help
+        font-size $text_size_l
+        line-height $text_line_height
+        
+        &_light,
+        &_note
+            color $text_color_light
+            font-size $text_size_m
+        
+    &__title-note
+        color $text_color_light
+        font-size $text_size_s
+        line-height 1
+        margin-left 5px
+        vertical-align super
+        position relative
+        top 3px

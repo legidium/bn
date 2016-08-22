@@ -1,0 +1,363 @@
+/* Utils */
+clearfix()
+  &:before,
+  &:after
+    content " "
+    display table
+    
+  &:after
+    clear both
+    
+border-box()
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+    
+/* Margins */
+margins()        
+    &_nomargin
+        margin-bottom 0
+    &_margin_xs
+        margin-bottom $margin_xs
+    &_margin_s
+        margin-bottom $margin_s
+    &_margin_m
+        margin-bottom $margin_m
+    &_margin_l
+        margin-bottom $margin_l
+    &_margin_xl
+        margin-bottom $margin_xl
+    &:last-child
+        margin-bottom 0
+    
+top_margins()
+    &_margin_t_xs
+        margin-top $margin_xs
+    &_margin_t_s
+        margin-top $margin_s
+    &_margin_t_m
+        margin-top $margin_m
+    &_margin_t_l
+        margin-top $margin_l
+    &_margin_t_xl
+        margin-top $margin_xl
+bottom_margins()
+    &_margin_b_xs
+        margin-bottom $margin_xs
+    &_margin_b_s
+        margin-bottom $margin_s
+    &_margin_b_m
+        margin-bottom $margin_m
+    &_margin_b_l
+        margin-bottom $margin_l
+    &_margin_b_xl
+        margin-bottom $margin_xl
+left_margins()
+    &_margin_l_xs
+        margin-left $margin_xs
+    &_margin_l_s
+        margin-left $margin_s
+    &_margin_l_m
+        margin-left $margin_m
+    &_margin_l_l
+        margin-left $margin_l
+    &_margin_l_xl
+        margin-left $margin_xl
+right_margins()
+    &_margin_r_xs
+        margin-right $margin_xs
+    &_margin_r_s
+        margin-right $margin_s
+    &_margin_r_m
+        margin-right $margin_m
+    &_margin_r_l
+        margin-right $margin_l
+    &_margin_r_xl
+        margin-right $margin_xl
+
+/* Paddings */     
+paddings()
+    &_nopadding
+        padding 0
+    &_padding_xs
+        padding $padding_xs
+    &_padding_s
+        padding $padding_s
+    &_padding_m
+        padding $padding_m
+    &_padding_l
+        padding $padding_l
+    &_padding_xl
+        padding $padding_xl
+        
+    &_padding
+        &_0-xs
+            padding 0 $padding_xs
+        &_0-s
+            padding 0 $padding_s
+        &_0-m
+            padding 0 $padding_m
+        &_0-l
+            padding 0 $padding_l
+        &_0-xl
+            padding 0 $padding_xl
+
+        &_xs-0
+            padding $padding_xs 0
+        &_xs-s
+            padding $padding_xs $padding_s
+        &_xs-m
+            padding $padding_xs $padding_m
+        &_xs-l
+            padding $padding_xs $padding_l
+        &_xs-xl
+            padding $padding_xs $padding_xl
+            
+        &_s-0
+            padding $padding_s 0
+        &_s-xs
+            padding $padding_s $padding_xs
+        &_s-m
+            padding $padding_s $padding_m
+        &_s-l
+            padding $padding_s $padding_l
+        &_s-xl
+            padding $padding_s $padding_xl
+            
+        &_m-0
+            padding $padding_m 0
+        &_m-xs
+            padding $padding_m $padding_xs
+        &_m-s
+            padding $padding_m $padding_s
+        &_m-l
+            padding $padding_m $padding_l
+        &_m-xl
+            padding $padding_m $padding_xl
+            
+        &_l-0
+            padding $padding_l 0
+        &_l-xs
+            padding $padding_l $padding_xs
+        &_l-s
+            padding $padding_l $padding_s
+        &_l-m
+            padding $padding_l $padding_m
+        &_l-xl
+            padding $padding_l $padding_xl
+            
+        &_xl-0
+            padding $padding_xl 0
+        &_xl-xs
+            padding $padding_xl $padding_xs
+        &_xl-s
+            padding $padding_xl $padding_s
+        &_xl-m
+            padding $padding_xl $padding_m
+        &_xl-l
+            padding $padding_xl $padding_l
+        
+        
+vh_paddings()
+    &_padding-vh_0-xs
+        padding 0 $padding_xs
+    &_padding-vh_0-s
+        padding 0 $padding_s
+    &_padding-vh_0-m
+        padding 0 $padding_m
+    &_padding-vh_0-l
+        padding 0 $padding_l
+    &_padding-vh_0-xl
+        padding 0 $padding_xl
+
+    &_padding-vh_xs-0
+        padding $padding_xs 0
+    &_padding-vh_s-0
+        padding $padding_s 0
+    &_padding-vh_m-0
+        padding $padding_m 0
+    &_padding-vh_l-0
+        padding $padding_l 0
+    &_padding-vh_xl-0
+        padding $padding_xl 0
+
+    &_padding-vh_xs-s
+        padding $padding_xs $padding_s
+    &_padding-vh_xs-m
+        padding $padding_xs $padding_m
+    &_padding-vh_xs-l
+        padding $padding_xs $padding_l
+    &_padding-vh_xs-xl
+        padding $padding_xs $padding_xl
+    
+    &_padding-vh_s-xs
+        padding $padding_s $padding_xs
+    &_padding-vh_s-m
+        padding $padding_s $padding_m
+    &_padding-vh_s-l
+        padding $padding_s $padding_l
+    &_padding-vh_s-xl
+        padding $padding_s $padding_xl
+    
+    &_padding-vh_m-xs
+        padding $padding_m $padding_xs
+    &_padding-vh_m-s
+        padding $padding_m $padding_s
+    &_padding-vh_m-l
+        padding $padding_m $padding_l
+    &_padding-vh_m-xl
+        padding $padding_m $padding_xl
+    
+    &_padding-vh_l-xs
+        padding $padding_l $padding_xs
+    &_padding-vh_l-s
+        padding $padding_l $padding_s
+    &_padding-vh_l-m
+        padding $padding_l $padding_m
+    &_padding-vh_l-xl
+        padding $padding_l $padding_xl
+    
+    &_padding-vh_xl-xs
+        padding $padding_xl $padding_xs
+    &_padding-vh_xl-s
+        padding $padding_xl $padding_s
+    &_padding-vh_xl-m
+        padding $padding_xl $padding_m
+    &_padding-vh_xl-l
+        padding $padding_xl $padding_l
+        
+top_paddings()   
+    &_padding-t_xs
+        padding-top $padding_xs
+    &_padding-t_s
+        padding-top $padding_s
+    &_padding-t_m
+        padding-top $padding_m
+    &_padding-t_l
+        padding-top $padding_l
+    &_padding-t_xl
+        padding-top $padding_xl
+        
+bottom_paddings()
+    &_padding-b_xs
+        padding-bottom $padding_xs
+    &_padding-b_s
+        padding-bottom $padding_s
+    &_padding-b_m
+        padding-bottom $padding_m
+    &_padding-b_l
+        padding-bottom $padding_l
+    &_padding-b_xl
+        padding-bottom $padding_xl
+        
+left_paddings()
+    &_padding-l_xs
+        padding-left $padding_xs
+    &_padding-l_s
+        padding-left $padding_s
+    &_padding-l_m
+        padding-left $padding_m
+    &_padding-l_l
+        padding-left $padding_l
+    &_padding-l_xl
+        padding-left $padding_xl
+        
+right_paddings()
+    &_padding-r_xs
+        padding-right $padding_xs
+    &_padding-r_s
+        padding-right $padding_s
+    &_padding-r_m
+        padding-right $padding_m
+    &_padding-r_l
+        padding-right $padding_l
+    &_padding-r_xl
+        padding-right $padding_xl
+
+nopaddings()
+    &_nopadding_t
+        padding-top 0
+    &_nopadding_b
+        padding-bottom 0
+    &_nopadding_l
+        padding-left 0
+    &_nopadding_r
+        padding-right 0
+        
+/* Borders */
+borders()
+    &_noborders
+        border none
+    &_border
+        border 1px solid $border_color
+    &_border_t
+        border-top 1px solid $border_color
+    &_border_b
+        border-bottom 1px solid $border_color
+    &_border_l
+        border-left 1px solid $border_color
+    &_border_r
+        border-right 1px solid $border_color
+    &_border_tb,
+    &_border_h,
+        border-top 1px solid $border_color
+        border-bottom 1px solid $border_color
+    &_border_lr,
+    &_border_v,
+        border-left 1px solid $border_color
+        border-right 1px solid $border_color
+
+/* Text */
+text_sizes()
+    &_size_xs
+        font-size $text_size_xs
+    &_size_s
+        font-size $text_size_s
+    &_size_m
+        font-size $text_size_m
+    &_size_l
+        font-size $text_size_l
+    &_size_xl
+        font-size $text_size_xl
+
+title_sizes()
+    &_size_xs
+        font-size $title_size_xs
+    &_size_s
+        font-size $title_size_s
+    &_size_m
+        font-size $title_size_m
+    &_size_l
+        font-size $title_size_l
+    &_size_xl
+        font-size $title_size_xl
+
+text_heights()
+    line-height $text_line_height
+        
+title_heights()
+    line-height $text_line_height
+    
+control_heights()
+    &_size_xs
+        line-height $control_height_xs
+    &_size_s
+        line-height $control_height_s
+    &_size_m
+        line-height $control_height_m
+    &_size_l
+        line-height $control_height_l
+    &_size_xl
+        line-height $control_height_xl
+
+form_group_col_sizes()
+    &_size_xs
+        width $form_group_col_size_xs
+    &_size_s
+        width $form_group_col_size_s
+    &_size_m
+        width $form_group_col_size_m
+    &_size_l
+        width $form_group_col_size_l
+    &_size_xl
+        width $form_group_col_size_xl

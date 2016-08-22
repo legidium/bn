@@ -1,0 +1,28 @@
+.account-menu {
+    margin-bottom: 40px;
+}
+.account-menu__value {
+    color: #afafaf;
+}
+.account-menu__link,
+.account-menu__link:visited {
+    color: #000;
+    font-size: 15px;
+    line-height: 30px;
+    text-decoration: none;
+}
+.account-menu__link:hover,
+.account-menu__link:active,
+.account-menu__link:focus,
+.account-menu__link.account-menu__link_active {
+    color: #b02a30;
+}
+.account-menu__link:focus {
+    outline: none;
+}
+.account-menu__link.account-menu__link_active {
+    cursor: default;
+}
+.account-menu__separator {
+    height: 30px;
+}

@@ -1,0 +1,216 @@
+block('ad-place-variable')(
+	js()(true),
+    content()(function(){
+        return [
+            {
+                elem: 'radio',
+                tag: 'input',
+                mods: { type: 'normal' },
+                attrs: { type: 'radio', id: 'ad-place-variable-normal', name: 'ad-place-variable', checked: true }
+            },
+            {
+                elem: 'radio',
+                tag: 'input',
+                mods: { type: 'colored' },
+                attrs: { type: 'radio', id: 'ad-place-variable-colored', name: 'ad-place-variable' }
+            },
+            {
+                elem: 'checkbox',
+                tag: 'input',
+                mods: { type: 'vip' },
+                attrs: { type: 'checkbox', id: 'ad-place-variable-vip', name: 'ad-place-variable-vip' }
+            },
+            {
+                elem: 'table',
+                tag: 'table',
+                content: [
+                    {
+                        elem: 'thead',
+                        tag: 'thead',
+                        content: [
+                            {
+                                elem: 'tr',
+                                tag: 'tr',
+                                content: [
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Вариант размещение'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Стоимость'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'На сайте'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'В печати'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'tbody',
+                        tag: 'tbody',
+                        content: [
+                            {
+                                elem: 'tr',
+                                tag: 'tr',
+                                cls: 'normal',
+                                content: [
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Обычное'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: '250 ₽'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Простая строка'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Простая строка'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'tr',
+                                tag: 'tr',
+                                cls: 'normal',
+                                mods: { type: 'normal' },
+                                content: [
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        mods: { cell: 'full-width' },
+                                        attrs: { colspan: 4 },
+                                        content: [
+                                            {
+                                                elem: 'text',
+                                                content: 'Обычный вариант размещение предполагает публикацию объявления на сайте в результатах<br>поиска, а также заведение персональной страницы объявления.'
+                                            },
+                                            {
+                                                block: 'image',
+                                                url: '../../img/ad.png'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'tr',
+                                tag: 'tr',
+                                cls: 'colored',
+                                content: [
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Выделение цветом'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: '450 ₽'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Выделение цветом'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Жирная строка'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'tr',
+                                tag: 'tr',
+                                cls: 'colored',
+                                content: [
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        mods: { cell: 'full-width' },
+                                        attrs: { colspan: 4 },
+                                        content: [
+                                            {
+                                                elem: 'text',
+                                                content: 'Выделение цветом дополняет обычный вариант размещения тем, что объявление будет выделено цветом в строке. При этом, в печатной версии такое объявлении будет написано жирным кеглем.'
+                                            },
+                                            {
+                                                block: 'image',
+                                                url: '../../img/ad_colored.png'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'tr',
+                                tag: 'tr',
+                                cls: 'vip',
+                                content: [
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: '«Специальное размещение»'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: '+ 50 ₽'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Доп.размещение<br>в&nbsp;правой колонке'
+                                    },
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        content: 'Золотая строка'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'tr',
+                                tag: 'tr',
+                                cls: 'vip',
+                                content: [
+                                    {
+                                        elem: 'td',
+                                        tag: 'td',
+                                        mods: { cell: 'full-width' },
+                                        attrs: { colspan: 4 },
+                                        content: [
+                                            {
+                                                elem: 'text',
+                                                content: 'Такой тип размещения включает в себя обычное и выделение цветом, а также показывает объявления в блоках VIP-объявлений.'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+);

@@ -1,0 +1,28 @@
+.address_list_item{
+	display: block;
+}
+
+.address_list_inline .address_list_item{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+.address_list_item__text,
+.address_list_item__del{
+	font-size: 13px;
+	display: inline-block;
+}
+
+
+.address_list_item__del{
+	margin-left: 5px;
+	cursor: pointer;
+	opacity: .5;
+}
+
+
+
+.address_list_item__del:hover{
+	opacity: .8;
+}

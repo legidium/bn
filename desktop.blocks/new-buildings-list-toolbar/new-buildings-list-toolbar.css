@@ -1,0 +1,45 @@
+.new-buildings-list-toolbar {
+    background: #fafafa;
+    padding: 8px 20px;
+}
+.new-buildings-list-toolbar__pull-left {
+    float: left;
+}
+.new-buildings-list-toolbar__pull-right {
+    float: right;
+}
+.new-buildings-list-toolbar__col {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: baseline;
+}
+.new-buildings-list-toolbar__col:last-child {
+    margin-right: 0;
+}
+.new-buildings-list-toolbar__label {
+    font-size: 11px;
+    line-height: 30px;
+    vertical-align: baseline;
+}
+.new-buildings-list-toolbar__label.new-buildings-list-toolbar__label_width_200 {
+    min-width: 200px;
+}
+.menu-item.menu-item_theme_islands.new-buildings-list-toolbar-search-icon {
+    padding-left: 27px;
+}
+.new-buildings-list-toolbar-search-icon:before {
+    content: '';
+    width: 12px;
+    height: 14px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -7px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAOCAIAAACU32q7AAAAB3RJTUUH3wgcDjgizWJ3qQAAANFJREFUeJyVkbsKhDAQRSdmHCQ+GhsL26TIF/j3foG1jYWNTVJEbUQF3SKL7C7uwt7qwBwuF4ZN09R13XmecBci0lqjc845d2v4SCnRU5qmZVkuy9L3PSJKKQGgbVt/fUqccyHEcRwAwBgTQryWPaVxHJum8bzv+8U+wY81n01RFOV5vm2btZZzXhQFAAzD8CZlWaaUmufZWouISqkbyRhjjPG8rmtd139vepOIqKoqrfX98Gt+HMdB8FmPSZIQkf8dIgIAYywMw6sbEdm3177mAe4ySuKOhn9WAAAAAElFTkSuQmCC');
+}
+.new-buildings-list-toolbar__col_width_220 {
+    min-width: 220px;
+}
+.new-buildings-list-toolbar__select-sort .button__text:before {
+    content: 'Сортировать ';
+}

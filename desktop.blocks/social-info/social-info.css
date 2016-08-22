@@ -1,0 +1,29 @@
+.social-info {
+	margin: -10px -30px 30px;
+	padding: 20px 30px;
+	background-color: #fafafa;
+}
+
+.social-info__text {
+	font-size: 13px;
+	margin: 0 0 13px;
+}
+
+.social-info__content {
+	position: relative;
+}
+
+.social-info__content .image {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.social-info__content-right {
+	padding-left: 60px;
+}
+
+.social-info__email {
+	font-size: 11px;
+	color: #bbb;
+}

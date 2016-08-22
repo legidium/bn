@@ -1,0 +1,583 @@
+block('new-buildings-filter-ext')(
+    content()(function() {
+        return [
+            {
+                elem: 'first_row',
+                content: [
+                    {
+                        elem: 'col',
+                        mods: { gray: true },
+                        content: [
+                            {
+                                elem: 'item',
+                                attrs: { id: 'new-buildings-filter-ext-etaji'},
+                                content: [
+                                    {
+                                        block: 'plain_text',
+                                        mods: { bold: true, size: '11' },
+                                        attrs: { style: 'line-height: 1.1; margin: 0 0 19px;' },
+                                        content: 'Этажи, лифты'
+                                    },
+                                    {
+                                        elem: 'controls_row',
+                                        content: {
+                                            block: 'control-group',
+                                            mix:  { block: 'clearfix' },
+                                            content: [
+                                                {
+                                                    block: 'label',
+                                                    text: 'Этаж'
+                                                },
+                                                {
+                                                    block : 'control-group',
+                                                    mix: [
+                                                        { block: 'new-buildings-filter-ext', elem: 'checkbox-group'},
+                                                        {block: 'checkbox-group', mods : { theme : 'islands', size : 'm' }}
+                                                    ],
+                                                    content: [
+                                                        {
+                                                            block: 'checkbox',
+                                                            mods : { theme : 'islands', size : 'm' },
+                                                            name : 'notFirstFloor',
+                                                            text : 'Не первый',
+                                                            val: true
+                                                        },
+                                                        {
+                                                            tag: 'br'
+                                                        },
+                                                        {
+                                                            block: 'checkbox',
+                                                            mods : { theme : 'islands', size : 'm' },
+                                                            name : 'notLastFloor',
+                                                            text : 'Не последний',
+                                                            val: true
+                                                        },
+                                                        {
+                                                            tag: 'br'
+                                                        },
+                                                        {
+                                                            block: 'checkbox',
+                                                            mods : { theme : 'islands', size : 'm' },
+                                                            name : 'lastFloor',
+                                                            text : 'Последний',
+                                                            val: true
+                                                        },
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        elem: 'controls_row',
+                                        content: {
+                                            block: 'control-group',
+                                            mix: { block: 'clearfix' },
+                                            content: [
+                                                {
+                                                    block: 'label',
+                                                    text: '&nbsp;'
+                                                },
+                                                {
+                                                    block: 'input',
+                                                    name: 'floorFrom',
+                                                    mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+                                                    placeholder : 'от'
+                                                },
+                                                {
+                                                    block: 'input',
+                                                    name: 'floorTo',
+                                                    mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+                                                    placeholder : 'до'
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        elem: 'controls_row',
+                                        content: {
+                                            block: 'control-group',
+                                            mix: {block: 'clearfix'},
+                                            content: [
+                                                {
+                                                    block: 'label',
+                                                    text: 'В доме'
+                                                },
+                                                {
+                                                    block: 'input',
+                                                    name: 'floorCountFrom',
+                                                    mods : { theme : 'islands', size : 'm', width: 's', nocorners: true },
+                                                    placeholder : 'от'
+                                                },
+                                                {
+                                                    block: 'input',
+                                                    name: 'floorCountTo',
+                                                    mods : { theme : 'islands', size : 'm', width: 's', nocorners: true, right_border: true },
+                                                    placeholder : 'до'
+                                                },
+                                                {
+                                                    block: 'label',
+                                                    tag: 'span',
+                                                    mods: {last: true},
+                                                    text: 'этажей'
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        elem: 'controls_row',
+                                        content: {
+                                            block: 'control-group',
+                                            mix: {block: 'clearfix'},
+                                            content: [
+                                                {
+                                                    block: 'label',
+                                                    text: 'Лифт'
+                                                },
+                                                {
+                                                    block : 'select',
+                                                    mods : { mode : 'radio', theme : 'islands', size : 'm', width: '120', corner: 'all' },
+                                                    name : 'isLift',
+                                                    val : '',
+                                                    options : [
+                                                        { val : '', text : 'Не важно' },
+                                                        { val : 1, text : 'Есть' },
+                                                        { val : 'service_lift', text : 'Есть грузовой лифт' },
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        mods: { gray: true },
+                        content: [
+                            {
+                                elem: 'item',
+                                attrs: { id: 'new-buildings-filter-ext-infrastructura'},
+                                content: [
+                                    {
+                                        block: 'plain_text',
+                                        mods:{ bold: true, size: '11' },
+                                        attrs: { style: 'line-height: 1.1; margin: 0 0 19px;' },
+                                        content: 'Инфраструктура'
+                                    },
+                                    {
+                                        elem: 'controls_row',
+                                        content: {
+                                            block: 'control-group',
+                                            mix: {block: 'clearfix'},
+                                            content: [
+                                                {
+                                                    block : 'checkbox-group',
+                                                    mix: { block: 'new-buildings-filter-ext', elem: 'checkbox-group'},
+                                                    mods : { theme : 'islands', size : 'm' },
+                                                    name : 'infrastructure[]',
+                                                    options : [
+                                                        { val : 0, text : 'Организованный паркинг'},
+                                                        { val : 1, text : 'Закрытая территория' },
+                                                        { val : 2, text : 'Охрана, консьерж' },
+                                                        { val : 3, text : 'Детский сад в шаговой доступности' },
+                                                        { val : 4, text : 'Школа в шаговой доступности' },
+                                                        { val : 5, text : 'Фитнес-центр в шаговой доступности' },
+                                                        { val : 6, text : 'Рядом парк' },
+                                                        { val : 7, text : 'Рядом озеро, река или водоем' }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        mods: { gray: true },
+                        attr: { id: 'new-buildings-filter-ext-klass-doma' },
+                        content: [
+                            {
+                                elem: 'item',
+                                attrs: { id: 'new-buildings-filter-ext-klass-doma'},
+                                content: [
+                                    {
+                                        block: 'plain_text',
+                                        mods:{ bold: true, size: '11' },
+                                        attrs: { style: 'line-height: 1.1; margin: 0 0 19px;' },
+                                        content: 'Класс дома'
+                                    },
+                                    {
+                                        elem: 'controls_row',
+                                        content: {
+                                            block: 'control-group',
+                                            mix: {block: 'clearfix'},
+                                            content: [
+                                                {
+                                                    block : 'checkbox-group',
+                                                    mix: { block: 'new-buildings-filter-ext', elem: 'checkbox-group'},
+                                                    mods : { theme : 'islands', size : 'm' },
+                                                    name : 'houseClass[]',
+                                                    options : [
+                                                        { val : 0, text : 'Эконом'},
+                                                        { val : 1, text : 'Комфорт' },
+                                                        { val : 2, text : 'Бизнес-класс' },
+                                                        { val : 3, text : 'Элитное жилье' }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        block: 'help',
+                                        mods: { items: true },
+                                        content: [
+                                            {
+                                                elem: 'item',
+                                                js: { val: 0 },
+                                                content: 'Текст для домов эконом класса.'
+                                            },
+                                            {
+                                                elem: 'item',
+                                                js: { val: 1 },
+                                                content: 'Текст для домов комфорт класса.'
+                                            },
+                                            {
+                                                elem: 'item',
+                                                js: { val: 3 },
+                                                content: 'Текст для домов бизнес-класса.'
+                                            },
+                                            {
+                                                elem: 'item',
+                                                elemMods: { visible: true },
+                                                js: { val: 4 },
+                                                content: 'Элитные дома строятся из кирпича или с применением монолитных технологий. Такое жилье обычно располагается в экологически-чистых и престижных районах. Здесь всегда есть организованный паркинг, охрана и закрытая территория. В таких домах вы не найдете малогабаритных квартир.'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        mods: { gray: true },
+                        content: [
+                            {
+                                elem: 'item',
+                                attrs: { id: 'new-buildings-filter-ext-klass-doma'},
+                                content: [
+                                    {
+                                        tag: 'div',
+                                        content: [
+                                            {
+                                                block: 'plain_text',
+                                                mods:{bold: true, size: '11'},
+                                                attrs: { style: 'display: inline-block; line-height: 1.1; margin: 0 0 19px;' },
+                                                content: 'Тип дома'
+                                            },
+                                            {
+                                                block : 'dropdown',
+                                                tag: 'span',
+                                                mods : { switcher : 'button', theme : 'islands'},
+                                                switcher : {
+                                                    block: 'button',
+                                                    attrs: { style: 'position: relative; top: -2px; left: 10px;' },
+                                                    mods : { theme : 'islands', gray: true, view: 'circle', pseudo : true},
+                                                    text: '?'
+                                                },
+                                                popup : {
+                                                    elem: 'popup_content',
+                                                    content: [
+                                                        {
+                                                            block: 'plain_text',
+                                                            tag: 'span',
+                                                            mods: { bold: true, size: '11' },
+                                                            content: 'Монолитный'
+                                                        },
+                                                        {
+                                                            block: 'plain_text',
+                                                            mods:{size: '11'},
+                                                            content: [
+                                                                {
+                                                                    tag: 'p',
+                                                                    content: 'Этажность: '
+                                                                },
+                                                                {
+                                                                    tag: 'p',
+                                                                    content: 'Текст про монолитные дома<br>Текст про монолитные дома на новой строке'
+                                                                },
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'controls_row',
+                                        content: {
+                                            block: 'control-group',
+                                            mix: { block: 'clearfix' },
+                                            content: [
+                                                {
+                                                    block : 'checkbox-group',
+                                                    mix: { block: 'new-buildings-filter-ext', elem: 'checkbox-group'},
+                                                    mods : { theme : 'islands', size : 'm' },
+                                                    name : 'houseType[]',
+                                                    options : [
+                                                        { val : 0, text : 'Панельный'},
+                                                        { val : 1, text : 'Кирпичный' },
+                                                        { val : 2, text : 'Монолитный' },
+                                                        { val : 3, text : 'Монолитно-каркасный' },
+                                                        { val : 4, text : 'Монолитно-кирпичный' },
+                                                        { val : 5, text : 'Монолитно-панельный' },
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        block: 'help',
+                                        mods: { items: true },
+                                        content: [
+                                            {
+                                                elem: 'item',
+                                                js: { val: 0 },
+                                                content: 'Текст для панельных домов.'
+                                            },
+                                            {
+                                                elem: 'item',
+                                                js: { val: 1 },
+                                                content: 'Текст для кирпичных домов.'
+                                            },
+                                            {
+                                                elem: 'item',
+                                                js: { val: 2 },
+                                                content: 'Текст для монолитных домов.'
+                                            },
+                                            {
+                                                elem: 'item',
+                                                js: { val: 3 },
+                                                content: 'Текст для монолитно-каркасных домов.'
+                                            },
+                                            {
+                                                elem: 'item',
+                                                js: { val: 4 },
+                                                content: 'Текст для монолитно-кирпичных домов.'
+                                            },
+                                            {
+                                                elem: 'item',
+                                                elemMods: { visible: true },
+                                                js: { val: 5 },
+                                                content: 'Монолитно-панельные дома представляют собой уникальную современную технологию, призванную быть экологичной и быстрой. Такие дома обычно стоят дешевле остальных.'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'first_row',
+                mods: { padding: true },
+                content: [
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                elem: 'controls_row',
+                                content: [
+                                    {
+                                        block: 'control-group',
+                                        mix: {block: 'clearfix'},
+                                        content: [
+                                            {
+                                                block: 'label',
+                                                attrs: {style: 'width: 100px; margin: 0 13px 6px 0;' },
+                                                text: 'Условия сделки'
+                                            },
+                                            {
+                                                block : 'select',
+                                                name: 'conditionTrade',
+                                                mods : {  mode : 'radio', theme : 'islands', size : 'm',  width: '150', corner: 'all' },
+                                                options : [
+                                                    { val : '', text : 'Не важно'},
+                                                    { val : 1, text : 'Прямая продажа'},
+                                                    { val : 2, text : 'Переуступка'}
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block : 'dropdown',
+                                        tag: 'span',
+                                        attrs: { style: 'position: absolute; top: 3px; right: 10px;' },
+                                        mods : { switcher : 'button', theme : 'islands'},
+                                        switcher : {
+                                            block: 'button',
+                                            mods : { theme : 'islands', view: 'circle', pseudo : true},
+                                            text: '?'
+                                        },
+                                        popup : {
+                                            elem: 'popup_content',
+                                            content: [
+                                                {
+                                                    block: 'plain_text',
+                                                    tag: 'span',
+                                                    mods: { bold: true, size: '11' },
+                                                    content: 'Условия сделки'
+                                                },
+                                                {
+                                                    block: 'plain_text',
+                                                    mods: {size: '11' },
+                                                    content: [
+                                                        {
+                                                            tag: 'p',
+                                                            content: 'Текст об условиях сделки<br>Текст об условиях сделки на новой строке'
+                                                        },
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                elem: 'controls_row',
+                                content: [
+                                    {
+                                        block: 'label',
+                                        attrs: { style: 'width: 75px; margin: 0 12px 6px 0;' },
+                                        text: 'Схема работы'
+                                    },
+                                    {
+                                        block : 'radio-group',
+                                        name: 'workSheme',
+                                        mods : { theme : 'islands', size : 'm', type : 'button'},
+                                        options : [
+                                            { val : 0, text : 'ДДУ (214 Ф3)', checked : true },
+                                            { val : 1, text : 'ЖСК' },
+                                            { val : 2, text : 'Иное' },
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                elem: 'controls_row',
+                                content: {
+                                    block: 'control-group',
+                                    mix: { block: 'clearfix' },
+                                    content: [
+                                        {
+                                            block: 'label',
+                                            attrs: { style: 'width: 100px; margin: 0 12px 6px 0;'},
+                                            text: 'Автор объявления'
+                                        },
+                                        {
+                                            block : 'input',
+                                            name: 'autor',
+                                            mods : {  theme : 'islands', size : 'l',  width: '175', nocorners: true },
+                                            placeholder : 'Название или телефон'
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                elem: 'controls_row',
+                                content: {
+                                    block: 'control-group',
+                                    mix: { block: 'clearfix' },
+                                    content: [
+                                        {
+                                            block: 'label',
+                                            attrs: { style: 'width: 100px; margin: 0 12px 6px 0;'},
+                                            text: '&nbsp;'
+                                        },
+                                        {
+                                            block : 'checkbox',
+                                            mods : { theme : 'islands', size : 'm' },
+                                            name : 'isPrivate',
+                                            val : 'true', 
+                                            text : 'Частное'
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                elem: 'controls_row',
+                                attrs: { id: 'new-buildings-filter-ext-data-publikacii' },
+                                content: {
+                                    block: 'control-group',
+                                    mix: { block: 'clearfix' },
+                                    content: [
+                                        {
+                                            block: 'label',
+                                            attrs: { style: 'width: 100px; margin: 0 12px 6px 0;'},
+                                            text: 'Дата публикации'
+                                        },
+                                        {
+                                            block : 'select',
+                                            mods : {  mode : 'radio', theme : 'islands', size : 'm', width: '175', corner: 'left' },
+                                            val: '',
+                                            name: 'publishDate',
+                                            options : [
+                                                { val : '', text : 'Не важно'},
+                                                { val : 'day', text : 'За сутки'},
+                                                { val : 'week', text : 'За неделю'},
+                                                { val : 'month', text : 'За месяц'},
+                                                { val : '3_month', text : 'За 3 месяца'},
+                                                { val : 'all_time', text : 'За все время'},
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                elem: 'controls_row',
+                                content: {
+                                    block: 'control-group',
+                                    mix: { block: 'clearfix' },
+                                    content: [
+                                        {
+                                            block: 'label',
+                                            attrs: { style: 'width: 100px; margin: 0 12px 6px 0;'},
+                                            text: '&nbsp;'
+                                        },
+                                        {
+                                            block : 'checkbox',
+                                            mods : { theme : 'islands', size : 'm' },
+                                            name : 'hasPhoto',
+                                            val : 'true', 
+                                            text : 'Только с фото'
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    })
+);

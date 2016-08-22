@@ -1,0 +1,113 @@
+block('user_comments_in_search')(
+	js()(function(){
+		var item_id = this.ctx.item_id || 0;
+		return { item_id: item_id };
+	}),
+	content()(function(){
+
+
+		if(!this.ctx.user_auth){
+			return [
+				{
+					block: 'help',
+					attrs: {style: 'padding: 10px;'},
+					content: 'Чтобы добавлять заметки к объектам, войдите на БН'
+				},
+				{
+					tag: 'div',
+					attrs: {style: 'padding: 10px;'},
+					content: [
+						{
+				            block : 'button',
+				            attrs: { href: '/', style: 'margin-right: 10px;' },	
+				            mods : { theme : 'islands', size : 'm', action: 'primary' },
+				            content: [
+				            	{
+				            		elem: 'text',
+				            		tag: 'span',
+				            		content: 'Войти'
+				            	}
+				            ]
+				        },
+				        {
+				            block : 'button',
+				            attrs: { href: '/' },	
+				            mods : { theme : 'islands', size : 'm' },
+				            content: [
+				            	{
+				            		elem: 'text',
+				            		tag: 'span',
+				            		content: 'Зарегистрироваться'
+				            	}
+				            ]
+				        }
+					]
+				},
+				{
+					tag: 'div',
+					attrs: {style: 'padding: 10px; background: #f2f2f2;'},
+					content: [
+						{
+							block: 'help',
+							content: 'Вы сможете добавлять заметки к любым объектам. Заметки видны только вам.'
+						}
+					]
+				}
+			];
+		}
+
+
+
+
+		return [
+			{
+				elem: 'form',
+				tag: 'form',
+				attrs: {action: '', method: 'post'},
+				content: [
+					{
+						elem: 'row',
+						attrs: {style: 'margin-bottom: 5px;'},
+						content: {
+							block: 'textarea',
+							attrs: {rows: 5},
+						    mods : { theme : 'islands', size : 'm', width : 'available' },
+						    placeholder : 'Добавьте заметку',
+						    val: this.ctx.user_comment
+						}
+					},
+					{
+						elem: 'row',
+						content: [
+							{
+								block: 'button',
+								mods : { theme : 'islands', size : 'm', type: 'submit'},
+								text: 'Отправить'
+							},
+							{
+								block: 'button',
+								mix: { block: 'user_comments_in_search', elem: 'cancel' },
+								attrs: { style: 'margin-left: 10px;', type: 'button' },
+								mods: { theme : 'islands', link: true },
+		                        text: 'отмена'
+							}
+						]
+					}
+				]
+			},
+			{
+				tag: 'div',
+				attrs: {style: 'padding: 10px; background: #f2f2f2;'},
+				content: [
+					{
+						block: 'help',
+						content: 'Заметки видны только вам'
+					}
+				]
+			}
+		];
+
+
+	})
+
+);

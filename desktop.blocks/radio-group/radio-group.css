@@ -1,0 +1,59 @@
+.radio-group.radio-group_theme_islands{
+	font-size: 0;
+}
+
+.radio-group_with-select > :last-child .button_theme_islands,
+.radio-group_with-select > :last-child .button_theme_islands:before {
+	border-radius: 0 !important;
+}
+
+.radio-group_with-select {
+	margin-right: -1px !important;
+}
+
+.radio-group_with-select + .select {
+	margin-right: 20px;
+}
+
+.radio-group_with-select + .select .button,
+.radio-group_with-select + .select .button:before {
+	border-radius: 0 3px 3px 0;
+}
+
+.select_rooms .button__text {
+	margin: 0 !important;
+	padding-left: 10px;
+	padding-right: 18px !important;
+	text-align: center;
+}
+
+.select_rooms .select__button.button_size_m .icon:empty {
+	right: 4px;
+	background: none;
+	width: 6px;
+	text-align: center;
+}
+
+.select_rooms .select__tick:empty:after {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: 1px;
+	visibility: visible ;
+	border: 3px solid transparent;
+	border-top-color: #000;
+}
+
+.select_rooms.select_opened .select__tick:empty:after {
+	top: 0;
+}
+
+.radio-group_font_s .button .button__text,
+.radio-group_font_s.radio-group_theme_islands .button_theme_islands.button .button__text {
+    font-size: 11px;
+}
+
+.radio-group_theme_islands.radio-group_size_l.radio-group_type_button {
+    line-height: normal;
+}

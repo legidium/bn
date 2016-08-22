@@ -1,0 +1,19 @@
+.user_lists_in_search{
+	width: 230px;
+}
+
+.user_lists_in_search__add_form{
+	padding: 10px; 
+	background: #f2f2f2;
+}
+
+
+.user_lists_in_search__lists_list{
+	max-height: 180px;
+	overflow-y: auto;
+}
+
+
+.user_lists_in_search__lists_list .menu-item_theme_islands.menu-item_disabled{
+	opacity: 1;
+}

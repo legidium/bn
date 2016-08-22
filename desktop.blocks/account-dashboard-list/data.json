@@ -1,0 +1,903 @@
+{
+    "user_auth": false,
+    "total_items": 1000,
+    "total_pages": 20,
+    "current_page": 1,
+
+
+    "lists" : [
+        { "id": 1, "name": "Список 1", "count": 23 }, 
+        { "id": 2, "name": "Список 2", "count": 2 }, 
+        { "id": 3, "name": "Список 3", "count": 9 }, 
+        { "id": 4, "name": "Список 4", "count": 23 }, 
+        { "id": 5, "name": "Список 5", "count": 2 }, 
+        { "id": 6, "name": "Список 6", "count": 3 }, 
+        { "id": 7, "name": "Список 7", "count": 6 }, 
+        { "id": 8, "name": "Список 8", "count": 1 }, 
+        { "id": 9, "name": "Список 9", "count": 2 } 
+    ],
+
+    "items": [
+        {
+            "mods": { "heading": true },
+            "address_help": "Адрес",
+            "object_help": "Объект",
+            "s_help": "S общ.",
+            "floor_help": "Этаж",
+            "san_help": "Сан.уз.",
+            "home_help": "Дом",
+            "price_help": "Цена, Р",
+            "seller_help": "Продавец"
+        },
+        {
+            "js": { "id": 101, "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "selected": true
+            },
+
+            "link": "http://bn.ru/1",
+            "image": "../../img/account-my-ads-sample.jpg",
+            "address_text": "Лейтенанта Шмидта наб. д.21",
+            "address_help": "м. Василеостровск,, 14 мин. пешком",
+            "status_text": "до 28.09.2015 (обычное)",
+
+            "object_text": "5к.кв.",
+            "object_help": "",
+            "s_text": "252,7",
+            "s_help": "",
+            "floor_text": "17/24",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФК",
+            "price_text": "18 000",
+            "price_help": "",
+            "seller_text": "Айдем и много текста",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+
+            "is_favorite": true,
+            "is_in_lists": true,
+            "is_user_note": true
+        },
+        {
+            "js": { "id": 1, "type": 2, "link": "http://bn.ru/2" },
+            "mods": {
+                "many_images": true,
+                "selected": true
+            },
+
+            "link": "http://bn.ru/1",
+            "image": "../../img/account-my-ads-sample.jpg",
+            "address_text": "Вознесенский пр. 4",
+            "address_help": "м. Сенная, 11 мин. на транспорте",
+            "status_text": "до 28.09.2015 (обычное, спецразмещение)",
+
+            "object_text": "5к.кв.",
+            "object_help": "",
+            "s_text": "252,7",
+            "s_help": "",
+            "floor_text": "17/24",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФК",
+            "home_voprosique": "?",
+            "home_voprosique_text": "<p><b>Заголовк - CФК</b></p><p>Этажность: 3-7</p><p>Текст про CФК<br>Текст про CФК на новой строке</p>",
+            "price_text": "18 000",
+            "price_help": "",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+
+            "is_favorite": true,
+            "is_in_lists": true,
+            "is_user_note": true
+        },
+        {
+            "js": { "id": 2,  "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "many_images": true,
+                "unpublished": true,
+                "selected": true
+            },
+            "link": "http://bn.ru/2",
+            "image": "../../img/account-my-ads-sample.jpg",
+            "address_text": "Грибоедова кан. наб. 144",
+            "address_help": "м. Сенная,, 12 мин. пешком",
+            "status_text": "объявление снято с публикации",
+            "object_text": "студия",
+            "object_help": "",
+            "s_text": "27",
+            "s_help": "",
+            "floor_text": "1/5",
+            "floor_help": "",
+            "san_text": "C",
+            "san_help": "",
+            "home_text": "КМ",
+            "home_help": "",
+            "price_text": "3 850",
+            "price_help": "ипот.",
+            "seller_text": "Аристократ",
+            "seller_help": "2 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false,
+            "isAppended": true
+        },
+        {
+            "js": { "id": 3, "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "many_images": true,
+                "expires": true
+            },
+            "link": "http://bn.ru/3",
+            "image": "",
+            "address_text": "6 Красноармейская ул. 14",
+            "address_help": "м. Технолог. инст-ут, 7 мин. пешком",
+            "status_text": "до 28.08.2015, осталось 2 дня (обычное)",
+            "object_text": "2к.кв.",
+            "object_help": "",
+            "s_text": "62,3",
+            "s_help": "",
+            "floor_text": "4/4",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "СТ",
+            "home_help": [
+                "",
+                ""
+            ],
+            "home_voprosique": "?",
+            "price_text": "4 530",
+            "price_help": "",
+            "seller_text": "АН Панорама",
+            "seller_help": "30 мая",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false,
+            "isAppended": false
+        },
+        {
+            "js": { "id": 4, "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru/4",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Частное",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false,
+            "isAppended": true
+        },
+        {
+            "js": { "id": 5, "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "К",
+            "home_help": "IV 15",
+            "price_text": "195 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": { "id": 4, "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "2 290",
+            "price_help": "рассел..",
+            "seller_text": "Смирнов и К",
+            "seller_help": "29 мая",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": { "id": 4, "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {"id": 4, "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": { "id": 4, "type": 2, "link": "http://bn.ru/1" },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        },
+        {
+            "js": {
+                "id": 4
+            },
+            "mods": {
+                "many_images": true
+            },
+            "link": "http://bn.ru",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Шпалерная 51",
+            "address_help": "Бизнесцентр Таврический",
+            "status_text": "до 28.08.2015",
+            "object_text": "офис",
+            "object_help": "",
+            "s_text": "56,7",
+            "s_help": "",
+            "floor_text": "5/7",
+            "floor_help": "",
+            "san_text": "P",
+            "san_help": "",
+            "home_text": "CФЛ",
+            "home_help": "",
+            "price_text": "19 000",
+            "price_help": "ипот.",
+            "seller_text": "Айдем",
+            "seller_help": "1 июня",
+            "phones": [
+                "8 (123) 987-78-12",
+                "8 (123) 987-78-12"
+            ],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            "tools_star_accept": false,
+            "tools_comments_accept": false
+        }
+    ]
+}

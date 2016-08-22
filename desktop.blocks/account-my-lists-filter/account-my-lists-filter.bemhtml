@@ -1,0 +1,85 @@
+block('account-my-lists-filter')(
+    js()(true),
+    tag()('form'),
+    content()(function() {
+        var fName = {
+            action: 'action',
+            target: 'target',
+            list_name: 'list_name'
+        };
+
+        return [
+            {
+                elem: 'line',
+                mix: { block: 'clearfix' },
+                content: [
+                    {
+                        elem: 'left',
+                        content: [
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'radio-group',
+                                        mix: { block: this.block, elem: 'action' },
+                                        mods: { theme: 'islands', size: 'l', font: 's', type: 'button' },
+                                        name: fName.action,
+                                        val: 'sell',
+                                        options: [
+                                            { val: 'any', text: 'Любые' },
+                                            { val: 'sell', text: 'Продажа' },
+                                            { val: 'rent', text: 'Аренда' }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'radio-group',
+                                        mix: { block: this.block, elem: 'target' },
+                                        mods: { theme: 'islands', size: 'l', font_s: true, type: 'button' },
+                                        name: fName.target,
+                                        options: [
+                                            { val: 'flat', text: 'Квартиру' },
+                                            { val: 'room', text: 'Комнату' }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'right',
+                        content: [
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        elem: 'search-wrapper',
+                                        content: [
+                                            {
+                                                block: 'input',
+                                                mix: { block: this.block, elem: 'search-input' },
+                                                mods: { theme: 'islands', size: 'l', type: 'search', nocorners: true },
+                                                name: fName.list_name,
+                                                placeholder: 'Поиск по спискам'
+                                            },
+                                            {
+                                                block: 'button',
+                                                mix: { block: this.block, elem: 'search-submit' },
+                                                mods: { theme: 'islands', size: 'm', type : 'submit' },
+                                                icon: { block: 'icon', mods: { action: 'search' } }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+)

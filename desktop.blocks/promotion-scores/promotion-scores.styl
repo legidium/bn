@@ -1,0 +1,37 @@
+@require "../../design/stylus/index"
+
+.promotion-scores
+    margin-bottom $margin_xxl
+    
+    &__items
+        margin-left -15px
+        margin-right -15px
+        line-height 0
+        
+    &__item
+        display inline-block
+        padding-left 15px
+        padding-right 15px
+        vertical-align top
+        width 33.33%
+        margin-bottom $margin_l
+        border-box()
+    
+    &__help
+        color $text_color_light
+        
+    &__title
+        font-size 43px
+        line-height 45px
+        margin-bottom $margin_s
+                
+        small, .small
+            font-size (43px / 2.15)
+            line-height 1
+    &__help,
+    &__text
+        font-size $font_size_l
+        line-height $text_line_height_m
+        margin-bottom $margin_s
+        
+            

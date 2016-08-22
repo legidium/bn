@@ -1,0 +1,16 @@
+
+
+.modal__close_button{
+	position: absolute;
+	top: 5px;
+	right: 7px;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	opacity: .5;
+}
+
+
+.modal__close_button:hover{
+	opacity: 1;
+}

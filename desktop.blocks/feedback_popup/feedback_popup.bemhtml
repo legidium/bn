@@ -1,0 +1,92 @@
+block('feedback_popup')(
+	js()('true'),
+	content()(function () {
+		return {
+			elem: 'inner',
+			js: true,
+			content: [{
+				block: 'i-jquery',
+				elem: 'inputmask'
+			}, {
+				block: 'radio-group',
+				tag: 'form',
+				mods: {
+					theme: 'islands',
+					size: 'm',
+					type: 'button',
+					focused: true
+				},
+				mix: {
+					block: 'feedback_popup',
+					elem: 'radio'
+				},
+				name: 'radio-button',
+				val: 1,
+				options: [
+					{val: 1, text: 'SMS сообщение'},
+					{val: 2, text: 'на почту'}
+				]
+			}, {
+				block: 'input',
+				mix: {
+					block: 'feedback_popup',
+					elem: 'address'
+				},
+				mods: {
+					theme: 'islands',
+					size: 'm'
+				},
+				placeholder: 'Ваш телефон для связи'
+			}, {
+				block: 'textarea',
+				mix: {
+					block: 'feedback_popup',
+					elem: 'text'
+				},
+				attrs: { style: 'height: 65px;transform:translateY(-2px);' },
+				mods: {
+					theme: 'islands',
+					size: 'm'
+				},
+				val: 'Меня интересует объект: \n' + this.ctx.apartment + '.\nПожалуйста свяжитесь со мной.'
+			}, {
+				elem: 'captcha',
+				attrs: { id: 'js-captcha' }
+			}, {
+				elem: 'load',
+				tag: 'script',
+				attrs: { src: 'https://www.google.com/recaptcha/api.js', async: true, defer: true }
+			//}, {
+			//	elem: 'load',
+			//	tag: 'script',
+			//	attrs: { src: 'https://raw.githubusercontent.com/RobinHerbots/jquery.inputmask/3.x/js/inputmask.js' }
+			}, {
+				elem: 'buttons',
+				content: [{
+					block: 'button',
+					mix: {
+						block: 'feedback_popup',
+						elem: 'submit'
+					},
+					mods: {
+						theme: 'islands',
+						size: 'm'
+					},
+					text: 'Отправить'
+				}, {
+					block: 'button',
+					mix: {
+						block: 'feedback_popup',
+						elem: 'cancel'
+					},
+					mods: {
+						theme: 'islands',
+						size: 'm',
+						view: 'plain'
+					},
+					text: 'отмена'
+				}]
+			}]
+		}
+	})
+);

@@ -1,0 +1,36 @@
+block('embed')(
+    js()(true),
+
+    content()(function() {
+        var content = [];
+        var image = applyNext().image || false;
+
+        image && content.push({ tag: 'img', attrs: { src: '/img/search/bn-lg.png', alt: '' } }) ;
+
+        return content;
+    }),
+
+    mod('small', true)(
+        content()(function() {
+
+            return {
+                tag: 'a',
+                elem: 'link',
+                attrs: { href: this.ctx.content.link },
+                content: [
+                    {
+                        block: 'icon',
+                        mix: { block: this.block, elem: 'image' },
+                        url: '/desktop.blocks/embed/camera.png'
+                    },
+                    {
+                        tag: 'span',
+                        elem: 'text',
+                        content: this.ctx.content.text
+                    }
+                    
+                ]
+            };
+        })
+    )
+);

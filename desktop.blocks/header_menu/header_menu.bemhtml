@@ -1,0 +1,18 @@
+block('header_menu')(
+    content()(function() {
+        return (this.ctx.items).map(function(item) {
+            return { elem: 'item', content: item };
+        });
+    }),
+    elem('item')(
+        content()(function() {
+            return {
+                elem: 'link', 
+                tag: 'a', 
+                content: applyNext().text, 
+                attrs: applyNext().attrs, 
+                mods: applyNext().mods
+            };
+        })
+    )
+);

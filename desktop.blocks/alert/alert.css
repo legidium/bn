@@ -1,0 +1,17 @@
+.alert {
+    border-width: 1px;
+    border-style: solid;
+    padding: 20px 30px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.alert.alert_info {
+    background: #f8fdf3;
+    border-color: #7ed321;
+}
+.alert__text {
+    font-size: 15px;
+    line-height: 1.4;
+}

@@ -1,0 +1,14 @@
+.header_nav{
+	margin-right: 20px;
+}
+
+
+.header_nav__item{
+	float: left;
+	padding: 9px 0 0 10px;
+}
+
+
+.header_nav__item_first{
+	padding-right: 20px;
+}

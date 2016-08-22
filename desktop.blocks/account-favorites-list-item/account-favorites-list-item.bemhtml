@@ -1,0 +1,138 @@
+block('account-favorites-list-item')(
+    /*tag()('a'),
+    match(function() { return !(this.mods.unpublished || this.mods.expires) && this.ctx.link; })(
+        attrs()(function() { return { href: this.ctx.link }; })
+    ),*/
+    js()(function(){ return { url: this.ctx.link }; }),
+    content()(function() {
+        var js       = this.ctx.js || {}
+        var mods     = this.ctx.mods || {};
+        var link     = this.ctx.link || '';
+        var data     = applyNext();
+        var columns  = ['image', 'address', 'price', 'seller', 'comment', 'tools'];
+        var main     = [];
+
+        var hasLink  = !(this.mods.unpublished || this.mods.expires) && link;
+
+        var maxLen   = {
+            addressStatusText: 50,
+            addressTitle:      50,
+            addressText:       50,
+            addressHelp:       50
+        };
+
+        var cutText = function(text, maxLength) { return (text && text.length > maxLength ? text.substr(0, maxLength) + '...' : text); };
+
+        var textElem = function(elem, text, maxLength, mods, tag) {
+            return {
+                tag: tag || undefined,
+                elem: elem || 'text',
+                elemMods: mods || undefined,
+                attrs: text && text.length > maxLength ? { title : text } : undefined,
+                content: text && text.length > maxLength ? text.substr(0, maxLength) + '...' : text
+            };
+        };
+
+        columns.map(function(column) {
+            var cell = { elem: 'cell', tag: 'span', elemMods: {} };
+            cell.elemMods[column] = true;
+
+            switch (column) {
+                case 'image':
+                    var image = data.image ? { elem: 'image', tag: 'img', attrs: { src: data.image, alt: ''} } : '&nbsp;';
+
+                    if (hasLink) {
+                        image = { elem: 'image-link', tag: 'a', attrs: { href: link }, content: image };
+                    }
+
+                    cell.content = { elem: 'image-holder', content: image };
+                    break;
+
+                case 'address':
+                    var title;
+
+                    if (hasLink) {
+                        title = {
+                            elem: 'title',
+                            content: {
+                                elem: 'title-link',
+                                mix: { block: 'link' },
+                                tag: 'a',
+                                attrs: { href: link },
+                                content: cutText(data.address_title, maxLen.addressTitle) || '&nbsp;'
+                            }
+                        };
+                    } else {
+                        title = textElem('title', data.address_title, maxLen.addressTitle) || '&nbsp;';
+                    }
+
+                    cell.content = [
+                        {
+                            elem: 'top-text',
+                            content: [
+                                textElem('status-text', data.status_text, maxLen.addressStatusText) || '&nbsp;',
+                                (mods.unpublished ? { elem: 'error-text', content: 'объявление снято с публикации' } : ''),
+                                (mods.expires ? { elem: 'error-text', content: 'срок публикации истек' } : '')
+                            ]
+                        },
+                        { elem: 'main-text', content: [
+                            title,
+                            textElem('text', data.address_text, maxLen.addressText),
+                            textElem('text-help', data.address_help, maxLen.addressHelp)
+                        ] }
+                    ];
+                    break;
+
+                case 'price':
+                    cell.content = [
+                        { elem: 'top-text', content: '&nbsp;' },
+                        { elem: 'main-text', content: [
+                            { elem: 'title', content: data.price_text || '&nbsp;' },
+                            { elem: 'text-help',  content: data.price_help || '' }
+                        ] }
+                    ];
+                    break;
+
+                case 'seller':
+                    cell.content = [
+                        { elem: 'top-text', content: '&nbsp;' },
+                        { elem: 'main-text', content: [
+                            { elem: 'title', content: data.seller_text || '&nbsp;' },
+                            (data.phones || []).map(function(phone) { return { elem: 'text', content: phone }; })
+                        ] }
+                    ];
+                    break;
+
+                case 'comment':
+                    cell.content = [
+                        { elem: 'top-text', content: '&nbsp;' },
+                        { elem: 'main-text', content: [
+                            { elem: 'comment', content: data.comment || '&nbsp;' }
+                        ] }
+                    ];
+                    break;
+
+                case 'tools':
+                    cell.content = [
+                        { elem: 'top-text', content: '&nbsp;' },
+                        {
+                            block: 'objects-list-item-tools',
+                            js: {
+                                itemId:   js.id   || '',
+                                itemType: js.type || ''
+                            },
+                            flags: { lists: !data.isZK, note: !data.isZK },
+                            data: data
+                        }
+                    ];
+                    break;
+            }
+
+            main.push(cell);
+        });
+
+        return { elem: 'row', content: { elem: 'row-inner', content: main } };
+    })
+    
+);
+

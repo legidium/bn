@@ -1,0 +1,23 @@
+block('account-favorites')(
+    js()(true),
+    content()(function() {
+        var content = [];
+        var params  = this.ctx.js || {};
+        
+        content.push({ elem: 'title', content: this.ctx.title || 'Избранноe' });
+        content.push({ elem: 'toolbar' });
+        
+        content.push({
+            block: 'account-favorites-list',
+            mix: { block: this.block, elem: 'list' },
+            content: this.ctx.items || []
+        });
+        
+        content.push({
+            block: 'pager',
+            mix: { block: this.block, elem: 'pager' }
+        });
+
+        return content;
+    })
+)

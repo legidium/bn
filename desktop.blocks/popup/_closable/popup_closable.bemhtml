@@ -1,0 +1,26 @@
+block('popup').mod('closable', true).content()(function() {
+
+	var content;
+	var close_button = {
+		elem: 'close_button',
+		content: {
+			block: 'icon',
+			mods: {action: 'remove'}
+		}
+	};
+
+	// if(Array.isArray(applyNext())){
+
+	// 	content = applyNext();
+	// 	content.push(close_button);
+
+	// } else {
+
+		content = [];
+		content.push(applyNext());
+		content.push(close_button);
+
+	// }
+
+    return content;
+});

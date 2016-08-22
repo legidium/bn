@@ -1,0 +1,93 @@
+block('account-favorites-list-toolbar')(
+    mix()([{ block: 'clearfix' }]),
+    content()(function() {
+        return [
+            {
+                elem: 'right',
+                content: [
+                    {
+                        elem: 'line',
+                        content: [
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                        text: 'Сохранить как PDF'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'dropdown',
+                                        mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                        switcher: {
+                                            block: 'link',
+                                            mods: { theme: 'islands', size: 'm', font: '11'},
+                                            content: [
+                                                {
+                                                    tag: 'span',
+                                                    content: 'Отправить'
+                                                },
+                                                {
+                                                    elem: 'tick',
+                                                    mix: { block: 'icon' }
+                                                }
+                                            ]
+                                        },
+                                        popup: [
+                                            {
+                                                block: 'send_search_results'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            /*{
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'dropdown',
+                                        mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                        switcher: {
+                                            block: 'link',
+                                            mods: { theme: 'islands', size: 'm', font: '11'},
+                                            content: [
+                                                {
+                                                    tag: 'span',
+                                                    content: 'Поделиться'
+                                                },
+                                                {
+                                                    elem: 'tick',
+                                                    mix: { block: 'icon' }
+                                                }
+                                            ]
+                                        },
+                                        popup: [
+                                            {
+                                                block: 'share_search_results'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },*/
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                        text: 'Распечатать'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+)

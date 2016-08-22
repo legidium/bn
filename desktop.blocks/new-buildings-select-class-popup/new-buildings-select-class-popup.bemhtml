@@ -1,0 +1,47 @@
+block('new-buildings-select-class-popup')(
+    content()(function() {
+        return [
+            {
+                elem: 'top',
+                content: [
+                    {
+                        block: 'menu',
+                        mods : { theme : 'islands', size : 'm', mode : 'check' },
+                        val : [0],
+                        content : [
+                            {
+                                elem: 'group',
+                                content : [
+                                    {
+                                        block: 'menu-item',
+                                        val: 0,
+                                        content: 'Любой класс'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'group',
+                                content : [
+                                    { block: 'menu-item', val: 1, content: 'Эконом' },
+                                    { block: 'menu-item', val: 2, content: 'Комфорт' },
+                                    { block: 'menu-item', val: 3, content: 'Бизнес-класс' },
+                                    { block: 'menu-item', val: 4, content: 'Элитное жилье' }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'bottom',
+                content: [
+                    {
+                        block: 'button',
+                        mods: { theme: 'islands', size: 'm' },
+                        text: 'Показать'
+                    }
+                ]
+            }
+        ];
+    })
+)

@@ -1,0 +1,9 @@
+.ad-head {
+	padding: 20px;
+	background-color: #fff;
+	border-width: 0 1px;
+	border-style: solid;
+	border-color: rgb(229, 229, 229);
+}
+
+.ad-head .button { margin-right: 10px; }

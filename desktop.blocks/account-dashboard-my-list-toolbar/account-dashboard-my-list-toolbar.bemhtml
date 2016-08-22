@@ -1,0 +1,30 @@
+block('account-dashboard-my-list-toolbar')(
+    content()(function() {
+        return [
+            {
+                block: 'link',
+                mix: { block: 'account-dashboard-my-list-toolbar', elem: 'button-edit' },
+                content: {
+                    block: 'icon',
+                    mods: { action: 'edit' }
+                }
+            },
+            {
+                block: 'link',
+                mix: { block: 'account-dashboard-my-list-toolbar', elem: 'button-copy' },
+                content: {
+                    block: 'icon',
+                    mods: { action: 'copy' }
+                }
+            },
+            {
+                block: 'link',
+                mix: { block: 'account-dashboard-my-list-toolbar', elem: 'button-remove' },
+                content: {
+                    block: 'icon',
+                    mods: { action: 'remove' }
+                }
+            }
+        ];
+    })
+);

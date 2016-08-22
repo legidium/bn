@@ -1,0 +1,42 @@
+.account-balance-info-tariff {
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+}
+.account-balance-info-tariff__title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.account-balance-info-tariff__helper {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.button_theme_islands.button_view_circle.account-balance-info-tariff__helper-button,
+.button_theme_islands.button_view_circle.account-balance-info-tariff__helper-button .button__text {
+    height: 15px;
+    width: 14px;
+}
+.button_theme_islands.button_view_circle.account-balance-info-tariff__helper-button .button__text {
+    line-height: 15px;
+    font-size: 10px;
+}
+.account-balance-info-tariff__items {
+    display: table;
+    width: 100%;
+}
+.account-balance-info-tariff__item {
+    display: table-row;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.account-balance-info-tariff__col {
+    display: table-cell;
+    padding: 0 0 8px;
+}
+.account-balance-info-tariff__col_right {
+    text-align: right;
+}
+.account-balance-info-tariff__help {
+    color: #afafaf;
+}

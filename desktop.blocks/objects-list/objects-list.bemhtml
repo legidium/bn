@@ -1,0 +1,58 @@
+block('objects-list')(
+    js()(true),
+    content()(function() {
+        var ctx = this.ctx;
+        var content = [],
+            header = [],
+            main = [],
+            footer = [];
+
+        if (ctx.toolbar) {
+            header.push(ctx.toolbar);
+        }
+
+        if (ctx.items) {
+            main.push({
+                elem: 'items',
+                mixItem: ctx.mixItem || {},
+                content: ctx.items
+            });
+
+            if (ctx.pager) {
+                footer.push(ctx.pager);
+            }
+        }
+
+        if (header) {
+            content.push({ elem: 'header', content: header });
+        }
+
+        if (main) {
+            content.push({ elem: 'main', content: main });
+        }
+
+        if (footer) {
+            content.push({ elem: 'footer', content: footer });
+        }
+
+        return content;
+    }),
+
+    elem('items')(
+        content()(function() {
+            var content = [];
+
+            (applyNext() || []).map(function(item) {
+                content.push({
+                    block: 'objects-list-item',
+                    js:   item.js   || undefined,
+                    mods: item.mods || undefined,
+                    link: item.link || undefined,
+                    content: item
+                });
+            });
+
+            return content;
+        })
+    )
+)

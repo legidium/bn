@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="ua_js_no">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Новостройки, карта</title>
+    <script>
+      (function(e, c)
+      {
+        e[c] = e[c].replace(/(ua_js_)no/g, "$1yes");
+      })(document.documentElement, "className");
+    </script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/merged.min.css?1446471803005" />
+  </head>
+
+  <body class="page">
+    <div class="layout">
+      <div class="header clearfix">
+        <div class="logo">
+          <a class="logo__link" href="/" title="На главную"></a>
+        </div>
+        <div class="pull_left">
+          <div class="header_menu">
+            <div class="header_menu__item"><a class="header_menu__link header_menu__link_active" href="/">Объявления</a></div>
+            <div class="header_menu__item"><a class="header_menu__link" href="/">Новостройки</a></div>
+            <div class="header_menu__item"><a class="header_menu__link" href="/">Аналитика и статьи</a></div>
+            <div class="header_menu__item"><a class="header_menu__link" href="/">Скидки</a></div>
+          </div>
+        </div>
+        <div class="pull_left" style="margin-left: 20px;">
+          <div class="adv" style="width: 120px;height: 49px;"></div>
+        </div>
+        <div class="pull_right">
+          <div class="header_nav">
+            <div class="header_nav__item header_nav__item_first"><a class="button button_theme_islands button_size_m button_action_warning button__control" role="button" type="button" href="/"><span class="button__text">Подать объявление</span></a></div>
+            <div class="header_nav__item"><a class="button button_theme_islands button_size_m button__control" role="button" type="button" href="/"><i class="icon icon_action_star" aria-hidden="true"></i><span class="button__text">10</span></a></div>
+            <div class="header_nav__item">
+              <div class="dropdown dropdown_switcher_button dropdown_theme_islands dropdown_size_m i-bem" data-bem="{&quot;dropdown&quot;:{}}">
+                <button class="button button_primary button_size_m button_theme_islands button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><i class="icon icon_action_user" aria-hidden="true"></i><span class="button__text">Мой БН</span></button>
+                <div class="popup popup_theme_islands popup_autoclosable popup_target_anchor i-bem" data-bem="{&quot;popup&quot;:{}}">
+                  <div class="menu menu_theme_islands menu_size_m menu_account menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-ads/account-agent-ads.html">Мои объявление</a></div>
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem"
+                    data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-searches/account-agent-searches.html">Мои поиски</a></div>
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem"
+                    data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-subs/account-agent-subs.html">Мои подписки</a></div>
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem"
+                    data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-searches/account-agent-searches.html">Профиль</a></div>
+                    <div class="menu-item menu-item_type_link menu-item_theme_islands i-bem"
+                    data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/desktop.bundles/account-agent-searches/account-agent-searches.html">Настройки</a></div>
+                    <div class="menu__group menu__group_gray"
+                    role="group">
+                      <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{}}" role="menuitem"><a class="link link__control menu-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="/">Выход</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="new-buildings-map i-bem" data-bem="{&quot;new-buildings-map&quot;:{}}">
+        <div class="new-buildings-map__top">
+          <div class="new-buildings-map__title">Полная база новостроек Санкт-Петербурга</div>
+        </div>
+        <div class="new-buildings-map__body">
+          <div class="new-buildings-map__toolbar clearfix" data-bem="{&quot;new-buildings-map__toolbar&quot;:{}}">
+            <div class="new-buildings-map__pull-left"><span class="input input_theme_islands input_size_xl input_has-clear input_inline input_nocorners new-buildings-map__search i-bem" data-bem="{&quot;input&quot;:{}}"><span class="input__box"><input class="input__control" placeholder="Невский пр-кт"/><i class="input__clear"></i></span></span>
+              <div
+              class="new-buildings-select-class i-bem" data-bem="{&quot;new-buildings-select-class&quot;:{}}">
+                <div class="dropdown dropdown_switcher_button dropdown_theme_islands dropdown_size_m new-buildings-select-class__dropdown i-bem" data-bem="{&quot;dropdown&quot;:{}}"><a class="link link_theme_islands link_size_m link_font_11 link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0"><span>Любой класс</span><div class="link__tick icon"></div></a>
+                  <div class="popup popup_theme_islands popup_autoclosable popup_target_anchor i-bem"
+                  data-bem="{&quot;popup&quot;:{}}">
+                    <div class="new-buildings-select-class-popup">
+                      <div class="new-buildings-select-class-popup__top">
+                        <div class="menu menu_theme_islands menu_size_m menu_mode_check menu__control i-bem" data-bem="{&quot;menu&quot;:{}}" role="menu" tabindex="0">
+                          <div class="menu__group" role="group">
+                            <div class="menu-item menu-item_checked menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:0}}" role="menuitem">Любой класс</div>
+                          </div>
+                          <div class="menu__group" role="group">
+                            <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:1}}" role="menuitem">Эконом</div>
+                            <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:2}}" role="menuitem">Комфорт</div>
+                            <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:3}}" role="menuitem">Бизнес-класс</div>
+                            <div class="menu-item menu-item_theme_islands i-bem" data-bem="{&quot;menu-item&quot;:{&quot;val&quot;:4}}" role="menuitem">Элитное жилье</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="new-buildings-select-class-popup__bottom">
+                        <button class="button button_theme_islands button_size_m button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="button__text">Показать</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="new-buildings-map__pull-right">
+            <button class="button button_theme_islands button_size_m button__control new-buildings-map__close-button i-bem" data-bem="{&quot;button&quot;:{}}" role="button" id="new-buildings-map-close-map" type="button"><span class="button__text">Закрыть карту</span></button>
+          </div>
+        </div>
+        <div class="new-buildings-map__map" data-bem="{&quot;new-buildings-map__map&quot;:{}}">
+          <div class="map map_provider_yandex i-bem" data-bem="{&quot;map&quot;:{&quot;center&quot;:[59.938596,30.332232],&quot;zoom&quot;:12,&quot;controls&quot;:[],&quot;geoObjects&quot;:[{&quot;type&quot;:&quot;placemark&quot;,&quot;coordinates&quot;:[59.938596,30.312232],&quot;properties&quot;:{&quot;hintContent&quot;:&quot;Шпалерная 51&quot;},&quot;options&quot;:{}},{&quot;type&quot;:&quot;placemark&quot;,&quot;coordinates&quot;:[59.958596,30.352232],&quot;properties&quot;:{&quot;hintContent&quot;:&quot;Шпалерная 51&quot;},&quot;options&quot;:{}},{&quot;type&quot;:&quot;placemark&quot;,&quot;coordinates&quot;:[59.918596,30.372232],&quot;properties&quot;:{&quot;hintContent&quot;:&quot;Шпалерная 51&quot;},&quot;options&quot;:{}}]}}"></div>
+          <div class="popup popup_autoclosable popup_theme_islands popup_target_position i-bem" data-bem="{&quot;popup&quot;:{&quot;directions&quot;:[&quot;top-center&quot;]}}" id="new-buildings-map-popup">
+            <div class="new-buildings-list-item new-buildings-list-item_width_100 new-buildings-list-item_popup i-bem" data-bem="{&quot;new-buildings-list-item&quot;:{}}">
+              <div class="new-buildings-list-item__layout">
+                <div class="new-buildings-list-item__header clearfix">
+                  <div class="new-buildings-list-item__title pull_left">
+                    <div class="new-buildings-list-item__name"><a class="link link__control new-buildings-list-item__name-link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="http://bn.ru">Ласточкино гнездо</a></div>
+                    <div class="new-buildings-list-item__address">Октябрьская наб., 118</div>
+                    <div class="new-buildings-list-item__address-details help">м. Ломоносовская, 40 мин. на транспорте</div>
+                  </div>
+                  <div class="new-buildings-list-item__developer pull_right">
+                    <div class="new-buildings-list-item__developer-name">ЛенСпецСМУ</div>
+                    <div class="new-buildings-list-item__developer-logo"><img class="new-buildings-list-item__developer-logo-image" src="../../img/new-buildings-developer-logo.png" alt="" /></div>
+                  </div>
+                </div>
+                <div class="new-buildings-list-item__body">
+                  <div class="new-buildings-list-item__image-wrapper">
+                    <a href="http://bn.ru"><img class="new-buildings-list-item__image" src="../../img/new-buildings-list-item-sample.jpg" alt="" /></a>
+                  </div>
+                  <div class="new-buildings-list-item__class" title="Эконом, Бизнес-класс. Монолит, охрана, консьерж, фитнес в шаговой доступности."><span class="text"><b>Эконом, Бизнес-класс</b>&nbsp;&nbsp;Монолит, охрана, консьерж, фитнес в шаговой доступности.</span></div>
+                </div>
+                <div class="new-buildings-list-item__footer">
+                  <div class="new-buildings-list-item__buildings">5 корпусов: 2 сдано, остальные — в 2017, 2018 и 2019</div>
+                  <div class="new-buildings-list-item__appartments">4270 квартир: 1 — 4к.кв., студии, свободные план.; от 20 до 180 м²</div>
+                  <div class="new-buildings-list-item__total-items-text">2115 предложений</div>
+                  <div class="new-buildings-list-item__price-range-text"><a class="link link__control new-buildings-list-item__link i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="http://bn.ru">1 450 500 <span class="currency">Р</span> — 4 500 000 <span class="currency">Р</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer__row clearfix">
+        <div class="footer__col">
+          <ul class="links_list">
+            <li class="links_list__item"><a class="links_list__link" href="/">Жилая недвижимость</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Загородная недвижимость</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Коммерческая недвижимость</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Недвижимость за рубежом</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Недвижимость в Латвии</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="links_list">
+            <li class="links_list__item"><a class="links_list__link" href="/">Оценка недвижимости</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Юридическая консультация</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Аналитика и аудит</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="links_list">
+            <li class="links_list__item"><a class="links_list__link" href="/">Новости рынка и индустрии</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Статьи и публикации</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Пресс-релизы компаний</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Видео</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="links_list">
+            <li class="links_list__item"><a class="links_list__link" href="/">О группе компаний</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Правила перепечатки</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col"><a class="button button_theme_islands button_size_m button_action_warning button__control" role="button" type="button" href="/"><span class="button__text">Подать объявление</span></a>
+          <ul class="links_list" style="margin-top: 10px;">
+            <li class="links_list__item"><a class="links_list__link" href="/">Подписка на издания БН</a></li>
+            <li class="links_list__item"><a class="links_list__link" href="/">Реклама на сайте</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <div class="help help_font_13">Генеральный партнер</div>
+          <a class="adv" style="width: 120px;height: 36px;margin:10px 0 0 0;" href="http://alfabank.ru"><img class="image" role="img" src="/img/alfa.png" /></a>
+        </div>
+      </div>
+      <div class="footer__powered"><a class="link link__control i-bem" data-bem="{&quot;link&quot;:{}}" tabindex="0" href="http://aidem.ru" title=""><span class="link__powered_by">Design by</span><span class="link__powered_logo"></span></a></div>
+    </div>
+    </div>
+    <script src="js/merged.min.js?1446471803005"></script>
+  </body>
+
+</html>

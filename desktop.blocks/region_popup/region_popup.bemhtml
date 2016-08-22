@@ -1,0 +1,1374 @@
+block('region_popup')(
+	js()(true),
+	content()(function() {
+
+		var spb_districts = {
+		    block : 'menu',
+		    mods : { theme : 'islands', size : 'm', mode : 'check', spb_districts: true },
+		    content : [
+		    	{
+		    		elem : 'group',
+		    		mods: {inline:true},
+		    		content: [
+		    			{
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 9,
+				            content : 'Адмиралтейский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val :10,
+				            content : 'Василеостровский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 11,
+				            content : 'Выборгский'
+				        },
+				        
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 13,
+				            content : 'Калининский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 14,
+				            content : 'Кировский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 15,
+				            content : 'Колпинский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 16,
+				            content : 'Красногвардейский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val :17,
+				            content : 'Красносельский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 18,
+				            content : 'Кронштадтский'
+				        },
+				        
+		    		]
+		    	},
+		    	{
+		    		elem : 'group',
+		    		mods: {inline:true},
+		    		content: [
+		    			
+		    			{
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 19,
+				            content : 'Курортный'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 20,
+				            content : 'Московский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 21,
+				            content : 'Невский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 22,
+				            content : 'Петроградский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 23,
+				            content : 'Петродворцовый'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 12,
+				            content : 'Приморский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 24,
+				            content : 'Пушкинский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 25,
+				            content : 'Фрунзенский'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 26,
+				            content : 'Центральный'
+				        },
+
+		    		]
+		    	}
+		        
+		    ]
+		};
+
+
+
+
+
+
+
+
+
+		var lenobl_subsities = {
+		    block : 'menu',
+		    mods : { theme : 'islands', size : 'm', mode : 'check', lenobl_districts: true },
+		    content : [
+		    	{
+		    		elem : 'group',
+		    		mods: {inline:true},
+		    		content: [
+		    			{
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 1,
+				            content : 'Бугры'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 2,
+				            content : 'Всеволожск'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 3,
+				            content : 'Кудрово'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 4,
+				            content : 'Колтуши'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 5,
+				            content : 'Мистолово'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 6,
+				            content : 'Мурино'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 7,
+				            content : 'Новое Девяткино'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 8,
+				            content : 'Поселок им. Свердлова'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 9,
+				            content : 'Романовка'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 11,
+				            content : 'Сертолово'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 12,
+				            content : 'Щеглово'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 13,
+				            content : 'Юкки'
+				        },
+				        
+		    		]
+		    	},
+		    	{
+		    		elem : 'group',
+		    		mods: {inline:true},
+		    		content: [
+		    			
+				        
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 14,
+				            content : 'Янино'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 15,
+				            content : 'Гатчина'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 16,
+				            content : 'Коммунар'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 17,
+				            content : 'Кировск'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 18,
+				            content : 'Отрадное'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 19,
+				            content : 'Шлиссельбург'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 20,
+				            content : 'Новоселье'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 21,
+				            content : 'Новогорелово'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 22,
+				            content : 'Никольское'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 23,
+				            content : 'Тельмана'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 24,
+				            content : 'Тосно'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 25,
+				            content : 'Федоровское'
+				        },
+		    		]
+		    	}
+		        
+		    ]
+		};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		var lenobl_districts = {
+		    block : 'menu',
+		    mods : { theme : 'islands', size : 'm', mode : 'check', lenobl_districts: true },
+		    content : [
+		    	{
+		    		elem : 'group',
+		    		mods: {inline:true},
+		    		content: [
+		    			{
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 66,
+				            content : 'Парголово'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 71,
+				            content : 'Парнас'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 72,
+				            content : 'Шувалово-Озерки'
+				        },
+				        // {
+				        //     block : 'menu-item',
+				        //     val : 4,
+				        //     content : 'Новая Охта'
+				        // },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 4311,
+				            content : 'Горелово'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 45,
+				            content : 'Красное Село'
+				        },
+				        // {
+				        //     block : 'menu-item',
+				        //     val : 7,
+				        //     content : 'Усть-Славянка'
+				        // },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 3656,
+				            content : 'Каменка'
+				        },
+				        // {
+				        //     block : 'menu-item',
+				        //     val : 9,
+				        //     content : 'Новоорловский'
+				        // },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 44,
+				            content : 'Колпино'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 95,
+				            content : 'Металлострой'
+				        },
+		    		]
+		    	},
+		    	{
+		    		elem : 'group',
+		    		mods: {inline:true},
+		    		content: [
+		    			
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 47,
+				            content : 'Зеленогорск'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 48,
+				            content : 'Сестрорецк'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 49,
+				            content : 'Петергоф'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 134,
+				            content : 'Стрельна'
+				        },
+				        // {
+				        //     block : 'menu-item',
+				        //     val : 16,
+				        //     content : 'Ленсоветовский'
+				        // },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 52,
+				            content : 'Павловск'
+				        },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 51,
+				            content : 'Пушкин'
+				        },
+				        // {
+				        //     block : 'menu-item',
+				        //     val : 19,
+				        //     content : 'Славянка'
+				        // },
+				        {
+				            block : 'menu-item',
+				            mods: {min_mar: true},
+				            val : 136,
+				            content : 'Шушары'
+				        },
+
+		    		]
+		    	}
+		        
+		    ]
+		};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		return [
+			{
+				block : 'tabs',
+	            mods : { theme : 'islands', type : 'button', size : 'xl' },
+	            val: 1,
+	            tabs : [
+	                {
+	                    title : 'Санкт-Петербург',
+	                    content : [
+	                    	{
+	                    		block: 'controls_row',
+	                    		content: [
+	                    			{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				content: [
+	                    					{
+			                    				block: 'headgroup',
+			                    				content: {
+			                    					elem: 'h3',
+			                    					mods: {menu: 'title'},
+			                    					content: 'Районы Санкт-Петербурга'
+			                    				}
+			                    			},
+	                    					spb_districts,
+											{
+			                    				block: 'headgroup',
+			                    				attrs: {style: 'margin-top: 20px;'},
+			                    				content: {
+			                    					elem: 'h3',
+			                    					mods: {menu: 'title'},
+			                    					content: 'Адрес'
+			                    				}
+			                    			},
+			                    			{
+			                    				block: 'addresses_control',
+			                    				
+			                    			}
+	                    				]
+	                    			},
+	                    			{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				attrs: {style: 'width: 346px;'},
+	                    				content: [
+	                    					{	
+			                    				block: 'spb_metro_sheme',
+			                    				mix:[{block: 'i-metro_addr-ctrl', js: {id: 1}}],
+			                    			}
+	                    				]
+	                    			},
+	                    			{
+	                    				elem: 'col',
+	                    				content: [
+	                    					{
+	                    						block: 'plain_text',
+	                    						attrs: {style: 'margin-bottom: 10px;'},
+	                    						content: 'До метро'
+	                    					},
+	                    					{
+	                    						block: 'control-group',
+	                    						content: [
+	                    							{
+	                    								block: 'input',
+	                    								name: 'metroDistance_input',
+	                    								mods: {theme: 'islands', size: 'xl', width: 's', nocorners: true, right_border: true},
+	                    								placeholder: 'мин'
+	                    							},
+	                    							{
+			                    						block: 'radio-group',
+			                    						mods: {theme: 'islands', size: 'xl', type : 'button'},
+			                    						name: 'metroDistanceOnFoot_radio',
+			                    						val: true,
+			                    						options : [
+							                                { val : true, text : 'пешком'},
+							                                { val : false, text : 'на трансп.' },
+							                            ]
+			                    					}
+	                    						]
+	                    					},
+	                    					{
+			                    				block: 'address_list',
+			                    				mix:[{block: 'i-metro_addr-ctrl', js: {id: 1}}],
+			                    				attrs: {style: 'margin-top: 20px; max-width: 239px;'},
+			                    				mods: {inline: true},
+			                    				content: []
+			                    			}
+	                    				]
+	                    			}
+	                    		]
+	                    	},
+	                    	{
+	                    		block: 'controls_row',
+	                    		content: [
+	                    			{
+	                    				elem: 'col',
+	                    				attrs: {style: 'margin-left: 30px;'},
+	                    				content: {
+		                    				block: 'button', 
+		                    				mods: {theme: 'islands', size: 'm', action: 'save'},
+		                    				text: 'Сохранить'
+		                    			}
+	                    			},
+				                    {
+				                        elem: 'col',
+				                        content: {
+				                            block: 'link',
+				                            attrs: {href: '#'},
+				                            mods: {font: '11', action: 'clear'},
+				                            content: 'очистить'
+				                        }
+				                    }
+	                    		]
+	                    	}
+	                    ]
+	                },
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	                {
+	                	checked : true,
+	                    title : 'Санкт-Петербург и пригороды',
+	                    content : [
+	                    	{
+	                    		block: 'controls_row',
+	                    		content: [
+	                    			{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				content: [
+	                    					{
+			                    				block: 'headgroup',
+			                    				content: {
+			                    					elem: 'h3',
+			                    					mods: {menu: 'title'},
+			                    					content: 'Районы Санкт-Петербурга'
+			                    				}
+			                    			},
+	                    					spb_districts,
+											{
+			                    				block: 'headgroup',
+			                    				mods: {margin_top: '30'},
+			                    				content: {
+			                    					elem: 'h3',
+			                    					mods: {menu: 'title'},
+			                    					content: 'Пригороды Санкт-Петербурга'
+			                    				}
+			                    			},
+	                    					// lenobl_districts
+	                    					lenobl_subsities
+											
+	                    				]
+	                    			},
+	                    			{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				attrs: {style: 'width: 346px;'},
+	                    				content: [
+	                    					{	
+			                    				block: 'spb_metro_sheme',
+			                    				mix:[{block: 'i-metro_addr-ctrl', js: {id: 2}}],
+			                    			}
+	                    				]
+	                    			},
+	                    			{
+	                    				elem: 'col',
+	                    				content: [
+	                    					{
+	                    						block: 'plain_text',
+	                    						attrs: {style: 'margin-bottom: 10px;'},
+	                    						content: 'До метро'
+	                    					},
+	                    					{
+	                    						block: 'control-group',
+	                    						content: [
+	                    							{
+	                    								block: 'input',
+	                    								name: 'metroDistance_input',
+	                    								mods: {theme: 'islands', size: 'xl', width: 's', nocorners: true, right_border: true},
+	                    								placeholder: 'мин'
+	                    							},
+	                    							{
+			                    						block: 'radio-group',
+			                    						mods: {theme: 'islands', size: 'xl', type : 'button'},
+			                    						name: 'metroDistanceOnFoot_radio',
+			                    						val: true,
+			                    						options : [
+							                                { val : true, text : 'пешком'},
+							                                { val : false, text : 'на трансп.' },
+							                            ]
+			                    					}
+	                    						]
+	                    					},
+	                    					{
+			                    				block: 'address_list',
+			                    				attrs: {style: 'margin-top: 20px; max-width: 239px;'},
+			                    				mods: {inline: true},
+			                    				mix:[{block: 'i-metro_addr-ctrl', js: {id: 2}}],
+			                    				content: []
+			                    			}
+	                    				]
+	                    			}
+	                    		]
+	                    	},
+	                    	{
+	                    		block: 'controls_row',
+	                    		content: [
+	                    			{
+	                    				elem: 'col',
+	                    				attrs: {style: 'margin-left: 30px;'},
+	                    				content: {
+		                    				block: 'button', 
+		                    				mods: {theme: 'islands', size: 'm', action: 'save'},
+		                    				text: 'Сохранить'
+		                    			}
+	                    			},
+				                    {
+				                        elem: 'col',
+				                        content: {
+				                            block: 'link',
+				                            attrs: {href: '#'},
+				                            mods: {font: '11', action: 'clear'},
+				                            content: 'очистить'
+				                        }
+				                    }
+	                    		]
+	                    	}
+	                    ]
+	                },
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+	                {
+	                    title : 'Санкт-Петербург и Ленобласть',
+	                    content : [
+	                    	{
+	                    		block: 'controls_row',
+	                    		content: [
+	                    			{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				content: [
+	                    					{
+			                    				block: 'headgroup',
+			                    				content: {
+			                    					elem: 'h3',
+			                    					mods: {menu: 'title'},
+			                    					content: 'Районы Санкт-Петербурга'
+			                    				}
+			                    			},
+	                    					spb_districts
+											
+	                    				]
+	                    			},
+	                    			{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				content: [
+	                    					{
+			                    				block: 'headgroup',
+			                    				content: {
+			                    					elem: 'h3',
+			                    					mods: {menu: 'title'},
+			                    					content: 'Районы Ленобласти'
+			                    				}
+			                    			},
+	                    					lenobl_districts
+	                    				]
+	                    			},
+	                    			// {
+	                    			// 	elem: 'col',
+	                    			// 	content: [
+	                    			// 		{
+	                    			// 			block: 'plain_text',
+	                    			// 			attrs: {style: 'margin-bottom: 10px;'},
+	                    			// 			content: 'До КАДа'
+	                    			// 		},
+	                    			// 		{
+	                    			// 			block: 'control-group',
+	                    			// 			content: [
+	                    			// 				{
+	                    			// 					block: 'input',
+	                    			// 					mods: {theme: 'islands', size: 'xl', width: 's', nocorners: true, right_border: true}
+	                    			// 				},
+	                    			// 				{
+			                    	// 					block: 'plain_text',
+			                    	// 					tag: 'span',
+			                    	// 					attrs: {style: 'display: inline-block; margin: 8px 0 0 10px;'},
+			                    	// 					content: 'км'
+			                    	// 				},
+	                    			// 			]
+	                    			// 		}
+	                    			// 	]
+	                    			// }
+	                    		]
+	                    	},
+	                    	{
+	                    		block: 'controls_row',
+	                    		content: [
+	                    			{
+	                    				elem: 'col',
+	                    				attrs: {style: 'margin-left: 30px;'},
+	                    				content: {
+		                    				block: 'button', 
+		                    				mods: {theme: 'islands', size: 'm', action: 'save'},
+		                    				text: 'Сохранить'
+		                    			}
+	                    			},
+				                    {
+				                        elem: 'col',
+				                        content: {
+				                            block: 'link',
+				                            attrs: {href: '#'},
+				                            mods: {font: '11', action: 'clear'},
+				                            content: 'очистить'
+				                        }
+				                    }
+	                    		]
+	                    	}
+	                    ]
+	                },
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// bit.ly/P121UR // bit.ly/NfYdTa // bit.ly/OptXT5 // bit.ly/RdKGNA
+	                {
+	                    title : 'Только Ленобласть',
+	                    content : [
+	                    	{
+                				block: 'headgroup',
+                				content: {
+                					elem: 'h3',
+                					mods: {menu: 'title'},
+                					content: 'Районы Ленобласти'
+                				}
+                			},
+	                    	{
+	                    		block: 'controls_row',
+	                    		content: [
+	                    			{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				content: {
+										    block : 'menu',
+										    mods : { theme : 'islands', size : 'm', mode : 'groupcheck' },
+										    content : [
+										    	{
+										    		elem : 'group',
+										    		title: 'Бокситогорский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 161,
+												            mix: {block: 'help'},
+												            content : 'Ефимовский'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 2,
+												        //      mix: {block: 'help'},
+												        //     content : 'Пикалёво'
+												        // },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 3,
+												        //      mix: {block: 'help'},
+												        //     content : 'Бокситогорск'
+												        // }
+										    		]
+										    	},
+										    	{
+										    		elem : 'group',
+										    		title: 'Волосовский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 187,
+												            mix: {block: 'help'},
+												            content : 'Волосово'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 3329,
+												            mix: {block: 'help'},
+												            content : 'Кикерино'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 2814,
+												            mix: {block: 'help'},
+												            content : 'Бегуницы'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 7,
+												        //     mix: {block: 'help'},
+												        //     content : 'Сосново'
+												        // },
+												        
+
+										    		]
+										    	},
+										    	{
+										    		elem : 'group',
+										    		title: 'Волховский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 4724,
+												             mix: {block: 'help'},
+												            content : 'Волхов'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 168,
+												             mix: {block: 'help'},
+												            content : 'Сясьстрой'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 10,
+												        //      mix: {block: 'help'},
+												        //     content : 'Новая Лахта'
+												        // }
+
+										    		]
+										    	},
+										    	{
+										    		elem : 'group',
+										    		title: 'Всеволожский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 1193,
+												             mix: {block: 'help'},
+												            content : 'Мурино'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 156,
+												             mix: {block: 'help'},
+												            content : 'Токсово'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 13,
+												        //      mix: {block: 'help'},
+												        //     content : 'Всеволожск'
+												        // }
+
+										    		]
+										    	}
+										        
+										    ]
+										}
+	                    			},
+	                    			{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				content: {
+										    block : 'menu',
+										    mods : { theme : 'islands', size : 'm', mode : 'groupcheck' },
+										    content : [
+										    	{
+										    		elem : 'group',
+										    		title: 'Выборгский',
+										    		content: [
+										    			// {
+												     //        block : 'menu-item',
+												     //        val : 14,
+												     //         mix: {block: 'help'},
+												     //        content : 'Выборг'
+												     //    },
+												        {
+												            block : 'menu-item',
+												            val : 160,
+												             mix: {block: 'help'},
+												            content : 'Высоцк'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 3504,
+												            mix: {block: 'help'},
+												            content : 'Глебычево'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 1114,
+												             mix: {block: 'help'},
+												            content : 'Зеленая Роща'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 18,
+												        //      mix: {block: 'help'},
+												        //     content : 'Каменогорск'
+												        // },
+												        {
+												            block : 'menu-item',
+												            val : 159,
+												             mix: {block: 'help'},
+												            content : 'Лесогорский'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 181,
+												             mix: {block: 'help'},
+												            content : 'Приморск'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 189,
+												             mix: {block: 'help'},
+												            content : 'Рощино'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 195,
+												             mix: {block: 'help'},
+												            content : 'Светогорск'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 174,
+												             mix: {block: 'help'},
+												            content : 'Советский'
+												        },
+										    		]
+										    	},
+										    	{
+										    		elem : 'group',
+										    		title: 'Гатчинский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 182,
+												             mix: {block: 'help'},
+												            content : 'Вырица'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 25,
+												        //      mix: {block: 'help'},
+												        //     content : 'Гатчина'
+												        // },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 26,
+												        //      mix: {block: 'help'},
+												        //     content : 'Улизаветино'
+												        // },
+												        {
+												            block : 'menu-item',
+												            val : 3912,
+												             mix: {block: 'help'},
+												            content : 'Заборье'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 28,
+												        //      mix: {block: 'help'},
+												        //     content : 'Ижора'
+												        // },
+												        {
+												            block : 'menu-item',
+												            val : 1205,
+												             mix: {block: 'help'},
+												            content : 'Кобрино'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 178,
+												             mix: {block: 'help'},
+												            content : 'Коммунар'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 31,
+												        //      mix: {block: 'help'},
+												        //     content : 'Сад. Уч. Белогорка'
+												        // },
+												        {
+												            block : 'menu-item',
+												            val : 167,
+												             mix: {block: 'help'},
+												            content : 'Сиверский'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 33,
+												        //      mix: {block: 'help'},
+												        //     content : 'станция Верево'
+												        // },
+												        
+
+										    		]
+										    	}
+										        
+										    ]
+										}
+									},
+									{
+		                				elem: 'col',
+		                				mods: {vertical: 'top'},
+		                				content: {
+										    block : 'menu',
+										    mods : { theme : 'islands', size : 'm', mode : 'groupcheck' },
+										    content : [
+										    	{
+										    		elem : 'group',
+										    		val: 2945,
+										    		title: 'Кингисеппский',
+										    		// content: [
+										    		// 	{
+												    //         block : 'menu-item',
+												    //         val : 34,
+												    //          mix: {block: 'help'},
+												    //         content : 'Ивангород'
+												    //     },
+												    //     {
+												    //         block : 'menu-item',
+												    //         val : 35,
+												    //          mix: {block: 'help'},
+												    //         content : 'Кингисепп'
+												    //     },
+												    //     {
+												    //         block : 'menu-item',
+												    //         val : 2945,
+												    //          mix: {block: 'help'},
+												    //         content : 'Кингисеппский'
+												    //     },
+												        
+										    		// ]
+										    	},
+										    	{
+										    		elem : 'group',
+										    		title: 'Киришский',
+										    		content: [
+										    			// {
+												     //        block : 'menu-item',
+												     //        val : 37,
+												     //         mix: {block: 'help'},
+												     //        content : 'СНТ'
+												     //    },
+												        {
+												            block : 'menu-item',
+												            val : 4921,
+												             mix: {block: 'help'},
+												            content : 'Кириши'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 164,
+												            mix: {block: 'help'},
+												            content : 'Будогощь'
+												        }
+										    		]
+										    	},
+										    	// {
+										    	// 	elem : 'group',
+										    	// 	title: 'Кировский, Ленобл.',
+										    	// 	content: [
+										    	// 		{
+												   //          block : 'menu-item',
+												   //          val : 173,
+												   //           mix: {block: 'help'},
+												   //          content : 'Отрадное'
+												   //      },
+												   //      {
+												   //          block : 'menu-item',
+												   //          val : 41,
+												   //           mix: {block: 'help'},
+												   //          content : 'Шлиссельбург'
+												   //      },
+												   //      {
+												   //          block : 'menu-item',
+												   //          val : 42,
+												   //           mix: {block: 'help'},
+												   //          content : 'Кировск'
+												   //      }
+										    	// 	]
+										    	// },
+										    	// {
+										    	// 	elem : 'group',
+										    	// 	title: 'Ломоносовский',
+										    	// 	content: [
+										    	// 	]
+										    	// }
+										        
+										    ]
+										}
+									},
+									{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				content: {
+										    block : 'menu',
+										    mods : { theme : 'islands', size : 'm', mode : 'groupcheck' },
+										    content : [
+										    	{
+										    		elem : 'group',
+										    		title: 'Лужский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 4073,
+												             mix: {block: 'help'},
+												            content : 'Торковичи'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 44,
+												        //      mix: {block: 'help'},
+												        //     content : 'Луга'
+												        // },
+												        
+										    		]
+										    	},
+										    	{
+										    		elem : 'group',
+										    		title: 'Подпорожский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 179,
+												            mix: {block: 'help'},
+												            content : 'Вознесенье'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 46,
+												        //      mix: {block: 'help'},
+												        //     content : 'Подпорожье'
+												        // },
+												        {
+												            block : 'menu-item',
+												            val : 4221,
+												             mix: {block: 'help'},
+												            content : 'Винницы'
+												        }
+										    		]
+										    	},
+										    	{
+										    		elem : 'group',
+										    		title: 'Приозерский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 3878,
+												             mix: {block: 'help'},
+												            content : 'Мельниково'
+												        },
+												        {
+												            block : 'menu-item',
+												            val : 3452,
+												             mix: {block: 'help'},
+												            content : 'Сосново'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 50,
+												        //      mix: {block: 'help'},
+												        //     content : 'Приозерск'
+												        // },
+												        {
+												            block : 'menu-item',
+												            val : 190,
+												             mix: {block: 'help'},
+												            content : 'Кузнечное'
+												        }
+										    		]
+										    	},
+										    	// {
+										    	// 	elem : 'group',
+										    	// 	title: 'Сланцевский',
+										    	// 	content: [
+										    	// 		{
+												   //          block : 'menu-item',
+												   //          val : 52,
+												   //           mix: {block: 'help'},
+												   //          content : 'Сланцево'
+												   //      }
+										    	// 	]
+										    	// },
+										    	// {
+										    	// 	elem : 'group',
+										    	// 	title: 'Сосновый бор',
+										    	// 	content: [
+										    	// 	]
+										    	// }
+										        
+										    ]
+										}
+									},
+									{
+	                    				elem: 'col',
+	                    				mods: {vertical: 'top'},
+	                    				content: {
+										    block : 'menu',
+										    mods : { theme : 'islands', size : 'm', mode : 'groupcheck' },
+										    content : [
+										    	// {
+										    	// 	elem : 'group',
+										    	// 	title: 'Тосненский',
+										    	// 	content: [
+										    	// 		{
+												   //          block : 'menu-item',
+												   //          val : 53,
+												   //          mix: {block: 'help'},
+												   //          content : 'Тихвин'
+												   //      }
+										    	// 	]
+										    	// },
+										    	{
+										    		elem : 'group',
+										    		title: 'Тосненский',
+										    		content: [
+										    			{
+												            block : 'menu-item',
+												            val : 163,
+												             mix: {block: 'help'},
+												            content : 'Любань'
+												        },
+												        // {
+												        //     block : 'menu-item',
+												        //     val : 55,
+												        //      mix: {block: 'help'},
+												        //     content : 'Тосно'
+												        // },
+												        {
+												            block : 'menu-item',
+												            val : 158,
+												            mix: {block: 'help'},
+												            content : 'Никольское'
+												        }
+										    		]
+										    	},
+										    	
+										    ]
+										}
+									}
+                    			]
+	                    	},
+	                    	{
+	                    		block: 'controls_row',
+	                    		content: [
+	                    			{
+	                    				elem: 'col',
+	                    				attrs: {style: 'margin-left: 30px;'},
+	                    				content: {
+		                    				block: 'button', 
+		                    				mods: {theme: 'islands', size: 'm', action: 'save'},
+		                    				text: 'Сохранить'
+		                    			}
+	                    			},
+				                    {
+				                        elem: 'col',
+				                        content: {
+				                            block: 'link',
+				                            attrs: {href: '#'},
+				                            mods: {font: '11', action: 'clear'},
+				                            content: 'очистить'
+				                        }
+				                    }
+	                    		]
+	                    	}
+	                    ]
+	                }
+	            ] 
+			}
+		];
+	})
+);

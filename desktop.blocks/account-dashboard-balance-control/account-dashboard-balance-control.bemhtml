@@ -1,0 +1,22 @@
+block('account-dashboard-balance-control')(
+    content()(function() {
+        return [
+            {
+                block: 'control-group',
+                content: [
+                    {
+                        block: 'control',
+                        mix: { block: 'account-dashboard-balance-control', elem: 'value' },
+                        content: applyNext()
+                    },
+                    {
+                        block: 'button',
+                        mix: { block: 'account-dashboard-balance-control', elem: 'add' },
+                        mods: { theme: 'islands', size: 'xl', submit: true   },
+                        text: 'Пополнить'
+                    }
+                ]
+            }
+        ];
+    })
+);

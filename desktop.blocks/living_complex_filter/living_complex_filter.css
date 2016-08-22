@@ -1,0 +1,18 @@
+.living_complex_filter{
+	border-top: 1px solid rgb(229, 229, 229);
+	padding: 20px;
+}
+
+.living_complex_filter__header{
+	font-size: 18px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.living_complex_filter__name{
+	color: #000;
+}
+
+.living_complex_filter__count{
+	color: #b2b2b2;
+}

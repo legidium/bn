@@ -1,0 +1,21 @@
+.successful-interaction-popup {
+    width: 200px;
+    padding: 10px;
+}
+
+.successful-interaction-popup__header {
+    font-size: 11px;
+    color: #4cc79d;
+}
+
+.successful-interaction-popup__note {
+    font-size: 11px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.successful-interaction-popup__close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}

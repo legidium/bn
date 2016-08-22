@@ -1,0 +1,168 @@
+block('account-personal-data-form')(
+    tag()('form'),
+    js()(true),
+    content()(function() {
+        var data = applyNext() || {};
+
+        return [
+            {
+                elem: 'line',
+                content: [
+                    {
+                        elem: 'col',
+                        mods: { width: 'label' },
+                        content: [
+                            {
+                                block: 'label',
+                                mods: { height: 'l' },
+                                content: 'Имя Фамилия'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        mods: { width: 'input_m' },
+                        content: [
+                            {
+                                block: 'input',
+                                mods: { theme: 'islands', size: 'l', nocorners: true, width : 'available' },
+                                name: 'name',
+                                val: data.name || ''
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'line',
+                content: [
+                    {
+                        elem: 'col',
+                        mods: { width: 'label' },
+                        content: [
+                            {
+                                block: 'label',
+                                mods: { height: 'l' },
+                                content: 'E-mail'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        mods: { width: 'input_m' },
+                        content: [
+                            {
+                                block: 'input',
+                                mods: { theme: 'islands', size: 'l', nocorners: true, width : 'available' },
+                                name: 'email',
+                                val: data.email || ''
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'line',
+                mods: { separator: true },
+                content: [
+                    {
+                        elem: 'col',
+                        mods: { width: 'label' },
+                        content: [
+                            {
+                                block: 'label',
+                                mods: { height: 'l' },
+                                content: 'Телефон'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        mix: { block: 'account-personal-data-form', elem: 'phones' },
+                        mods: { width: 'input_s' },
+                        content: [
+                            {
+                                block: 'input',
+                                mix: { block: 'account-personal-data-form', elem: 'phone' },
+                                mods: { theme: 'islands', size: 'l', nocorners: true, width : 'available' },
+                                name: 'phones[]',
+                                val: data.phones && data.phones.length ? data.phones[0] : ''
+                            },
+                            {
+                                block: 'link',
+                                mix: { block: 'account-personal-data-form', elem: 'button-add-phone' },
+                                content: ' + еще телефон'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'checkbox-group',
+                                mix: { block: 'account-personal-data-form', elem: 'messengers' },
+                                mods: { theme : 'islands', size : 'm', type : 'line' },
+                                name : 'messengers',
+                                val: data.messengers || [],
+                                options : [
+                                    { val : 1, text : 'Есть Viber' },
+                                    { val : 2, text : 'Есть Watsup' }
+                                ]
+                            }
+
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'line',
+                content: [
+                    {
+                        elem: 'col',
+                        mods: { width: 'label' },
+                        content: [
+                            {
+                                block: 'label',
+                                mods: { height: 'l' },
+                                content: 'Skype'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        mods: { width: 'input_m' },
+                        content: [
+                            {
+                                block: 'input',
+                                mix: { block: 'account-personal-data-form', elem: 'skype' },
+                                name: 'skype',
+                                mods: { theme: 'islands', size: 'l', nocorners: true, width : 'available' },
+                                val: data.skype || ''
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'line',
+                content: [
+                    {
+                        elem: 'col',
+                        mods: { width: 'label' },
+                        content: '&nbsp;'
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'button',
+                                mods: { theme : 'islands', size : 'xl', font: 'm' },
+                                text: 'Сохранить информацию',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+);

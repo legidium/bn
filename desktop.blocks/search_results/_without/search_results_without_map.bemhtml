@@ -1,0 +1,5 @@
+block('search_results').mod('without', 'map')(
+	content()(function () {
+		return applyNext().slice(1);
+	})
+);

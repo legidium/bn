@@ -1,0 +1,328 @@
+.button_theme_islands.button{
+    background: rgb(229, 229, 229);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    outline: 0;
+    cursor: pointer;
+}
+
+.button_theme_islands.button:before {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    content: '';
+    border-radius: 2px;
+    background: #fff;
+}
+
+.button.button_theme_islands.button_focused-hard {
+    background: transparent;
+    -webkit-box-shadow: inset 0 0 0 1px #f7941d;
+    -moz-box-shadow: inset 0 0 0 1px #f7941d;
+    box-shadow: inset 0 0 0 1px #f7941d;
+}
+
+.button_theme_islands.button.button_hovered {
+    background: #F7942D;
+}
+
+.button_theme_islands.button.button_view_plain.button_hovered {
+    background: inherit;
+}
+
+.button_theme_islands.button .button__text{
+    color: black;
+    font-size: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button_theme_islands.button.button_voprosique{
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    margin-left: 5px;
+    background: #ccc;
+}
+
+
+.button_theme_islands.button.button_voprosique .button__text{
+    font-size: 9px;
+    color: white;
+    line-height: 13px;
+}
+
+
+.button_theme_islands.button.button_voprosique:before{
+    border-radius: 50%;
+    background: #ccc;
+}
+
+
+.button_theme_islands.button_view_circle{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.button_theme_islands.button_view_circle:before{
+    border-radius: 50%;
+}
+
+
+.button_theme_islands.button.button_view_circle .button__text{
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    color: rgb(151, 151, 151);
+}
+
+.button_theme_islands.button.button_view_circle:before{
+    border-radius: 50%;
+}
+
+
+.button_theme_islands.button_gray{
+    background: #d9d9d9;
+}
+
+
+.button_theme_islands.button_gray:before{
+    background: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.button_theme_islands.button_action_primary{
+    background: rgb(237, 159, 45);
+}
+
+.button_theme_islands.button_action_primary:before{
+    background: rgb(254, 197, 120);
+}
+
+
+
+
+.button_theme_islands.button_action_primary:hover{
+    background: #f59331;
+}
+
+.button_theme_islands.button_action_primary:hover:before{
+    background: #f59331;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.button_theme_islands.button_action_subprimary{
+    background: rgb(237, 159, 45);
+}
+
+
+
+
+
+.button.button_theme_islands.button_action_warning,
+.button.button_theme_islands.button_action_warning:hover,
+.button.button_theme_islands.button_action_warning.button_hovered {
+    background: #b02a30;
+}
+.button.button_theme_islands.button_action_warning,
+.button.button_theme_islands.button_action_warning .button__text {
+    color: #b02a30;
+}
+.button.button_theme_islands.button_action_warning:hover:before,
+.button.button_theme_islands.button_action_warning.button_hovered {
+    background: #b8002f;
+}
+.button.button_theme_islands.button_action_warning:hover,
+.button.button_theme_islands.button_action_warning.button_hovered,
+.button.button_theme_islands.button_action_warning:hover .button__text,
+.button.button_theme_islands.button_action_warning.button_hovered .button__text {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.button_theme_islands.button.button_checked{
+    background: rgb(237, 159, 45);
+}
+
+.button_theme_islands.button.button_checked.button_hovered{
+    background: rgb(237, 159, 45);
+}
+
+.button_theme_islands.button.button_checked:before{
+    background: #fff;
+}
+
+
+
+.button_theme_islands.button.button_size_m,
+.button_theme_islands.button.button_size_m .icon {
+    height: 30px;
+}
+
+
+
+.button_theme_islands.button.button_size_m .button__text{
+    font-size: 11px;
+    line-height: 30px;
+    margin: 0 12px 0 13px;
+}
+
+
+
+.button_theme_islands.button.button_size_l {
+    height: 30px;
+}
+
+
+.button_theme_islands.button.button_size_l .button__text{
+    font-size: 13px;
+    line-height: 30px;
+    margin: 0 15px;
+}
+
+
+
+.button_theme_islands.button_size_xl,
+.button_theme_islands.button.button_size_xl,
+.button_theme_islands.button_size_xl_m,
+.button_theme_islands.button.button_size_xl_m,
+
+.button_theme_islands.button_big,
+.button_theme_islands.button.button_big {
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+}
+
+.button_theme_islands.button.button_size_xl .button__text,
+.button_theme_islands.button.button_size_xl_m .button__text,
+.button_theme_islands.button.button_big .button__text {
+    font-size: 13px;
+    line-height: 35px;
+    height: 35px;
+    margin: 0 15px;
+}
+
+.button_theme_islands.button.button_size_xl_m .button__text {
+    font-size: 11px;
+}
+
+
+
+
+
+
+.button_theme_islands.button .icon+.button__text {
+    margin-left: 0;
+}
+
+.button .button__tick{
+    background-image: url("../../libs/bem-components/design/common.blocks/theme/_islands/arrow.svg");
+    background-size: 8px 5px;
+    margin-left: 5px;
+    vertical-align: inherit;
+}
+
+.button_font_s.button .button__text,
+.button_font_s.button_theme_islands.button .button__text {
+    font-size: 11px;
+}
+.button_font_m.button .button__text,
+.button_font_m.button_theme_islands.button .button__text {
+    font-size: 13px;
+}
+.button_font_l.button .button__text,
+.button_font_l.button_theme_islands.button .button__text {
+    font-size: 15px;
+}
+.button_uppercase.button .button__text,
+.button_uppercase.button_theme_islands.button .button__text {
+    text-transform: uppercase;
+}
+
+.button.button_theme_islands.button_saved {
+    background-color: transparent;
+    pointer-events: none;
+    cursor: normal;
+}
+
+.button.button_theme_islands.button_saved:before {
+    background-color: transparent;
+}
+
+.button.button_theme_islands.button_saved .button__text {
+    color: #25C348;
+}
+
+.button.button_theme_islands.button_link, 
+.button.button_theme_islands.button_link:before{
+    background: transparent;
+}
+
+.button_theme_islands.button_submit {
+    background: #F7941D;
+}
+.button_theme_islands.button_submit:before {
+    background: #fff;
+}
+
+.button_theme_islands.button_primary {
+    background: #E7AE6C;
+}
+.button_theme_islands.button_primary:before {
+    background: #F6C177;
+}
+
+.button_theme_islands.button_primary.button_hovered:before {
+    background: #ED9F2D;
+}
+
+.button.button_theme_islands.button_wide .button__text {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.button.button_theme_islands.button_wide .icon+ .button__text {
+    margin-left: 3px;
+}
+.button.button_theme_islands.button_wide .icon {
+    margin-left: 13px;
+}
+
+.button_hidden,
+.button_theme_islands.button_hidden {
+    display: none;
+}

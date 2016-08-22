@@ -1,0 +1,254 @@
+{
+    "user_auth": false,
+    "total_pages": 2,
+    "current_page": 1,
+	"total_items": 20,
+	"current_items": 10,
+
+    "lists" : [
+        { "id": 1, "name": "Список 1", "count": 23 }, 
+        { "id": 2, "name": "Список 2", "count": 2, "type": 1 }, 
+        { "id": 3, "name": "Список 3", "count": 9, "type": 2 }, 
+        { "id": 4, "name": "Список 4", "count": 23, "type": 2 }, 
+        { "id": 5, "name": "Список 5", "count": 2, "type": 5 }, 
+        { "id": 6, "name": "Список 6", "count": 3, "type": 5 }, 
+        { "id": 7, "name": "Список 7", "count": 6 }, 
+        { "id": 8, "name": "Список 8", "count": 1, "type": 2 }, 
+        { "id": 9, "name": "Список 9", "count": 2, "type": 4 } 
+    ],
+
+	"items": [
+		{
+            "js": { "id": "1", "type": 1 },
+            "mods": { "many_images": true, "selected": true },
+            
+            "link": "http://bn.ru/1",
+            "image": "../../img/account-my-ads-sample.jpg",
+            "address_title": "ЖК Олимпийский",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "12 июня",
+            "price_text": "от 2 до 6,5 млн. <span class='currency'>Р</span>",
+            "price_help": "Сданные дома<br> и в 2015 - 2019 годах ",
+            "seller_text": "Sell City",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "эконом, бизнес-класс. монолит, подземный паркинг, закрытая территория, школа",
+            
+            "isZK": true,
+            "object_type": 1,
+            "is_favorite": true,
+
+            "in_lists": [1, 5],
+            "user_note": ""
+        },
+        {
+            "js": { "id": "2", "type": 3 },
+            "mods": { "many_images": true, "expires": true },
+
+            "link": "http://bn.ru/2",
+            "image": "",
+            "address_title": "аренда 1к.кв. (30 м²)",
+            "address_text": "Грибоедова кан. наб. 144",
+            "address_help": "м.Сенная,, 12 мин. пешком",
+            "status_text": "12 июля",
+            "price_text": "27 000 тыс. <span class='currency'>Р</span>",
+            "price_help": "КУ включены",
+            "seller_text": "Частное",
+            "seller_help": " 1 июня",
+            "phones": ["8 (911) 921-24-41"],
+            "comment": "корабль; окна на улицу, пол ламинат, гор.вода теплоцентр, ванна отдельная",
+            
+            "object_type": 3,
+            "is_favorite": true,
+            "is_in_lists": false,
+            "is_user_note": false,
+
+            "in_lists": [],
+            "user_note": ""
+        },
+        {
+            "js": { "id": "3", "type": 2 },
+            "mods": { "selected": true },
+
+            "link": "http://bn.ru/3",
+            "image": "",
+            "address_title": "продажа 5к.кв. (63 м²)",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "1 июня",
+            "price_text": "18 800 тыс. <span class='currency'>Р</span>",
+            "price_help": "торг, ипотека",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            
+            "object_type": 2,
+            "is_favorite": false,
+            "is_in_lists": true,
+            "is_user_note": true,
+
+            "in_lists": [5, 6, 8],
+            "user_note": "Краткая заметка 1"
+        },
+        {
+            "js": { "id": "4", "type": 2 },
+            "mods": { "many_images": true, "unpublished": true },
+
+            "link": "http://bn.ru/4",
+            "image": "../../img/account-my-ads-sample.jpg",
+            "address_title": "продажа 5к.кв. (63 м²)",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "1 июня",
+            "price_text": "18 800 тыс. <span class='currency'>Р</span>",
+            "price_help": "торг, ипотека",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            
+            "object_type": 2,
+            "is_favorite": true,
+            "is_in_lists": true,
+            "is_user_note": true,
+
+            "in_lists": [4, 7, 8],
+            "user_note": "Краткая заметка 2"
+        },
+        {
+            "js": { "id": "5", "type": 2 },
+            "mods": { "many_images": true },
+
+            "link": "http://bn.ru/5",
+            "image": "",
+            "address_title": "продажа 5к.кв. (63 м²)",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "1 июня",
+            "price_text": "18 800 тыс. <span class='currency'>Р</span>",
+            "price_help": "торг, ипотека",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+            
+            "object_type": 2,
+            "is_favorite": false,
+            "is_in_lists": false,
+            "is_user_note": false
+        },
+        {
+            "js": { "id": "6", "type": 2 },
+            "mods": { "many_images": true },
+
+            "link": "http://bn.ru/6",
+            "image": "",
+            "address_title": "продажа 5к.кв. (63 м²)",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "1 июня",
+            "price_text": "18 800 тыс. <span class='currency'>Р</span>",
+            "price_help": "торг, ипотека",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+
+            "object_type": 2,
+            "is_favorite": false,
+            "is_in_lists": false,
+            "is_user_note": false
+        },
+        {
+            "js": { "id": "7", "type": 2 },
+            "mods": { "many_images": true },
+
+            "link": "http://bn.ru/7",
+            "image": "",
+            "address_title": "продажа 5к.кв. (63 м²)",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "1 июня",
+            "price_text": "18 800 тыс. <span class='currency'>Р</span>",
+            "price_help": "торг, ипотека",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+
+            "object_type": 2,
+            "is_favorite": false,
+            "is_in_lists": false,
+            "is_user_note": false
+        },
+        {
+            "js": { "id": "8", "type": 2  },
+            "mods": { "many_images": true },
+
+            "link": "http://bn.ru/8",
+            "image": "",
+            "address_title": "продажа 5к.кв. (63 м²)",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "1 июня",
+            "price_text": "18 800 тыс. <span class='currency'>Р</span>",
+            "price_help": "торг, ипотека",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+
+            "object_type": 2,
+            "is_favorite": false,
+            "is_in_lists": false,
+            "is_user_note": false
+        },
+        {
+            "js": { "id": "9", "type": 2  },
+            "mods": { "many_images": true },
+
+            "link": "http://bn.ru/9",
+            "image": "",
+            "address_title": "продажа 5к.кв. (63 м²)",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "1 июня",
+            "price_text": "18 800 тыс. <span class='currency'>Р</span>",
+            "price_help": "торг, ипотека",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+
+            "object_type": 2,
+            "is_favorite": false,
+            "is_in_lists": false,
+            "is_user_note": false
+        },
+        {
+            "js": { "id": "10", "type": 2  },
+            "mods": { "many_images": true },
+
+            "link": "http://bn.ru/10",
+            "image": "",
+            "address_title": "продажа 5к.кв. (63 м²)",
+            "address_text": "Лейтенанта Шмидта наб. д.21 м.",
+            "address_help": "Василеостровск,, 14 мин. пешком",
+            "status_text": "1 июня",
+            "price_text": "18 800 тыс. <span class='currency'>Р</span>",
+            "price_help": "торг, ипотека",
+            "seller_text": "Аг-во. СОЮЗ",
+            "seller_help": " 1 июня",
+            "phones": ["8 (921) 934-99-58", "8 (911) 921-24-41"],
+            "comment": "вход со двора, окна во двор, ремонт произведен, телефон есть, гор.вода теплоцентр, заст.лоджия",
+
+            "object_type": 2,
+            "is_favorite": false,
+            "is_in_lists": false,
+            "is_user_note": false
+        }
+	]
+
+}

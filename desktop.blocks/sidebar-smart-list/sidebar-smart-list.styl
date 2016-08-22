@@ -1,0 +1,37 @@
+@require "../../design/stylus/index"
+
+$link_hover_color ?= rgb(176, 42, 48)
+    
+.sidebar-smart-list
+    margin-bottom $margin_m
+    
+    &__item
+        margin-bottom $margin_m
+        
+    &__link,
+    &__image,
+    &__text,
+    &__help
+        display block
+        
+    &__image
+        margin-bottom $margin_s
+    
+    &__link,
+    &__text,
+    &__help
+        color $text_color
+        font-size $font_size_m
+        line-height $text_line_height_s
+        margin 0
+        
+    &__link
+        text-decoration none
+        &:hover, &:focus
+            color $link_hover_color
+            
+            .sidebar-smart-list__text
+                color $link_hover_color
+
+    &__help
+        color $text_color_light

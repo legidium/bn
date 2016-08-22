@@ -1,0 +1,110 @@
+block('search_map_results')(
+	js()(true),
+	content()(function(){
+	    var content = [];
+
+        if (this.ctx.items) {
+            content = (this.ctx.items).map(function(item) {
+                return {
+                    elem: 'table_row',
+                    elemMods: { visible: true },
+                    js : { address: item.address_text },
+                    content: item
+                }
+            });
+
+            content.push({ elem: 'pagination_wrapper' });
+	    }
+
+	    return content;
+	}),
+
+	elem('table_row')(
+	    content()(function() {
+	        return [
+	            {
+	                elem: 'table_row_inner',
+	                content: applyNext()
+	            }
+	        ];
+	    })
+	),
+
+    elem('table_row_inner')(
+    	content()(function() {
+    	    return [
+                {
+                    elem: 'table_cell',
+                    mods : { image : true },
+                    content: applyNext().image || { elem: 'image_holder' }
+                },
+                {
+                    elem: 'table_cell',
+                    content: [
+                        {
+                            elem: 'item_title',
+                            content: applyNext()
+                        },
+                        {
+                            elem: 'item_details',
+                            content: applyNext()
+                        },
+                        {
+                            elem: 'item_comment',
+                            content: applyNext()
+                        }
+                    ]
+                }
+    	    ];
+        })
+    ),
+
+	elem('item_title')(
+	    content()(function() {
+	        return [
+	            {
+                    elem: 'text',
+                    elemMods: { object: true },
+                    content: applyNext().object_text + ' (' + applyNext().s_text + ')'
+                },
+                {
+                    elem: 'text',
+                    elemMods: { price: true },
+                    content: ' &mdash; ' + applyNext().price_text
+                },
+                {
+                    elem: 'text',
+                    elemMods: { seller: true },
+                    content: ' ' + [applyNext().seller_text, applyNext().seller_help].join(', ')
+                }
+	        ]
+	    })
+	),
+
+	elem('item_details')(
+        content()(function() {
+            var content = [];
+
+            content.push('Площадь: ' + applyNext().s_text );
+            content.push('этаж: ' + applyNext().floor_text);
+            content.push('санузел: ' + applyNext().san_text);
+            content.push('дом &mdash; ' + applyNext().home_text);
+
+            return content.join(', ');
+        })
+    ),
+
+    elem('item_comment')(
+        content()(function() {
+            return applyNext().comment;
+        })
+    ),
+
+    elem('pagination_wrapper')(
+        content()(function() {
+            return {
+                block: 'pagination'
+            };
+        })
+    )
+);

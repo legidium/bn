@@ -1,0 +1,38 @@
+.living_complex_sidebar_info{
+	padding: 20px;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+
+.living_complex_sidebar_info__price{
+	margin-bottom: 5px;
+}
+
+
+.living_complex_sidebar_info__price_help{
+	color: #b7b7b7;
+	font-size: 18px;
+	display: inline-block;
+	margin-right: 12px;
+}
+
+.living_complex_sidebar_info__price_value{
+	color: #000;
+	font-size: 30px;
+	font-weight: bold;
+	display: inline-block;
+	margin-right: 12px;
+}
+
+.living_complex_sidebar_info__info{
+	margin-bottom: 15px;
+}
+
+.living_complex_sidebar_info__info:last-child{
+	margin-bottom: 0;
+}
+
+.living_complex_sidebar_info__info_bold{
+	font-size: 18px;
+	margin-bottom: 2px;
+}

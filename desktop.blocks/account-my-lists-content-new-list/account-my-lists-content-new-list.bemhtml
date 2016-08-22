@@ -1,0 +1,36 @@
+block('account-my-lists-content-new-list')(
+    content()(function() {
+        return [
+            {
+                elem: 'line',
+                content: [
+                    {
+                        tag: 'p',
+                        block: 'text',
+                        mods: { font: 's' },
+                        content: 'Создайте новый список, добавляйте в него объекты, делитесь, отправляйте на почту.'
+                    }
+                ]
+            },
+            {
+                elem: 'line',
+                mix: { block: 'clearfix' },
+                elemMods: { dark: true },
+                content: [
+                    {
+                        block : 'input',
+                        mix: { block: 'account-my-lists-content-new-list', elem: 'input' },
+                        mods : { theme: 'islands', size: 'l', width: 'available', nocorners: true },
+                        placeholder : 'Новый список'
+                    },
+                    {
+                        block : 'button',
+                        mix: { block: 'account-my-lists-content-new-list', elem: 'button' },
+                        mods : { theme: 'islands', size: 'm' },
+                        text: 'Добавить'
+                    }
+                ]
+            }
+        ]
+    })
+)

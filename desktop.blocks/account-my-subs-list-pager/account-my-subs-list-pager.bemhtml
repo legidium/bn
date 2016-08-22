@@ -1,0 +1,18 @@
+block('account-my-subs-list-pager')(
+    content()(function() {
+        return [
+            {
+                block: 'button',
+                mix: { block: 'account-my-subs-list-pager', elem: 'more' },
+                mods: { theme: 'islands', size: 'l' },
+                text: 'Показать еще'
+            },
+            {
+                tag: 'span',
+                block: 'help',
+                mix: { block: 'account-my-subs-list-pager', elem: 'text' },
+                content: 'Показано 25 из 54'
+            }
+        ]
+    })
+)

@@ -1,0 +1,137 @@
+    /** @var string Действие (Купить/Снять)  */
+    public $action;
+    /** @var string Цель (Квартира/комната/дом, участок/ком. недвижимость)   */
+    public $target;
+    /** @var float Цена от  */
+    public $priceFrom;
+    /** @var float Цена до  */
+    public $priceTo;
+    /** @var string Валюта  */
+    public $currency;
+    /** @var string Значение цены (за всё/ за м^2)  */
+    public $priceMode;
+    /** @var array Тип квартиры (Студию/1/2/3/4 и более/Свободная планировка/Доля - Свободная планировка/Доля)  */
+    public $flatTypes;
+    /** @var bool Новостройка  */
+    public $isNew;
+    /** @var bool Вторичка*/
+    public $isResale;
+    /** @var bool Строится */
+    public $isBuild;
+    /** @var bool Построен  */
+    public $isBuilt;
+    /** @var int Общая площадь от  */
+    public $areaFrom;
+    /** @var int Общая площадь до  */
+    public $areaTo;
+    /** @var int Жилая площадь от */
+    public $livingAreaFrom;
+    /** @var int Жилая площадь до */
+    public $livingAreaTo;
+    /** @var int Площадь кухни от */
+    public $kitchenAreaFrom;
+    /** @var int Площадь кухни до */
+    public $kitchenAreaTo;
+    /** @var int Этаж от */
+    public $floorFrom;
+    /** @var int Этаж до */
+    public $floorTo;
+    /** @var int Количество этажей от */
+    public $floorCountFrom;
+    /** @var int Количество этажей до */
+    public $floorCountTo;
+    /** @var bool Не последний этаж */
+    public $notLastFloor;
+    /** @var bool Не первый этаж */
+    public $notFirstFloor;
+    /** @var bool Последний этаж */
+    public $lastFloor;
+    /** @var int Лифт */
+    public $isLift;
+    /** @var bool Можно заезжать сразу и жить */
+    public $canBeSettledAtOnce;
+    /** @var int Отделка */
+    public $finishing;
+    /** @var int Балкон */
+    public $balcony;
+    /** @var int Санузел */
+    public $bathroom;
+    /** @var bool Крытый паркинг */
+    public $coveredParking;
+    /** @var bool Закрытая территория */
+    public $coveredSpace;
+    /** @var array Тип дома */
+    public $typeBuilding;
+    /** @var int Условия сделки */
+    public $conditionTrade;
+    /** @var bool Ипотека */
+    public $isMortgage;
+    /** @var string Автор объявления */
+    public $author;
+    /** @var bool Частное */
+    public $isPrivate;
+    /** @var int Дата публикации (за сутки, за неделю, за месяц, за 3 месяца, за все время) */
+    public $publishDate;
+    /** @var bool Есть фото */
+    public $hasPhoto;
+    /** @var int Срок сдачи квартал */
+    public $readyQuarter;
+    /** @var int Срок сдачи год */
+    public $readyYear;
+
+    /** Адрес объекта объявления */
+    /** @var array Район */
+    public $district;
+    /** @var array Населенный пункт */
+    public $locality;
+    /** @var array Улица c домом*/
+    public $streetBuilding;
+    /** @var array Ближайшая станция метро */
+    public $metro;
+    /** @var int Время до ближайшей станции метро */
+    public $metroDistance;
+    /** @var bool До метро время пешком */
+    public $metroDistanceOnFoot;
+
+    /** @var bool С детьми */
+    public $withChildren;
+    /** @var bool С животными */
+    public $withPets;
+    /** @var bool Есть телефон */
+    public $isPhone;
+    /** @var bool Есть холодильник */
+    public $isFridge;
+    /** @var bool Есть стиральная машина */
+    public $isWasher;
+    /** @var bool Есть плита */
+    public $isStove;
+    /** @var bool Есть куходнная мебель */
+    public $isKitchenFurniture;
+    /** @var bool Есть мебель */
+    public $isFurniture;
+
+    /** @var array Кол-во комнат в квартире  */
+    public $roomCount;
+    /** @var int Кол-во комнат в квартире от */
+    public $roomCountFrom;
+    /** @var int Кол-во комнат в квартире до */
+    public $roomCountTo;
+    /** @var array Количество комнат */
+    public $roomOfferedCount;
+
+    /** @var array Тип дома/участка  */
+    public $villageTypes;
+    /** @var int Площадь участка от  */
+    public $sectorAreaFrom;
+    /** @var int Площадь участка до  */
+    public $sectorAreaTo;
+
+    /** @var array Тип коммерческой недвижимости  */
+    public $businessTypes;
+
+    /** @var bool Посуточная аренда */
+    public $isDailyRent;
+    /** @var bool Длительный срок */
+    public $isLongRent;
+    /** @var bool Залог */
+    public $hasRentPledge;

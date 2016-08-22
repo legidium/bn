@@ -1,0 +1,43 @@
+block('adv')(
+	
+	tag()(function(){
+		if(this.ctx.hasOwnProperty('url')){
+			return 'a';
+		} 
+
+		return 'div';
+	}),
+
+	attrs()(function(){
+		var ctx = this.ctx;
+
+		var mar = ctx.margin ? 'margin:' + ctx.margin + ';' : '';
+
+		var width = ctx.width == 'max' ? 'width: 100%;' : 'width: ' + ctx.width + 'px;'
+		var height = ctx.height == 'max' ? '' : 'height: ' + ctx.height + 'px;';
+
+		var style = width + height + mar;
+
+		var attrs = {
+        	style: style
+    	};
+
+    	if(ctx.hasOwnProperty('url')){
+			attrs.href = ctx.url;
+		} 
+
+        return attrs;
+	}),
+	
+	content()(function(){
+
+		if(this.ctx.hasOwnProperty('image')){
+			return {
+				block: 'image',
+				url: this.ctx.image
+			}
+		}
+
+		return '';
+	})
+);

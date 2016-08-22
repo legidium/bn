@@ -1,0 +1,46 @@
+@require "../../design/stylus/index"
+
+$col-gap   ?=      10
+
+$col_size_xs ?=    70px
+$col_size_s  ?=    140px
+$col_size_m  ?=    210px
+$col_size_l  ?=    280px
+$col_size_xs ?=    350px
+
+
+col-sizes()
+    &_size_xs
+        width $col_size_xs
+    &_size_s
+        width $col_size_s
+    &_size_m
+        width $col_size_m
+    &_size_l
+        width $col_size_l
+    &_size_xl
+        width $col_size_xl
+        
+.multi-value
+        
+    &__item
+        margin-left ($col-gap  / -2)px
+        margin-right ($col-gap  / -2)px
+        margin-bottom $margin_s
+        margins()
+    
+    &__col
+        display inline-block
+        vertical-align top
+        padding-left ($col-gap  / 2)px
+        padding-right ($col-gap  / 2)px
+        border-box()
+        col-sizes()
+        margins()
+    
+    &__button-add
+        &.button .button__text,
+        &.button_theme_islands.button .button__text
+            color $text_color_light
+            margin-left 4px
+            margin-right 4px

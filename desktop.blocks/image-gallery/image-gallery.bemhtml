@@ -1,0 +1,40 @@
+block('payment-method')(
+    mix()({ block: 'clearfix' }),
+    content()(function() {
+        return (this.ctx.images || []).map(function(option, i) {
+            return [
+                {
+                    elem: 'radio',
+                    tag: 'input',
+                    attrs: {
+                        type: 'radio',
+                        name: 'payment-method',
+                        id: 'payment-method-' + i
+                    }
+                },
+                {
+                    elem: 'item',
+                    tag: 'label',
+                    attrs: { for: 'payment-method-' + i },
+                    content: {
+                        elem: 'inner',
+                        content: [
+                            {
+                                elem: 'icon',
+                                cls: 'icon icon_payment-method icon_method_' + option.icon
+                            },
+                            {
+                                elem: 'name',
+                                content: option.text
+                            },
+                            {
+                                elem: 'desc',
+                                content: option.desc
+                            }
+                        ]
+                    }
+                }
+            ];
+        });
+    })
+);

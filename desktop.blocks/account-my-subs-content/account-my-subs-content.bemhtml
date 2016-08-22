@@ -1,0 +1,26 @@
+block('account-my-subs-content')(
+    content()(function() {
+        return [
+            {
+                elem: 'header',
+                content: [
+                    {
+                        elem: 'title',
+                        content: [
+                            'Мои подписки на обновления',
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'main',
+                content: [
+                    {
+                        block: 'account-my-subs-list',
+                        items: this.ctx.items || []
+                    }
+                ]
+            }
+        ];
+    })
+);

@@ -1,0 +1,33 @@
+block('account-dashboard-agency')(
+
+    mod('view', 'agent')(
+        content()(function() {
+            var content = [];
+            var data = this.ctx.data || {};
+            var title = typeof this.ctx.title != "undefined" ? this.ctx.title : 'Агентство';
+            var fields = ['title', 'moderator_name', 'moderator_email'];
+            
+            var m, v, items = [];
+            (fields).map(function(field) {
+                if (data.hasOwnProperty(field)) {
+                    m = field == 'title' ? { name: true } : { note: true };
+                    v = field == 'moderator_name' ? 'Модератор &ndash; ' + data[field] : data[field];
+
+                    items.push({ elem: 'item', mods: m, content: v });
+                }
+            })
+
+            content.push(title ? { elem: 'header', content: [{ elem: 'title', content: this.ctx.title || 'Агентство' }] } : '');
+            content.push(items.length ? { elem: 'content', content: items } : '');
+            content.push({ elem: 'footer', content: [
+                {
+                    block: 'link',
+                    mix: { block: this.block, elem: 'action-change' },
+                    content: 'Сменить агентство'
+                }
+            ]});
+            
+            return content;
+        })
+    )
+)

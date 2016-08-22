@@ -1,0 +1,102 @@
+block('account-my-ads-list-toolbar')(
+    mix()({ block: 'clearfix' }),
+    content()(function() {
+        return [
+            {
+                elem: 'left',
+                mix: { block: 'pull_left' },
+                content: [
+                    {
+                        block: 'dropdown',
+                        mods : { switcher : 'button', theme : 'islands', size : 'm' },
+                        switcher : {
+                            block : 'link',
+                            mods : { theme : 'islands', size : 'm', font: '11'},
+                            content: [
+                                {
+                                    tag: 'span',
+                                    content: 'Действия с выбранными'
+                                },
+                                {
+                                    elem: 'tick',
+                                    mix: { block: 'icon' }
+                                }
+                            ]
+                        },
+                        popup : [
+                            {
+                                block: 'menu',
+                                mods : { theme : 'islands', size : 'm', dropdown: true, align: 'right' },
+                                content : [
+                                    { block: 'menu-item', val: 'unpublish', content: 'Снять с публикации' },
+                                    { block: 'menu-item', val: 'archive', content: 'Архивировать' },
+                                    { block: 'menu-item', val: 'manage', content: 'Управлять размещением' }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+
+            },
+            {
+                elem: 'right',
+                mix: { block: 'pull_right' },
+                content: [
+                    {
+                        elem: 'line',
+                        content: [
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'button',
+                                        mods: {theme: 'islands', size: 'm', view: 'plain'},
+                                        text: 'Сохранить как PDF'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'dropdown',
+                                        mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                        switcher: {
+                                            block: 'link',
+                                            mods: { theme: 'islands', size: 'm', font: '11'},
+                                            content: [
+                                                {
+                                                    tag: 'span',
+                                                    content: 'Отправить'
+                                                },
+                                                {
+                                                    elem: 'tick',
+                                                    mix: { block: 'icon' }
+                                                }
+                                            ]
+                                        },
+                                        popup: [
+                                            {
+                                                block: 'send_search_results'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                        text: 'Распечатать'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+)

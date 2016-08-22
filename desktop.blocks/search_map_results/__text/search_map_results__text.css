@@ -1,0 +1,17 @@
+.search_map_results__text {
+    font-size: 11px;
+    line-height: normal;
+    color: black;
+}
+.search_map_results__text_header {
+    margin-bottom: 8px;
+}
+.search_map_results__text_details {
+    line-height: 1.2;
+}
+.search_map_results__text_comments {
+
+}
+.search_map_results__text_address {
+    font-weight: bold;
+}

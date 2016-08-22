@@ -1,0 +1,14 @@
+block('placement-condition')(
+	content()(function(){
+		return [
+			{
+				elem: 'name',
+				tag: 'span',
+				content: this.ctx.name
+			},
+			this.ctx.text
+		];
+
+	})
+
+);

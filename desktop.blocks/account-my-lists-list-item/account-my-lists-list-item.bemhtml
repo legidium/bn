@@ -1,0 +1,20 @@
+block('account-my-lists-list-item')(
+    content()(function() {
+        var js = applyNext().js || {};
+        var id = js.id || 0;
+
+        return [
+            {
+                tag: 'a',
+                js: { id: id },
+                elem: 'content',
+                attrs: { href: applyNext().link || '#' },
+                content: [
+                    { elem: 'title', content: applyNext().title },
+                    { elem: 'info', content: applyNext().info_text || '&nbsp;' },
+                    { elem: 'status', content: applyNext().status_text || '&nbsp;' }
+                ]
+            }
+        ];
+    })
+)

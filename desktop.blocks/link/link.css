@@ -1,0 +1,67 @@
+.link {
+    cursor: pointer;
+}
+.link,
+.link.link_theme_islands {
+	color: black;
+	text-decoration: none;
+	font-size: 13px;
+	outline: 0;
+}
+.link:visited,
+.link.link_theme_islands:visited {
+    color: #7e7e7e;
+}
+.link:hover,
+.link.link_theme_islands:hover,
+.link:focus,
+.link.link_theme_islands:focus {
+    color: #b02a30;
+}
+.link.link_theme_islands.link_size_m {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 30px;
+}
+.link_font_11,
+.link.link_theme_islands.link.link_font_11 {
+	font-size: 11px;
+}
+.link_font_13,
+.link.link_theme_islands.link_font_13 {
+	font-size: 13px;
+}
+.link .link__tick,
+.link.link_theme_islands .link__tick {
+	background-image: url("../../libs/bem-components/design/common.blocks/theme/_islands/arrow.svg");
+	background-size: 8px 5px;
+	margin-left: 5px;
+}
+.link_theme_islands.link.link_voprosique {
+    background: #ccc;
+    border-radius: 50%;
+    color: white;
+    display: inline-block;
+    font-size: 9px;
+    line-height: 13px;
+    margin-left: 5px;
+    height: 11px;
+    width: 11px;
+    text-align: center;
+}
+.link_theme_islands.link.link_voprosique:hover {
+    color: white;
+    text-decoration: none;
+}
+.link_theme_islands.link.link_voprosique:before{
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.link.link_menu,
+.link.link_menu:hover,
+.link.link_menu:active,
+.link.link_menu:focus,
+.link.link_menu.link_hovered {
+    color: inherit;
+}

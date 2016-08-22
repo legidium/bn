@@ -1,0 +1,17 @@
+block('return_to_search')(
+	content()(function () {
+		return this.ctx.buttons.map(function (buttonText) {
+			return {
+				elem: 'button',
+				content: {
+					block: 'button',
+					text: buttonText,
+					mods: {
+						theme: 'islands',
+						size: 'm'
+					}
+				}
+			};
+		});
+	})
+);

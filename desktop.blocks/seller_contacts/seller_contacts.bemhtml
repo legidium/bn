@@ -1,0 +1,122 @@
+block('seller_contacts')(
+	content()(function () {
+		var contactsIcon = {
+			Skype: 'skype',
+			WhatsApp: 'whats-app',
+			Viber: 'viber'
+		};
+
+		return [{
+			elem: 'name',
+			content: this.ctx.agencyName
+		}, {
+			elem: 'type',
+			tag: 'p',
+			content: this.ctx.contragentType
+		}, {
+			elem: 'phones',
+			content: this.ctx.phones.map(function (phone) {
+				return {
+					elem: 'phone',
+					content: [{
+						elem: 'number',
+						tag: 'a',
+						attrs: { href: 'tel:' + phone.number },
+						content: phone.number
+					}, {
+						elem: 'icons',
+						tag: 'span',
+						content: phone.alternatives.map(function (iconUrl) {
+							return {
+								block: 'icon',
+								mods: { action: contactsIcon[iconUrl] },
+								tag: 'i'
+							};
+						})
+					}]
+				};
+			})
+		}, {
+			elem: 'help-tooltip',
+			content: [{
+				elem: 'help-text',
+				tag: 'span',
+				content: 'Можно связаться с помощью'
+			}, {
+				elem: 'icons',
+				content: this.ctx.callTypes.map(function (callType) {
+					return {
+						elem: 'link',
+						tag: 'a',
+						attrs: { href: 'skype:123' },
+						content: {
+							block: 'icon',
+							tag: 'i',
+							mods: {action: contactsIcon[callType]}
+						}
+					};
+				})
+			}]
+		}, {
+			elem: 'success_message',
+			content: 'Сообщение отправлено'
+		}, {
+			elem: 'button',
+			content: {
+				block: 'dropdown',
+				mods: {
+					switcher: 'button',
+					theme: 'islands',
+					size: 'm'
+				},
+				switcher: {
+					block: 'button',
+					mix: {
+						block: 'seller_contacts',
+						elem: 'subscribe'
+					},
+					mods : { theme : 'islands', size : 'm'},
+					text: 'Написать продавцу'
+				},
+				popup: {
+					block: 'feedback_popup',
+					tag: 'form',
+					apartment: this.ctx.apartment,
+					mods: {
+						theme: 'islands',
+						target: 'anchor'
+					},
+					mainOffset: 100
+				}
+			}
+		}, {
+			elem: 'items',
+			tag: 'ul',
+			content: [{
+				elem: 'item',
+				tag: 'li',
+				content: [{
+					elem: 'published-text',
+					content: 'Опубликовано',
+					tag: 'span'
+				}, {
+					elem: 'published-data',
+					content: this.ctx.publishDate,
+					tag: 'span'
+				}]
+			}, {
+				elem: 'item',
+				tag: 'li',
+				content: [{
+					elem: 'viewed-text',
+					content: 'Просмотрено',
+					tag: 'span'
+				}, {
+					elem: 'viewed-data',
+					content: this.ctx.viewed + ' раз',
+					tag: 'span'
+				}]
+			}]
+		}];
+	})
+);

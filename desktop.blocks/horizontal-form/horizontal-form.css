@@ -1,0 +1,165 @@
+.horizontal-form {
+	display: table;
+	width: 100%;
+}
+
+.horizontal-form__line {
+	display: table-row;
+}
+
+.horizontal-form__line:last-child .horizontal-form__label,
+.horizontal-form__line:last-child .horizontal-form__field {
+	padding-bottom: 0;
+}
+
+.horizontal-form__label,
+.horizontal-form__field {
+	display: table-cell;
+	padding-bottom: 20px;
+}
+
+.horizontal-form__label {
+	width: 95px;
+	font-size: 13px;
+	padding-right: 5px;
+	vertical-align: middle;
+}
+
+.horizontal-form__text {
+	margin: 0 0 5px;
+}
+
+.horizontal-form__desc {
+	margin: 0;
+	font-size: 11px;
+	color: #bbb;
+}
+
+.horizontal-form__label.vertical-top {
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+.textarea-label { vertical-align: top; }
+
+.textarea {
+	width: 100%;
+	padding: 10px;
+	outline: none;
+	resize: vertical;
+	border: 1px solid rgb(229, 229, 229);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.textarea:focus {
+	border-color: #fc0;
+	box-shadow: 0 0 0 1px #fc0;
+}
+
+.textarea_xl { min-height: 90px; }
+.textarea_l { min-height: 50px; }
+
+.input_full-size { width: 100%; }
+
+.width_m { width: 70px; }
+.width_l { width: 130px; }
+
+.horizontal-form__field .radio-group {
+	margin-right: 20px;
+}
+
+.horizontal-form__field .button_theme_islands.button.button_size_l .button__text {
+	font-size: 11px;
+	margin: 0 14px;
+}
+
+.horizontal-form__field  .checkbox_theme_islands.checkbox_type_line.checkbox_size_m { margin-right: 20px; }
+
+.horizontal-form__field .select { margin-right: 20px; }
+.horizontal-form__field .checkbox-group {
+	display: inline-block;
+	line-height: 30px !important;
+}
+
+.label_ceiling-height .input {
+	width: 40px;
+	float: none;
+	margin-right: 6px;
+}
+
+.label_ceiling-height span { font-size: 11px; }
+
+.horizontal-form__field .input_theme_islands.input_size_l .input__control,
+.horizontal-form__field .input_theme_islands.input.input_size_xl .input__control {
+	font-size: 13px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.horizontal-form__right-hint {
+	color: #bbb;
+	font-size: 11px;
+}
+
+.horizontal-form__field .cols-2 { margin-bottom: -20px; }
+
+.horizontal-form__field .cols-2 .checkbox {
+	float: left;
+	width: 50%;
+	margin-bottom: 4px;
+	margin-right: 0 !important;
+}
+
+.horizontal-form__field .radio-group { float: left; }
+
+.horizontal-form__field .control-group .input {
+	width: 90px;
+}
+
+.checkbox-group:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.photo-upload__icon {
+	margin-bottom: 10px;
+}
+
+.field__year-of-construction .checkbox-group {
+	float: left;
+}
+
+.horizontal-form__num-of-rooms .radio-group {
+	margin: 0;
+	margin-right: -1px;
+}
+
+.horizontal-form__floors__label {
+	font-size: 11px;
+	vertical-align: top;
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: 20px;
+}
+
+
+.horizontal-form__floors__label .input {
+	width: 50px;
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.horizontal-form__floors__label .select {
+	float: none !important;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 0;
+    width: 160px;
+}

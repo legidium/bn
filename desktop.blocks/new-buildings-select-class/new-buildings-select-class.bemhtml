@@ -1,0 +1,31 @@
+block('new-buildings-select-class')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                block: 'dropdown',
+                mix: { block: 'new-buildings-select-class', elem: 'dropdown' },
+                mods : { switcher : 'button', theme : 'islands', size : 'm' },
+                switcher : {
+                    block : 'link',
+                    mods : { theme : 'islands', size : 'm', font: '11'},
+                    content: [
+                        {
+                            tag: 'span',
+                            content: 'Любой класс'
+                        },
+                        {
+                            elem: 'tick',
+                            mix: { block: 'icon' }
+                        }
+                    ]
+                },
+                popup : [
+                    {
+                        block: 'new-buildings-select-class-popup'
+                    }
+                ]
+            }
+        ];
+    })
+);

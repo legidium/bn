@@ -1,0 +1,10 @@
+block('bmedia')(
+    tag()( 'a' ),
+    attrs()(function(){ return { href: this.ctx.href } }),
+    content()(function() {
+        return{
+            block: 'image',
+            url: this.ctx.url
+        }
+    })
+);

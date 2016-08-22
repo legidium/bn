@@ -1,0 +1,39 @@
+block('account-summary-ad')(
+    content()(function() {
+        var ctx = this.ctx;
+        var items = [];
+
+        (ctx.items).map(function(item) {
+            items.push({
+                elem: 'item',
+                mods: item.mods,
+                content: item
+            });
+        });
+
+        return [
+            {
+                elem: 'title',
+                content: ctx.title
+            },
+            {
+                elem: 'items',
+                content: items
+            }
+        ]
+    }),
+
+    elem('item')(
+        content()(function() {
+            return [
+                applyNext().text,
+                {
+                    elem: 'item-value',
+                    tag: 'span',
+                    content: ' ' + applyNext().val
+                }
+            ];
+        })
+    )
+
+);

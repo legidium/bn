@@ -1,0 +1,21 @@
+block('account-my-ads-filter-search')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                block : 'input',
+                mods: { theme: 'islands', size: 'l', type: 'search', nocorners: true },
+                name: 'input',
+                placeholder: 'Поиск по адресу'
+            },
+            {
+                block: 'button',
+                mods: { theme: 'islands', size: 'm', view : 'plain' },
+                icon: {
+                    block: 'icon',
+                    mods: { action: 'search' }
+                }
+            }
+        ]
+    })
+);

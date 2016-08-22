@@ -1,0 +1,27 @@
+.ad-info {
+	position: relative;
+	margin: 0 -1px;
+	padding: 20px;
+	border: 1px solid rgb(126, 211, 33);
+	background-color: #f8fdf3;
+}
+
+.ad-info__controls {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	white-space: nowrap;
+	line-height: 0;
+}
+
+.ad-info__controls .button {
+	vertical-align: top;
+	margin-left: 20px;
+	color: #bbb;
+}
+
+.ad-info__title {
+	font-size: 15px;
+	margin: 0 0 10px;
+	line-height: 1.4;
+}

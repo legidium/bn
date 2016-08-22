@@ -1,0 +1,68 @@
+.account-my-lists-list-item {
+    display: inline-block;
+    padding: 15px;
+    width: 243px;
+    height: 190px;
+}
+.account-my-lists-list-item,
+.account-my-lists-list-item__content,
+.account-my-lists-list-item__title,
+.account-my-lists-list-item__info,
+.account-my-lists-list-item__status {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.account-my-lists-list-item__content {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    display: block;
+    color: #000;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1.4;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    white-space: normal;
+}
+.account-my-lists-list-item__content:hover {
+    border-color: #fedb6b;
+    text-decoration: none;
+}
+.account-my-lists-list-item__title,
+.account-my-lists-list-item__info,
+.account-my-lists-list-item__status {
+    display: block;
+    padding: 0 15px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    width: 100%;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.account-my-lists-list-item__title {
+    font-size: 13px;
+    line-height: 18px;
+    top: 15px;
+    height: 90px;
+}
+.account-my-lists-list-item__info,
+.account-my-lists-list-item__status {
+    font-size: 11px;
+    line-height: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.account-my-lists-list-item__info {
+    bottom: 28px;
+}
+.account-my-lists-list-item__status {
+    color: #afafaf;
+    bottom: 8px;
+}

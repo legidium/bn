@@ -1,0 +1,45 @@
+block('account-dashboard-lists')(
+    content()(function() {
+        var content = [];
+        var items = [];
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({ elem: 'item', mods: item.mods, content: item });
+        });
+
+        content.push({ elem: 'title', content: this.ctx.title || 'Недавно обновленные списки' });
+        content.push(items.length ? { elem: 'items', content: items } : { elem: 'note' });
+
+        return content;
+    }),
+
+    elem('note')(
+        content()(function() {
+            return [
+                {
+                    block: 'icon',
+                    mods: { action: 'list' },
+                    mix: { block: 'account-dashboard-lists', elem: 'note-icon' }
+                },
+                'Добавляйте объекты в произвольные списки, редактируйте и отправляйте их по почте'
+            ];
+        })
+    ),
+
+    elem('item')(
+        content()(function() {
+            return [
+                {
+                    tag: 'a',
+                    elem: 'item-content',
+                    attrs: { href: applyNext().link || '#' },
+                    content: [
+                        { elem: 'item-title', content: applyNext().title || '&nbsp;'},
+                        { elem: 'item-info', content: applyNext().info_text || '&nbsp;' },
+                        { elem: 'item-status', content: applyNext().status_text || '&nbsp;' }
+                    ]
+                }
+            ];
+        })
+    )
+);

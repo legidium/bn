@@ -1,0 +1,15 @@
+.auth__bottom {
+	position: relative;
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.auth__link {
+	float: left;
+	font-size: 11px;
+	color: #000;
+	text-decoration: none;
+}

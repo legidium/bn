@@ -1,0 +1,57 @@
+@require "../../design/stylus/index"
+
+$link_hover_color ?= rgb(176, 42, 48)
+
+.sidebar-text-list
+    margin-bottom $margin_m
+    
+    &__item
+        border-top 1px solid $border_color
+        padding 10px 0
+        position relative
+        border-box()
+        
+        &:last-child
+            border-bottom 1px solid $border_color
+        
+    &__left
+        position absolute
+        top 10px
+        left 0
+        width 50px
+        
+    &__right
+        padding-left 60px
+        min-height 50px
+        
+    &__link,
+    &__icon,
+    &__title,
+    &__text,
+    &__help
+        display block
+    
+    &__link,
+    &__text,
+    &__help
+        color $text_color
+        font-size $font_size_m
+        line-height 1.1
+        margin 0
+        
+    &__link
+        text-decoration none
+        
+        &:hover, &:focus
+            color $link_hover_color
+            
+            .sidebar-text-list__title,
+            .sidebar-text-list__text
+                color $link_hover_color
+    
+    &__title
+        margin-bottom 5px
+        
+    &__title,
+    &__help
+        color $text_color_light

@@ -1,0 +1,10 @@
+block('logo')(
+    content()(function() {
+        return {
+			elem: 'link',
+			tag: 'a',
+			attrs: { href: '/', title: 'На главную' },
+			content: ''
+		};
+    })
+);

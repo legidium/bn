@@ -1,0 +1,243 @@
+block('account-dashboard-list-item')(
+    tag()('a'),
+    match(function() { return !(this.mods.unpublished || this.mods.expires || this.mods.heading) && this.ctx.link; }) (
+        attrs()(function() { return { href: this.ctx.link }; })
+    ),
+    js()(function(){ return { url: this.ctx.link }; }),
+    content()(function() {
+        var c, cell;
+        var main      = [];
+        var js        = this.ctx.js   || {}
+        var mods      = this.ctx.mods || {};
+        var data      = applyNext();
+        var id        = data.id       || '';
+        var type      = data.type     || '';
+        var isHeading = mods.heading  || false;
+
+        var columns   = [
+            'checkbox', 'image', 'address', 'object', 's', 'floor', 'san',
+            'home', 'price', 'seller', 'phone', 'comment', 'tools'
+        ];
+
+        var maxLen = {
+            addressStatusText: 35,
+            addressTitle:      27,
+            addressText:       27,
+            addressHelp:       50,
+            priceText:         9,
+            sellerText:        12
+        };
+
+        var textElem = function(elem, text, maxLength, mods, tag) {
+            return {
+                tag: tag || undefined,
+                elem: elem || 'text',
+                elemMods: mods || undefined,
+                attrs: text && text.length > maxLength ? { title : text } : undefined,
+                content: text && text.length > maxLength ? text.substr(0, maxLength) + '...' : text
+            };
+        }
+        
+        columns.map(function(column) {
+            c = '';
+
+            switch (column) {
+                case 'checkbox':
+                    c = {
+                        block: 'checkbox',
+                        mods: { theme: 'islands', size: 'm', 'check-item': true },
+                        name: 'ids[]',
+                        val: js.id
+                    };
+                    break;
+
+                case 'image':
+                    c = {
+                            elem: 'image-holder',
+                            content: data.image ? { elem: 'image', tag: 'img', attrs: { src: data.image, alt: '' } } : '&nbsp;'
+                        };
+                    break;
+
+                case 'address':
+                    var isError = mods.unpublished || mods.expires;
+                    c = [
+                            {
+                                elem: 'top-text',
+                                content: textElem('status-text', data.status_text, maxLen.addressStatusText, { error: isError }) || '&nbsp;'
+                            },
+                            {
+                                elem: 'main-text',
+                                content: [
+                                    textElem('text', data.address_text, maxLen.addressText),
+                                    textElem('text-help', data.address_help, maxLen.addressHelp)
+                                ]
+                            }
+                        ];
+                    break;
+
+                case 'object':
+                    c = [
+                            { elem: 'top-text', content: '&nbsp;' },
+                            { elem: 'main-text', content: [
+                                    { elem: 'text', content: data.object_text || '&nbsp;' },
+                                    { elem: 'text-help',  content: data.object_help }
+                                ]
+                            }
+                        ];
+                    break;
+
+                case 's':
+                    c = [
+                            { elem: 'top-text', content: '&nbsp;' },
+                            { elem: 'main-text', content: [
+                                    { elem: 'text', content: data.s_text || '&nbsp;' },
+                                    { elem: 'text-help', content: data.s_help }
+                                ]
+                            }
+                        ];
+                    break;
+
+                case 'floor':
+                    c = [
+                            { elem: 'top-text', content: '&nbsp;' },
+                            { elem: 'main-text', content:
+                                [
+                                    { elem: 'text', content: data.floor_text || '&nbsp;' },
+                                    { elem: 'text-help',  content: data.floor_help }
+                                ]
+                            }
+                        ];
+                    break;
+
+                case 'san':
+                    c = [
+                            { elem: 'top-text', content: '&nbsp;' },
+                            { elem: 'main-text', content:
+                                [
+                                    { elem: 'text', content: data.san_text || '&nbsp;' },
+                                    { elem: 'text-help',  content: data.san_help }
+                                ]
+                            }
+                        ];
+                    break;
+
+                case 'home':
+                    var text = data.home_voprosique == '?' && data.home_voprosique_text
+                        ? [data.home_text, { block: 'voprosique', text: data.home_voprosique_text }]
+                        : data.home_text || '&nbsp;';
+
+                    c = [
+                            { elem: 'top-text', content: '&nbsp;' },
+                            { elem: 'main-text', content:
+                                [
+                                    { elem: 'text', content: text },
+                                    { elem: 'text-help',  content: data.home_help },
+                                ]
+                            }
+                        ];
+                    break;
+
+                case 'price':
+                    c = [
+                            { elem: 'top-text', content: '&nbsp;' },
+                            { elem: 'main-text', content:
+                                [
+                                    textElem('text', data.price_text, maxLen.priceText) || '&nbsp;',
+                                    { elem: 'text-help',  content: data.price_help }
+                                ]
+                            }
+                        ];
+                    break;
+
+                case 'seller':
+                    c = [
+                            { elem: 'top-text', content: '&nbsp;' },
+                            { elem: 'main-text', content:
+                                [
+                                    textElem('text', data.seller_text, maxLen.sellerText) || '&nbsp;',
+                                    { elem: 'text-help',  content: data.seller_help }
+                                ]
+                            }
+                        ];
+                    break;
+
+                case 'phone':
+                    var phones = (data.phones || []).map(function(phone) { return { elem: 'text', content: phone }; });
+                    c = [
+                            { elem: 'top-text', content: '&nbsp;' },
+                            { elem: 'main-text', content: phones }
+                        ];
+                    break;
+
+                case 'comment':
+                    c = { elem: 'main-text', content: { elem: 'comment', content: data.comment || '&nbsp;' } }
+                    break;
+
+                case 'tools':
+                    console.log(js);
+                    c = {
+                        block: 'objects-list-item-tools',
+                        js: {
+                            itemId:   js.id   || '',
+                            itemType: js.type || ''
+                        },
+                        flags: { lists: !data.isZK, note: !data.isZK },
+                        data: data
+                    };
+                    break;
+            }
+
+            cell = { elem: 'cell', tag: 'span', elemMods: {}, content: c };
+            cell.elemMods[column] = true;
+
+            main.push(cell);
+        });
+    
+        return { elem: 'row', content: { elem: 'row-inner', content: main } };
+    }),
+
+    mod('heading', true)(
+        tag()('div'),
+        content()(function() {
+            var c, cell;
+            var content = [];
+            var data    = this.ctx.content;
+            var columns = [
+                'checkbox', 'image', 'address', 'object', 's', 'floor', 'san',
+                'home', 'price', 'seller', 'phone', 'comment', 'tools'
+            ];
+
+            columns.map(function(column) {
+                c = '';
+
+                switch (column) {
+                    case 'checkbox': c = {
+                            block: 'checkbox',
+                            mods: { theme: 'islands', size: 'm', 'check-all': true },
+                            name: 'ids'
+                        };
+                        break;
+
+                    case 'address':  c = data.address_help; break;
+                    case 'object':   c = data.object_help;  break;
+                    case 's':        c = data.s_help;       break;
+                    case 'floor':    c = data.floor_help;   break;
+                    case 'san':      c = data.san_help;     break;
+                    case 'san':      c = data.san_help;     break;
+                    case 'home':     c = data.home_help;    break;
+                    case 'price':    c = data.price_help;   break;
+                    case 'seller':   c = data.seller_help;  break;
+                }
+
+                cell = { elem: 'cell', elemMods: {}, content: c || '&nbsp;' };
+                cell.elemMods[column] = true;
+
+                content.push(cell);
+            });
+
+            return content;
+        })
+    )
+    
+);
+

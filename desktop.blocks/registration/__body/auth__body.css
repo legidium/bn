@@ -1,0 +1,121 @@
+.registration__body {
+	min-height: 230px;
+	background-color: #fff;
+	border-bottom: 1px solid rgb(229, 229, 229);
+	padding: 1px 0 40px;
+}
+
+.registration__block {
+	width: 540px;
+	margin: -130px auto 0;
+	padding: 20px 30px 30px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 8px 10px rgba(126, 126, 126, 0.5);
+	-moz-box-shadow: 0 8px 10px rgba(126, 126, 126, 0.5);
+	-o-box-shadow: 0 8px 10px rgba(126, 126, 126, 0.5);
+	box-shadow: 0 8px 10px rgba(126, 126, 126, 0.5);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.registration__title {
+	margin: 0 0 30px;
+	text-align: center;
+	font-size: 26px;
+}
+
+.registration__form {
+	display: table;
+	margin-bottom: -20px;
+	width: 100%;
+}
+
+.registration__form-line {
+	display: table-row;
+}
+
+.registration__label,
+.registration__field {
+	position: relative;
+	display: table-cell;
+	padding-bottom: 20px;
+	vertical-align: middle;
+	font-size: 13px;
+}
+
+.registration__label {
+	width: 110px;
+	vertical-align: middle;
+}
+
+.registration__field { vertical-align: top; }
+
+.vertical-top { vertical-align: top; }
+
+.registration__field .input_theme_islands.input.input_size_xl { width: 320px; }
+.registration__field .input_theme_islands.input.input_size_xl.input_full-size { width: 100%; }
+.registration__field .input_theme_islands.input.input_size_xl.input_w130 { width: 130px; }
+
+.registration__field .select_theme_islands.select { float: none; }
+
+.registration__field .select .button { border-radius: 0; }
+
+.registration__field .select.select_full-size { width: 100%; }
+
+.registration__field .checkbox-group_theme_islands.checkbox-group_size_m {
+	line-height: 30px;
+	margin-left: 15px;
+}
+
+.registration__field-desc {
+	font-size: 11px;
+	padding-top: 6px;
+	color: #bbb;
+}
+
+.registration__field .input_theme_islands.input.input_size_xl .input__control {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	width: 100%;
+}
+
+.registration__phone-line {
+	margin-bottom: 20px;
+}
+
+.registration__add-phone {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	color: #bbb;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.input__control {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.long-input .input__control { width: 100%; }
+.short-input .input__control {
+	width: 130px;
+	margin-right: 13px;
+}
+
+.registration__preson-switcher {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.registration__preson-switcher .button_theme_islands.button_size_xl,
+.registration__preson-switcher .button_theme_islands.button.button_size_xl,
+.registration__preson-switcher .button_theme_islands.button.button_size_xl .button__text {
+	height: 28px;
+	line-height: 28px;
+}

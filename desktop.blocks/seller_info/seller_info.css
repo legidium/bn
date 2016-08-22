@@ -1,0 +1,29 @@
+.seller_info {
+	position: relative;
+	left: -1px;
+	width: 250px;
+	border-left: 1px solid rgb(229, 229, 229);
+	padding: 18px 19px 0 20px;
+}
+
+.seller_info__price-wrapper {
+	border-bottom: 1px solid rgb(229, 229, 229);
+	padding-bottom: 18px;
+}
+
+.seller_info__price {
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: -0.5px;
+}
+
+.seller_info__area {
+	margin-top: 3px;
+	font-size: 11px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.seller_info__conditions {
+	margin-top: 5px;
+	font-size: 11px;
+}

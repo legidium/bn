@@ -1,0 +1,42 @@
+.dropdown_theme_islands .link .link__tick,
+.dropdown_theme_islands .link.link_theme_islands .link__tick {
+    background-image: url("../../libs/bem-components/design/common.blocks/theme/_islands/arrow.svg");
+    background-size: 8px 5px;
+    margin-left: 5px;
+    -webkit-transition: -webkit-transform 0.1s ease-out;
+    transition: transform 0.1s ease-out;
+}
+.dropdown_theme_islands.dropdown_opened .link .link__tick,
+.dropdown_theme_islands.dropdown_opened .link.link_theme_islands .link__tick {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.dropdown.dropdown_switcher_button .link:hover,
+.dropdown.dropdown_switcher_link .link:hover,
+.dropdown.dropdown_switcher_button .link.link_theme_islands:hover,
+.dropdown.dropdown_switcher_link .link.link_theme_islands:hover,
+.dropdown.dropdown_switcher_button .link:focus,
+.dropdown.dropdown_switcher_link .link:focus,
+.dropdown.dropdown_switcher_button .link.link_theme_islands:focus,
+.dropdown.dropdown_switcher_link .link.link_theme_islands:focus {
+    color: inherit;
+}
+
+.dropdown_switcher_only_icon .button,
+.dropdown_switcher_only_icon .button:hover{
+	background: transparent;
+	padding: 0;
+}
+
+.dropdown_switcher_only_icon .button:before{
+	top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.dropdown.dropdown_switcher_pseudo-icon .link:hover,
+.dropdown.dropdown_switcher_pseudo-icon .link.link_theme_islands:hover {
+    text-decoration: none;
+}

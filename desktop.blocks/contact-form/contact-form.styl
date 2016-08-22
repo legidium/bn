@@ -1,0 +1,31 @@
+@require "../../design/stylus/index"
+
+.contact-form
+    border-radius 4px
+    box-shadow 0 5px 10px rgba( 126, 126, 126, 0.5)
+    padding $margin_l
+    width 435px
+    border-box()
+    
+    .contact-form &__label
+        width 130px
+
+    &__message
+        textarea,
+        .textarea_theme_islands
+            display block
+            min-height 80px
+            -webkit-border-radius 0
+            -moz-border-radius 0
+            border-radius 0
+    
+    .select.select_mode_radio-check, 
+    .select_theme_islands.select.select_mode_radio-check
+        .button
+            .button__text
+                color $text_color_light
+
+        .button_checked
+            .button__text
+                color inherit
+        

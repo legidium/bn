@@ -1,0 +1,27 @@
+block('new-buildings-map')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                elem: 'top',
+                content: [
+                    {
+                        elem: 'title',
+                        content: 'Полная база новостроек Санкт-Петербурга'
+                    }
+                ]
+            },
+            {
+                elem: 'body',
+                content: [
+                    {
+                        elem: 'toolbar'
+                    },
+                    {
+                        elem: 'map'
+                    }
+                ]
+            }
+        ];
+    })
+)

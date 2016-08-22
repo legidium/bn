@@ -1,0 +1,21 @@
+.main_enter{
+	border-top: 1px solid rgb(229, 229, 229);
+	padding: 28px;
+	text-align: center;
+}
+
+.main_enter__heart,
+.main_enter__text,
+.main_enter__buttons{
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.main_enter__heart{
+	position: relative;
+	top: -2px;
+}
+
+.main_enter__buttons .button{
+	margin-right: 10px;
+}

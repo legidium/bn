@@ -1,0 +1,22 @@
+.account-summary-ad__title {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.account-summary-ad__item {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.account-summary-ad__item:last-child {
+    margin-bottom: 0;
+}
+.account-summary-ad__item-value {
+    color: rgb(151, 151, 151);
+}
+.account-summary-ad__item_selected {
+    color: #f5a623;
+}
+.account-summary-ad__item_selected .account-summary-ad__item-value {
+    color: #fde5bc;
+}

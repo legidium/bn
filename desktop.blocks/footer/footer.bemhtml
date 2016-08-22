@@ -1,0 +1,276 @@
+block('footer')(
+    content()(function() {
+        return [
+            {
+                elem: 'row',
+                mix: [{block: 'clearfix'}],
+                content: [
+                    {
+                        elem: 'col',
+                        content: {
+                            block: 'links_list',
+                            tag: 'ul',
+                            content: [
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Жилая недвижимость'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Загородная недвижимость'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Коммерческая недвижимость'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Недвижимость за рубежом'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Недвижимость в Латвии'
+                                    }
+                                },
+                            ]
+                        }
+                    },
+                    {
+                        elem: 'col',
+                        content: {
+                            block: 'links_list',
+                            tag: 'ul',
+                            content: [
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Оценка недвижимости'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Юридическая консультация'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Аналитика и аудит'
+                                    }
+                                },
+                                
+                            ]
+                        }
+                    },
+                    {
+                        elem: 'col',
+                        content: {
+                            block: 'links_list',
+                            tag: 'ul',
+                            content: [
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Новости рынка и индустрии'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Статьи и публикации'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Пресс-релизы компаний'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Видео'
+                                    }
+                                },
+                            ]
+                        }
+                    },
+                    {
+                        elem: 'col',
+                        content: {
+                            block: 'links_list',
+                            tag: 'ul',
+                            content: [
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'О группе компаний'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Правила перепечатки'
+                                    }
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'li',
+                                    content: {
+                                        elem: 'link',
+                                        tag: 'a',
+                                        attrs: { href: '/' },
+                                        content: 'Контакты'
+                                    }
+                                },
+                            ]
+                        }
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'button',
+                                js: false,
+                                tag: 'a',
+                                attrs: { href: '/' },
+                                mods : { theme: 'islands', size : 'm', action: 'warning'},
+                                text: 'Подать объявление'
+                            },
+                            {
+                                block: 'links_list',
+                                attrs: { style: 'margin-top: 10px;' },
+                                tag: 'ul',
+                                content: [
+                                    
+                                    {
+                                        elem: 'item',
+                                        tag: 'li',
+                                        content: {
+                                            elem: 'link',
+                                            tag: 'a',
+                                            attrs: { href: '/' },
+                                            content: 'Подписка на издания БН'
+                                        }
+                                    },
+                                    {
+                                        elem: 'item',
+                                        tag: 'li',
+                                        content: {
+                                            elem: 'link',
+                                            tag: 'a',
+                                            attrs: { href: '/' },
+                                            content: 'Реклама на сайте'
+                                        }
+                                    },
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'help',
+                                mods: {font: '13'},
+                                content: 'Генеральный партнер'
+                            },
+                            {
+                                block: 'adv',
+                                width: 120,
+                                height: 36,
+                                margin: '10px 0 0 0',
+                                image: '/img/alfa.png',
+                                url: 'http://alfabank.ru'
+                            },
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'powered',
+                content: {
+                    block: 'link',
+                    attrs: {href: 'http://aidem.ru', title: ''},
+                    content: [
+                        {
+                            elem: 'powered_by',
+                            tag: 'span',
+                            content: 'Design by'
+                        },
+                        {
+                            elem: 'powered_logo',
+                            tag: 'span'
+                        }
+                    ]
+                }
+            }
+        ];
+    })
+);

@@ -1,0 +1,43 @@
+.account__content {
+    border-collapse: collapse;
+    display: table;
+    position: relative;
+    width: 100%;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.account__left,
+.account__right,
+.account__middle {
+    display: table-cell;
+    vertical-align: top;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.account__left {
+    border-right: 1px solid rgb(229, 229, 229);
+    padding: 30px 20px;
+    width: 270px;
+}
+.account__right {
+    border-left: 1px solid rgb(229, 229, 229);
+    padding: 20px 30px;
+    width: 310px;
+}
+.account__middle {
+    border-left: 1px solid rgb(229, 229, 229);
+    border-right: 1px solid rgb(229, 229, 229);
+}
+.account__title {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.content_layout__col.account__ad-banner {
+    width: 60%;
+    margin-top: 78px;
+}

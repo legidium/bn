@@ -1,0 +1,19 @@
+block('ad-search-filter')(
+    mix()({ block: 'clearfix' }),
+    content()(function() {
+        return [
+            'Похожи объекты по',
+            {
+                block : 'radio-group',
+                mods : { theme : 'islands', size : 'l', type : 'button' },
+                name : 'ad-variable',
+                val: 1,
+                options : [
+                    { val : 1, text : 'расположению' },
+                    { val : 2, text : 'параметрам' },
+                    { val : 3, text : 'цене' }
+                ]
+            }
+        ]
+    })
+);

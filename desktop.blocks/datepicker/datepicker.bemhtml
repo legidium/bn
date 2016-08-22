@@ -1,0 +1,12 @@
+block('datepicker')(
+	js()(true),
+	content()(function(){
+		return [
+			{
+				elem: 'input',
+				tag: 'input',
+				attrs: { value: this.ctx.date }
+			}
+		]
+	})
+);

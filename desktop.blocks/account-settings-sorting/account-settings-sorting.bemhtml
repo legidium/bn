@@ -1,0 +1,27 @@
+block('account-settings-sorting')(
+    content()(function() {
+        var data = this.ctx.data || {};
+        var sorting = data.sorting || {};
+
+        return [
+            {
+                elem: 'title',
+                attrs: { style: 'margin-bottom: 10px; font-size: 20px; line-height: 1.3;' },
+                content: 'Сортировка в поиске по-умолчанию'
+            },
+            {
+                block : 'menu',
+                mods : { theme : 'islands', size : 'm', mode : 'radio' },
+                content : [
+                    { block : 'menu-item', val : 1, content : 'по цене от наименьшей' },
+                    { block : 'menu-item', val : 2, content : 'по цене от наибольшей' },
+                    { block : 'menu-item', val : 2, content : 'по адресу А — я' },
+                    { block : 'menu-item', val : 2, content : 'по адресу Я — а' },
+                    { block : 'menu-item', val : 2, content : 'по площади от наименьшей' },
+                    { block : 'menu-item', val : 2, content : 'по площади от наибольшей' },
+                    { block : 'menu-item', val : 2, content : 'по дате добавления' }
+                ]
+            }
+        ];
+    })
+);

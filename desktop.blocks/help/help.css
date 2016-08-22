@@ -1,0 +1,28 @@
+.help{
+	font-size: 11px;
+    font-style: normal;
+	line-height: 15px;
+	color: rgb(151, 151, 151);
+}
+
+.help_inline {
+    float: none !important;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.help__paragraph {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.help_font_13{
+	font-size: 13px;
+}
+
+.help__item {
+    display: none;
+}
+.help__item_visible {
+    display: block;
+}

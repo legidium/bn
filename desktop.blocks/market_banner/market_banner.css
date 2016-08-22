@@ -1,0 +1,73 @@
+.market_banner {
+	position: relative;
+	width: 251px;
+	padding: 18px 0 0 0;
+}
+
+.market_banner__banner-wrapper {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	margin: 13px 0 29px 1px;
+}
+
+.market_banner__big-image {
+	width: 250px;
+	height: 250px;
+	background: #eb9e3b;
+}
+
+.market_banner__banner-upper-text {
+	position: absolute;
+	left: 50%;
+	bottom: 43%;
+	font-size: 13px;
+	color: #fff;
+	transform: translateX(-50%);
+}
+
+.market_banner__banner-lower-text {
+	position: absolute;
+	left: 50%;
+	top: 57%;
+	font-size: 13px;
+	color: #fff;
+	transform: translateX(-50%);
+}
+
+.market_banner__items {
+	padding: 0;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.market_banner__item {
+	border-top: 1px solid rgb(229, 229, 229);
+	padding: 10px 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.market_banner__image-wrapper {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	background: rgb(240, 240, 240);
+}
+
+.market_banner__text {
+	display: inline-block;
+	vertical-align: middle;
+	width: 180px;
+	margin: -6px 0 0 0;
+	padding-left: 12px;
+	font-size: 13px;
+}
+
+.market_banner__image {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}

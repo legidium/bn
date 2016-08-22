@@ -1,0 +1,90 @@
+.b-agency-contacts {
+	position: relative;
+	width: 251px;
+	margin: 18px 19px 0 20px;
+	padding-bottom: 20px;
+}
+
+.b-agency-contacts__name {
+	font-size: 18px;
+}
+
+.b-agency-contacts__type {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.b-agency-contacts__phones {
+	margin-top: 12px;
+	font-size: 18px;
+}
+
+.b-agency-contacts__phone {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.b-agency-contacts__icons {
+	display: flex;
+	position: absolute;
+	height: 19px;
+	left: 140px;
+}
+
+.b-agency-contacts__icon {
+	width: 20px;
+}
+
+.b-agency-contacts__number {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+.b-agency-contacts__help-tooltip {
+	display: flex;
+	margin-top: 3px;
+	font-size: 11px;
+}
+
+.b-agency-contacts__button {
+	padding: 25px 0 17px;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.b-agency-contacts__items {
+	margin: 18px 0 0;
+	padding: 0;
+}
+
+.b-agency-contacts__item {
+	display: flex;
+	list-style: none;
+	margin: 0 0 0.3em 0;
+	padding: 0;
+}
+
+.b-agency-contacts__published-text {
+	font-size: 11px;
+	color: rgb(229, 229, 229);
+}
+
+.b-agency-contacts__published-data {
+	position: absolute;
+	left: 74px;
+	font-size: 11px;
+}
+
+.b-agency-contacts__viewed-data {
+	position: absolute;
+	left: 74px;
+	font-size: 11px;
+}
+
+.b-agency-contacts__viewed-text {
+	font-size: 11px;
+	color: rgb(229, 229, 229);
+}

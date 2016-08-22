@@ -1,0 +1,51 @@
+.text {
+    margin: 0 0 10px;
+    vertical-align: baseline;
+}
+.text:last-child {
+    margin: 0;
+}
+.text_font_s {
+    font-size: 11px;
+    line-height: 1.4;
+}
+.text_font_m {
+    font-size: 13px;
+    line-height: 1.4;
+}
+.text_font_l {
+    font-size: 15px;
+    line-height: 1.4;
+}
+.text_font-xl {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.text_height_s {
+    line-height: 24px;
+}
+.text_height_m {
+    line-height: 28px;
+}
+.text_height_l {
+    line-height: 30px;
+}
+.text_height_xl {
+    line-height: 35px;
+}
+.text_bold {
+    font-weight: bold;
+}
+.text_weight_bold {
+    font-weight: bold;
+}
+.text_light {
+    color: #afafaf;
+}
+.text_error {
+    color: #d0021b;
+}
+.text_nomargin {
+    margin: 0;
+}
+

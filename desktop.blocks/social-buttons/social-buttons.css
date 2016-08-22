@@ -1,0 +1,13 @@
+.social-buttons {
+	margin: 0 -5px;
+}
+
+.social-buttons .button {
+	margin: 0 5px;
+}
+
+.social-buttons-title {
+	margin: 0 0 20px;
+	font-size: 13px;
+	font-weight: 600;
+}

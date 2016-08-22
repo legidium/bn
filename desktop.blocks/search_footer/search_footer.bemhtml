@@ -1,0 +1,47 @@
+block('search_footer')(
+
+    content()(function(){
+        var cols       = [];
+        var buttons    = typeof this.ctx.buttons != "undefined"  ? this.ctx.buttons :  true;
+        var pagerMix   = this.ctx.pagerMix ? this.ctx.pagerMix : { block: 'search_filters_controller', js: { id: 1 } };
+        var pagerMods  = this.ctx.pagerMods || {};
+        
+
+        cols.push({
+            elem: 'col',
+            content: [
+                {
+                    block: 'pagination',
+                    mix: pagerMix,
+                    mods: pagerMods
+                }
+            ]
+        });
+
+        if (buttons) { 
+            cols.push({
+                elem: 'col',
+                mods: {right: true},
+                content: {
+                    block : 'dropdown',
+                    mods : { switcher : 'button', theme : 'islands', size : 'm' },
+                    switcher : {
+                        block: 'button',
+                        mods : { theme : 'islands', size : 'm'},
+                        text: 'Подписаться на новые обновления',
+                        icon: {
+                            block : 'icon',
+                            mods : { action : 'mail' }
+                        }
+                    },
+                    popup : {
+                        block: 'email_subscribe'
+                    }
+                }
+            });
+        }   
+
+        return { block: 'controls_row', content: cols };
+    })
+
+);

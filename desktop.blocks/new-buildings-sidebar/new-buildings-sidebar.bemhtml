@@ -1,0 +1,156 @@
+block('new-buildings-sidebar')(
+    content()(function () {
+        var content = [];
+
+        content.push({
+            block: 'sidebar-image',
+            url: '#',
+            image: '../../img/bn/250x130/bn_1.png'
+        });
+
+        content.push({
+            block: 'sidebar-text-list',
+            items: [
+                {
+                    url: '#',
+                    icon: 'icon_sidebar_bricks',
+                    iconSize: 'l',
+                    text: 'Плюсы и минусы домов СФК. На что обращать внимание при покупке.'
+                },
+                {
+                    url: '#',
+                    icon: 'icon_sidebar_ecology',
+                    iconSize: 'l',
+                    text: 'Экологическая ситуация на Васильевском острове.'
+                },
+                {
+                    url: '#',
+                    icon: 'icon_sidebar_user-plus',
+                    iconSize: 'l',
+                    text: 'Что такое встречка.<br> Успешные истории.'
+                }
+            ]
+        });
+
+        content.push({
+            block: 'sidebar-thumbs-list',
+            items: [
+                {
+                    url: '#',
+                    image: '../../img/thumbs/120x90/video_1.png',
+                    text: 'Объезд новых ЖК Приморского района (май 2015)',
+                    video: true
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/120x90/video_2.png',
+                    text: 'Интервью руководства ЛСР о ситуации с новостройками в СПб',
+                    video: true
+                }
+            ]
+        });
+
+        content.push({
+            block: 'sidebar-smart-list',
+            items: [
+                {
+                    url: '#',
+                    image: '../../img/thumbs/240x80/img_1.png',
+                    text: 'Жилой комплекс Duderhof Club, элитные квартиры на Петергофском шоссе',
+                    help: '1 982 предложения'
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/240x80/img_2.png',
+                    text: 'ЖК «Три ветра» — квартиры бизнес-класса в 10 минутах от Лахта-Центра',
+                    help: '672 предложения'
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/240x80/img_3.png',
+                    text: 'Хотите квартиру бизнес-класса за 4млн? ЖК «Александровский» в Пушкине',
+                    help: '917 предложений'
+                }
+            ]
+        });
+
+        content.push({
+            block: 'sidebar-image',
+            url: '#',
+            image: '../../img/bn/250x250/bn_1.png'
+        });
+
+        content.push({
+            block: 'sidebar-smart-list',
+            items: [
+                {
+                    url: '#',
+                    image: '../../img/thumbs/240x80/img_1.png',
+                    text: 'Квартиры с балконом до 3 млн. рублей в ЖК Адмиралтейского района',
+                    help: '2 291 объявление'
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/240x80/img_2.png',
+                    text: '1 и 2-ух комнатные квартиры в ЖК для молодой семьи рядом с парком',
+                    help: '1 147 объявлений'
+                }
+            ]
+        });
+
+        content.push({
+            block: 'sidebar-thumbs-list',
+            items: [
+                {
+                    url: '#',
+                    image: '../../img/thumbs/120x100/img_1.png',
+                    text: 'Квартира с видом на Неву! 7-я линия, 51 м2, высокие потолки, с мебелью, 7 500 000'
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/120x100/img_2.png',
+                    text: 'Видовая квартира на Среднем проспекте! Окна в пол, новый ремонт, 12 млн.'
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/120x100/img_3.png',
+                    text: '2-ух комнатая квартира на 11-й линии. Высокие потолки, 6 250 000'
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/120x100/img_4.png',
+                    text: 'Прекрасная однушка у м. Василеостровская. Новый ремонт 8,5 млн., не жили'
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/120x100/img_5.png',
+                    text: 'Элитная 3-х комнатная квартира на набережной Невы со скидкой, 18 900 000'
+                },
+                {
+                    url: '#',
+                    image: '../../img/thumbs/120x100/img_6.png',
+                    text: '2-х комнатная квартира с отличным ремонтом в ЖК «Ласточкино гнездо»'
+                }
+            ]
+        });
+
+        content.push({
+            block: 'sidebar-text-list',
+            items: [
+                {
+                    url: '#',
+                    title: 'ГЛАВНОЕ',
+                    text: 'Рынок жилья Петербурга. Цены 5 – 11 июня'
+                },
+                {
+                    url: '#',
+                    title: 'НОВОСТИ',
+                    text: 'Обновленный Генплан: каким инвестпроектам повезло'
+                }
+            ]
+        });
+
+        return content;
+    })
+);
+

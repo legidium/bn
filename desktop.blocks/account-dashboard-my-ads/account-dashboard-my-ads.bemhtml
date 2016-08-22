@@ -1,0 +1,44 @@
+block('account-dashboard-my-ads')(
+    content()(function() {
+        var content = [];
+        var items = [];
+        var banner = this.ctx.banner || false;
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({ elem: 'item', mods: item.mods, content: item });
+        });
+
+        content.push({ elem: 'title', content: 'Мои объявления' });
+        content.push(
+            banner
+                ? {
+                    elem: 'items', mods: { row: true }, content: [
+                        { elem: 'col', mods: { list: true }, content: items },
+                        { elem: 'col', mods: { banner: true }, content: { elem: 'banner', content: banner } }
+                    ]
+                  }
+                : { elem: 'items', content: items }
+        );
+
+        return content;
+    }),
+
+    elem('item')(
+        content()(function() {
+            return [
+                applyNext().title, ' ',
+                { tag: 'span', elem: 'value', content: applyNext().val }
+            ];
+        })
+    ),
+
+    elem('banner')(
+        content()(function() {
+            return {
+                block: 'link',
+                url: applyNext().url || '#',
+                content: { tag: 'img', attrs: { src: applyNext().image || '', alt: '' } }
+            };
+        })
+    )
+);

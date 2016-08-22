@@ -1,0 +1,8 @@
+block('new-buildings-list-search-popup')(
+    js()(true),
+    content()(function() {
+        return [
+
+        ]
+    })
+);

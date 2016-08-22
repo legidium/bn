@@ -1,0 +1,34 @@
+.account-balance-info-details {
+    margin-top: 8px;
+}
+.account-balance-info-details__title {
+    font-size: 15px;
+    font-weight: bold;
+}
+.account-balance-info-details__items {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.account-balance-info-details__item {
+    display: table-row;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.account-balance-info-details__item_selected {
+    color: #f5a623;
+}
+.account-balance-info-details__item_italic {
+    color: #afafaf;
+    font-style: italic;
+}
+.account-balance-info-details__col {
+    display: table-cell;
+    padding: 0 0 8px;
+}
+.account-balance-info-details__col_right {
+    text-align: right;
+}
+.account-balance-info-details__help {
+    color: #afafaf;
+}

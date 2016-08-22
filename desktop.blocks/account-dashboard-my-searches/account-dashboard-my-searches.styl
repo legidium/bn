@@ -1,0 +1,57 @@
+border-box()
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+
+.account-dashboard-my-searches
+    &_hidden
+        display none
+        
+    &__title
+        font-size 26px
+        line-height 1.3
+    
+    &__item
+        border-bottom 1px solid #e5e5e5
+        
+        &:last-child
+            border-bottom none
+    &__more
+        padding 10px 0
+
+    &__row
+        display table
+        width 100%
+        border-box()
+        
+    &__cell
+        display table-cell
+        padding 20px 10px
+        vertical-align top
+        
+        &:first-child
+            padding-left 0
+            
+        &:last-child
+            padding-right 0
+        
+        &_title
+            width auto
+        
+        &_date
+            text-align right
+            width 150px
+
+    &__item-title
+        font-size 15px
+        line-height 1.3
+        margin-bottom 5px
+    
+    &__item-description
+        color #afafaf
+        font-size 13px
+        line-height 1.3
+    
+    &__item-date
+        font-size 13px
+        line-height 1.3

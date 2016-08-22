@@ -1,0 +1,52 @@
+.nod-right {
+	margin: 0 20px;
+	padding: 18px 0;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+.nod-right:last-child {
+	border-bottom: none;
+}
+
+.nod-right__price,
+.nod-right__title,
+.nod-right__desc,
+.nod-right__text {
+	margin-bottom: 4px;
+}
+
+.nod-right__price {
+	font-size: 30px;
+}
+
+.nod-right__title,
+.nod-right__phone {
+	font-size: 18px;
+}
+
+.nod-right__phone {
+	margin-top: 16px;
+}
+
+.nod-right__desc,
+.nod-right__text {
+	font-size: 11px;
+}
+
+.nod-right__desc {
+	color: #bbb;
+}
+
+.nod-right__housing-complex {
+	margin: 30px 0 16px;
+}
+
+.nod-right .button { margin-top: 20px; }
+
+.nod-right__phone-item .icon {
+	margin: 2px -8px 2px 13px;
+}
+
+.nod-right__text .icon {
+	margin: 2px 0 2px 5px;
+}
+

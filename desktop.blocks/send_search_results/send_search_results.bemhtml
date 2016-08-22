@@ -1,0 +1,66 @@
+block('send_search_results')(
+
+	content()(function(){
+		return [
+			{
+				elem: 'row',
+				content: {
+					block: 'radio-group',
+					mods : { theme : 'islands', size : 'm', type : 'button' },
+				    name : 'radio-islands',
+				    options : [
+				        { val : 1, text : 'Эту страницу' },
+				        { val : 2, text : 'Все результаты' }
+				    ]
+				},
+			},
+			{
+				elem: 'row',
+				content: {
+					block : 'checkbox',
+				    mods : { theme : 'islands', size : 'm', checked : true },
+				    name: 'name1',
+				    val : 'val_1',
+				    text : 'Без контактов продавца'
+				}
+			},
+			{
+				elem: 'row',
+				mix: {block: 'clearfix'},
+				content: {
+					block : 'input',
+					attrs: {style: 'float: none; width: 100%;'},
+				    mods : { theme : 'islands', size : 'm', width : 'available' },
+				    name: 'name12',
+				    placeholder : 'Email получателя'
+				}
+			},
+			{
+				elem: 'row',
+				content: {
+				    block : 'textarea',
+				    attrs: {rows: 5},
+				    mods : { theme : 'islands', size : 'm', width : 'available' },
+				    placeholder : 'Комментарий для получателя'
+				}
+			},
+			{
+				elem: 'row',
+				content: [
+					{
+						block: 'button',
+						mods : { theme : 'islands', size : 'm'},
+						text: 'Отправить'
+					},
+					{
+						block: 'link',
+						attrs: {href: '#', style: 'margin-left: 10px;'},
+						mods: {font: '11'},
+                        content: 'отмена'
+					}
+				]
+			}
+		];
+	})
+
+);

@@ -1,0 +1,27 @@
+block('sidebar-smart-list')(
+    content()(function() {
+        var items = [];
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({ elem: 'item', content: item });
+        });
+
+        return { elem: 'items', content: items };
+    }),
+
+    elem('item')(
+        content()(function() {
+            var content = [];
+            var url = applyNext().url || '';
+            var text = applyNext().text || '';
+            var help = applyNext().help || '';
+            var image = applyNext().image || '';
+
+            content.push(image ? { elem: 'image', tag: 'img', attrs: { src: image, alt: '' } } : '');
+            content.push(text ? { elem: 'text', tag: 'span', content: text } : '');
+            content.push(help ? { elem: 'help', tag: 'span', content: help } : '');
+
+            return url ? { elem: 'link', tag: 'a', attrs: { href: url }, content: content } : content;
+        })
+    )
+)

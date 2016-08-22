@@ -1,0 +1,27 @@
+block('successful-interaction-popup')(
+	content()(function() {
+		return [
+			{
+				elem: 'header',
+				content: 'Объявление отправлено'
+			},
+			{
+				elem: 'note',
+				content: 'Пожалуйста, не отправляйте письма тем, кто не желает их получать.'
+			},
+			{
+				block: 'button',
+				mods : { theme : 'islands', size : 'm'},
+				text: 'ОК'
+			},
+			{
+				elem: 'close',
+				tag: 'span',
+				content: {
+					block: 'icon',
+					mods: {action: 'remove'}
+				}
+			}
+		]
+	})
+);

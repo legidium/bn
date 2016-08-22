@@ -1,0 +1,96 @@
+block('my_saved_searches')(
+
+	content()(function(){
+		return {
+
+			block: 'menu',
+			mods : { theme : 'islands', size : 'm', mode : 'check' },
+			attrs: { style: 'width: 800px;' },
+			content: [
+				{
+					block : 'menu-item',
+					mods: {vertical_check: 'top', more_padding: true},
+		            content : [
+		            	{
+		            		block: 'clearfix',
+		            		content: [
+		            			{
+				            		block: 'plain_text',
+				            		mods: {size: '11'},
+				            		mix: {block: 'pull_left'},
+				            		content: 'Купить однокомнатную, двухкомнатную, многокомнатную квартиру в Санкт-Петербурге'
+				            	},
+				            	{
+				            		block: 'plain_text',
+				            		mods: {size: '11'},
+				            		mix: {block: 'pull_right'},
+				            		content: '29 июня, 17:03'
+				            	}
+		            		]
+		            	},
+		            	{
+		            		block: 'help',
+		            		content: 'От 2 500 000 до 23 000 000 Р, вторичка, новостройка, Адмиралтейский, Калининский, жилая площадь от 32, не первый,<br> не последний этаж, в доме до 9 этажей, за 2 недели.'
+		            	}
+		            ]
+				},
+				{
+					block : 'menu-item',
+					mods: {vertical_check: 'top', more_padding: true},
+		            content : [
+		            	{
+		            		block: 'clearfix',
+		            		content: [
+		            			{
+				            		block: 'plain_text',
+				            		mods: {size: '11'},
+				            		mix: {block: 'pull_left'},
+				            		content: 'Купить студию, однокомнатнут квартиру в Санкт-Петербурге'
+				            	},
+				            	{
+				            		block: 'plain_text',
+				            		mods: {size: '11'},
+				            		mix: {block: 'pull_right'},
+				            		content: '29 июня, 17:03'
+				            	}
+		            		]
+		            	},
+		            	{
+		            		block: 'help',
+		            		content: 'От 200 000 до 3 000 000 ₽, новостройка, Приморский район, жилая площадь от 24, не первый этаж, санузел совмещенный, за все время.'
+		            	}
+		            ]
+				},
+				{
+					block : 'menu-item',
+					mods: {vertical_check: 'top', more_padding: true},
+		            content : [
+		            	{
+		            		block: 'clearfix',
+		            		content: [
+		            			{
+				            		block: 'plain_text',
+				            		mods: {size: '11'},
+				            		mix: {block: 'pull_left'},
+				            		content: 'Купить комнату от 18 до 25 метров в Санкт-Петербурге'
+				            	},
+				            	{
+				            		block: 'plain_text',
+				            		mods: {size: '11'},
+				            		mix: {block: 'pull_right'},
+				            		content: '12 июня, 24:03'
+				            	}
+		            		]
+		            	},
+		            	{
+		            		block: 'help',
+		            		content: 'От 1 500 000 до 2 500 000 ₽, вторичка, жилая площадь от 18 до 25 метров, не первый, не последний этаж, санузел раздельный,<br>с ремонтом, только частные оъявления, за все время, только с фото.'
+		            	}
+		            ]
+				}
+			]
+
+		};
+	})
+
+);

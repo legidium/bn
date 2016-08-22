@@ -1,0 +1,25 @@
+.not-authorized-popup {
+    width: 232px;
+    position: relative;
+}
+
+.not-authorized-popup__header {
+    font-size: 11px;
+    padding: 10px;
+}
+
+.not-authorized-popup__controls {
+    margin-bottom: 10px;
+}
+
+.not-authorized-popup__footer {
+    font-size: 11px;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+}
+
+.not-authorized-popup__close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}

@@ -1,0 +1,38 @@
+block('right-news')(
+    content()(function() {
+        return (this.ctx.items || []).map(function(option, i) {
+            return [
+                {
+                    tag: 'a',
+                    elem: 'wrapper',
+                    mix: { block: 'link' },
+                    attrs: { href: option.href },
+                    content: [
+                        {
+                            elem: 'item',
+                            content: [
+                                {
+                                    elem: 'image-place',
+                                    mods: option.mods,
+                                    content: {
+                                        block: 'image',
+                                        url: option.url,
+                                        alt: option.alt
+                                    }
+                                },
+                                {
+                                    elem: 'text',
+                                    content: option.text
+                                },
+                                {
+                                    elem: 'desc',
+                                    content: option.desc
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ];
+        });
+    })
+);

@@ -1,0 +1,38 @@
+block('pager')(
+    js()(true),
+	content()(function(){
+		return [
+            {
+                elem: 'line',
+                mix: { block: 'clearfix' },
+                content: [
+                    {
+                        elem: 'col',
+                        content: {
+                            block: 'button',
+                            mix: { block: this.block, elem: 'next' },
+                            mods: { theme: 'islands', size: 'l' },
+                            text: 'Показать еще'
+                        }
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'text',
+                                mix: { block: this.block, elem: 'status' },
+                                mods: { font: 's', height: 'l' },
+                                content: 'Показано 0 из 0'
+                            }
+                        ]
+                    },
+                    {
+                        block: 'spin',
+                        mods: { theme: 'islands', size : 'm' },
+                        mix: { block: this.block, elem: 'spin' }
+                    }
+                ]
+            }
+		];
+	})
+);

@@ -1,0 +1,16 @@
+.content-wrapper {
+	padding: 1px 0;
+	border-width: 0 1px;
+    border-style: solid;
+    border-color: #e2e2e2;
+}
+
+.content-wrapper_dark {
+	background-color: #fafafa;
+}
+
+.content-wrapper + .footer { border-top: 1px solid #e2e2e2; }
+
+.content-wrapper_dark + .footer {
+	background-color: #fafafa;
+}

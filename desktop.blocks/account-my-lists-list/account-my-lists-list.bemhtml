@@ -1,0 +1,52 @@
+block('account-my-lists-list')(
+    content()(function() {
+        var ctx = this.ctx;
+        var content = [];
+
+        content.push({
+            elem: 'header',
+            content: [
+                {
+                    elem: 'toolbar',
+                    content: { block: 'account-my-lists-list-toolbar' }
+                }
+            ]
+        });
+        content.push({
+            elem: 'main',
+            content: ctx.items
+                ? { elem: 'items', mods: { loadable: true }, content: ctx.items }
+                : {}
+        });
+        content.push({
+            elem: 'footer',
+            content: [
+                {
+                    elem: 'pager',
+                    mods: { loadable: true },
+                    content: { block: 'account-my-lists-list-pager' }
+                }
+            ]
+        });
+
+
+        return content;
+    }),
+
+    elem('items')(
+        content()(function() {
+            var content = [];
+
+            (applyNext() || []).map(function(item) {
+                content.push({
+                    block: 'account-my-lists-list-item',
+                    js: item.link ? { link: item.link } : {},
+                    mods: item.mods,
+                    content: item
+                });
+            });
+
+            return content;
+        })
+    )
+)

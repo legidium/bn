@@ -1,0 +1,18 @@
+block('favourite-star')(
+    content()(function() {
+        var id = this.ctx.id ? this.ctx.id : 'favourite';
+
+        return [
+            {
+                elem: 'input',
+                tag: 'input',
+                attrs: { type: 'checkbox', id: id, checked: this.ctx.checked }
+            },
+            {
+                elem: 'label',
+                tag: 'label',
+                attrs: { for: id }
+            }
+        ];
+    })
+);

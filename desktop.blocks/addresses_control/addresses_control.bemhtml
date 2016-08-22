@@ -1,0 +1,39 @@
+block('addresses_control')(
+	js()(true),
+	content()(function(){
+
+		return [
+			{
+				tag: 'div',
+				attrs: {style: 'margin-left: 30px; margin-bottom: 20px; overflow: hidden;'},
+				content: [
+					{
+        				block: 'control-group',
+        				content: [
+        					{
+        						block: 'address_autocomplete',
+        						attrs: { style: 'width: 180px;'},
+        						mods: { type: 'bn' },
+        						js: { url: '/desktop.blocks/address_autocomplete/test.json' }
+        					},
+        					{
+        						block: 'input',
+        						mix: { block: 'addresses_control', elem: 'dom_number' },
+        						attrs: { style: 'width: 115px;'},
+        						mods: {theme: 'islands', size: 'xl', nocorners: true},
+        						placeholder: 'Дома/диапазон'
+        					}
+        				]
+        			}
+				]
+			},
+			{
+				block: 'address_list',
+				attrs: {style: 'margin-left: 30px;'},
+				content: []
+			}
+		];
+
+	})
+
+);

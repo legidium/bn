@@ -1,0 +1,66 @@
+block('select').elem('menu')(
+    def()(function() {
+        var mods = this.mods,
+            optionToMenuItem = function(option) {
+                var res = {
+                        block : 'menu-item',
+                        mods : { disabled : mods.disabled || option.disabled },
+                        val : option.val,
+                        js : { checkedText : option.checkedText },
+                        content : option.text
+                    };
+
+                if(option.icon) {
+                    res.js.text = option.text;
+                    res.content = [
+                        option.icon,
+                        res.content
+                    ];
+                }
+
+                console.log(option);
+
+                if(option.block == 'help'){
+                    return {
+                        elem: 'padding',
+                        content: {
+                            block: 'help',
+                            content: option.text
+                        }
+                    }
+                }
+
+                return res;
+            };
+
+        applyCtx({
+            block : 'menu',
+            mix : { block : this.block, elem : this.elem },
+            mods : {
+                size : mods.size,
+                theme : mods.theme,
+                disabled : mods.disabled,
+                mode : mods.mode
+            },
+            val : this._select.val,
+            attrs : { tabindex : undefined },
+            content : this._select.options.map(function(optionOrGroup) {
+                var resurl = optionToMenuItem(optionOrGroup);
+
+                if(optionOrGroup.group){
+                    var mods = optionOrGroup.mods || {};
+                    mods['has-title'] = !!optionOrGroup.title;
+
+                    resurl = {
+                        elem : 'group',
+                        mods : mods,
+                        title : optionOrGroup.title,
+                        content : optionOrGroup.group.map(optionToMenuItem)
+                    };
+                }
+
+                return resurl;
+            })
+        });
+    })
+);

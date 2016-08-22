@@ -1,0 +1,169 @@
+.feed-ad {
+	position: relative;
+	width: 600px;
+	margin: 0 auto 30px;
+}
+
+.feed-ad_first {
+	padding-top: 50px;
+}
+
+.feed-ad__title,
+.feed-ad__title-desc {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.feed-ad__title { font-size: 26px; }
+
+.feed-ad__title-desc {
+	font-size: 11px;
+	color: #bbb;
+}
+
+.feed-ad__ad-type-switcher {
+	margin-bottom: 25px;
+}
+
+.feed-ad .radio-group {
+	margin-right: 20px;
+}
+
+.feed-ad__vertical-form .feed-ad__vertical-form__label {
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.feed-ad__vertical-form .feed-ad__field { margin-bottom: 4px; }
+
+.feed-ad__vertical-form .feed-ad__field .input {
+	width: 100%;
+	float: none;
+}
+
+.input_font_bold.input_theme_islands .input__control { font-weight: 600; }
+
+.feed-ad__desc {
+	font-size: 11px;
+	color: #bbb;
+	margin-bottom: 20px;
+}
+
+.feed-ad .search_map {
+	margin: 0 -30px -30px;
+	height: 275px;
+	width: auto;
+}
+
+.feed-ad .search_map .map { height: 275px; }
+
+.horizontal-form__living-space__label {
+	width: 33.33%;
+	float: left;
+	font-size: 11px;
+}
+
+.horizontal-form__living-space__label:nth-child(1) { text-align: left; }
+.horizontal-form__living-space__label:nth-child(2) { text-align: center; }
+.horizontal-form__living-space__label:nth-child(3) { text-align: right; }
+
+.horizontal-form__living-space__label .input {
+	width: 70px;
+	float: none !important;
+	margin: 0 6px;
+}
+
+.feed-ad__text {
+	font-size: 13px;
+	margin: 0 0 5px;
+}
+
+.cl_grey {
+	color: #bbb;
+}
+
+.feed-ad__buttons {
+	margin-top: 25px;
+}
+
+.feed-ad__buttons .button,
+.feed-ad__buttons .link {
+	margin-right: 15px;
+	font-size: 11px;
+}
+
+.feed-ad .pull_left {
+	position: absolute;
+	left: 0;
+	top: 2px;
+}
+
+.feed-ad_last {
+	text-align: center;
+}
+
+.feed-ad_last .button {
+	margin-bottom: 20px;
+}
+
+.feed-ad_options .feed-ad__title {
+	margin-bottom: 30px;
+}
+
+.feed-ad_options .checkbox_theme_islands.checkbox.checkbox_size_m {
+	display: inline-block;
+	margin-bottom: 25px;
+	font-size: 13px;
+}
+
+.feed-ad_options.feed-ad_first {
+	padding: 0;
+	margin-top: 50px;
+}
+
+.feed-ad_options .dropdown_another-methods {
+	margin-bottom: 20px;
+}
+
+.feed-ad__total-price {
+	font-size: 18px;
+}
+
+.feed-ad__total-price-desc {
+	color: #bbb;
+	font-size: 11px;
+}
+
+.feed-ad__content{
+	position: relative;
+}
+
+.feed-ad__layout{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #a5a6a6;
+    opacity: 0.3;
+    display: none;
+}
+
+.feed-ad_inactive .feed-ad__layout{
+	display: block;
+}
+
+.mb_30 { margin-bottom: 30px; }
+
+.select .button_theme_islands.button.button_checked:before {
+	background-color: #fff;
+}
+
+.horizontal-form__right-hint_vertical_middle {
+	padding-top: 10px;
+}
+
+.menu_theme_islands .menu-item_theme_islands.menu-item_checked {
+	background-position: 10px 50%;
+}

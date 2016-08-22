@@ -1,0 +1,238 @@
+clearfix()
+  &:before,
+  &:after
+    content " "
+    display table
+    
+  &:after
+    clear both
+    
+border-box()
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+
+text-nowrap()
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    
+.account-dashboard-my-list
+    &__control
+        margin-right 20px !important
+        
+        &:last-child
+            margin-right 0 !important
+
+    &__toolbar
+        display block
+        background #f9f9f9
+        padding 0 20px 0 30px
+        margin-bottom 10px
+        
+        &-line
+            margin-left -10px
+            margin-right -10px
+            clearfix()
+            
+        &-left
+            float left
+            padding-left 10px
+            padding-right 10px
+            border-box()
+            
+        &-right
+            float right
+            padding-left 10px
+            padding-right 10px
+            border-box()
+        
+        .button_theme_islands.button
+            .button__text
+                margin 0 1px
+
+        
+    &__pager
+        padding 30px
+        
+    &__pager-text
+        margin-left 15px
+        
+    &__items
+        display block
+    
+    &__item
+        display table
+        width 100%
+        
+        &_many_images
+            .account-dashboard-my-list__image-holder:before,
+            .account-dashboard-my-list__image-holder:after
+                display block
+        
+        &_selected
+            .account-dashboard-my-list__image-holder
+                border 2px solid #fedb6b
+                
+        &_unpublished
+            .account-dashboard-my-list__cell
+                opacity 0.5
+                
+                &_checkbox, &_tools, &_price
+                    opacity 1
+    
+    &__row
+        position relative
+        border 1px solid transparent
+        margin -1px -1px 0 -1px
+        border-box()
+        
+        &:hover
+            border-color #fedb6b
+            cursor pointer
+            
+            .account-dashboard-my-list__tools-item
+                visibility visible
+            
+        &_heading
+            &:hover
+                border-color transparent
+                cursor default
+                
+            .account-dashboard-my-list__cell
+                color #afafaf
+                font-size 11px
+                line-height 12px
+                font-weight normal
+                padding 5px
+                vertical-align bottom
+                
+                &_checkbox
+                    padding-left 10px
+                    padding-right 5px
+                
+                &_price
+                    background transparent
+                    
+                &_seller
+                    padding-left 10px
+        
+    &__row-inner
+        position relative
+        
+        &:after
+            content ''
+            display block
+            height 0
+            width 100%
+            border-top 1px solid #ececec
+            position absolute
+            z-index -1
+            top 100%
+            clear both
+            
+    &__cell
+        font-size 11px
+        line-height 12px
+        display table-cell
+        vertical-align middle
+        padding: 0 5px
+        border-box()
+        
+        &_checkbox
+            width 29px
+            max-width 29px
+            padding-left 10px
+            padding-right 5px
+        &_image
+            width 55px
+            max-width 55px
+            padding-left 0
+            padding-right 0
+        &_address
+            width 210px
+            max-width 210px
+        &_object, &_s, &_san, &_floor, &_home, &_price
+            width 50px
+            max-width 50px
+        &_seller
+            width 90px
+            max-width 90px
+            padding-left 10px
+        &_phone
+            width 100px
+            max-width 100px
+        &_comment
+            width auto
+            .account-dashboard-my-list__text
+                white-space normal
+        &_tools
+            width 40px
+            max-width 40px
+            text-align center
+        &_price
+            background #fafafa
+            text-align center
+            
+        .checkbox_theme_islands.checkbox .checkbox__box
+            margin 0
+    
+    &__text
+        text-nowrap()
+        
+    &__status-text
+        color #afafaf
+        font-size 10px
+        line-height 11px
+        margin-bottom 7px
+        text-nowrap()
+    
+    &__image-holder
+        background #9b9b9b
+        width 50px
+        height 50px
+        margin 12px 0 8px
+        position relative
+        border-box()
+        
+        &:after,
+        &:before
+            display none
+            content " "
+            position absolute
+            top 0
+            left 0
+    
+        &:before
+            width 48px
+            height 48px
+            background rgb(195, 195, 195)
+            z-index -1
+            top -3px
+            left 50%
+            margin-left -24px
+        
+        &:after 
+            width 46px
+            height 46px
+            background rgb(229, 227, 227)
+            z-index -2
+            top -6px
+            left 50%
+            margin-left -23px
+            
+        img
+            display block
+            width 100%
+            height 100%
+            box-sizing border-box
+    
+    &__tools
+        wid
+    &__tools-item
+        padding 4px 0
+        visibility hidden
+        
+        &_accept
+            visibility visible    
+        

@@ -1,0 +1,35 @@
+block('account-settings-content')(
+    content()(function() {
+        var data = this.ctx.data || {};
+
+        return [
+            {
+                elem: 'header',
+                content: [
+                    {
+                        elem: 'title',
+                        content: 'Настройки'
+                    }
+                ]
+            },
+            {
+                elem: 'main',
+                content: [
+                    {
+                        elem: 'left',
+                        content: [
+                            { elem: 'line', content: { block: 'account-settings-publishing' } },
+                            { elem: 'line', content: { block: 'account-settings-mail' } }
+                        ]
+                    },
+                    {
+                        elem: 'right',
+                        content: [
+                            { elem: 'line', content: { block: 'account-settings-sorting' } }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+);

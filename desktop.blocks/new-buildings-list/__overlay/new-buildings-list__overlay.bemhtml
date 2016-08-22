@@ -1,0 +1,11 @@
+block('new-buildings-list').elem('overlay')(
+    content()(function(){
+        return [
+            {
+                block : 'spin',
+                mix: { block: 'new-buildings-list', elem: 'overlay-spin' },
+                mods : { theme : 'islands', size : 'm', visible : true }
+            }
+        ]
+    })
+)

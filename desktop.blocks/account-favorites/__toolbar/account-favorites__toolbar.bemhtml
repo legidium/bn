@@ -1,0 +1,56 @@
+block('account-favorites').elem('toolbar')(
+    content()(function() {
+        var content = [];
+        var items = [];
+
+        items.push({
+            block: 'button',
+            mods: { theme: 'islands', size: 'm', view: 'plain' },
+            mix: { block: this.block, elem: 'action-save-pdf' },
+            text: 'Сохранить как PDF'
+        });
+
+        items.push({
+            block: 'dropdown',
+            mods: { switcher: 'button', theme: 'islands', size: 'm' },
+            mix: { block: this.block, elem: 'action-send' },
+            switcher: {
+                block: 'link',
+                mods: { theme: 'islands', size: 'm', font: '11'},
+                content: [
+                    { tag: 'span', content: 'Отправить' },
+                    { elem: 'tick', mix: { block: 'icon' } }
+                ]
+            },
+            popup: { block: 'send_search_results', mods: { view: this.mods.view || undefined } }
+        });
+        
+        /*items.push({
+            block: 'dropdown',
+            mods: { switcher: 'button', theme: 'islands', size: 'm' },
+            mix: { block: this.block, elem: 'action-share' },
+            switcher: {
+                block: 'link',
+                mods: { theme: 'islands', size: 'm', font: '11'},
+                content: [
+                    { tag: 'span', content: 'Поделиться' },
+                    { elem: 'tick', mix: { block: 'icon' } }
+                ]
+            },
+            popup: { block: 'share_search_results', mods: { view: this.mods.view || undefined } }
+        });*/
+
+        items.push({
+            block: 'button',
+            mods: { theme: 'islands', size: 'm', view: 'plain' },
+            mix: { block: this.block, elem: 'action-print' },
+            text: 'Распечатать'
+        });               
+                                
+        return {
+            elem: 'toolbar-group',
+            elemMods: { pull: 'right' },
+            content: (items || []).map(function(item) { return { elem: 'toolbar-item', content: item }; })
+        };
+    })
+)

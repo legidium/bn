@@ -1,0 +1,33 @@
+.multi-phones {
+	position: relative;
+}
+
+.multi-phones__item {
+	margin-bottom: 20px;
+}
+
+
+
+.multi-phones__item .control-group{
+	margin-left: 145px;
+	padding-top: 5px;
+}
+
+
+
+
+
+
+.multi-phones__add {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: #bbb;
+	background: transparent;
+	font-size: 11px;
+	cursor: pointer;
+	outline: none;
+}

@@ -1,0 +1,94 @@
+@require "../../design/stylus/index"
+
+font-sizes()
+    &_size_xs
+        font-size $font_size_xs
+    &_size_s
+        font-size $font_size_s
+    &_size_m
+        font-size $font_size_m
+    &_size_l
+        font-size $font_size_l
+    &_size_xl
+        font-size $font_size_xl
+    &_size_xxl
+        font-size $font_size_xxl
+        
+line-heights()
+    &_height_xs
+        line-height $text_line_height_xs
+    &_height_s
+        line-height $text_line_height_s
+    &_height_m
+        line-height $text_line_height_m
+    &_height_l
+        line-height $text_line_height_l
+    &_height_xl
+        line-height $text_line_height_xl
+    &_height_xxl
+        line-height $text_line_height_xxl
+    
+.post
+    font-size $font_size_m
+    line-height $text_line_height_m
+    font-sizes()
+    line-heights()
+    
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6,
+    &__title_h1,
+    &__title_h2,
+    &__title_h3,
+    &__title_h4,
+    &__title_h5,
+    &__title_h6
+        line-height $heading_line_height
+        margin 0 0 $margin_s
+        
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    &__title_h1,
+    &__title_h2,
+    &__title_h3
+        font-weight normal
+    
+    h1, .h1,
+    &__title_h1
+        font-size $font_size_h1
+    h2, .h2,
+    &__title_h2
+        font-size $font_size_h2
+    h3, .h3,
+    &__title_h3
+        font-size $font_size_h3
+    h4, .h4,
+    &__title_h4
+        font-size $font_size_h4
+    h5, .h5,
+    &__title_h5
+        font-size $font_size_h5
+    h6, .h6,
+    &__title_h6
+        font-size $font_size_h6
+        
+    p, &__text
+        margin 0 0 $margin_m
+        
+        &_light
+            color $text_color_light
+            
+    a, &__link
+        color $link_text_color
+        text-decoration none
+        
+        &:hover, &:focus
+            text-decoration underline
+
+    &__text
+        font-sizes()
+        line-heights()

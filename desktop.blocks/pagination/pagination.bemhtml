@@ -1,0 +1,87 @@
+block('pagination')(
+    js()(true),
+	content()(function(){
+		return [
+            {
+                elem: 'line',
+                mix: { block: 'clearfix' },
+                content: [
+                    {
+                        elem: 'col',
+                        content: {
+                            block: 'text',
+                            mods: { font: 'm', height: 'l' },
+                            content: 'Страницы'
+                        }
+                    },
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'control-group',
+                                mix: { block: 'pagination', elem: 'pages' },
+                                content: [
+                                    {
+                                        js: { page: 1 },
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'l', type: 'link' },
+                                        attrs: { href: '/' },
+                                        text: 'Первая'
+                                    },
+                                    {
+                                        js: { page: 2 },
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'l', type: 'link' },
+                                        attrs: { href: '/' },
+                                        text: '2'
+                                    },
+                                    {
+                                        js: { page: 3 },
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'l', type: 'link' },
+                                        attrs: { href: '/' },
+                                        text: '3'
+                                    },
+                                    {
+                                        js: { page: 4 },
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'l', type: 'link', checked: true },
+                                        attrs: { href: '/' },
+                                        text: '4'
+                                    },
+                                    {
+                                        js: { page: 5 },
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'l', type: 'link' },
+                                        attrs: { href: '/' },
+                                        text: '5'
+                                    },
+                                    {
+                                        js: { page: 6 },
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'l', type: 'link' },
+                                        attrs: { href: '/' },
+                                        text: '6'
+                                    },
+                                    {
+                                        js: { page: 7 },
+                                        block: 'button',
+                                        mods: { theme: 'islands', size: 'l', type: 'link' },
+                                        attrs: { href: '/' },
+                                        text: 'Следующая'
+                                    }
+                                ]
+                            },
+                            {
+                                block: 'text',
+                                mix: { block: 'pagination', elem: 'status' },
+                                mods: { font: 's', height: 'l' },
+                                content: 'Показано 50 из 1231'
+                            }
+                        ]
+                    }
+                ]
+            }
+		];
+	})
+);

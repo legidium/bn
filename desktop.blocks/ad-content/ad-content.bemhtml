@@ -1,0 +1,84 @@
+block('ad-content')(
+    content()(function() {
+        var ctx = this.ctx;
+
+        return [
+            {
+                elem: 'title',
+                content: ctx.title,
+            },
+            {
+                elem: 'address',
+                content: ctx.address
+            },
+            {
+                elem: 'controls',
+                mix: { block: 'clearfix' },
+                content: [
+                    {
+                        block: 'favourite-star'
+                    },
+                    {
+                        block: 'button',
+                        icon: {
+                            block : 'icon',
+                            mods : { action : 'plus' }
+                        }
+                    },
+                    {
+                        elem: 'comment-block-toggle',
+                        tag: 'input',
+                        attrs: { type: 'checkbox', id: 'comment-block' }
+                    },
+                    {
+                        block: 'button',
+                        tag: 'label',
+                        attrs: { for: 'comment-block' },
+                        icon: {
+                            block : 'icon',
+                            mods : { action : 'comments' }
+                        }
+                    },
+                    {
+                        elem: 'comment-block',
+                        content: [
+                            {
+                                block: 'textarea'
+                            },
+                            {
+                                block: 'button',
+                                mods : { theme : 'islands', size : 'm', gray: true },
+                                text: 'Сохранить'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'block',
+                mix: { block: 'clearfix' },
+                content: [ 
+                    {
+                        elem: 'left',
+                        content: ctx.left_content
+                    },
+                    {
+                        elem: 'right',
+                        content: ctx.right_content
+                    }
+                ]
+            },
+            {
+                block: 'page-interaction'
+            },
+            {
+                elem: 'ban',
+                content: {
+                    block: 'banner',
+                    href: '#',
+                    url: '../../img/ad-content__ban.jpg'
+                }
+            }
+        ];
+    })
+);

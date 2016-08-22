@@ -1,0 +1,34 @@
+block('new-buildings-map').elem('toolbar')(
+    js()(true),
+    mix()([{ block: 'clearfix' }]),
+    content()(function() {
+        return [
+            {
+                elem: 'pull-left',
+                content: [
+                    {
+                        block: 'input',
+                        mix: { block: 'new-buildings-map', elem: 'search' },
+                        mods: { theme: 'islands', size: 'xl', 'has-clear' : true, inline: true, nocorners: true },
+                        placeholder: 'Невский пр-кт'
+                    },
+                    {
+                        block: 'new-buildings-select-class'
+                    },
+                ]
+            },
+            {
+                elem: 'pull-right',
+                content: [
+                    {
+                        block: 'button',
+                        mix: { block: 'new-buildings-map', elem: 'close-button' },
+                        mods : { theme : 'islands', size : 'm'},
+                        attrs: { id: 'new-buildings-map-close-map' },
+                        text: 'Закрыть карту'
+                    }
+                ]
+            }
+        ];
+    })
+);

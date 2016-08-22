@@ -1,0 +1,116 @@
+block('account-dashboard-list-toolbar')(
+    content()(function() {
+        return [
+            {
+                elem: 'line',
+                content: [
+                    {
+                        elem: 'left',
+                        content: [
+                            {
+                                block: 'dropdown',
+                                mix: { block: 'account-dashboard-list', elem: 'control' },
+                                mods : { switcher : 'button', theme : 'islands', size : 'm' },
+                                switcher : {
+                                    block : 'link',
+                                    mods : { theme : 'islands', size : 'm', font: '11'},
+                                    content: [
+                                        {
+                                            tag: 'span',
+                                            content: 'Действия с выбранными'
+                                        },
+                                        {
+                                            elem: 'tick',
+                                            mix: { block: 'icon' }
+                                        }
+                                    ]
+                                },
+                                popup : [
+                                    {
+                                        block: 'menu',
+                                        mix: { block: 'account-dashboard-list', elem: 'control' },
+                                        mods : { theme : 'islands', size : 'm', align: 'right' },
+                                        content : [
+                                            { block: 'menu-item', val: 'remove', content: 'Удалить из списка' }                                             ]
+                                    }
+                                ]
+                            },
+                            {
+                                block: 'checkbox',
+                                mix: { block: 'account-dashboard-list', elem: 'control' },
+                                mods: { theme: 'islands', size: 'm' },
+                                attrs: { style: 'line-height: 30px;'},
+                                text: 'Только мои объявления'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'right',
+                        content: [
+                            {
+                                block: 'button',
+                                mix: { block: 'account-dashboard-list', elem: 'control' },
+                                mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                text: 'Сохранить как PDF'
+                            },
+                            {
+                                block: 'dropdown',
+                                mix: { block: 'account-dashboard-list', elem: 'control' },
+                                mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                switcher: {
+                                    block: 'link',
+                                    mods: { theme: 'islands', size: 'm', font: '11'},
+                                    content: [
+                                        {
+                                            tag: 'span',
+                                            content: 'Отправить'
+                                        },
+                                        {
+                                            elem: 'tick',
+                                            mix: { block: 'icon' }
+                                        }
+                                    ]
+                                },
+                                popup: [
+                                    {
+                                        block: 'send_search_results'
+                                    }
+                                ]
+                            },
+                            /*{
+                                block: 'dropdown',
+                                mix: { block: 'account-dashboard-list', elem: 'control' },
+                                mods: { switcher: 'button', theme: 'islands', size: 'm' },
+                                switcher: {
+                                    block: 'link',
+                                    mods: { theme: 'islands', size: 'm', font: '11'},
+                                    content: [
+                                        {
+                                            tag: 'span',
+                                            content: 'Поделиться'
+                                        },
+                                        {
+                                            elem: 'tick',
+                                            mix: { block: 'icon' }
+                                        }
+                                    ]
+                                },
+                                popup: [
+                                    {
+                                        block: 'share_search_results'
+                                    }
+                                ]
+                            },*/
+                            {
+                                block: 'button',
+                                mix: { block: 'account-dashboard-list', elem: 'control' },
+                                mods: { theme: 'islands', size: 'm', view: 'plain' },
+                                text: 'Распечатать'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+)

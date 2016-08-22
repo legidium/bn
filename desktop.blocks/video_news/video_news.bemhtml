@@ -1,0 +1,63 @@
+block('video_news')(
+	content()(function () {
+		return [{
+			elem: 'items',
+			tag: 'ul',
+			content: this.ctx.news.map(function (item) {
+				return {
+					elem: 'item',
+					tag: 'li',
+					content: [{
+						elem: 'header',
+						content: item.header
+					}, {
+						elem: 'sub-header',
+						content: item.text
+					}]
+				};
+			})
+		}, {
+			elem: 'video-wrapper',
+			content: [{
+				elem: 'header',
+				content: 'Видеосюжеты'
+			}, {
+				elem: 'videos',
+				tag: 'ul',
+				content: this.ctx.videos.map(function (video) {
+					return {
+						elem: 'video',
+						tag: 'li',
+						content: [{
+							elem: 'container',
+							content: {
+								block: 'icon',
+								mix: {
+									block: 'video_news',
+									elem: 'icon'
+								},
+								tag: 'i',
+								mods: { action: 'play' }
+							}
+						}, {
+							elem: 'text',
+							tag: 'p',
+							content: video.text
+						}]
+					};
+				})
+			}]
+		}, {
+			elem: 'banner',
+			content: [{
+				elem: 'upper-text',
+				tag: 'span',
+				content: 'Реклама'
+			}, {
+				elem: 'lower-text',
+				tag: 'span',
+				content: '250×250'
+			}]
+		}];
+	})
+);

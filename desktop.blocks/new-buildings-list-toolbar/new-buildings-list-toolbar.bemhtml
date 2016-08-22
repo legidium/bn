@@ -1,0 +1,214 @@
+block('new-buildings-list-toolbar')(
+    js()(true),
+    mix()([{ block: 'clearfix' }]),
+    content()(function() {
+        return [
+            {
+                elem: 'pull-left',
+                content: [
+                    {
+                        elem: 'line',
+                        content: [
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        elem: 'search',
+                                        tag: 'form',
+                                        content: [
+                                            {
+                                                block: 'input',
+                                                attrs: { id: 'new-buildings-list-toolbar-search', style: 'width: 335px;' },
+                                                mods: { theme: 'islands', size: 'xl', width: '335', inline: true, nocorners: true, 'has-clear' : true },
+                                                placeholder: 'Название ЖК, город, район, метро или улица'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'search-help',
+                                        content: [
+                                            {
+                                                block: 'popup',
+                                                attrs: { id: 'new-buildings-list-toolbar-search-popup' },
+                                                mods: { autoclosable : true, theme: 'islands', target : 'anchor' },
+                                                directions: ['bottom-center'],
+                                                content: {
+                                                    block: 'menu',
+                                                    mods : { theme : 'islands', size: 'm' },
+                                                    content : [
+                                                        {
+                                                            elem : 'group',
+                                                            attrs: { style: 'padding: 10px 0;' },
+                                                            content : [
+                                                                {
+                                                                    block : 'menu-item',
+                                                                    cls: 'new-buildings-list-toolbar-search-icon',
+                                                                    content : [
+                                                                        {
+                                                                            tag: 'span',
+                                                                            content: '<b>ЖК Невская плаза</b>'
+                                                                        },
+                                                                        {
+                                                                            block: 'help',
+                                                                            tag: 'span',
+                                                                            mods: { font_13: true },
+                                                                            content:  ', СПб, ул. Евтухова, 14.'
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    block : 'menu-item',
+                                                                    cls: 'new-buildings-list-toolbar-search-icon',
+                                                                    content : [
+                                                                        {
+                                                                            tag: 'span',
+                                                                            content: '<b>ЖК Невская плаза</b>'
+                                                                        },
+                                                                        {
+                                                                            block: 'help',
+                                                                            tag: 'span',
+                                                                            mods: { font_13: true },
+                                                                            content:  ', СПб, ул. Евтухова, 14.'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            elem : 'group',
+                                                            attrs: { style: 'padding: 5px 0;' },
+                                                            content : [
+                                                                {
+                                                                    block : 'menu-item',
+                                                                    content : [
+                                                                        {
+                                                                            tag: 'span',
+                                                                            content: '<b>Нев</b>астополь'
+                                                                        },
+                                                                        {
+                                                                            block: 'help',
+                                                                            tag: 'span',
+                                                                            mods: { font_13: true },
+                                                                            content:  ' 17 ЖК'
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    block : 'menu-item',
+                                                                    content : [
+                                                                        {
+                                                                            tag: 'span',
+                                                                            content: 'СПб, <b>Нев</b>ский район'
+                                                                        },
+                                                                        {
+                                                                            block: 'help',
+                                                                            tag: 'span',
+                                                                            mods: { font_13: true },
+                                                                            content:  ' 7 ЖК'
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    block : 'menu-item',
+                                                                    content : [
+                                                                        {
+                                                                            tag: 'span',
+                                                                            content: 'метро <b>Нев</b>ский пр-кт'
+                                                                        },
+                                                                        {
+                                                                            block: 'help',
+                                                                            tag: 'span',
+                                                                            mods: { font_13: true },
+                                                                            content:  ' 1 ЖК'
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    block : 'menu-item',
+                                                                    content : [
+                                                                        {
+                                                                            tag: 'span',
+                                                                            content: '<b>Нев</b>ский пр-кт'
+                                                                        },
+                                                                        {
+                                                                            block: 'help',
+                                                                            tag: 'span',
+                                                                            mods: { font_13: true },
+                                                                            content:  ' 8 ЖК'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'col',
+                                mods: { width_220: true },
+                                content: [
+                                    {
+                                        elem: 'label',
+                                        content: [
+                                            {
+                                                block: 'select',
+                                                mix: { block: 'new-buildings-list-toolbar', elem: 'select-sort' },
+                                                mods : { mode : 'radio', theme : 'islands', size : 'm', inline: true, liketext: true },
+                                                name : 'select_sort',
+                                                val : 0,
+                                                options : [
+                                                    { val : 0, text : 'по умолчанию' },
+                                                    { val : 1, text : 'по цене от наименьшей' },
+                                                    { val : 2, text : 'по цене от наибольшей' },
+                                                    { val : 4, text : 'по названию от А — я' },
+                                                    { val : 5, text : 'по площади от Я — а' }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'col',
+                                content: [
+                                    {
+                                        elem: 'label',
+                                        content: [
+                                            {
+                                                block: 'new-buildings-select-class'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'pull-right',
+                content: [
+                    {
+                        elem: 'col',
+                        content: [
+                            {
+                                block: 'button',
+                                mods : { theme : 'islands', size : 'm'},
+                                attrs: { id: 'new-buildings-list-toolbar-map' },
+                                text: 'Показать на карте',
+                                icon: {
+                                    block: 'icon',
+                                    mods: { action: 'yamap' }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    })
+);

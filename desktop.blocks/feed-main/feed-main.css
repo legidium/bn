@@ -1,0 +1,51 @@
+.feed-main { background-color: #fff; }
+
+.feed-main__top {
+	padding: 50px;
+}
+
+.feed-main__title {
+	font-size: 26px;
+	line-height: 1;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+.feed-main__text {
+	font-size: 15px;
+	margin-bottom: 30px;
+	line-height: 1.6;
+}
+
+.feed-main__buttons { padding-left: 140px; }
+
+.feed-main__buttons .button,
+.feed-main__buttons .link {
+	margin: 0 15px;
+}
+
+.feed-main__middle {
+	padding: 0 10px;
+	margin-bottom: 30px;
+	background-color: rgba(0, 0, 0, .02);
+}
+
+.feed-main__middle .col-4 {
+	padding: 30px 10px;
+}
+
+.feed-main__middle-title {
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.feed-main__middle-text {
+	font-size: 13px;
+	line-height: 1.9;
+}
+
+.feed-main__bottom {
+	padding-bottom: 25px;
+}
+
+.feed-main__bottom .image { width: 100%; }

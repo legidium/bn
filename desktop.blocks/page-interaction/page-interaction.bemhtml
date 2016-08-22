@@ -1,0 +1,153 @@
+block('page-interaction')(
+	content()([
+			{
+				elem: 'pull_left',
+				content: [
+					{
+						block: 'controls_row',
+						content: [
+							{
+								elem: 'col',
+								content: {
+									block: 'link',
+									attrs: {href: '#'},
+									mods: {font: '11'},
+									content: 'Сохранить в PDF'
+								}
+							},
+							{
+								elem: 'col',
+								content: [
+									{
+										block : 'dropdown',
+										mods : { switcher : 'link', theme : 'islands', size : 'm' },
+										switcher : {
+											block : 'link',
+											mods : { theme : 'islands', size : 'm', font: '11'},
+											content:[
+												{
+													tag: 'span',
+													content: 'Отправить'
+												},
+												{
+													elem: 'tick',
+													mix: {block: 'icon'}
+												}
+											]
+										},
+										popup : {
+											block: 'successful-interaction-popup'
+										}
+									}
+								]
+							},
+							{
+								elem: 'col',
+								content: {
+									block: 'link',
+									attrs: {href: '#'},
+									mods: {font: '11'},
+									content: 'Распечатать'
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				elem: 'pull_right',
+				content: [
+					{
+						elem: 'col',
+						content: [
+							{
+								block : 'dropdown',
+								mods : { switcher : 'button', theme : 'islands', size : 'm' },
+								switcher : {
+									block : 'link',
+									mods : { theme : 'islands', size : 'm', font: '11'},
+									content:[
+										{
+											tag: 'span',
+											content: 'Пожаловаться'
+										},
+										{
+											elem: 'tick',
+											mix: {block: 'icon'}
+										}
+									]
+								},
+								popup : {
+									block: 'menu',
+									mods : { theme : 'islands', size : 'm' },
+									content : [
+										{
+											block : 'menu-item',
+											val : 1,
+											content : [
+												{
+													tag: 'span',
+													content: 'Продано'
+												}
+											]
+										},
+										{
+											block : 'menu-item',
+											val : 2,
+											content : [
+												{
+													tag: 'span',
+													content: 'Не дозвониться'
+												}
+											]
+										},
+										{
+											block : 'menu-item',
+											val : 3,
+											content : [
+												{
+													tag: 'span',
+													content: 'Неверная цена'
+												}
+											]
+										},
+										{
+											block : 'menu-item',
+											val : 4,
+											content : [
+												{
+													tag: 'span',
+													content: 'Неверный адрес'
+												}
+											]
+										},
+										{
+											block : 'menu-item',
+											val : 5,
+											content : [
+												{
+													tag: 'span',
+													content: 'Некорректное изображение'
+												}
+											]
+										},
+										{
+											block : 'menu-item',
+											val : 5,
+											content : [
+												{
+													tag: 'span',
+													content: 'Объект не существует'
+												}
+											]
+										}
+									]
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	)
+);

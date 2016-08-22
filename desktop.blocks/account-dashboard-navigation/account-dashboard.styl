@@ -1,0 +1,76 @@
+$dashboard ?=               1280px
+$panels ?=                  ($dashboard - 20px)
+$left ?=                    270px
+$middle ?=                  auto
+$right ?=                   auto
+
+$left-padding ?=            30px 20px
+$middle-padding ?=          0
+$right-padding ?=           30px 20px
+
+$dashboard-border-width ?=  1px
+$dashboard-border-style ?=  solid
+$dashboard-border-color ?=  #e5e5e5
+
+clearfix()
+  &:before,
+  &:after
+    content " "
+    display table
+    
+  &:after
+    clear both
+
+border-box()
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+
+panels()
+    border-collapse collapse
+    display table
+    border-box()
+    
+panel()
+    border-right $dashboard-border-width $dashboard-border-style $dashboard-border-color
+    display table-cell
+    vertical-align top
+    border-box()
+    
+.account-dashboard
+    width $dashboard
+    margin-left auto
+    margin-right auto
+    border-box()
+    clearfix()
+    
+    &__main
+        border $dashboard-border-width $dashboard-border-style $dashboard-border-color
+        border-top $dashboard-border-width $dashboard-border-style transparent
+        position relative
+        top -1px
+        
+    &__panels
+        width $panels
+        panels()
+    
+    &__left
+        padding $left-padding
+        width $left
+        panel()
+        
+    &__middle
+        padding $middle-padding
+        width $middle
+        panel()
+    
+    &__right
+        padding $right-padding
+        width $right
+        panel()
+        
+    &__item
+        padding: 20px 30px
+        
+        &_nopadding
+            padding 0

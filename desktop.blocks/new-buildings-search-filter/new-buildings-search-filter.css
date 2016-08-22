@@ -1,0 +1,31 @@
+.new-buildings-search-filter__line {
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+
+.new-buildings-search-filter__line:last-child {
+    margin-bottom: 0;
+}
+
+.new-buildings-search-filter__col {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: baseline;
+}
+
+.new-buildings-search-filter__col_right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.new-buildings-search-filter__label {
+    font-size: 11px;
+}
+
+.new-buildings-search-filter__label .control-group {
+    float: none !important;
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 6px;
+}

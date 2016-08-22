@@ -1,0 +1,56 @@
+.account-balance-payments-list__title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.account-balance-payments-list__items {
+    display: table;
+    width: 100%;
+}
+.account-balance-payments-list__items-header,
+.account-balance-payments-list__item {
+    display: table-row;
+    font-size: 15px;
+    line-height: 1.3;
+    
+}
+.account-balance-payments-list__items-header {
+    border-bottom: 1px solid rgb(229, 229, 229);
+    color: #afafaf;
+    vertical-align: bottom;
+}
+.account-balance-payments-list__cell {
+    display: table-cell;
+    padding: 10px 10px 0 0;
+    vertical-align: middle;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.account-balance-payments-list__cell:first-child {
+    padding-left: 0;
+}
+.account-balance-payments-list__cell:last-child {
+    padding-right: 0;
+}
+.account-balance-payments-list__items-header .account-balance-payments-list__cell {
+    padding: 5px 0;
+    vertical-align: bottom;
+}
+.account-balance-payments-list__cell_link a {
+    color: #000;
+    font-size: 15px;
+    line-height: 1.3;
+    text-decoration: none;
+}
+.account-balance-payments-list__cell_link a:hover {
+    color: #afafaf;
+    text-decoration: none;
+}
+.account-balance-payments-list__cell_date { width: 145px; }
+.account-balance-payments-list__cell_sum { width: 125px; }
+.account-balance-payments-list__cell_method { width: 230px; }
+.account-balance-payments-list__cell_status { width: 220px; }
+.account-balance-payments-list__cell_attachments { width: 190px; }
+.account-balance-payments-list__cell_refresh { width: 20px; padding: 0; position: relative; top: 5px; }

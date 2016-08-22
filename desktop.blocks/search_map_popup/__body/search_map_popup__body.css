@@ -1,0 +1,7 @@
+.search_map_popup__body {
+    padding-bottom: 1px;
+    max-height: 324px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

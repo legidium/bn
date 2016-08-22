@@ -1,0 +1,122 @@
+block('b-retail-data')(
+	content()([
+			{
+				elem: 'header',
+				content: 	[
+					{
+                        block: 'b-titles',
+                        type: '2-комнатная квартира',
+                        address: 'ул. Егорова д. 16',
+                        area: '63',
+                        note: 'ЖК «Ласточкино гнездо», м. Ломоносовская, 27 мин. на транспорте',
+                        tradeType: 'Продажа'
+				    },
+                    {
+                        block: 'b-tools',
+                        isAuthorized: false,
+                        addedToFavorites: true,
+                        addedToLists: true,
+                        addedNote: true,
+                        note: 'тут заметка'
+                    }
+                ]
+			},
+
+			{
+				elem: 'left',
+				content: [
+					{ elem: 'parameters' },
+					{ elem: 'description' }
+				]
+			},
+
+			{
+				elem: 'right',
+				content: [
+					{ elem: 'map' },
+					{ elem: 'address' },
+					{ elem: 'image' },
+					{ elem: 'gallery' },
+					{ elem: 'plan' }
+				]
+			}
+		]
+	),
+
+	elem('parameters')(
+		tag()('ul'),
+		content()(function () {
+			var parameters = [
+				{ title: 'Количество комнат', value: 2 },
+				{ title: 'S, общая', value: '63 м²' },
+				{ title: 'S, жилая', value: '42 м²' },
+				{ title: 'S, комнат', value: '23 + 19 м²' },
+				{ title: 'S, кухни', value: '9 м²' },
+				{ title: 'S, комнат', value: '42 м²' },
+				{ title: 'Этаж', value: '4 из 5' },
+				{ title: 'Тип дома', value: 'старый фонд' },
+				{ title: 'Срок сдачи', value: 'IV 2016' },
+				{ title: 'Санузел', value: 'раздельный' },
+				{ title: 'Балкон', value: 'есть' },
+				{ title: 'Пол', value: 'линолеум' },
+				{ title: 'Ремонт', value: 'обычный' },
+				{ title: 'Вид из окон', value: 'во двор и на улицу' },
+				{ title: 'Высота потолков', value: '2,65м' },
+				{ title: 'Лифт', value: 'нет' },
+				{ title: 'Мусоропровод', value: 'нет' },
+				{ title: 'Организованный паркинг', value: 'есть' }
+			];
+
+			return parameters.map(function (parameter) {
+				return {
+					tag: 'li',
+					elem: 'parameter',
+					content: [
+						{
+							elem: 'parameter-title',
+							content: parameter.title
+						},
+						{
+							elem: 'parameter-value',
+							content: parameter.value
+						}
+					]
+				};
+			});
+		})
+	),
+
+	elem('description')(
+		content()(
+			'Квартира в новостройке. Квартира в жилом комплексе "Ласточкино гнездо", который расположен в 15 минутах езды от четырех станций метро : Ломоносовская, Пролетарская, Елизаровская, Улица Дыбенко. На территории комплекса паркинг, несколько школ и детских садов, спортивный комплекс, места для прогулок с детьми. Из окон верхних этажей открывается вид на Неву. Большой выбор планировок. Действуют программы рассрочки и ипотека. Звоните!'
+		)
+	),
+
+	elem('address')(
+		content()(
+			'Октябрьская набережная, 118 (63 м²) м. Ломоносовская, 27 мин. на транспорте'
+		)
+	),
+
+	elem('gallery')(
+		content()(function () {
+			var images = [
+				{ src: '//:0' },
+				{ src: '//:0' },
+				{ src: '//:0' },
+				{ src: '//:0' },
+				{ src: '//:0' },
+				{ src: '//:0' },
+				{ src: '//:0' },
+				{ src: '//:0' },
+				{ src: '//:0' }
+			];
+
+			return images.map(function (image) {
+				return {
+					elem: 'gallery-item'
+				};
+			});
+		})
+	)
+);

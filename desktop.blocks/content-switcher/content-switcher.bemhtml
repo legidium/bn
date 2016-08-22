@@ -1,0 +1,34 @@
+block('content-switcher')(
+	js()(true),
+    content()(function(){
+    	var buttons = [];
+    	var blocks = [];
+
+        (this.ctx.buttons).map(function(item) {
+            buttons.push({ 
+                elem: 'buttons-item',
+                tag: 'li',
+                content: item.text
+            });
+        });
+
+        (this.ctx.blocks).map(function(item) {
+            blocks.push({ 
+                elem: 'block',
+                content: item
+            });
+        });
+
+    	return [
+    		{
+    			elem: 'buttons',
+    			tag: 'ul',
+    			content: buttons
+    		},
+    		{
+    			elem: 'wrapper',
+    			content: blocks
+    		}
+    	];
+    })
+);

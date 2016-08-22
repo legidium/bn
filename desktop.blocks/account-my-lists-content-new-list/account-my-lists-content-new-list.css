@@ -1,0 +1,19 @@
+.account-my-lists-content-new-list {
+    width: 320px;
+}
+.account-my-lists-content-new-list__line {
+    padding: 10px;
+}
+.account-my-lists-content-new-list__line_dark {
+    background: #f0f0f0;
+}
+.account-my-lists-content-new-list__input.input,
+.account-my-lists-content-new-list__input.input_theme_islands.input {
+    float: left;
+    width: 224px;
+}
+.account-my-lists-content-new-list__button.button,
+.account-my-lists-content-new-list__input.input_theme_button.button {
+    float: left;
+    widht: 76px;
+}

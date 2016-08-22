@@ -1,0 +1,8 @@
+.search_map_popup__header {
+    font-size: 13px;
+    line-height: normal;
+    height: 63px;
+    padding: 16px 20px 17px;
+    overflow: hidden;
+    box-sizing: border-box;
+}

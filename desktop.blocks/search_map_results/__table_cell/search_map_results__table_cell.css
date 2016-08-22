@@ -1,0 +1,16 @@
+.search_map_results__table_cell {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 9px;
+    padding-left: 9px;
+    box-sizing: border-box;
+}
+.search_map_results__table_cell:first-child {
+    padding-left: 0;
+}
+.search_results__table_cell_image {
+    width: 55px;
+}
+.search_map_results__table_cell_text {
+
+}

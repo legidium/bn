@@ -1,0 +1,32 @@
+block('account-my-searches-content')(
+    content()(function() {
+        return [
+            {
+                elem: 'header',
+                content: [
+                    {
+                        elem: 'title',
+                        content: [
+                            'Мои сохраненные поиски',
+                            {
+                                block: 'help',
+                                tag: 'span',
+                                mix: { block: 'account-my-searches-content', elem: 'title-help' },
+                                content: '25 последних запросов'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                elem: 'main',
+                content: [
+                    {
+                        block: 'account-my-searches-list',
+                        items: this.ctx.items || []
+                    }
+                ]
+            }
+        ];
+    })
+);

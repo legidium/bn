@@ -1,0 +1,9 @@
+.ad-map { margin-bottom: 26px; }
+.ad-map .search_map, .ad-map .search_map .map { height: 220px; }
+.ad-map .search_map { margin-bottom: 8px; }
+
+.ad-map__address {
+	font-size: 13px;
+}
+
+.ad-map__address .cl_grey { margin-left: 10px; }

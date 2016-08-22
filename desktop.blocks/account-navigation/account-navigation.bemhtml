@@ -1,0 +1,10 @@
+block('account-navigation')(
+    content()(function() {
+        return [
+            {
+                block: 'account-menu',
+                items: this.ctx.items
+            }
+        ];
+    })
+);

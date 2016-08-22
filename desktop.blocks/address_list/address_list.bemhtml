@@ -1,0 +1,18 @@
+block('address_list')(
+	js()(true),
+	mix()([{ elem : 'control' }]),
+
+	def()(function() {
+        var ctx = this.ctx,
+            mods = this.mods,
+            firstItem,
+            checkedItems = [];
+
+        if(ctx.content) {
+ 			if(!this.isArray(ctx.content)) throw Error('menu: content must be an array of the menu items');
+        }
+
+        applyNext();
+    })
+
+);

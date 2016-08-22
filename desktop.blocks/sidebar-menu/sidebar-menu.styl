@@ -1,0 +1,33 @@
+$menu_text_color        ?= $text_color
+$menu_active_text_color ?= $text_color_light
+$menu_hover_text_color  ?= $text_color_light
+
+
+$menu_text_size_m ?= 15px
+$menu_text_size_l ?= 16px
+
+$menu_line_height_m ?= ($menu_text_size_m * 2)
+$menu_line_height_l ?= ($menu_text_size_l * 2)
+
+.sidebar-menu
+    
+    ul&__items
+        list-style none
+        margin 0
+        padding 0
+    
+    &__link
+        color $menu_text_color 
+        font-size $menu_text_size_m
+        line-height $menu_line_height_m
+        text-decoration none
+        
+        &:hover,
+        &:focus
+            color $menu_hover_text_color
+            text-decoration none 
+    
+    &__item
+        &_active
+            .sidebar-menu__link
+                color $menu_active_text_color

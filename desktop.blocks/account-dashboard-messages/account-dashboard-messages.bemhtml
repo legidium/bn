@@ -1,0 +1,15 @@
+block('account-dashboard-messages')(
+    content()(function() {
+        var items = [];
+
+        (this.ctx.items || []).map(function(item) {
+            items.push({ elem: 'item', content: item });
+        });
+
+        return { elem: 'items', content: items };
+    }),
+
+    elem('item')(function() {
+        return applyNext();
+    })
+);

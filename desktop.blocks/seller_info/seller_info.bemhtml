@@ -1,0 +1,110 @@
+block('seller_info')(
+	content()(function () {
+		var content = [];
+		var wrapperContent = [{
+			elem: 'price',
+			content: this.ctx.price + ' Р'
+		}, {
+			elem: 'area',
+			content: [{
+				elem: 'text',
+				tag: 'span',
+				content: this.ctx.area + ' Р за м'
+			}, {
+				elem: 'upper',
+				tag: 'sup',
+				content: '2'
+			}]
+		}];
+
+		if (this.ctx.conditions && this.ctx.conditions.length > 0) {
+			wrapperContent.push({
+				elem: 'conditions',
+				content: this.ctx.conditions.reduce(function (previousValue, condition) {
+					return previousValue + ', ' + condition;
+				})
+			});
+		}
+
+		content.push({
+			elem: 'price-wrapper',
+			content: wrapperContent
+		});
+
+		content.push({
+			block: 'seller_contacts',
+			agencyName: this.ctx.agencyName,
+			contragentType: this.ctx.contragentType,
+			phones: this.ctx.phones,
+			callTypes: this.ctx.callTypes,
+			publishDate: this.ctx.publishDate,
+			viewed: this.ctx.viewed,
+			apartment: this.ctx.apartment
+		});
+
+		content.push({
+			block: 'seller_area_description',
+			name: 'ЖК «Ласточкино гнездо»',
+			location: 'ЛенСпецСМУ',
+			image: '',
+			category: 'Эконом',
+			buildings: 5,
+			apartmentTypes: [ 'студии', '1 - 4 к.кв. от 36 м2 до 124 м2' ],
+			sale: 372
+		});
+
+		content.push({
+			block: 'market_banner',
+			bannerUrl: '',
+			items: [{
+				text: 'Квартиры в новостройках. Как сейчас строят и кому можно доверять',
+				url: 'bricks'
+			}, {
+				text: 'Что такое черновая отделка: что входит, что не входит (справочник)',
+				url: 'ecology'
+			}, {
+				text: 'Ипотека для молодой семьи: хитрости оформления и подводные камни',
+				url: 'user'
+			}]
+		});
+
+		content.push({
+			block: 'b-advanced-banner',
+			bannersText: [
+				'Новая квартира у м.Звездная, 42 жилая, 5,2 млн. Дом сдан, с отделкой',
+				'40 метров за 4 млн ₽ на Московском пр! С отделкой, дом сдан, окна во двор'
+			],
+			apartments: [{
+				text: 'Двушки в новостройках Адмиралтейского района до 5 млн.',
+				count: 719
+			}, {
+				text: 'Квартиры от ЛенСпецСтрой в Московском районе. ЖК «Солнце»',
+				count: 826
+			}, {
+				text: 'Современные студии с ремонтом у м.Звездная до 3,5 млн.',
+				count: 209
+			}]
+		});
+
+		content.push({
+			block: 'video_news',
+			news: [{
+				header: 'Главное',
+				text: 'Рынок новостроек Петербурга. Цены 1 – 7 июля'
+			}, {
+				header: 'Новости',
+				text: 'Строительство виадука на Дунайском перевалило за экватор'
+			}, {
+				header: 'Аналитика',
+				text: 'Динамика активности спроса на первичном рынке жилья СПб'
+			}],
+			videos: [{
+				text: 'Развитие Московского района перед ЧМ 2018: инфрастуктура'
+			}, {
+				text: 'Новостройки Горьковской: что можно купить за 5 млн.'
+			}]
+		});
+
+		return content;
+	})
+);

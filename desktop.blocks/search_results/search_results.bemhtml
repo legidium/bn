@@ -1,0 +1,46 @@
+block('search_results')(
+	
+	js()(true),
+
+	content()(function(){
+		var link_to_map = {
+			elem: 'row',
+			content: {
+				block: 'controls_row',
+				content: {
+					elem: 'col',
+					mods: {right: true},
+					content: {
+						block: 'button',
+						mods : { theme : 'islands', size : 'm'},
+						text: 'Посмотреть на карте',
+						icon: {
+							block: 'icon',
+							mods: {action: 'yamap'}
+						}
+					}
+				},
+			}
+		};
+
+
+		var content = [];
+
+		if(!this.ctx.just_results) content.push(link_to_map);
+
+		(this.ctx.items).map(function(item) {
+            content.push({ 
+            	js: item.js,
+            	block: 'search_results_item', 
+            	mods: item.mods, 
+            	content: item 
+            });
+        });
+
+		return content;
+	})
+	
+
+
+	
+);

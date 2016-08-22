@@ -1,0 +1,10 @@
+.new-buildings-map__map {
+    border-top: 1px solid rgb(229, 229, 229);
+    width: 100%;
+    height: 585px;
+    position: relative;
+}
+
+.new-buildings-map__map .map{
+    height: 585px;
+}

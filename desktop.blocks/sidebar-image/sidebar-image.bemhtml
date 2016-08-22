@@ -1,0 +1,10 @@
+block('sidebar-image')(
+    content()(function() {
+        var url = this.ctx.url || '';
+        var image = { elem: 'image', tag: 'img', attrs: { src: this.ctx.image || '', alt: '' } };
+
+        return url
+            ? { elem: 'link', tag: 'a', attrs: { href: url }, content: image }
+            : image;
+    })
+)

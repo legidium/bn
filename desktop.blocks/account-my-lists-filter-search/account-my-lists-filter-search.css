@@ -1,0 +1,19 @@
+.account-my-lists-filter-search {
+    position: relative;
+}
+.account-my-lists-filter-search .input_theme_islands.input {
+    float: none;
+    padding-right: 30px;
+    width: 190px;
+}
+.account-my-lists-filter-search .button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 0;
+    background: none;
+    z-index: 1;
+}
